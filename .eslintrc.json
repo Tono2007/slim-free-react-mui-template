@@ -37,8 +37,13 @@
 	"rules": {
 		"prettier/prettier": "error",
 		"no-console": 0,
+		"no-unused-vars": "warn",
+		"react/prop-types": 0,
 		"import/order": 0,
+		"react/jsx-props-no-spreading": 0,
+		"react/no-array-index-key": 0,
 		"no-shadow": 0,
-		"allowTernary": 0
+		"allowTernary": 0,
+		"import/no-extraneous-dependencies": 0
 	}
 }
