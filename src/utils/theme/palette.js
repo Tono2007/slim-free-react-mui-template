@@ -24,6 +24,18 @@ export default {
 		contrastText: '#343A40',
 	},
 	tertiary: {
+		light: '#F7BBF4',
+		100: '#F5A9F1',
+		200: '#F184EB',
+		300: '#ED5FE6',
+		400: '#E93AE0',
+		main: '#E219D7',
+		dark: '#BD15B4',
+		700: '#8B0F84',
+		800: '#580A54',
+		contrastText: '#fff',
+	},
+	cuaternary: {
 		light: '#C4E8FB',
 		100: '#B1E0FA',
 		200: '#8AD1F8',

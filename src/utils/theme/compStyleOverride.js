@@ -5,15 +5,11 @@ export default {
 	MuiButton: {
 		styleOverrides: {
 			root: {
-				'&.MuiButton-containedPrimary': {
+				'&.MuiButton-containedPrimary:not(:disabled)': {
 					backgroundColor: palette.primary[400],
 					'&:hover': {
 						backgroundColor: palette.primary.main,
 					},
-				},
-				'&.MuiButton-outlinedPrimary': {
-					// borderColor: palette.primary[200],
-					'&:hover': { borderColor: palette.primary[300] },
 				},
 			},
 		},
@@ -34,9 +30,6 @@ export default {
 				},
 			},
 		},
-	},
-	MuiPaper: {
-		// defaultProps: { elevation: 26 },
 	},
 	MuiPopover: {
 		defaultProps: {
@@ -72,29 +65,37 @@ export default {
 			},
 		},
 	},
-	MuiLink: {
-		styleOverrides: {
-			root: {
-				color: palette.primary[200],
-			},
-		},
-	},
 	MuiOutlinedInput: {
 		styleOverrides: {
-			root: {
+			root: ({ ownerState }) => ({
+				/* ...(ownerState.color === 'primary' && {
+					'&.MuiOutlinedInput-notchedOutline': {
+						borderColor: palette.secondary.light,
+					},
+					'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+						borderColor: palette.primary[400],
+					},
+					'&:hover&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+						borderColor: palette.primary[400],
+					},
+					'&:hover .MuiOutlinedInput-notchedOutline': {
+						borderColor: palette.primary[400],
+					},
+				}), */
+
 				'&.MuiOutlinedInput-notchedOutline': {
-					borderColor: palette.secondary.light,
+					borderColor: palette?.[ownerState.color]?.main || '#000',
 				},
 				'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-					borderColor: palette.primary[400],
+					borderColor: palette?.[ownerState.color]?.[400] || '#000',
 				},
 				'&:hover&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-					borderColor: palette.primary[400],
+					borderColor: palette?.[ownerState.color]?.[400] || '#000',
 				},
 				'&:hover .MuiOutlinedInput-notchedOutline': {
-					borderColor: palette.primary[400],
+					borderColor: palette?.[ownerState.color]?.[400] || '#000',
 				},
-			},
+			}),
 		},
 	},
 	MuiTableCell: {
