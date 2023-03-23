@@ -3,21 +3,6 @@ import { alpha } from '@mui/material/styles';
 
 export default {
 	MuiButton: {
-		variants: [
-			{
-				props: { variant: 'dashed' },
-				style: {
-					textTransform: 'none',
-					border: `2px dashed ${palette.primary.main}`,
-				},
-			},
-			{
-				props: { variant: 'dashed', color: 'secondary' },
-				style: {
-					border: `2px dashed ${palette.secondary.main}`,
-				},
-			},
-		],
 		styleOverrides: {
 			root: {
 				'&.MuiButton-containedPrimary': {

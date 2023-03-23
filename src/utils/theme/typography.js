@@ -1,7 +1,7 @@
 import palette from './palette';
 
 export default {
-	fontFamily: `"Rubik", "Helvetica", "Arial", sans-serif`,
+	fontFamily: `"Rubik", "Helvetica" , "-apple-system" , "Arial", sans-serif`,
 	fontSize: 14,
 	button: {
 		textTransform: 'none',

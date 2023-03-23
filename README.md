@@ -10,8 +10,8 @@ It can be used for most type of dashboard and app templates like analytics, admi
 
 ## Free Berry React version
 
-- [Preview](https://github.com/Tono2007/slim-free-react-mui-template)
-- [Download from Github](https://github.com/Tono2007/slim-free-react-mui-template)
+-   [Preview](https://github.com/Tono2007/slim-free-react-mui-template)
+-   [Download from Github](https://github.com/Tono2007/slim-free-react-mui-template)
 
 ## Getting Started
 
@@ -23,22 +23,25 @@ git clone https://github.com/Tono2007/slim-free-react-mui-template.git
 
 ## Technology Stack
 
-- [Material UI V5](https://mui.com/)
-- React 18
-- Built with React Hooks API
-- Redux & React Context API for State Management
-- React Router for Navigation Routing
-- Vite
-- Code Splitting
-- Aliases
-- Light/Dark theme support
+-   [Material UI V5](https://mui.com/)
+-   React 18
+-   Built with React Hooks API
+-   Redux & React Context API for State Management
+-   React Router for Navigation Routing
+-   Vite
+-   Code Splitting
+-   Aliases
+-   Light/Dark theme support
 
 ## Issues
 
 ### Routing
+
 To report a bug, please submit an [issue](https://github.com/Tono2007/slim-free-react-mui-template/issues) on Github. We will respond as soon as possible to resolve the issue.
 
 ### Color Presets
+
+We use three different colors
 
 ### Changelog
 
@@ -74,4 +77,4 @@ Slim routing system is based on [react-router](https://reacttraining.com/react-r
 
 ## License
 
-- Licensed cover under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/LICENSE)
+-   Licensed cover under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/LICENSE)

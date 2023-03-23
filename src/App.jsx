@@ -27,6 +27,12 @@ function App() {
 					<Button variant="contained" color="secondary">
 						Contained
 					</Button>
+					<Button variant="contained" color="primary">
+						Contained
+					</Button>
+					<Button variant="contained" color="tertiary">
+						Contained
+					</Button>
 					<Button variant="outlined">Outlined</Button>
 					<Box sx={{ width: '100%', maxWidth: 500 }}>
 						<Typography variant="h1" gutterBottom>
