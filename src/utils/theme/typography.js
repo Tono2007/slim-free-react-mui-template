@@ -47,16 +47,17 @@ export default {
 		color: palette.text.secondary,
 	},
 	caption: {
-		fontSize: '0.75rem',
+		fontSize: '0.7rem',
 		color: palette.text.secondary,
 		fontWeight: 400,
 	},
 	body1: {
-		fontSize: '0.875rem',
+		fontSize: '0.775rem',
 		fontWeight: 400,
 		lineHeight: '1.334em',
 	},
 	body2: {
+		fontSize: '0.875rem',
 		letterSpacing: '0em',
 		fontWeight: 400,
 		lineHeight: '1.5em',

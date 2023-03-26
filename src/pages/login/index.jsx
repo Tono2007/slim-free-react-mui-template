@@ -21,7 +21,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LoginIcon from '@mui/icons-material/Login';
 
 // assets
-import logo from '@/assets/images/logo/png/colorLogoNobg.png';
+import logo from '@/assets/images/logo/png/Color_logo_nobg.png';
 import Google from '@/assets/icons/social-google.svg';
 
 function LoginPage() {
@@ -79,7 +79,7 @@ function LoginPage() {
 					Ingresar con Google
 				</Button>
 				<Divider>
-					<Chip label="OR" variant="outlined" />
+					<Chip label="OR" variant="outlined" size="small" />
 				</Divider>
 
 				<Typography variant="body2" color="textSecondary">

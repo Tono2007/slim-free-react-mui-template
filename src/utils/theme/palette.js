@@ -59,7 +59,9 @@ export default {
 	background: {
 		/* paper: theme.paper,
 		default: theme.backgroundDefault, */
-		default: '#F0F2F7',
 		// #fafafa
+		default: '#F0F2F7',
+		dark: '#E3E7EB',
+		// #212529
 	},
 };

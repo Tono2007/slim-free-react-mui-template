@@ -1,13 +1,13 @@
 const heights = {
-	header: '150',
-	userHeader: '72',
+	header: '148',
+	userHeader: '70',
 	nav: '78',
-	mobileHeader: '60',
+	mobileHeader: '190',
 };
 
 function calcHeaderHeight(type, withPx = true) {
-	const height = heights[type] || '80';
-	return withPx ? `${height}px}` : +height;
+	const height = heights[type] || '148';
+	return withPx ? `${height}px` : +height;
 }
 
 export default calcHeaderHeight;

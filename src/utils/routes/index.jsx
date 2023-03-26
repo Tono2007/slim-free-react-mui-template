@@ -6,6 +6,7 @@ import ScrollToTop from '@helpers/ScrollToTop';
 import withLazyLoadably from '@/utils/hocs/withLazyLoadably';
 
 import MinimalLayout from '@/components/layouts/minimalLayout';
+import MainLayout from '@/components/layouts/mainLayout';
 
 const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
 const Dashboard1Page = withLazyLoadably(
@@ -20,6 +21,8 @@ function Router() {
 					<Route path="/" element={<MinimalLayout />}>
 						<Route index element={<LoginPage />} />
 						<Route path="login" element={<LoginPage />} />
+					</Route>
+					<Route path="/" element={<MainLayout />}>
 						<Route path="dashboard1" element={<Dashboard1Page />} />
 						<Route path="home" element={<Dashboard1Page />} />
 					</Route>
