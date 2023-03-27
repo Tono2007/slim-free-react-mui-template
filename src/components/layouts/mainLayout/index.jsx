@@ -1,12 +1,31 @@
 import { Outlet } from 'react-router-dom';
-// MUI Stuff
+import withScrollTopFabButton from '@hocs/withScrollTopFabButton';
+// MUI
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import Fab from '@mui/material/Fab';
+// Icons
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 // Components
 import Footer from '@/components/footer';
 import MainHeader from '@/components/mainHeader';
 import Navbar from '@/components/navbar';
+
+function FabButton() {
+	/* <Fab
+		size="small"
+		aria-label="scroll back to top"
+		sx={{ bgcolor: 'primary.light' }}
+	>
+		<KeyboardArrowUpIcon color="primary" />
+	</Fab> */
+	return (
+		<Fab size="small" aria-label="scroll back to top" color="primary">
+			<KeyboardArrowUpIcon />
+		</Fab>
+	);
+}
 
 function MainLayout() {
 	return (
@@ -22,6 +41,7 @@ function MainLayout() {
 			>
 				<Outlet />
 			</Container>
+			{withScrollTopFabButton(FabButton)}
 			<Footer />
 		</Box>
 	);

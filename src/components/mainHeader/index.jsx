@@ -24,7 +24,15 @@ function MainHeader() {
 				overflow="hidden"
 			>
 				<Stack direction="row" alignItems="center" spacing={1}>
-					<Box component="img" width={150} src={logo} alt="logo" />
+					<Box
+						component="img"
+						width={{
+							xs: 100,
+							sm: 150,
+						}}
+						src={logo}
+						alt="logo"
+					/>
 					<Typography
 						variant="caption"
 						alignSelf="self-end"

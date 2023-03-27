@@ -28,7 +28,8 @@
 				"map": [
 					["@", "./src"],
 					["@helpers", "./src/utils/helpers"],
-					["@hooks", "./src/utils/hooks"]
+					["@hooks", "./src/utils/hooks"],
+					["@hocs", "./src/utils/hocs"]
 				],
 				"extensions": [".js", ".ts", ".tsx", ".jsx", ".json"]
 			}

@@ -1,9 +1,8 @@
 import { lazy } from 'react';
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ScrollToTop from '@helpers/ScrollToTop';
 
-import withLazyLoadably from '@/utils/hocs/withLazyLoadably';
+import ScrollToTopOnRouteChange from '@hocs/withScrollTopOnRouteChange';
+import withLazyLoadably from '@hocs/withLazyLoadably';
 
 import MinimalLayout from '@/components/layouts/minimalLayout';
 import MainLayout from '@/components/layouts/mainLayout';
@@ -16,7 +15,7 @@ const Dashboard1Page = withLazyLoadably(
 function Router() {
 	return (
 		<BrowserRouter>
-			<ScrollToTop>
+			<ScrollToTopOnRouteChange>
 				<Routes>
 					<Route path="/" element={<MinimalLayout />}>
 						<Route index element={<LoginPage />} />
@@ -29,7 +28,7 @@ function Router() {
 
 					<Route path="*" element={<h1>404</h1>} />
 				</Routes>
-			</ScrollToTop>
+			</ScrollToTopOnRouteChange>
 		</BrowserRouter>
 	);
 }

@@ -9,4 +9,13 @@ const Loadable = (Component) => (props) =>
 		</Suspense>
 	);
 
+/* function Loadable(Component) {
+	return function Loadably(props) {
+		return (
+			<Suspense fallback={<Loader />}>
+				<Component {...props} />
+			</Suspense>
+		);
+	};
+} */
 export default Loadable;

@@ -9,7 +9,13 @@ import SearchIcon from '@mui/icons-material/Search';
 
 function SearchBar() {
 	return (
-		<Stack component="form">
+		<Stack
+			component="form"
+			display={{
+				xs: 'none',
+				md: 'inline-block',
+			}}
+		>
 			<TextField
 				size="small"
 				color="primary"
@@ -22,12 +28,22 @@ function SearchBar() {
 							</IconButton>
 						</InputAdornment>
 					),
+
 					sx: {
 						pr: 0,
 						bgcolor: 'background.paper',
 						borderRadius: '20px',
 						overflow: 'hidden',
 						height: 40,
+					},
+					inputProps: {
+						sx: {
+							transition: '0.3s padding',
+							pl: 1.5,
+							'&:not(:placeholder-shown), &:focus': {
+								pl: 3,
+							},
+						},
 					},
 				}}
 				placeholder="Buscar"
