@@ -75,6 +75,10 @@ function Navbar() {
 						<NavDropLink
 							options={[
 								{
+									title: 'Inicio',
+									href: '/home',
+								},
+								{
 									title: 'Sign in',
 									href: '/login',
 								},
