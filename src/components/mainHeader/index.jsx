@@ -4,28 +4,28 @@ import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 
 // assets
-import logo from '@/assets/images/logo/png/White_logotext_nobg.png';
+import logo from '@/assets/images/logo/png/Color_logotext2_nobg.png';
 
 import LoggedUser from './loggedUser';
 import SearchBar from './searchBar';
 
 function MainHeader() {
 	return (
-		<Box bgcolor="primary.main" component="header" /* height={70} */>
+		<Box bgcolor="background.paper" component="header" py={1.5}>
 			<Stack
 				component={Container}
 				maxWidth="lg"
 				direction="row"
-				height="100%"
+				height={50}
 				justifyContent="space-between"
 				alignItems="center"
 				flexWrap="wrap"
-				py={2}
+				spacing={3}
+				overflow="hidden"
 			>
 				<Stack direction="row" alignItems="center" spacing={1}>
-					<Box component="img" width={130} src={logo} alt="logo" />
+					<Box component="img" width={150} src={logo} alt="logo" />
 					<Typography
-						color="primary.contrastText"
 						variant="caption"
 						alignSelf="self-end"
 						display={{ xs: 'none', sm: 'block' }}

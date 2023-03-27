@@ -16,12 +16,12 @@
 	}
 
 	::-webkit-scrollbar-thumb:hover {
-		background-color: #1560BD;
+		background-color: #1973E2;
 	}
 
 	/* Estilos track de scroll */
 	::-webkit-scrollbar-track {
-		background-color: #d3d3d3;
+		background-color: #eee;
 	/* 	background-color: rgb(129, 130, 134); */
 	}
 
@@ -40,7 +40,7 @@
 	}
 
 	::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
-		border-color: transparent transparent #1560BD transparent;
+		border-color: transparent transparent #1973E2 transparent;
 	}
 
 	/* Down */
@@ -50,6 +50,6 @@
 	}
 
 	::-webkit-scrollbar-button:vertical:single-button:increment:hover {
-		border-color: #1560BD transparent transparent transparent;
+		border-color: #1973E2 transparent transparent transparent;
 	}
 }

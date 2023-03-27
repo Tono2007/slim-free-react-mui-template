@@ -19,7 +19,10 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 
 // assets
-import avatar2 from '@/assets/images/avatar2.jpg';
+import avatar2 from '@/assets/images/avatars/avatar2.jpg';
+
+// Components
+import NotificationsButton from './notificationButton';
 
 function LoggedUser() {
 	const [anchorEl, setAnchorEl] = useState(null);
@@ -38,7 +41,6 @@ function LoggedUser() {
 					'& .MuiMenuItem-root': {
 						mt: 0.5,
 					},
-					'& .MuiPaper-root': { border: 1, borderColor: 'border' },
 				}}
 				anchorEl={anchorEl}
 				anchorOrigin={{
@@ -93,62 +95,71 @@ function LoggedUser() {
 					</MenuItem>
 				</MenuList>
 			</Menu>
-			<ButtonBase
-				onClick={handleClick}
-				variant="outlined"
-				sx={{
-					pr: 1,
-					borderRadius: '20px',
-					transition: '.2s',
-					transitionProperty: 'background,color ',
-					'&:hover': {
-						bgcolor: (theme) =>
-							alpha(theme.palette.primary[400], 0.8),
-					},
-					'&:hover .MuiSvgIcon-root': {
-						opacity: '1',
-						ml: 2,
-					},
-				}}
+			<Stack
+				height="100%"
+				direction="row"
+				flex={1}
+				justifyContent="flex-end"
+				alignItems="center"
+				spacing={1}
 			>
-				<Stack
-					direction="row"
-					justifyContent="space-between"
-					alignItems="center"
-					spacing={1}
+				<NotificationsButton />
+				<ButtonBase
+					onClick={handleClick}
+					variant="outlined"
+					sx={{
+						height: '100%',
+						overflow: 'hidden',
+						borderRadius: '25px',
+						transition: '.2s',
+						px: 1,
+						transitionProperty: 'background,color',
+						'&:hover': {
+							bgcolor: (theme) =>
+								alpha(theme.palette.primary.main, 0.06),
+						},
+						'&:hover .MuiSvgIcon-root': {
+							opacity: '1',
+							// transform: 'translateX(10px)',
+						},
+					}}
 				>
-					<Avatar
-						alt="User Img"
-						src={avatar2}
-						sx={{
-							mr: 0.5,
-							width: 40,
-							height: 40,
-							boxShadow: (theme) =>
-								`0px 0px 0px 4px ${theme.palette.primary.main} ,0px 0px 0px 5px ${theme.palette.background.paper}`,
-						}}
-					/>
-					<Typography
-						color="primary.contrastText"
-						variant="body2"
-						display={{
-							xs: 'none',
-							sm: 'inline-block',
-						}}
+					<Stack
+						width="100%"
+						direction="row"
+						justifyContent="space-between"
+						alignItems="center"
+						spacing={1}
 					>
-						Katherine Lumaad
-					</Typography>
-					<ExpandMoreIcon
-						fontSize="small"
-						sx={{
-							transition: '0.5s',
-							opacity: '0',
-							ml: 0,
-							color: 'primary.contrastText',
-						}}
-					/>
-				</Stack>
-			</ButtonBase>
+						<Avatar
+							alt="User Img"
+							src={avatar2}
+							sx={{
+								width: 35,
+								height: 35,
+								boxShadow: (theme) =>
+									`0px 0px 0px 4px ${theme.palette.background.paper} ,0px 0px 0px 5px ${theme.palette.primary.main} `,
+							}}
+						/>
+						<Typography
+							variant="body2"
+							display={{
+								xs: 'none',
+								sm: 'inline-block',
+							}}
+						>
+							Katherine
+						</Typography>
+						<ExpandMoreIcon
+							fontSize="small"
+							sx={{
+								transition: '0.2s',
+								opacity: '0',
+							}}
+						/>
+					</Stack>
+				</ButtonBase>
+			</Stack>
 		</>
 	);
 }

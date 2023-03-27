@@ -33,7 +33,12 @@ export default {
 	},
 	MuiPopover: {
 		defaultProps: {
-			elevation: 3,
+			elevation: 26,
+		},
+		styleOverrides: {
+			paper: {
+				border: `1px solid ${palette.border}`,
+			},
 		},
 	},
 	MuiMenuItem: {

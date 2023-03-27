@@ -176,11 +176,6 @@ function NavDropLink({ minWidth = 200, options = [], Icon, title }) {
 					'& .MuiMenuItem-root': {
 						mt: 0.5,
 					},
-					'& .MuiPaper-root': {
-						border: 1,
-						borderColor: 'border',
-						borderRadius: 0,
-					},
 				}}
 				anchorEl={anchorEl}
 				anchorOrigin={{
