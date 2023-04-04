@@ -128,7 +128,7 @@ function LoginForm() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log('dd');
+		console.log('submit');
 		setIsLoading(true);
 		setTimeout(() => {
 			setIsLoading(false);
@@ -139,7 +139,6 @@ function LoginForm() {
 		<Box onSubmit={handleSubmit} component="form">
 			<TextField
 				size="small"
-				required
 				color="primary"
 				error={error.error}
 				autoFocus
@@ -159,7 +158,6 @@ function LoginForm() {
 			<TextField
 				size="small"
 				color="primary"
-				required
 				error={error.error}
 				name="password"
 				type={showPassword ? 'text' : 'password'}

@@ -54,9 +54,9 @@ function LoggedUser() {
 				open={Boolean(anchorEl)}
 				onClose={handleClose}
 			>
-				<MenuList sx={{ minWidth: 200, p: 1 }}>
+				<MenuList sx={{ p: 1 }}>
 					<Typography variant="subtitle1" textAlign="center">
-						Katherine Lumaad
+						Elizabeth Lumaad Olsen
 					</Typography>
 					<Typography variant="subtitle2" textAlign="center">
 						Executive Director
@@ -148,7 +148,7 @@ function LoggedUser() {
 								sm: 'inline-block',
 							}}
 						>
-							Katherine
+							Elizabeth
 						</Typography>
 						<ExpandMoreIcon
 							fontSize="small"

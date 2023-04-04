@@ -12,6 +12,17 @@ const themeOptions = {
 	shape: {
 		borderRadius: 2,
 	},
+	breakpoints: {
+		values: {
+			xs: 0,
+			// smartphone
+			sp: 400,
+			sm: 600,
+			md: 900,
+			lg: 1200,
+			xl: 1536,
+		},
+	},
 };
 const theme = createTheme(themeOptions);
 theme.shadows[25] = '0px 10px 10px -15px #0005';

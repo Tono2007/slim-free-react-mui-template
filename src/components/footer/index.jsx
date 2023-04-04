@@ -194,7 +194,8 @@ function Footer() {
 					alignItems="center"
 				>
 					<Typography variant="body1" textAlign="center">
-						Copyright 2023 © All Rights Reserved. Slim Template
+						Copyright 2023 © All Rights Reserved. Slim React MUI
+						Template
 					</Typography>
 					<Typography variant="subtitle1" textAlign="center">
 						💻 - Construido por{' '}

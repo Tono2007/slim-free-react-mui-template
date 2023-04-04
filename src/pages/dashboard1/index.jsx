@@ -1,15 +1,21 @@
 // MUI
-import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import Stack from '@mui/material/Stack';
 
-import Loader from '@/components/loader';
+import WelcomeSection from './welcomeSection';
+import StatsSection from './statsSection';
+import GraphsSection from './graphsSection';
 
 function Dashboard1Page() {
 	return (
-		<div>
-			dashboard1
-			<Loader />
-			<Box height="300vh">sdf</Box>
-		</div>
+		<Stack spacing={3}>
+			<WelcomeSection />
+
+			<StatsSection />
+
+			<GraphsSection />
+		</Stack>
 	);
 }
 

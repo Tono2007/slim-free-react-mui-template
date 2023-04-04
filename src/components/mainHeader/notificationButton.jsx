@@ -16,6 +16,7 @@ import Avatar from '@mui/material/Avatar';
 import ButtonBase from '@mui/material/ButtonBase';
 
 // Icons
+import CloseIcon from '@mui/icons-material/Close';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 // data
 import notifications from '@/_mocks/notifications';
@@ -56,14 +57,18 @@ function NotificationsButton() {
 			>
 				<Stack
 					sx={{
-						width: 400,
+						maxWidth: 400,
 						p: 2,
 						pb: 0,
 					}}
 					direction="column"
 					spacing={2}
 				>
-					<Stack direction="row" justifyContent="space-between">
+					<Stack
+						direction="row"
+						justifyContent="space-between"
+						flexWrap="wrap"
+					>
 						<Stack
 							direction="row"
 							alignItems="center"
@@ -95,6 +100,18 @@ function NotificationsButton() {
 						>
 							Marcar como leidas
 						</Button>
+						<IconButton
+							aria-label="close notifications menu"
+							onClick={handleClose}
+							size="small"
+							color="primary"
+							sx={{
+								border: 1,
+								display: { sm: 'none', xs: 'inline-flex' },
+							}}
+						>
+							<CloseIcon fontSize="inherit" />
+						</IconButton>
 					</Stack>
 
 					<Divider sx={{ my: 1 }} />
