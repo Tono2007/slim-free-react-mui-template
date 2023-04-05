@@ -22,6 +22,109 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 
+const NAV_LINKS_CONFIG = [
+	{
+		id: 1,
+		type: 'group',
+		title: 'Dashboard',
+		Icon: BarChartOutlinedIcon,
+		children: [
+			{
+				title: 'Dashboard01',
+				href: '/dashboard1',
+			},
+			{
+				title: 'Dashboard02',
+				href: '/dashboard1',
+			},
+			{
+				title: 'Dashboard03',
+				href: '/dashboard1',
+			},
+		],
+	},
+	{
+		id: 2,
+		type: 'group',
+		title: 'UI Elements',
+		Icon: GridViewOutlinedIcon,
+		children: [
+			{
+				title: 'Buttons',
+				href: '/producers',
+			},
+			{
+				title: 'Forms',
+				href: '/producers/new',
+			},
+		],
+	},
+	{
+		id: 3,
+		type: 'group',
+		title: 'Pages',
+		Icon: AutoStoriesOutlinedIcon,
+		children: [
+			{
+				title: 'Inicio',
+				href: '/home',
+			},
+			{
+				title: 'Sign in',
+				href: '/login',
+			},
+			{
+				title: 'Sign up',
+				href: '/login',
+			},
+		],
+	},
+	{
+		id: 4,
+		type: 'group',
+		title: 'Theme',
+		Icon: PaletteOutlinedIcon,
+		children: [
+			{
+				title: 'Oalete Colores',
+				href: '/colors',
+			},
+			{
+				title: 'Tipografia',
+				href: '/Tipografia',
+			},
+		],
+	},
+	{
+		id: 5,
+		type: 'group',
+		title: 'Apps',
+		Icon: InventoryOutlinedIcon,
+		children: [
+			{
+				title: 'Ecommerce',
+				href: '/profile',
+			},
+			{ title: 'Social Feed', href: '/profile' },
+			{ title: 'Calendar', href: '/profile' },
+			{ title: 'Chat', href: '/profile' },
+		],
+	},
+	{
+		id: 6,
+		type: 'only',
+		title: 'Perfil',
+		Icon: AccountCircleOutlinedIcon,
+		href: '/profile',
+	},
+	{
+		id: 7,
+		type: 'only',
+		title: 'Widgets',
+		Icon: WidgetsOutlinedIcon,
+		href: '/w',
+	},
+];
 function Navbar() {
 	return (
 		<AppBar position="sticky" color="transparent" elevation={26}>
@@ -40,94 +143,28 @@ function Navbar() {
 						borderColor="border"
 						flexWrap="wrap"
 					>
-						<NavDropLink
-							options={[
-								{
-									title: 'Dashboard01',
-									href: '/dashboard1',
-								},
-								{
-									title: 'Dashboard02',
-									href: '/dashboard1',
-								},
-								{
-									title: 'Dashboard03',
-									href: '/dashboard1',
-								},
-							]}
-							Icon={BarChartOutlinedIcon}
-							title="Dashboard"
-						/>
-						<NavDropLink
-							options={[
-								{
-									title: 'Buttons',
-									href: '/producers',
-								},
-								{
-									title: 'Forms',
-									href: '/producers/new',
-								},
-							]}
-							Icon={GridViewOutlinedIcon}
-							title="UI Elements"
-						/>
-						<NavDropLink
-							options={[
-								{
-									title: 'Inicio',
-									href: '/home',
-								},
-								{
-									title: 'Sign in',
-									href: '/login',
-								},
-								{
-									title: 'Sign up',
-									href: '/login',
-								},
-							]}
-							Icon={AutoStoriesOutlinedIcon}
-							title="Pages"
-						/>
-
-						<NavDropLink
-							options={[
-								{
-									title: 'Colores',
-									href: '/colors',
-								},
-								{
-									title: 'Tipografia',
-									href: '/Tipografia',
-								},
-							]}
-							Icon={PaletteOutlinedIcon}
-							title="Theme"
-						/>
-						<NavDropLink
-							options={[
-								{
-									title: 'Ecommerce',
-									href: '/profile',
-								},
-								{ title: 'Social Feed', href: '/profile' },
-								{ title: 'Calendar', href: '/profile' },
-								{ title: 'Chat', href: '/profile' },
-							]}
-							Icon={InventoryOutlinedIcon}
-							title="Apps"
-						/>
-						<NavLink
-							href="/profile"
-							Icon={AccountCircleOutlinedIcon}
-							title="Perfil"
-						/>
-						<NavLink
-							href="/d"
-							Icon={WidgetsOutlinedIcon}
-							title="Widgets"
-						/>
+						{NAV_LINKS_CONFIG.map((navLink) => {
+							const { title, type, Icon, id } = navLink;
+							if (type === 'group') {
+								return (
+									<NavDropLink
+										key={id}
+										minWidth={navLink?.menuMinWidth}
+										options={navLink?.children}
+										Icon={Icon}
+										title={title}
+									/>
+								);
+							}
+							return (
+								<NavLink
+									key={id}
+									href={navLink?.href}
+									Icon={Icon}
+									title={title}
+								/>
+							);
+						})}
 					</Stack>
 				</Container>
 			</Box>
