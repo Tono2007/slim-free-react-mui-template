@@ -1,4 +1,3 @@
-import moment from 'moment';
 // MUI
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
@@ -21,7 +20,12 @@ function WelcomeSection() {
 				>
 					<Stack spacing={2}>
 						<Typography variant="caption">
-							{moment().format('LL')}
+							{new Date().toLocaleDateString('es-MX', {
+								weekday: 'long',
+								year: 'numeric',
+								month: 'long',
+								day: 'numeric',
+							})}
 						</Typography>
 						<Typography>
 							The starting point for your next project is based on

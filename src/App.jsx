@@ -15,11 +15,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/utils/theme';
 import Router from '@/utils/routes';
 
-import moment from 'moment';
-import 'moment/dist/locale/es';
-
-moment().locale();
-
 function App() {
 	return (
 		<ReduxProvider>
