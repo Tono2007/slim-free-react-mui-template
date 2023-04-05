@@ -22,6 +22,17 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 
+/**
+ * @example
+ * {
+ *	id: number,
+ *	type: "group" | "only",
+ *	title: string,
+ *	Icon: NodeElement
+ *	children?: {title: string, href: string}[]
+ * }
+ */
+
 const NAV_LINKS_CONFIG = [
 	{
 		id: 1,
@@ -66,10 +77,6 @@ const NAV_LINKS_CONFIG = [
 		Icon: AutoStoriesOutlinedIcon,
 		children: [
 			{
-				title: 'Inicio',
-				href: '/home',
-			},
-			{
 				title: 'Sign in',
 				href: '/login',
 			},
@@ -86,7 +93,7 @@ const NAV_LINKS_CONFIG = [
 		Icon: PaletteOutlinedIcon,
 		children: [
 			{
-				title: 'Oalete Colores',
+				title: 'Paleta de Colores',
 				href: '/colors',
 			},
 			{
@@ -238,6 +245,7 @@ function NavDropLink({ minWidth = 200, options = [], Icon, title }) {
 								key={i}
 								onClick={handleClose}
 								component={RouterLink}
+								sx={{ fontSize: 14 }}
 								/* selected={Boolean(match)} */
 								to={option.href}
 							>
@@ -253,7 +261,7 @@ function NavDropLink({ minWidth = 200, options = [], Icon, title }) {
 					flexGrow: 1,
 					...(match && {
 						backgroundImage: (theme) =>
-							`linear-gradient(90deg, ${theme.palette.primary[200]} 0%,${theme.palette.primary.main} 100% )`,
+							`linear-gradient(90deg, ${theme.palette.primary[300]} 0%,${theme.palette.primary.dark} 100% )`,
 					}),
 					'&:hover': {
 						bgcolor: (theme) =>

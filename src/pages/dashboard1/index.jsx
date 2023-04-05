@@ -19,10 +19,10 @@ function Dashboard1Page() {
 			<StatsSection />
 			<section>
 				<Grid container spacing={3}>
-					<Grid item xs={12} sm={12} md={6}>
+					<Grid item xs={12} md={12} lg={6}>
 						<ProductsSection />
 					</Grid>
-					<Grid item xs={12} sm={12} md={6}>
+					<Grid item xs={12} md={12} lg={6}>
 						<TransactionsSection />
 					</Grid>
 				</Grid>

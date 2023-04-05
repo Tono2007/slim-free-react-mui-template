@@ -8,38 +8,38 @@ export default {
 	},
 	h6: {
 		fontWeight: 500,
-		color: palette.text.dark,
+		color: palette.text.primary,
 		fontSize: '0.75rem',
 	},
 	h5: {
-		fontSize: '0.875rem',
-		color: palette.text.dark,
+		fontSize: '0.85rem',
+		color: palette.text.primary,
 		fontWeight: 500,
 	},
 	h4: {
 		fontSize: '1rem',
-		color: palette.text.dark,
+		color: palette.text.primary,
 		fontWeight: 600,
 	},
 	h3: {
 		fontSize: '1.25rem',
-		color: palette.text.dark,
+		color: palette.text.primary,
 		fontWeight: 600,
 	},
 	h2: {
 		fontSize: '1.5rem',
-		color: palette.text.dark,
+		color: palette.text.primary,
 		fontWeight: 700,
 	},
 	h1: {
 		fontSize: '2.125rem',
-		color: palette.text.dark,
+		color: palette.text.primary,
 		fontWeight: 700,
 	},
 	subtitle1: {
 		fontSize: '0.875rem',
 		fontWeight: 500,
-		color: palette.text.dark,
+		color: palette.text.primary,
 	},
 	subtitle2: {
 		fontSize: '0.75rem',

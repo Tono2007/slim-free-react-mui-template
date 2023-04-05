@@ -1,4 +1,5 @@
 import palette from './palette';
+import typography from './typography';
 import { alpha } from '@mui/material/styles';
 
 export default {
@@ -103,15 +104,15 @@ export default {
 			}),
 		},
 	},
-	MuiTableCell: {
-		/* defaultProps: {
-			size: 'medium',
-		}, */
+	MuiTableHead: {
 		styleOverrides: {
 			root: {
-				// color: palette.text.tertiary,
-				'&.MuiTableCell-head': {
-					color: palette.text.primary,
+				'& .MuiTableCell-head': {
+					...typography?.h5,
+					textTransform: 'uppercase',
+					backgroundColor: '#fafafa',
+					borderTop: `1px solid ${palette.border}`,
+					borderBottom: `1px solid ${palette.border}`,
 				},
 			},
 		},
@@ -120,7 +121,7 @@ export default {
 		styleOverrides: {
 			root: {
 				'&.MuiTableRow-hover:hover': {
-					backgroundColor: alpha(palette.primary[400], 0.05),
+					backgroundColor: alpha(palette.primary.light, 0.1),
 				},
 			},
 		},
