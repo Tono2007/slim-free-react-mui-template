@@ -17,34 +17,39 @@ const notificationsData = [
 		name: 'Woodie',
 		avatar: avatarImg1,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '30/07/2021',
 		checked: false,
 	},
 	{
 		id: uuid(),
 		name: 'Felizio',
 		avatar: avatarImg2,
-		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		title: 'aprecio tu trabajo en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
 		id: uuid(),
 		name: 'Nickolai',
 		avatar: avatarImg3,
-		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		title: 'quiere conectar contigo.',
+		date: '15/12/2021',
 		checked: false,
 	},
 	{
 		id: uuid(),
 		name: 'Elsinore',
 		avatar: avatarImg4,
-		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		title: 'te envio un mensaje.',
+		date: '11/07/2020',
 		checked: true,
 	},
 	{
 		id: uuid(),
 		name: 'Harvey',
 		avatar: avatarImg5,
-		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		title: 'te agrego y a 18 personas a un grupo.',
+		date: '29/01/2021',
 		checked: true,
 	},
 	{
@@ -52,6 +57,7 @@ const notificationsData = [
 		name: 'Othello',
 		avatar: avatarImg6,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: true,
 	},
 	{
@@ -59,6 +65,7 @@ const notificationsData = [
 		name: 'Anselma',
 		avatar: avatarImg7,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: true,
 	},
 	{
@@ -66,6 +73,7 @@ const notificationsData = [
 		name: 'Fredia',
 		avatar: avatarImg8,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
@@ -73,6 +81,7 @@ const notificationsData = [
 		name: 'Iseabal',
 		avatar: avatarImg9,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
@@ -80,6 +89,7 @@ const notificationsData = [
 		name: 'Chevy',
 		avatar: avatarImg10,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: true,
 	},
 	{
@@ -87,6 +97,7 @@ const notificationsData = [
 		name: 'Nap',
 		avatar: avatarImg11,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: true,
 	},
 	{
@@ -94,6 +105,7 @@ const notificationsData = [
 		name: 'Terza',
 		avatar: avatarImg1,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: true,
 	},
 	{
@@ -101,6 +113,7 @@ const notificationsData = [
 		name: 'Nowell',
 		avatar: avatarImg2,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
@@ -108,6 +121,7 @@ const notificationsData = [
 		name: 'Nicol',
 		avatar: avatarImg3,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
@@ -115,6 +129,7 @@ const notificationsData = [
 		name: 'Lianna',
 		avatar: avatarImg4,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
@@ -122,6 +137,7 @@ const notificationsData = [
 		name: 'Georas',
 		avatar: avatarImg4,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
@@ -129,6 +145,7 @@ const notificationsData = [
 		name: 'Obed',
 		avatar: avatarImg5,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
@@ -136,6 +153,7 @@ const notificationsData = [
 		name: 'Gale',
 		avatar: avatarImg6,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
@@ -143,6 +161,7 @@ const notificationsData = [
 		name: 'Raddie',
 		avatar: avatarImg7,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 	{
@@ -150,6 +169,7 @@ const notificationsData = [
 		name: 'Theodosia',
 		avatar: avatarImg8,
 		title: 'te etiqueto y a 18 personas mas en una publicación.',
+		date: '25/07/2021',
 		checked: false,
 	},
 ];

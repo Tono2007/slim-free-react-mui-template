@@ -173,6 +173,7 @@ function Notification({ notification }) {
 			}}
 		>
 			<Stack
+				width="100%"
 				direction="row"
 				spacing={2}
 				alignItems="center"
@@ -198,7 +199,9 @@ function Notification({ notification }) {
 						<strong>{notification?.name} </strong>
 						{notification?.title}
 					</Typography>
-					<Typography variant="caption">25/07/2021</Typography>
+					<Typography variant="caption">
+						{notification?.date}
+					</Typography>
 				</Stack>
 			</Stack>
 		</ButtonBase>
