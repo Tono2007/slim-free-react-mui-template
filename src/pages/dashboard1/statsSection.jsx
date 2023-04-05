@@ -5,10 +5,7 @@ import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 // MUI
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
 
 const STATS_DATA = [
 	{
@@ -60,7 +57,7 @@ function StatsSection() {
 			}}
 		>
 			{STATS_DATA.map((stat) => (
-				<Grid item xs={12} sm={12} md={3} key={stat.id}>
+				<Grid item xs={12} sm={6} md={3} key={stat.id}>
 					<StatSection statData={stat} />
 				</Grid>
 			))}

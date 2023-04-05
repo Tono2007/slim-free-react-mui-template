@@ -22,10 +22,10 @@ function GraphsSection() {
 						<Grid item xs={12} sm={12} md={12}>
 							<EtereumWalletSection />
 						</Grid>
-						<Grid item xs={12} sm={12} md={6}>
+						<Grid item xs={12} sm={6} md={6}>
 							<MaleVisitorsSection />
 						</Grid>
-						<Grid item xs={12} sm={12} md={6}>
+						<Grid item xs={12} sm={6} md={6}>
 							<FemaleVisitorsSection />
 						</Grid>
 					</Grid>
