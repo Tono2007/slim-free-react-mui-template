@@ -19,7 +19,7 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 
 // assets
-import avatar2 from '@/assets/images/avatars/avatar2.jpg';
+import avatar2 from '@/assets/images/avatars/avatar_13.jpg';
 
 // Components
 import NotificationsButton from './notificationButton';
