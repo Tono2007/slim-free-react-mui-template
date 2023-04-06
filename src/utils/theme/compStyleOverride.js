@@ -135,4 +135,11 @@ export default {
 			},
 		},
 	},
+	MuiLink: {
+		styleOverrides: {
+			root: {
+				color: palette.primary[300],
+			},
+		},
+	},
 };

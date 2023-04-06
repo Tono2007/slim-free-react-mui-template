@@ -5,9 +5,10 @@ import Typography from '@mui/material/Typography';
 function PageHeader({ children, title, sx = {} }) {
 	return (
 		<Stack
-			my={4}
+			my={3}
 			direction="row"
 			justifyContent="space-between"
+			alignItems="center"
 			flexWrap="wrap"
 			textTransform="uppercase"
 			sx={sx}

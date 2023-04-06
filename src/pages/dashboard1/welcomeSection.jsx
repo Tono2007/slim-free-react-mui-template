@@ -7,18 +7,15 @@ import PageHeader from '@/components/pageHeader';
 
 function WelcomeSection() {
 	return (
-		<PageHeader
-			title="Bienvenida, Elizabeth Lumaad Olsen"
-			sx={{ textTransform: 'none', mb: 0 }}
-		>
+		<PageHeader title="Dashboard 01">
 			<Breadcrumbs
 				aria-label="breadcrumb"
 				sx={{ textTransform: 'uppercase' }}
 			>
-				<Link underline="hover" color="primary" href="#!">
+				<Link underline="hover" href="#!">
 					Inicio
 				</Link>
-				<Typography color="text.tertiary">Dashboard1</Typography>
+				<Typography color="text.tertiary">Dashboard</Typography>
 			</Breadcrumbs>
 		</PageHeader>
 	);

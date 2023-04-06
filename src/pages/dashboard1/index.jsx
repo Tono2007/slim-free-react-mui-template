@@ -13,22 +13,24 @@ import TransactionsSection from './transactionsSection';
 
 function Dashboard1Page() {
 	return (
-		<Stack spacing={3}>
+		<>
 			<WelcomeSection />
-			<GraphsSection />
-			<StatsSection />
-			<section>
-				<Grid container spacing={3}>
-					<Grid item xs={12} md={12} lg={6}>
-						<ProductsSection />
+			<Stack spacing={3}>
+				<GraphsSection />
+				<StatsSection />
+				<section>
+					<Grid container spacing={3}>
+						<Grid item xs={12} md={12} lg={6}>
+							<ProductsSection />
+						</Grid>
+						<Grid item xs={12} md={12} lg={6}>
+							<TransactionsSection />
+						</Grid>
 					</Grid>
-					<Grid item xs={12} md={12} lg={6}>
-						<TransactionsSection />
-					</Grid>
-				</Grid>
-			</section>
-			<BitcoinSection />
-		</Stack>
+				</section>
+				<BitcoinSection />
+			</Stack>
+		</>
 	);
 }
 
