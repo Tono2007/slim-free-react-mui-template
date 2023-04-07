@@ -37,7 +37,7 @@ export default {
 			{
 				props: { type: 'card' },
 				style: {
-					padding: 30,
+					padding: 25,
 					'@media (max-width: 600px)': {
 						padding: '5%',
 					},

@@ -1,3 +1,5 @@
+import useAutoCounter from '@hooks/useAutoCounter';
+
 import QueryStatsOutlinedIcon from '@mui/icons-material/QueryStatsOutlined';
 import DonutSmallOutlinedIcon from '@mui/icons-material/DonutSmallOutlined';
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
@@ -12,28 +14,28 @@ const STATS_DATA = [
 		id: 1,
 		color: 'secondary.main',
 		name: 'Impressions',
-		total: '822,490',
+		total: 822490,
 		Icon: DonutSmallOutlinedIcon,
 	},
 	{
 		id: 2,
 		color: 'cuaternary.main',
 		name: 'Page visits',
-		total: '465,183',
+		total: 465183,
 		Icon: QueryStatsOutlinedIcon,
 	},
 	{
 		id: 3,
 		color: 'tertiary.400',
 		name: 'Comission',
-		total: '781,524',
+		total: 781524,
 		Icon: AssessmentOutlinedIcon,
 	},
 	{
 		id: 4,
 		color: 'success.light',
 		name: 'Earnings',
-		total: '369,657',
+		total: 369657,
 		Icon: MonetizationOnOutlinedIcon,
 	},
 ];
@@ -67,6 +69,12 @@ function StatsSection() {
 
 function StatSection({ statData }) {
 	const { name, total, color, Icon } = statData;
+	const counter = useAutoCounter({
+		limiter: total,
+		increment: 5000,
+		interval: 10,
+	});
+
 	return (
 		<Stack p={3} direction="row" spacing={3} alignItems="center">
 			<Icon sx={{ fontSize: 60, color }} color="disabled" />
@@ -78,7 +86,9 @@ function StatSection({ statData }) {
 				>
 					{name}
 				</Typography>
-				<Typography fontSize={30}>{total}</Typography>
+				<Typography fontSize={30}>
+					{counter.toLocaleString()}
+				</Typography>
 			</span>
 		</Stack>
 	);

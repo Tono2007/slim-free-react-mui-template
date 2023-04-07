@@ -13,6 +13,9 @@ const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
 const Dashboard1Page = withLazyLoadably(
 	lazy(() => import('@/pages/dashboard1')),
 );
+const Dashboard2Page = withLazyLoadably(
+	lazy(() => import('@/pages/dashboard2')),
+);
 
 function Router() {
 	return (
@@ -25,6 +28,7 @@ function Router() {
 					<Route path="/" element={<MainLayout />}>
 						<Route index element={<Dashboard1Page />} />
 						<Route path="dashboard1" element={<Dashboard1Page />} />
+						<Route path="dashboard2" element={<Dashboard2Page />} />
 					</Route>
 
 					<Route path="*" element={<Page404 />} />

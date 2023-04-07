@@ -1,3 +1,5 @@
+import useAutoCounter from '@hooks/useAutoCounter';
+
 import Chart from 'react-apexcharts';
 import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
 
@@ -88,6 +90,11 @@ const bitcoinGraphConfig = {
 };
 
 function BitcoinEarningsSection() {
+	const counter = useAutoCounter({
+		limiter: 0.0345,
+		increment: 0.001,
+		interval: 10,
+	});
 	return (
 		<SectionContainer
 			background={
@@ -114,7 +121,7 @@ function BitcoinEarningsSection() {
 				pb={{ xs: 30, md: 0 }}
 			>
 				<Typography variant="subtitle1" fontSize={55}>
-					0.0345{' '}
+					{Math.round(counter * 10000) / 10000}{' '}
 					<Typography variant="subtitle1" component="span">
 						BTC
 					</Typography>
@@ -182,6 +189,11 @@ const ethereumGraphConfig = {
 	],
 };
 function EtereumWalletSection() {
+	const counter = useAutoCounter({
+		limiter: 0.0873,
+		increment: 0.001,
+		interval: 10,
+	});
 	return (
 		<SectionContainer
 			background={
@@ -202,7 +214,7 @@ function EtereumWalletSection() {
 		>
 			<Stack ml="auto" width="50%" spacing={0}>
 				<Typography variant="subtitle1" fontSize={35}>
-					0.0873{' '}
+					{Math.round(counter * 10000) / 10000}{' '}
 					<Typography variant="subtitle1" component="span">
 						ETH
 					</Typography>
@@ -264,6 +276,11 @@ const maleVisitorsGraphConfig = {
 };
 
 function MaleVisitorsSection() {
+	const counter = useAutoCounter({
+		limiter: 29931,
+		increment: 1000,
+		interval: 10,
+	});
 	return (
 		<SectionContainer
 			background={
@@ -290,7 +307,7 @@ function MaleVisitorsSection() {
 				alignItems="center"
 			>
 				<Typography variant="subtitle1" fontSize={35}>
-					29,931
+					{counter.toLocaleString()}
 				</Typography>
 				<Typography variant="subtitle1">MALE VISITORS</Typography>
 				<Typography variant="subtitle2" color="text.secondary" pb={2}>
@@ -340,6 +357,11 @@ const femaleVisitorsGraphConfig = {
 };
 
 function FemaleVisitorsSection() {
+	const counter = useAutoCounter({
+		limiter: 45231,
+		increment: 1000,
+		interval: 10,
+	});
 	return (
 		<SectionContainer
 			background={
@@ -366,7 +388,7 @@ function FemaleVisitorsSection() {
 				alignItems="center"
 			>
 				<Typography variant="subtitle1" fontSize={35}>
-					45,231
+					{counter.toLocaleString()}
 				</Typography>
 				<Typography variant="subtitle1">FEMALE VISITORS</Typography>
 				<Typography variant="subtitle2" color="text.secondary" pb={2}>

@@ -57,7 +57,7 @@ function BitcoinCard(props) {
 				justifyContent="center"
 				alignItems="center"
 			>
-				<img src={img} alt="bitcoin 1" width="30%" />
+				<img src={img} alt="bitcoin 1" width="40%" />
 				<Typography variant="h3">{title}</Typography>
 				<Typography variant="body2" color="text.secondary">
 					{content}
