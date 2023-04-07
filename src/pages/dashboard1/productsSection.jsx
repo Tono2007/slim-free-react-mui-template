@@ -23,7 +23,7 @@ import productsData from '@/_mocks/products';
 
 function ProductsSection() {
 	return (
-		<Card sx={{ p: '0 !important' }}>
+		<Card type="none">
 			<Stack direction="column" alignItems="flex-start">
 				<Typography variant="h5" textTransform="uppercase" m={2}>
 					Products Purchases

@@ -77,7 +77,7 @@ const SALES_DATA = [
 ];
 function SalesCard() {
 	return (
-		<Card sx={{ p: 3, height: '50%' }}>
+		<Card sx={{ height: '50%' }}>
 			<Stack direction="column" spacing={1} justifyContent="center">
 				<Typography
 					color="primary.main"
@@ -144,9 +144,7 @@ function SalesCard() {
 
 const impressionsGraphConfig = {
 	options: {
-		fill: {
-			colors: getDefaultChartsColors(3),
-		},
+		colors: getDefaultChartsColors(3),
 		chart: {
 			toolbar: {
 				show: false,
@@ -157,7 +155,6 @@ const impressionsGraphConfig = {
 			parentHeightOffset: 0,
 		},
 		stroke: {
-			colors: getDefaultChartsColors(3),
 			width: 2,
 		},
 		markers: {
@@ -183,7 +180,7 @@ const impressionsGraphConfig = {
 };
 function ImpressionsCard() {
 	return (
-		<Card sx={{ p: 3, position: 'relative', height: '50%' }}>
+		<Card sx={{ position: 'relative', height: '50%' }}>
 			<Stack direction="column" spacing={1} pb={6}>
 				<Typography
 					color="primary.main"

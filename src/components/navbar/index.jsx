@@ -46,11 +46,11 @@ const NAV_LINKS_CONFIG = [
 			},
 			{
 				title: 'Dashboard02',
-				href: '/dashboard1',
+				href: '/dashboard2',
 			},
 			{
 				title: 'Dashboard03',
-				href: '/dashboard1',
+				href: '/dashboard3',
 			},
 		],
 	},

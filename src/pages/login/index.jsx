@@ -37,8 +37,6 @@ function LoginPage() {
 					lg: '30%',
 				},
 				border: 0,
-				px: 3,
-				py: 2,
 			}}
 		>
 			<Stack direction="column" spacing={2}>

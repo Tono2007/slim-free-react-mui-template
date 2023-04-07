@@ -15,21 +15,51 @@ export default {
 			},
 		},
 	},
+	MuiPaper: {
+		variants: [
+			{
+				props: { variant: 'outlinedElevation' },
+				style: ({ ownerState, theme }) => ({
+					boxShadow: theme.shadows[ownerState.elevation],
+					border: `1px solid ${palette.border}`,
+				}),
+			},
+		],
+	},
 	MuiCard: {
-		defaultProps: {
-			elevation: 26,
-		},
-		styleOverrides: {
-			root: {
-				border: `1px solid ${palette.border}`,
-				paddingTop: 40,
-				paddingBottom: 40,
-				paddingLeft: 30,
-				paddingRight: 30,
-				'@media (max-width: 600px)': {
-					padding: '5%',
+		variants: [
+			{
+				props: { type: 'none' },
+				style: {
+					padding: 0,
 				},
 			},
+			{
+				props: { type: 'card' },
+				style: {
+					padding: 30,
+					'@media (max-width: 600px)': {
+						padding: '5%',
+					},
+				},
+			},
+			{
+				props: { type: 'section' },
+				style: {
+					paddingTop: 40,
+					paddingBottom: 40,
+					paddingLeft: 30,
+					paddingRight: 30,
+					'@media (max-width: 600px)': {
+						padding: '5%',
+					},
+				},
+			},
+		],
+		defaultProps: {
+			elevation: 26,
+			type: 'card',
+			variant: 'outlinedElevation',
 		},
 	},
 	MuiPopover: {

@@ -20,7 +20,7 @@ import customersData from '@/_mocks/customers';
 
 function TransactionsSection() {
 	return (
-		<Card sx={{ p: '0 !important' }}>
+		<Card type="none">
 			<Stack direction="column" alignItems="flex-start">
 				<Typography variant="h5" textTransform="uppercase" m={2}>
 					User Transaction History

@@ -48,9 +48,7 @@ function SectionContainer({ children, background }) {
 
 const bitcoinGraphConfig = {
 	options: {
-		fill: {
-			colors: getDefaultChartsColors(3),
-		},
+		colors: getDefaultChartsColors(3),
 		chart: {
 			toolbar: {
 				show: false,
@@ -61,12 +59,10 @@ const bitcoinGraphConfig = {
 			parentHeightOffset: 0,
 		},
 		stroke: {
-			colors: getDefaultChartsColors(3),
 			width: 2,
 		},
 		markers: {
 			size: 5,
-			colors: getDefaultChartsColors(3),
 		},
 		grid: {
 			show: false,
@@ -146,13 +142,11 @@ function BitcoinEarningsSection() {
 
 const ethereumGraphConfig = {
 	options: {
+		colors: getDefaultChartsColors(2),
 		plotOptions: {
 			bar: {
 				columnWidth: '95%',
 			},
-		},
-		fill: {
-			colors: getDefaultChartsColors(2),
 		},
 		chart: {
 			toolbar: {
@@ -233,9 +227,7 @@ function EtereumWalletSection() {
 
 const maleVisitorsGraphConfig = {
 	options: {
-		fill: {
-			colors: getDefaultChartsColors(3),
-		},
+		colors: getDefaultChartsColors(3),
 		chart: {
 			toolbar: {
 				show: false,
@@ -246,13 +238,11 @@ const maleVisitorsGraphConfig = {
 			parentHeightOffset: 0,
 		},
 		stroke: {
-			colors: getDefaultChartsColors(3),
 			curve: 'straight',
 			width: 1,
 		},
 		markers: {
 			size: 4,
-			colors: getDefaultChartsColors(3),
 		},
 		grid: {
 			show: false,
@@ -313,9 +303,7 @@ function MaleVisitorsSection() {
 }
 const femaleVisitorsGraphConfig = {
 	options: {
-		fill: {
-			colors: getDefaultChartsColors(4),
-		},
+		colors: getDefaultChartsColors(4),
 		chart: {
 			toolbar: {
 				show: false,
@@ -326,13 +314,11 @@ const femaleVisitorsGraphConfig = {
 			parentHeightOffset: 0,
 		},
 		stroke: {
-			colors: getDefaultChartsColors(4),
 			curve: 'straight',
 			width: 1,
 		},
 		markers: {
 			size: 4,
-			colors: getDefaultChartsColors(4),
 		},
 		grid: {
 			show: false,
