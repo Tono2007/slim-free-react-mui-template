@@ -22,7 +22,7 @@ function SalesOverviewCard() {
 		<Card>
 			<CardHeader title="Sales Overview" size="small">
 				<ButtonGroup
-					variant="text"
+					variant="outlined"
 					size="small"
 					aria-label="temporaly button group"
 				>

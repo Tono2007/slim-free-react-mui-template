@@ -1,5 +1,6 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import withScrollTopFabButton from '@hocs/withScrollTopFabButton';
+import WidthPageTransition from '@hocs/widthPageTransition';
 // MUI
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -26,8 +27,8 @@ function FabButton() {
 		</Fab>
 	);
 }
-
 function MainLayout() {
+	const location = useLocation();
 	return (
 		<Box display="flex" minHeight="100vh" flexDirection="column">
 			<Header />
@@ -39,6 +40,9 @@ function MainLayout() {
 					pb: 5,
 				}}
 			>
+				{/* <WidthPageTransition location={location.key}>
+					<Outlet />
+				</WidthPageTransition> */}
 				<Outlet />
 			</Container>
 			{withScrollTopFabButton(FabButton)}

@@ -30,7 +30,7 @@ function Router() {
 						<Route path="dashboard1" element={<Dashboard1Page />} />
 						<Route path="dashboard2" element={<Dashboard2Page />} />
 					</Route>
-
+					<Route path="404" element={<Page404 />} />
 					<Route path="*" element={<Page404 />} />
 				</Routes>
 			</ScrollToTopOnRouteChange>
