@@ -22,7 +22,7 @@ function CustomersOverviewCard() {
 		<Card>
 			<CardHeader title="Customer Overview" size="small">
 				<ButtonGroup
-					variant="text"
+					variant="outlined"
 					size="small"
 					aria-label="temporaly button group"
 				>
@@ -57,12 +57,8 @@ function TabButton({ children, tabKey, changeTab, activeView }) {
 	return (
 		<Button
 			onClick={() => changeTab(tabKey)}
-			sx={{
-				...(activeView === tabKey && {
-					outline: (theme) =>
-						`2px solid ${theme.palette.primary.main}`,
-				}),
-			}}
+			disableElevation
+			variant={activeView === tabKey ? 'contained' : 'outlined'}
 		>
 			{children}
 		</Button>

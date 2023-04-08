@@ -16,6 +16,9 @@ const Dashboard1Page = withLazyLoadably(
 const Dashboard2Page = withLazyLoadably(
 	lazy(() => import('@/pages/dashboard2')),
 );
+const Dashboard4Page = withLazyLoadably(
+	lazy(() => import('@/pages/dashboard4')),
+);
 
 function Router() {
 	return (
@@ -29,6 +32,7 @@ function Router() {
 						<Route index element={<Dashboard1Page />} />
 						<Route path="dashboard1" element={<Dashboard1Page />} />
 						<Route path="dashboard2" element={<Dashboard2Page />} />
+						<Route path="dashboard4" element={<Dashboard4Page />} />
 					</Route>
 					<Route path="404" element={<Page404 />} />
 					<Route path="*" element={<Page404 />} />

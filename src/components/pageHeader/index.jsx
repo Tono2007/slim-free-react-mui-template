@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 function PageHeader({ children, title, sx = {} }) {
 	return (
 		<Stack
+			component="header"
 			my={3}
 			direction="row"
 			justifyContent="space-between"
