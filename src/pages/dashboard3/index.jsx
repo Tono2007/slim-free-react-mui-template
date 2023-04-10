@@ -11,6 +11,7 @@ import SalesOverviewCard from './salesCard';
 import StatsSection from './statsSection';
 import EarningsSection from './earningsSection';
 import SuggestedPeople from './suggestedPeople';
+import ProductsSection from './productsSection';
 
 function Dashboard3() {
 	return (
@@ -38,6 +39,9 @@ function Dashboard3() {
 				</Grid>
 				<Grid item xs={12} sm={6} md={3}>
 					<SuggestedPeople />
+				</Grid>
+				<Grid item xs={12} sm={12} md={12}>
+					<ProductsSection />
 				</Grid>
 				<Grid item xs={12} sm={12} md={12}>
 					<SalesOverviewCard />

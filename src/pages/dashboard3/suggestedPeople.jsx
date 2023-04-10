@@ -1,11 +1,8 @@
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Card from '@mui/material/Card';
-import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
@@ -14,6 +11,8 @@ import Tooltip from '@mui/material/Tooltip';
 import PersonAddAlt1OutlinedIcon from '@mui/icons-material/PersonAddAlt1Outlined';
 
 import CardHeader from '@/components/cardHeader';
+
+import usersData from '@/_mocks/customers';
 
 function SuggestedPeople() {
 	return (
@@ -32,22 +31,21 @@ function SuggestedPeople() {
 					},
 				}}
 			>
-				<UserListItem />
-				<UserListItem />
-				<UserListItem />
-				<UserListItem />
-				<UserListItem />
+				{usersData.slice(0, 5).map((user) => (
+					<UserListItem key={user.id} user={user} />
+				))}
 			</List>
 		</Card>
 	);
 }
 
-function UserListItem() {
+function UserListItem({ user }) {
+	const { avatarImg, name, rol } = user;
 	return (
 		<ListItem disablePadding alignItems="flex-start">
 			<ListItemButton>
 				<ListItemAvatar>
-					<Avatar alt="Remy Sharp" />
+					<Avatar alt="Remy Sharp" src={avatarImg} />
 				</ListItemAvatar>
 				<span style={{ width: '100%' }}>
 					<Typography
@@ -55,9 +53,9 @@ function UserListItem() {
 						fontSize={13}
 						color="primary.main"
 					>
-						Amber Heard
+						{name}
 					</Typography>
-					<Typography variant="caption">Software Engineer</Typography>
+					<Typography variant="caption">{rol}</Typography>
 				</span>
 				<Tooltip title="Add Friend">
 					<IconButton>
