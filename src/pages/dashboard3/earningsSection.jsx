@@ -56,8 +56,11 @@ function EarningsSection() {
 		interval: 10,
 	});
 	return (
-		<Card type="none" sx={{ height: '100%' }}>
-			<Stack direction="column" spacing={1} px={3} pt={3}>
+		<Card
+			type="none"
+			sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+		>
+			<Stack direction="column" spacing={1} px={3} pt={3} flexGrow={1}>
 				<Typography fontSize={30} variant="subtitle1">
 					${counter.toLocaleString()}
 				</Typography>
@@ -82,6 +85,7 @@ function EarningsSection() {
 				</Button>
 			</Stack>
 			<Chart
+				style={{ marginTop: 'auto' }}
 				options={earningsGraphConfig.options}
 				series={earningsGraphConfig.series}
 				type="bar"

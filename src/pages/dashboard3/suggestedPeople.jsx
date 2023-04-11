@@ -31,7 +31,7 @@ function SuggestedPeople() {
 					},
 				}}
 			>
-				{usersData.slice(0, 5).map((user) => (
+				{usersData.slice(0, 6).map((user) => (
 					<UserListItem key={user.id} user={user} />
 				))}
 			</List>
