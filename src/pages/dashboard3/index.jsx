@@ -12,6 +12,7 @@ import StatsSection from './statsSection';
 import EarningsSection from './earningsSection';
 import SuggestedPeople from './suggestedPeople';
 import ProductsSection from './productsSection';
+import ActivitiesCard from './activitiesSection';
 
 function Dashboard3() {
 	return (
@@ -32,7 +33,7 @@ function Dashboard3() {
 					<StatsSection />
 				</Grid>
 				<Grid item xs={12} sm={6} md={4}>
-					fsfd{' '}
+					<ActivitiesCard />
 				</Grid>
 				<Grid item xs={12} sm={6} md={5}>
 					<EarningsSection />
@@ -45,16 +46,6 @@ function Dashboard3() {
 				</Grid>
 				<Grid item xs={12} sm={12} md={12}>
 					<SalesOverviewCard />
-				</Grid>
-				<Grid item xs={12} sm={12} md={6}>
-					<Stack spacing={3} direction="column">
-						fsd
-					</Stack>
-				</Grid>
-				<Grid item xs={12} sm={6} md={3} order={3}>
-					<Stack spacing={3} direction="column">
-						fsd
-					</Stack>
 				</Grid>
 			</Grid>
 		</>

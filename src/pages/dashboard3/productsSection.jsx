@@ -41,8 +41,13 @@ function ProductsSection() {
 						{['Today', 'This Month', 'This Week'].map((tab, i) => (
 							<Button
 								key={i}
+								variant={
+									tab === 'This Week'
+										? 'contained'
+										: 'outlined'
+								}
 								sx={{
-									...(tab === 'Day' && {
+									...(tab === 'This Week' && {
 										outline: (theme) =>
 											`2px solid ${theme.palette.primary.main}`,
 									}),

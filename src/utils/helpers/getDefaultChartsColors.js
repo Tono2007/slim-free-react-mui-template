@@ -9,6 +9,7 @@ const COLORS = {
 	2: [palette.secondary.main, palette.cuaternary.main, palette.primary.main],
 	3: [palette.cuaternary.main, palette.tertiary.main, palette.primary.main],
 	4: [palette.tertiary.main, palette.secondary.main, palette.primary.main],
+	5: [palette.primary.main, palette.secondary.main, palette.cuaternary.main],
 };
 
 function getColors(type) {

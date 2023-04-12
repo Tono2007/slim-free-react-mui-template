@@ -14,7 +14,7 @@ const VARIANTS_CONFIG = {
 	},
 	large: {
 		headerMb: 4,
-		titleMb: 2,
+		titleMb: 1,
 		titleVariant: 'h3',
 	},
 };
