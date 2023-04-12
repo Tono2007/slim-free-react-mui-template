@@ -29,23 +29,23 @@ const NAV_LINKS_CONFIG = [
 		children: [
 			{
 				title: 'Dashboard01',
-				href: '/dashboard1',
+				href: '/dashboards/dashboard1',
 			},
 			{
 				title: 'Dashboard02',
-				href: '/dashboard2',
+				href: '/dashboards/dashboard2',
 			},
 			{
 				title: 'Dashboard03',
-				href: '/dashboard3',
+				href: '/dashboards/dashboard3',
 			},
 			{
 				title: 'Dashboard04',
-				href: '/dashboard4',
+				href: '/dashboards/dashboard4',
 			},
 			{
 				title: 'Dashboard05',
-				href: '/dashboard5',
+				href: '/dashboards/dashboard5',
 			},
 		],
 	},
@@ -73,19 +73,19 @@ const NAV_LINKS_CONFIG = [
 		children: [
 			{
 				title: 'Sign in',
-				href: '/login',
+				href: '/pages/login',
 			},
 			{
 				title: 'Sign up',
-				href: '/login',
+				href: '/pages/login',
 			},
 			{
 				title: 'Edit Profile',
-				href: '/login',
+				href: '/pages/login',
 			},
 			{
 				title: 'Profile',
-				href: '/login',
+				href: '/pages/login',
 			},
 			{
 				title: 'Error Pages',
@@ -93,25 +93,43 @@ const NAV_LINKS_CONFIG = [
 				children: [
 					{
 						title: '404',
-						href: '/dashboard1',
+						href: '/pages/error/404',
 					},
 					{
 						title: '405',
-						href: '/401',
+						href: '/pages/error/404',
 					},
 					{
 						title: '403',
-						href: '/dashboard3',
+						href: '/pages/error/404',
 					},
 					{
 						title: '401',
-						href: '/dashboard5',
+						href: '/pages/error/404',
 					},
 				],
 			},
 			{
-				title: '404 ',
-				href: '/404',
+				title: 'Landing Pages',
+				type: 'group',
+				children: [
+					{
+						title: 'Landing01',
+						href: '/pages/landing/landing1',
+					},
+					{
+						title: 'Landing02',
+						href: '/pages/landing/landing2',
+					},
+					{
+						title: 'Landing03',
+						href: '/pages/landing/landing3',
+					},
+					{
+						title: 'Landing04',
+						href: '/pages/landing/landing4',
+					},
+				],
 			},
 		],
 	},
@@ -123,15 +141,23 @@ const NAV_LINKS_CONFIG = [
 		children: [
 			{
 				title: 'Paleta de Colores',
-				href: '/colors',
+				href: '/theme/colors',
 			},
 			{
 				title: 'Tipografia',
-				href: '/Tipografia',
+				href: '/theme/Tipografia',
 			},
 			{
-				title: 'Custom Components',
-				href: '/Tipografia',
+				title: 'Sombras',
+				href: '/theme/boxShadow',
+			},
+			{
+				title: 'Iconos',
+				href: '/theme/icons',
+			},
+			{
+				title: 'Utilidades',
+				href: '/theme/Tipografia',
 			},
 		],
 	},
@@ -153,16 +179,16 @@ const NAV_LINKS_CONFIG = [
 	{
 		id: 6,
 		type: 'item',
-		title: 'Perfil',
-		Icon: AccountCircleOutlinedIcon,
-		href: '/profile',
+		title: 'Components',
+		Icon: WidgetsOutlinedIcon,
+		href: '/w',
 	},
 	{
 		id: 7,
 		type: 'item',
-		title: 'Widgets',
-		Icon: WidgetsOutlinedIcon,
-		href: '/w',
+		title: 'Perfil',
+		Icon: AccountCircleOutlinedIcon,
+		href: '/profile',
 	},
 ];
 
