@@ -22,19 +22,23 @@ const Dashboard3Page = withLazyLoadably(
 const Dashboard4Page = withLazyLoadably(
 	lazy(() => import('@/pages/dashboard4')),
 );
+const Dashboard5Page = withLazyLoadably(
+	lazy(() => import('@/pages/dashboard5')),
+);
+
 function Router() {
 	return (
 		<BrowserRouter>
 			<ScrollToTopOnRouteChange>
 				<Routes>
 					<Route path="/" element={<MinimalLayout />}>
-						<Route path="/pages/">
+						<Route path="pages/">
 							<Route path="login" element={<LoginPage />} />
 						</Route>
 					</Route>
 					<Route path="/" element={<MainLayout />}>
 						<Route index element={<Dashboard1Page />} />
-						<Route path="/dashboards/">
+						<Route path="dashboards/">
 							<Route
 								path="dashboard1"
 								element={<Dashboard1Page />}
@@ -51,8 +55,13 @@ function Router() {
 								path="dashboard4"
 								element={<Dashboard4Page />}
 							/>
+							<Route
+								path="dashboard5"
+								element={<Dashboard5Page />}
+							/>
 						</Route>
-						<Route path="/pages/">
+
+						<Route path="pages/">
 							<Route path="error/">
 								<Route path="404" element={<Page404 />} />
 							</Route>

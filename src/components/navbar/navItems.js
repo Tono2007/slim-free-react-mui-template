@@ -145,7 +145,7 @@ const NAV_LINKS_CONFIG = [
 			},
 			{
 				title: 'Tipografia',
-				href: '/theme/Tipografia',
+				href: '/theme/typography',
 			},
 			{
 				title: 'Sombras',
@@ -157,7 +157,7 @@ const NAV_LINKS_CONFIG = [
 			},
 			{
 				title: 'Utilidades',
-				href: '/theme/Tipografia',
+				href: '/theme/utils',
 			},
 		],
 	},

@@ -8,12 +8,12 @@ const VARIANTS_CONFIG = {
 		titleVariant: 'h5',
 	},
 	medium: {
-		headerMb: 4,
+		headerMb: 3,
 		titleMb: 1,
 		titleVariant: 'h4',
 	},
 	large: {
-		headerMb: 4,
+		headerMb: 3,
 		titleMb: 1,
 		titleVariant: 'h3',
 	},
