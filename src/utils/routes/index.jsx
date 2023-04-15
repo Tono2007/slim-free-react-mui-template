@@ -25,6 +25,15 @@ const Dashboard4Page = withLazyLoadably(
 const Dashboard5Page = withLazyLoadably(
 	lazy(() => import('@/pages/dashboard5')),
 );
+const ThemeTypographyPage = withLazyLoadably(
+	lazy(() => import('@/pages/themeTypography')),
+);
+const ThemeColorsPage = withLazyLoadably(
+	lazy(() => import('@/pages/themeColors')),
+);
+const ThemeShadowPage = withLazyLoadably(
+	lazy(() => import('@/pages/themeShadow')),
+);
 
 function Router() {
 	return (
@@ -60,7 +69,20 @@ function Router() {
 								element={<Dashboard5Page />}
 							/>
 						</Route>
-
+						<Route path="theme/">
+							<Route
+								path="typography"
+								element={<ThemeTypographyPage />}
+							/>
+							<Route
+								path="colors"
+								element={<ThemeColorsPage />}
+							/>
+							<Route
+								path="boxShadow"
+								element={<ThemeShadowPage />}
+							/>
+						</Route>
 						<Route path="pages/">
 							<Route path="error/">
 								<Route path="404" element={<Page404 />} />
