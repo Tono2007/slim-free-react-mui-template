@@ -21,7 +21,26 @@ function SalesOverviewCard() {
 	return (
 		<Card>
 			<CardHeader title="Sales Overview" size="small">
-				<ButtonGroup
+				<Stack direction="row" alignItems="center" spacing={0}>
+					{['day', 'week', 'month'].map((tab, i) => (
+						<Button
+							key={i}
+							size="small"
+							onClick={() => setViewBy(tab)}
+							variant={viewBy === tab ? 'outlined' : 'text'}
+							sx={{
+								textTransform: 'capitalize',
+								color:
+									viewBy === tab
+										? 'primary.main'
+										: 'text.secondary',
+							}}
+						>
+							{tab}
+						</Button>
+					))}
+				</Stack>
+				{/* <ButtonGroup
 					variant="outlined"
 					size="small"
 					aria-label="temporaly button group"
@@ -42,12 +61,12 @@ function SalesOverviewCard() {
 					</TabButton>
 					<TabButton
 						changeTab={changeTab}
-						tabKey="month"
+						tabKey="Month"
 						activeView={viewBy}
 					>
 						Month
 					</TabButton>
-				</ButtonGroup>
+				</ButtonGroup> */}
 			</CardHeader>
 			<CustomersChart activeView={viewBy} />
 		</Card>

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Card from '@mui/material/Card';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -26,11 +28,19 @@ function TodoListCard() {
 
 function TodoItem(props) {
 	const { defaultChecked = false, text, color = 'primary' } = props;
+	const [checked, setChecked] = useState(defaultChecked);
 	return (
 		<FormControlLabel
+			slotProps={{
+				typography: {
+					sx: { textDecoration: checked ? 'line-through' : '' },
+				},
+			}}
 			control={
 				<Checkbox
+					onChange={(e) => setChecked(e.target.checked)}
 					defaultChecked={defaultChecked}
+					value={checked}
 					size="small"
 					sx={{ p: 0.5, px: 1 }}
 					color={color}

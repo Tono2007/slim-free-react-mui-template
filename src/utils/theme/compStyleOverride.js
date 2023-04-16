@@ -16,6 +16,10 @@ export default {
 		},
 	},
 	MuiPaper: {
+		defaultProps: {
+			elevation: 26,
+			variant: 'outlinedElevation',
+		},
 		variants: [
 			{
 				props: { variant: 'outlinedElevation' },
@@ -104,6 +108,9 @@ export default {
 	MuiOutlinedInput: {
 		styleOverrides: {
 			root: ({ ownerState }) => ({
+				'&:hover': {
+					backgroundColor: '#eee8',
+				},
 				/* ...(ownerState.color === 'primary' && {
 					'&.MuiOutlinedInput-notchedOutline': {
 						borderColor: palette.secondary.light,

@@ -6,6 +6,7 @@ import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
+import Box from '@mui/material/Box';
 
 import PageHeader from '@/components/pageHeader';
 import CardHeader from '@/components/cardHeader';
@@ -32,8 +33,35 @@ function ThemeShadow() {
 				<CardHeader title="Basic Shadow">
 					<MuiLogo link={link} />
 				</CardHeader>
+				<Grid container spacing={8}>
+					{Array.from({ length: 28 }, (_, i) => i)
+						.slice(1)
+						.map((shadow, i) => (
+							<Grid item xs={12} sm={4} md={3} lg={2} key={i}>
+								<ColorBox shadow={shadow} />
+							</Grid>
+						))}
+				</Grid>
 			</Card>
 		</>
+	);
+}
+
+function ColorBox({ shadow }) {
+	return (
+		<Box
+			sx={{
+				boxShadow: shadow,
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+				bgcolor: '#fafafa',
+				py: 7,
+				color: 'grey.800',
+			}}
+		>
+			<Typography>boxShadow: {shadow}</Typography>
+		</Box>
 	);
 }
 

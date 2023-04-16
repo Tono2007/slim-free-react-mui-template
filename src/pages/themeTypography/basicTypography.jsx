@@ -17,12 +17,12 @@ function BasicTypography() {
 			<Card type="section">
 				<CardHeader
 					title="Basic Typography"
-					subtitle="Basic Typography examples. Rubik Font."
+					subtitle="Basic Typography examples."
 				>
 					<MuiLogo link={link} />
 				</CardHeader>
 				<Grid container spacing={2}>
-					<Grid item xs={12} sm={12}>
+					<Grid item xs={12} sm={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Heading</Typography>
 							<Divider sx={{ my: 2 }} />
@@ -46,7 +46,7 @@ function BasicTypography() {
 							</Typography>
 						</TypographyCard>
 					</Grid>
-					<Grid item xs={12} sm={12}>
+					<Grid item xs={12} sm={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">
 								Subtitles
@@ -64,7 +64,7 @@ function BasicTypography() {
 							</Typography>
 						</TypographyCard>
 					</Grid>
-					<Grid item xs={12} sm={12}>
+					<Grid item xs={12} sm={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Body</Typography>
 							<Divider sx={{ my: 2 }} />
@@ -86,7 +86,7 @@ function BasicTypography() {
 							</Typography>
 						</TypographyCard>
 					</Grid>
-					<Grid item xs={12} sm={12}>
+					<Grid item xs={12} sm={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Extra</Typography>
 							<Divider sx={{ my: 2 }} />
@@ -116,13 +116,29 @@ function BasicTypography() {
 							</Link>
 						</TypographyCard>
 					</Grid>
-				</Grid>
-			</Card>
-			<Card type="section">
-				<CardHeader title="Typography" />
-				<Divider sx={{ mb: 6 }} />
-				<Grid container spacing={2}>
-					<Grid item xs={6}>
+					<Grid item xs={12} sm={12} md={12}>
+						<TypographyCard variant="outlined">
+							<Typography variant="subtitle1">
+								Font Family
+							</Typography>
+							<Divider sx={{ my: 2 }} />
+							<Typography variant="h2" gutterBottom>
+								Rubik Font
+							</Typography>
+							<Stack spacing={2} direction="row">
+								<Typography variant="body1" fontWeight="light">
+									Light
+								</Typography>
+								<Typography variant="body1" fontWeight="medium">
+									medium
+								</Typography>
+								<Typography variant="body1" fontWeight="bold">
+									bold
+								</Typography>
+							</Stack>
+						</TypographyCard>
+					</Grid>
+					<Grid item xs={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">
 								Text Color
@@ -151,7 +167,7 @@ function BasicTypography() {
 							</Typography>
 						</TypographyCard>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item xs={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">
 								Theme Color
@@ -188,6 +204,10 @@ function BasicTypography() {
 						</TypographyCard>
 					</Grid>
 				</Grid>
+			</Card>
+			<Card type="section">
+				<CardHeader title="Dark Theme Typography" subtitle="WIP" />
+				<Divider sx={{ mb: 6 }} />
 			</Card>
 		</Stack>
 	);

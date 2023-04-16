@@ -17,6 +17,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 
 // Icons
 import CloseIcon from '@mui/icons-material/Close';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 // data
 import notifications from '@/_mocks/notifications';
@@ -200,6 +201,7 @@ function Notification({ notification }) {
 						{notification?.title}
 					</Typography>
 					<Typography variant="caption">
+						<AccessTimeIcon fontSize="inherit" sx={{ mr: 0.3 }} />
 						{notification?.date}
 					</Typography>
 				</Stack>

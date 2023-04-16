@@ -81,6 +81,7 @@ function Header() {
 
 function TabsNav() {
 	const [value, setValue] = useState(0);
+	const [slot, setSlot] = useState('week');
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
@@ -102,13 +103,31 @@ function TabsNav() {
 				<Tab label="Products" />
 				<Tab label="Misc" />
 				<Box flexGrow={1} />
-				<Stack
+				{/* <Stack
 					spacing={0}
 					direction="row"
 					divider={<Divider orientation="vertical" flexItem />}
 				>
 					{['Today', 'This Week', 'This Month'].map((tab, i) => (
 						<Button key={i} size="small">
+							{tab}
+						</Button>
+					))}
+				</Stack> */}
+				<Stack direction="row" alignItems="center" spacing={0}>
+					{['Today', 'This Week', 'This Month'].map((tab, i) => (
+						<Button
+							key={i}
+							size="small"
+							onClick={() => setSlot(tab)}
+							variant={slot === tab ? 'outlined' : 'text'}
+							sx={{
+								color:
+									slot === tab
+										? 'primary.main'
+										: 'text.secondary',
+							}}
+						>
 							{tab}
 						</Button>
 					))}

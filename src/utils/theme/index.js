@@ -27,4 +27,6 @@ const themeOptions = {
 const theme = createTheme(themeOptions);
 theme.shadows[25] = '0px 10px 10px -15px #0005';
 theme.shadows[26] = '0px 15px 10px -15px #0003';
+theme.shadows[27] = '0px 15px 12px -15px #0004';
+
 export default theme;
