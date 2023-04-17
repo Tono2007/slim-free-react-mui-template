@@ -12,6 +12,9 @@ import MenuList from '@mui/material/MenuList';
 import Collapse from '@mui/material/Collapse';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
+import Paper from '@mui/material/Paper';
+import Fade from '@mui/material/Fade';
+import Popper from '@mui/material/Popper';
 
 // Icons
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -27,202 +30,195 @@ function NavMenu({ minWidth = 200, menuChildren = [], Icon, title }) {
 		location.pathname.includes(el.href),
 	);
 
-	const handleClose = () => {
+	const handlePopoverClose = () => {
 		setAnchorEl(null);
 	};
 	useEffect(() => {
-		handleClose();
+		handlePopoverClose();
 	}, [location]);
 
 	const handleClick = (event) => {
 		setAnchorEl(event.currentTarget);
 	};
+	const handlePopoverOpen = (event) => {
+		setAnchorEl(event.currentTarget);
+	};
 
+	const open = Boolean(anchorEl);
 	return (
-		<>
-			<Menu
-				sx={{
-					'& .MuiMenuItem-root': {
-						// mt: 0.5,
-					},
-				}}
+		<NavItemButton
+			selected={match}
+			onClick={handleClick}
+			aria-owns={open ? `${title} popover` : undefined}
+			aria-haspopup="true"
+			disableRipple
+			onMouseEnter={handlePopoverOpen}
+			onMouseLeave={handlePopoverClose}
+		>
+			<NavItem showExpand Icon={Icon} title={title} selected={match} />
+			<Popper
+				open={open}
 				anchorEl={anchorEl}
-				anchorOrigin={{
-					vertical: 'bottom',
-					horizontal: 'left',
-				}}
-				transformOrigin={{
-					vertical: 'top',
-					horizontal: 'left',
-				}}
-				open={Boolean(anchorEl)}
-				onClose={handleClose}
+				placement="bottom-start"
+				keepMounted
+				onClose={handlePopoverClose}
+				disablePortal
+				sx={{ zIndex: 9999 }}
+				transition
 			>
-				<MenuList sx={{ minWidth, width: 'auto', px: 1 }}>
-					{menuChildren.map((item, i) => {
-						const {
-							href = '',
-							title,
-							type = 'item',
-							children,
-						} = item;
-						const match = useMatch({ path: href });
-						switch (type) {
-							case 'group':
-								return (
-									<NavCollapse
-										key={i}
-										title={title}
-										menuChildren={children}
-									/>
-								);
-							case 'item':
-								return (
-									<MenuItem
-										key={i}
-										onClick={handleClose}
-										component={RouterLink}
-										to={href}
-										sx={{ fontSize: MENUITEM_FONTSIZE }}
-										selected={Boolean(match)}
-									>
-										{title}
-									</MenuItem>
-								);
-							default:
-								return (
-									<Typography
-										variant="h6"
-										color="error"
-										align="center"
-									>
-										Menu Items Error
-									</Typography>
-								);
-						}
-					})}
-				</MenuList>
-			</Menu>
-			<NavItemButton selected={match} onClick={handleClick}>
-				<NavItem
-					showExpand
-					Icon={Icon}
-					title={title}
-					selected={match}
-				/>
-			</NavItemButton>
-		</>
+				{({ TransitionProps }) => (
+					<Fade {...TransitionProps} timeout={350}>
+						<Paper>
+							<MenuList sx={{ minWidth, width: 'auto', px: 1 }}>
+								{menuChildren.map((item, i) => {
+									const {
+										href = '',
+										title,
+										type = 'item',
+										children,
+									} = item;
+									const match = useMatch({ path: href });
+									switch (type) {
+										case 'group':
+											return (
+												<NavCollapse
+													key={i}
+													title={title}
+													menuChildren={children}
+												/>
+											);
+										case 'item':
+											return (
+												<MenuItem
+													key={i}
+													component={RouterLink}
+													to={href}
+													sx={{
+														fontSize:
+															MENUITEM_FONTSIZE,
+													}}
+													selected={Boolean(match)}
+												>
+													{title}
+												</MenuItem>
+											);
+										default:
+											return (
+												<Typography
+													variant="h6"
+													color="error"
+													align="center"
+												>
+													Menu Items Error
+												</Typography>
+											);
+									}
+								})}
+							</MenuList>
+						</Paper>
+					</Fade>
+				)}
+			</Popper>
+		</NavItemButton>
 	);
 }
 
 function NavCollapse({ title, menuChildren, level = 1 }) {
 	const { pathname } = useLocation();
-	const location = useLocation();
+	const match = menuChildren.some((el) => pathname.includes(el.href));
+	const [anchorEl, setAnchorEl] = useState(null);
 
-	const [open, setOpen] = useState(false);
-	const [selected, setSelected] = useState(false);
-
-	const match = menuChildren.some((el) =>
-		location.pathname.includes(el.href),
-	);
-	useEffect(() => {
-		const match = menuChildren.some((el) =>
-			location.pathname.includes(el.href),
-		);
-		setOpen(match);
-		setSelected(match);
-	}, []);
-
-	const handleClick = () => {
-		setOpen(!open);
-		setSelected(!selected);
+	const handlePopoverClose = () => {
+		setAnchorEl(null);
 	};
 
+	const handlePopoverOpen = (event) => {
+		setAnchorEl(event.currentTarget);
+	};
+	const open = Boolean(anchorEl);
 	return (
-		<>
-			<MenuItem
-				onClick={handleClick}
-				sx={{
-					fontSize: MENUITEM_FONTSIZE,
-				}}
-				/* selected={open || Boolean(selected)} */
+		<MenuItem
+			sx={{
+				fontSize: MENUITEM_FONTSIZE,
+			}}
+			selected={open || match}
+			aria-owns={open ? `${title} popover` : undefined}
+			aria-haspopup="true"
+			onMouseEnter={handlePopoverOpen}
+			onMouseLeave={handlePopoverClose}
+		>
+			<ListItemText
+				primary={
+					<Typography variant="inherit" align="left">
+						{title}
+					</Typography>
+				}
+			/>
+			<ExpandMoreIcon fontSize="small" />
+			<Popper
+				open={open}
+				anchorEl={anchorEl}
+				placement="right-start"
+				keepMounted
+				onClose={handlePopoverClose}
+				disablePortal
+				sx={{ zIndex: 9999 }}
+				transition
 			>
-				<ListItemText
-					primary={<Typography variant="inherit">{title}</Typography>}
-				/>
-				<ExpandMoreIcon fontSize="small" />
-			</MenuItem>
-			<Collapse in={open} timeout="auto">
-				<MenuList
-					component="div"
-					sx={{
-						'&>a': {
-							ml: 2 * level,
-							borderTopLeftRadius: 0,
-							borderBottomLeftRadius: 0,
-							borderLeft: 1,
-							borderColor: 'primary.light',
-						},
-					}}
-				>
-					{menuChildren.map((item, i) => {
-						const {
-							href = '',
-							title,
-							type = 'item',
-							children,
-						} = item;
-						const match = useMatch({ path: href });
-						switch (type) {
-							case 'group':
-								return (
-									<NavCollapse
-										key={i}
-										title={title}
-										menuChildren={children}
-										level={level + 1}
-									/>
-								);
-							case 'item':
-								return (
-									<MenuItem
-										key={i}
-										component={RouterLink}
-										to={href}
-										selected={Boolean(match)}
-										sx={
-											{
-												/* '&::before': {
-												content: '""',
-												display: 'inline-block',
-												borderRadius: '50%',
-												bgcolor: 'primary.main',
-												width: '6px',
-												height: '6px',
-												mb: '2px',
-												mr: 2,
-											}, */
-											}
-										}
-									>
-										{item.title}
-									</MenuItem>
-								);
-							default:
-								return (
-									<Typography
-										variant="h6"
-										color="error"
-										align="center"
-									>
-										Menu Items Error
-									</Typography>
-								);
-						}
-					})}
-				</MenuList>
-			</Collapse>
-		</>
+				{({ TransitionProps }) => (
+					<Fade {...TransitionProps} timeout={350}>
+						<Paper>
+							<MenuList>
+								{menuChildren.map((item, i) => {
+									const {
+										href = '',
+										title,
+										type = 'item',
+										children,
+									} = item;
+									const match = useMatch({ path: href });
+									switch (type) {
+										case 'group':
+											return (
+												<NavCollapse
+													key={i}
+													title={title}
+													menuChildren={children}
+													level={level + 1}
+												/>
+											);
+										case 'item':
+											return (
+												<MenuItem
+													key={i}
+													component={RouterLink}
+													to={href}
+													selected={Boolean(match)}
+													sx={{
+														fontSize: 'inherit',
+													}}
+												>
+													{item.title}
+												</MenuItem>
+											);
+										default:
+											return (
+												<Typography
+													variant="h6"
+													color="error"
+													align="center"
+												>
+													Nav Menu Items Error
+												</Typography>
+											);
+									}
+								})}
+							</MenuList>
+						</Paper>
+					</Fade>
+				)}
+			</Popper>
+		</MenuItem>
 	);
 }
 

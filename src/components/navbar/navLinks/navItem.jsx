@@ -63,7 +63,7 @@ export function NavItem({ Icon, title, showExpand = false, selected = false }) {
 	);
 }
 
-export function NavItemButton({ children, selected, ...rest }) {
+export function NavItemButton({ children, selected, sx, ...rest }) {
 	return (
 		<ButtonBase
 			sx={{
@@ -71,11 +71,12 @@ export function NavItemButton({ children, selected, ...rest }) {
 				...(selected && {
 					backgroundImage: (theme) =>
 						`linear-gradient(90deg, ${theme.palette.primary[300]} 0%,${theme.palette.primary.dark} 100% )`,
+					// bgcolor: selected ? '#000' : 'transparent',
 				}),
-				// bgcolor: match ? '#000' : 'transparent',
 				'&:hover': {
 					bgcolor: (theme) => alpha(theme.palette.primary.light, 0.1),
 				},
+				...sx,
 			}}
 			{...rest}
 		>

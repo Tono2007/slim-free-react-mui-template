@@ -1,3 +1,4 @@
+import { v4 as uuid } from 'uuid';
 // Icons
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
@@ -22,7 +23,7 @@ import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 
 const NAV_LINKS_CONFIG = [
 	{
-		id: 1,
+		id: uuid(),
 		type: 'group',
 		title: 'Dashboard',
 		Icon: BarChartOutlinedIcon,
@@ -50,7 +51,7 @@ const NAV_LINKS_CONFIG = [
 		],
 	},
 	{
-		id: 2,
+		id: uuid(),
 		type: 'group',
 		title: 'UI Elements',
 		Icon: GridViewOutlinedIcon,
@@ -63,10 +64,62 @@ const NAV_LINKS_CONFIG = [
 				title: 'Forms',
 				href: '/producers/new',
 			},
+			{
+				title: 'Level 0',
+				type: 'group',
+				children: [
+					{
+						title: 'Level 1a',
+						href: '/1a',
+					},
+					{
+						title: 'Level 1b',
+						type: 'group',
+						children: [
+							{
+								title: 'Level 2a',
+								href: '/2a',
+							},
+							{
+								title: 'Level 2b',
+								href: '/2b',
+							},
+							{
+								title: 'Level 2c',
+								type: 'group',
+								children: [
+									{
+										title: 'Level 3a',
+										href: '/3a',
+									},
+									{
+										title: 'Level 3b',
+										type: 'group',
+										children: [
+											{
+												title: 'Level 4a',
+												href: '/3b',
+											},
+										],
+									},
+									{
+										title: 'Level 3c',
+										href: '/3c',
+									},
+								],
+							},
+						],
+					},
+					{
+						title: 'Level 1c',
+						href: '/1c',
+					},
+				],
+			},
 		],
 	},
 	{
-		id: 3,
+		id: uuid(),
 		type: 'group',
 		title: 'Pages',
 		Icon: AutoStoriesOutlinedIcon,
@@ -88,6 +141,7 @@ const NAV_LINKS_CONFIG = [
 				href: '/pages/login',
 			},
 			{
+				id: uuid(),
 				title: 'Error Pages',
 				type: 'group',
 				children: [
@@ -110,6 +164,7 @@ const NAV_LINKS_CONFIG = [
 				],
 			},
 			{
+				id: uuid(),
 				title: 'Landing Pages',
 				type: 'group',
 				children: [
@@ -134,7 +189,7 @@ const NAV_LINKS_CONFIG = [
 		],
 	},
 	{
-		id: 4,
+		id: uuid(),
 		type: 'group',
 		title: 'Theme',
 		Icon: PaletteOutlinedIcon,
@@ -152,9 +207,13 @@ const NAV_LINKS_CONFIG = [
 				href: '/theme/boxShadow',
 			},
 			{
+				title: 'Paper',
+				href: '/theme/boxShadow',
+			},
+			/* {
 				title: 'Iconos',
 				href: '/theme/icons',
-			},
+			}, */
 			{
 				title: 'Utilidades',
 				href: '/theme/utils',
@@ -162,7 +221,7 @@ const NAV_LINKS_CONFIG = [
 		],
 	},
 	{
-		id: 5,
+		id: uuid(),
 		type: 'group',
 		title: 'Apps',
 		Icon: InventoryOutlinedIcon,
@@ -177,14 +236,15 @@ const NAV_LINKS_CONFIG = [
 		],
 	},
 	{
-		id: 6,
+		id: uuid(),
 		type: 'item',
 		title: 'Components',
+		// title: 'Components/Sample Tab',
 		Icon: WidgetsOutlinedIcon,
 		href: '/w',
 	},
 	{
-		id: 7,
+		id: uuid(),
 		type: 'item',
 		title: 'Perfil',
 		Icon: AccountCircleOutlinedIcon,
