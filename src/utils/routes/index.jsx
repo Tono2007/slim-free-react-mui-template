@@ -34,6 +34,7 @@ const ThemeColorsPage = withLazyLoadably(
 const ThemeShadowPage = withLazyLoadably(
 	lazy(() => import('@/pages/themeShadow')),
 );
+const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
 
 function Router() {
 	return (
@@ -87,6 +88,14 @@ function Router() {
 							<Route path="error/">
 								<Route path="404" element={<Page404 />} />
 							</Route>
+						</Route>
+					</Route>
+					<Route
+						path="/"
+						element={<MainLayout container={false} pb={false} />}
+					>
+						<Route path="pages/">
+							<Route path="wip" element={<WIPPage />} />
 						</Route>
 					</Route>
 					<Route path="*" element={<Page404 />} />

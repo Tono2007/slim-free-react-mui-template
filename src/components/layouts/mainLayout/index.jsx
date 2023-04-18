@@ -27,17 +27,17 @@ function FabButton() {
 		</Fab>
 	);
 }
-function MainLayout() {
+function MainLayout({ container = 'lg', pb = true }) {
 	const location = useLocation();
 	return (
 		<Box display="flex" minHeight="100vh" flexDirection="column">
 			<Header />
 			<Container
-				maxWidth="lg"
+				maxWidth={container}
 				component="main"
 				sx={{
 					flex: '1 0 auto',
-					pb: 5,
+					...(pb && { pb: 5 }),
 				}}
 			>
 				{/* <WidthPageTransition location={location.key}>

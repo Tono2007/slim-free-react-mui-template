@@ -133,6 +133,10 @@ const NAV_LINKS_CONFIG = [
 				href: '/pages/login',
 			},
 			{
+				title: 'WIP',
+				href: '/pages/wip',
+			},
+			{
 				title: 'Edit Profile',
 				href: '/pages/login',
 			},
@@ -238,8 +242,8 @@ const NAV_LINKS_CONFIG = [
 	{
 		id: uuid(),
 		type: 'item',
-		title: 'Components',
-		// title: 'Components/Sample Tab',
+		// 	title: 'Components',
+		title: 'Sample Tab',
 		Icon: WidgetsOutlinedIcon,
 		href: '/w',
 	},
