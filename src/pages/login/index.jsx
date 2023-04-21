@@ -89,7 +89,7 @@ function LoginPage() {
 					variant="outlined"
 					fullWidth
 					color="primary"
-					to="/signup"
+					to="/pages/signup"
 					size="small"
 					component={RouterLink}
 				>

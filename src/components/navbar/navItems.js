@@ -65,6 +65,14 @@ const NAV_LINKS_CONFIG = [
 				href: '/producers/new',
 			},
 			{
+				title: 'Paper',
+				href: '/theme/components/paper',
+			},
+			{
+				title: 'Card',
+				href: '/theme/components/paper',
+			},
+			{
 				title: 'Level 0',
 				type: 'group',
 				children: [
@@ -130,7 +138,7 @@ const NAV_LINKS_CONFIG = [
 			},
 			{
 				title: 'Sign up',
-				href: '/pages/login',
+				href: '/pages/signup',
 			},
 			{
 				title: 'WIP',
@@ -210,10 +218,7 @@ const NAV_LINKS_CONFIG = [
 				title: 'Sombras',
 				href: '/theme/boxShadow',
 			},
-			{
-				title: 'Paper',
-				href: '/theme/boxShadow',
-			},
+
 			/* {
 				title: 'Iconos',
 				href: '/theme/icons',

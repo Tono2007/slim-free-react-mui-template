@@ -10,6 +10,7 @@ import MainLayout from '@/components/layouts/mainLayout';
 import Page404 from '@/pages/404';
 
 const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
+const SignupPage = withLazyLoadably(lazy(() => import('@/pages/signup')));
 const Dashboard1Page = withLazyLoadably(
 	lazy(() => import('@/pages/dashboard1')),
 );
@@ -44,6 +45,7 @@ function Router() {
 					<Route path="/" element={<MinimalLayout />}>
 						<Route path="pages/">
 							<Route path="login" element={<LoginPage />} />
+							<Route path="signup" element={<SignupPage />} />
 						</Route>
 					</Route>
 					<Route path="/" element={<MainLayout />}>
