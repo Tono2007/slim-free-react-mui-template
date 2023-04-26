@@ -53,25 +53,64 @@ const NAV_LINKS_CONFIG = [
 	{
 		id: uuid(),
 		type: 'group',
-		title: 'UI Elements',
+		title: 'Components',
 		Icon: GridViewOutlinedIcon,
 		children: [
-			{
-				title: 'Buttons',
-				href: '/producers',
-			},
 			{
 				title: 'Forms',
 				href: '/producers/new',
 			},
 			{
-				title: 'Paper',
-				href: '/theme/components/paper',
+				title: 'Tables',
+				href: '/producers/new',
 			},
 			{
-				title: 'Card',
-				href: '/theme/components/paper',
+				title: 'Modal',
+				href: '/producers/new',
 			},
+			{
+				title: 'Loader',
+				href: '/producers/new',
+			},
+			{
+				title: 'Alerts/Snackbar/Toasts',
+				href: '/producers/new',
+			},
+			{
+				title: 'Carousel',
+				href: '/producers/new',
+			},
+			{
+				title: 'Navigation/Navbar',
+				href: '/producers/new',
+			},
+			{
+				title: 'UI Elements',
+				type: 'group',
+				children: [
+					{
+						title: 'Card',
+						href: '/theme/components/paper',
+					},
+					{
+						title: 'Menu',
+						href: '/theme/components/paper',
+					},
+					{
+						title: 'Paper',
+						href: '/components/ui/paper',
+					},
+					{
+						title: 'Buttons',
+						href: '/components/ui/buttons',
+					},
+					{
+						title: 'Inputs',
+						href: '/components/ui/inputs',
+					},
+				],
+			},
+
 			{
 				title: 'Level 0',
 				type: 'group',

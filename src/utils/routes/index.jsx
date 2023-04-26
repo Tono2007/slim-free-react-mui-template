@@ -35,6 +35,7 @@ const ThemeColorsPage = withLazyLoadably(
 const ThemeShadowPage = withLazyLoadably(
 	lazy(() => import('@/pages/themeShadow')),
 );
+const SamplePage = withLazyLoadably(lazy(() => import('@/pages/sample')));
 const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
 
 function Router() {
@@ -50,6 +51,8 @@ function Router() {
 					</Route>
 					<Route path="/" element={<MainLayout />}>
 						<Route index element={<Dashboard1Page />} />
+						<Route path="samplePage" element={<SamplePage />} />
+
 						<Route path="dashboards/">
 							<Route
 								path="dashboard1"
