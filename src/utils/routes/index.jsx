@@ -7,33 +7,33 @@ import withLazyLoadably from '@hocs/withLazyLoadably';
 import MinimalLayout from '@/components/layouts/minimalLayout';
 import MainLayout from '@/components/layouts/mainLayout';
 
-import Page404 from '@/pages/404';
+import Page404 from '@/pages/errorPages/404';
 
 const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
 const SignupPage = withLazyLoadably(lazy(() => import('@/pages/signup')));
 const Dashboard1Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboard1')),
+	lazy(() => import('@/pages/dashboardsPages/dashboard1')),
 );
 const Dashboard2Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboard2')),
+	lazy(() => import('@/pages/dashboardsPages/dashboard2')),
 );
 const Dashboard3Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboard3')),
+	lazy(() => import('@/pages/dashboardsPages/dashboard3')),
 );
 const Dashboard4Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboard4')),
+	lazy(() => import('@/pages/dashboardsPages/dashboard4')),
 );
 const Dashboard5Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboard5')),
+	lazy(() => import('@/pages/dashboardsPages/dashboard5')),
 );
 const ThemeTypographyPage = withLazyLoadably(
-	lazy(() => import('@/pages/themeTypography')),
+	lazy(() => import('@/pages/themePages/themeTypography')),
 );
 const ThemeColorsPage = withLazyLoadably(
-	lazy(() => import('@/pages/themeColors')),
+	lazy(() => import('@/pages/themePages/themeColors')),
 );
 const ThemeShadowPage = withLazyLoadably(
-	lazy(() => import('@/pages/themeShadow')),
+	lazy(() => import('@/pages/themePages/themeShadow')),
 );
 const SamplePage = withLazyLoadably(lazy(() => import('@/pages/sample')));
 const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
