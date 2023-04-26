@@ -98,7 +98,7 @@ function UserTypeCard({
 			width="100%"
 			border={0}
 			py={1}
-			px={2}
+			px={{ xs: 1, sm: 2 }}
 			sx={{
 				cursor: 'pointer',
 				bgcolor: 'background.paper',
@@ -118,6 +118,7 @@ function UserTypeCard({
 			<Icon
 				{...(userTypeSelected !== type && { color: 'action' })}
 				fontSize="medium"
+				sx={{ display: { xs: 'none', sm: 'block' } }}
 			/>
 
 			<span>

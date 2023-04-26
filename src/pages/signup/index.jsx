@@ -21,6 +21,8 @@ import Facebook from '@/assets/icons/social-facebook.png';
 
 import UserTypeTab from './userTypeTab';
 import PersonalDataTab from './personalDataTab';
+import UserDataFormTab from './userDataFormTab';
+import SuccessfulRegistration from './successfulRegistration';
 
 function Signup() {
 	return (
@@ -35,10 +37,8 @@ function Signup() {
 							alignItems="center"
 							height="100%"
 							color="primary.contrastText"
-							sx={{
-								p: '5%',
-								display: 'flex',
-							}}
+							p="5%"
+							spacing={5}
 						>
 							<Box
 								p={1.5}
@@ -148,7 +148,8 @@ function SignupContainer() {
 	return (
 		<Stack
 			width="100%"
-			p={{ xs: 2, md: 5 }}
+			py={5}
+			px={{ xs: 1, md: 5 }}
 			direction="column"
 			height="100%"
 			maxHeight={{ xs: '100%', md: '80vh' }}
@@ -165,18 +166,17 @@ function SignupContainer() {
 					);
 				})}
 			</Stepper>
-			{activeStep === steps.length ? (
-				{
-					/* <SuccessfulRegistration /> */
-				}
-			) : (
-				<Box p={2} height="100%" pt={4}>
-					{activeStep === 0 && <UserTypeTab />}
-					{activeStep === 1 && <PersonalDataTab />}
-					{/* 
-					{activeStep === 2 && <UserDataFormTab />} */}
-				</Box>
-			)}
+			<Box p={2} height="100%" pt={4}>
+				{activeStep === steps.length ? (
+					<SuccessfulRegistration />
+				) : (
+					<>
+						{activeStep === 0 && <UserTypeTab />}
+						{activeStep === 1 && <PersonalDataTab />}
+						{activeStep === 2 && <UserDataFormTab />}
+					</>
+				)}
+			</Box>
 		</Stack>
 	);
 }

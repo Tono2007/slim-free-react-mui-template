@@ -149,6 +149,10 @@ const NAV_LINKS_CONFIG = [
 				href: '/pages/login',
 			},
 			{
+				title: 'Notifications',
+				href: '/pages/login',
+			},
+			{
 				title: 'Profile',
 				href: '/pages/login',
 			},
@@ -250,7 +254,7 @@ const NAV_LINKS_CONFIG = [
 		// 	title: 'Components',
 		title: 'Sample Tab',
 		Icon: WidgetsOutlinedIcon,
-		href: '/w',
+		href: '/samplePage',
 	},
 	{
 		id: uuid(),

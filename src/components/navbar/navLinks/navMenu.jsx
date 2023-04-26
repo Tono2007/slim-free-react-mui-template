@@ -23,7 +23,7 @@ import { NavItem, NavItemButton } from './navItem';
 
 const MENUITEM_FONTSIZE = 14;
 
-function NavMenu({ minWidth = 200, menuChildren = [], Icon, title }) {
+function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 	const location = useLocation();
 	const [anchorEl, setAnchorEl] = useState(null);
 	const match = menuChildren.some((el) =>
@@ -63,13 +63,13 @@ function NavMenu({ minWidth = 200, menuChildren = [], Icon, title }) {
 				keepMounted
 				onClose={handlePopoverClose}
 				disablePortal
-				sx={{ zIndex: 9999 }}
+				sx={{ zIndex: 9999, minWidth }}
 				transition
 			>
 				{({ TransitionProps }) => (
 					<Fade {...TransitionProps} timeout={350}>
 						<Paper>
-							<MenuList sx={{ minWidth, width: 'auto', px: 1 }}>
+							<MenuList sx={{ px: 1 }}>
 								{menuChildren.map((item, i) => {
 									const {
 										href = '',

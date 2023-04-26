@@ -760,10 +760,6 @@ export default [
 		code: 'MF',
 	},
 	{
-		name: 'Saint Martin',
-		code: 'MF',
-	},
-	{
 		name: 'Saint Pierre and Miquelon',
 		code: 'PM',
 	},
