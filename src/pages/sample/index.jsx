@@ -8,6 +8,7 @@ import Card from '@mui/material/Card';
 
 import PageHeader from '@/components/pageHeader';
 import CardHeader from '@/components/cardHeader';
+import SampleTabsPage from './sampleTabsPage';
 
 function SamplePage() {
 	return (
@@ -28,6 +29,7 @@ function SamplePage() {
 					Optional Action
 				</CardHeader>
 			</Card>
+			<SampleTabsPage />
 		</>
 	);
 }

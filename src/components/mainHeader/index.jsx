@@ -34,6 +34,7 @@ function MainHeader() {
 						alt="logo"
 					/>
 					<Typography
+						component="sub"
 						variant="caption"
 						alignSelf="self-end"
 						display={{ xs: 'none', sm: 'block' }}
