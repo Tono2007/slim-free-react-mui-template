@@ -1,12 +1,31 @@
-# slim-mui-template
+# slim-mui-template &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) ![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)
 
-Modern and clean mui Template
+<div align="center">
+<img src="src/assets/images/logo/png/Color_logo_nobg.png" />  
+</div>
+<h3 align="justify">Modern and clean mui Template
 
-Slim - Modern & Clean Responsive MUI Material-ui Admin Dashboard Template. Using flat and minimal design. It is fully responsive.
+Slim - a free and open source React dashboard template made using the Material UI React component library with aim of flexibility and better customizability.
 
-It can be used for most type of dashboard and app templates like analytics, admin or messenger app for your desktop or mobile applications. Amazing flexibility and reusability.
+Modern & Clean Responsive MUI Material-ui Admin Dashboard Template. Using flat and minimal design. It is fully responsive.
 
-⭐ ⭐ ⭐
+It can be used for most type of dashboard and app templates like analytics, admin or messenger app for your desktop or mobile applications. Amazing flexibility and reusability. **85+** Demo pages </h3>
+
+<div align="center">
+<img src="src/assets/images/logo/png/Color_logotext_nobg.png"  height="50px"/>  
+</div>
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐
+
+-   Support React18.
+-   Professional user interface.
+-   Material UI React components.
+-   Fully responsive, all modern browser supported.
+-   Easy to use code & folder structure.
+-   Flexible & high-Performance code
+-   Hundreds of customized MUI components.
+-   Pre-build useful pages & Apps.
+-   Dark & light mode
 
 ## Free SLIM MUI React js version
 
@@ -32,6 +51,11 @@ git clone https://github.com/Tono2007/slim-free-react-mui-template.git
 -   Code Splitting
 -   Aliases
 -   Light/Dark theme support
+
+![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=Javascript&logoColor=%23F7DF1E)
+![React](https://img.shields.io/badge/React-149eca?style=for-the-badge&logo=react&logoColor=fff)
+![Prettier](https://img.shields.io/badge/Prettier-crimson?style=for-the-badge&logo=Prettier&logoColor=fff)
+![ESLint](https://img.shields.io/badge/ESLint-000?style=for-the-badge&logo=ESLint&logoColor=fff)
 
 ## Issues
 
@@ -64,11 +88,11 @@ We use three different colors
 │   │       ├── LandingLayout  -> Layout for landing components & routers
 │   │       ├── MainLayout     -> Layout for main components & routers
 │   │       ├── MinimalLayout  -> Layout for mimimal components & routers
-│   │   ├── loader   
-│   │   ├── modal     
+│   │   ├── loader
+│   │   ├── modal
 │   │── pages              -> View files for all pages
 │   ├── contexts/redux     -> State management
-│   ├── utils     
+│   ├── utils
 │   │   ├── helpers        -> helpers utilities
 │   │   ├── hocs           -> Custom hocs
 │   │   ├── hooks          -> Custom hooks
