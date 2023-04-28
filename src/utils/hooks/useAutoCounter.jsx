@@ -5,12 +5,7 @@ import { useRef, useEffect, useState } from 'react';
  * @param {("increment" | "decrement")} ["type"] - type of function to call
  */
 
-function useAutoCounter({
-	limiter,
-	increment = 1,
-	interval = 100,
-	type = 'increment',
-}) {
+function useAutoCounter({ limiter, increment = 1, interval = 100, type = 'increment' }) {
 	const [counter, setCounter] = useState(0);
 	const intervalRef = useRef();
 

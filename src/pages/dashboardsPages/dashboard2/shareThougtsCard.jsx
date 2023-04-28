@@ -17,11 +17,7 @@ function ShareThougts() {
 		<Card>
 			<Stack spacing={3} direction="column">
 				<CardHeader title="Share your thoughts" size="small" />
-				<TextField
-					placeholder="What's on your mind?"
-					multiline
-					minRows={4}
-				/>
+				<TextField placeholder="What's on your mind?" multiline minRows={4} />
 				<Stack direction="row" justifyContent="space-between">
 					<Button variant="contained" disableElevation>
 						Share Post

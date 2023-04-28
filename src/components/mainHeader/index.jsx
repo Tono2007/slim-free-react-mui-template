@@ -33,12 +33,7 @@ function MainHeader() {
 						src={logo}
 						alt="logo"
 					/>
-					<Typography
-						component="sub"
-						variant="caption"
-						alignSelf="self-end"
-						display={{ xs: 'none', sm: 'block' }}
-					>
+					<Typography component="sub" variant="caption" alignSelf="self-end" display={{ xs: 'none', sm: 'block' }}>
 						React MUI Template
 					</Typography>
 				</Stack>

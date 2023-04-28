@@ -42,18 +42,9 @@ function Header() {
 				day: 'numeric',
 			})}`}
 		>
-			<Stack
-				divider={<Divider orientation="vertical" flexItem />}
-				direction="row"
-				alignItems="center"
-				spacing={3}
-			>
+			<Stack divider={<Divider orientation="vertical" flexItem />} direction="row" alignItems="center" spacing={3}>
 				<Stack direction="row" spacing={2} alignItems="center">
-					<Typography
-						variant="subtitle1"
-						fontSize={35}
-						display="inline"
-					>
+					<Typography variant="subtitle1" fontSize={35} display="inline">
 						$1,433
 					</Typography>
 					<Typography variant="caption" textTransform="uppercase">
@@ -62,11 +53,7 @@ function Header() {
 					</Typography>
 				</Stack>
 				<Stack direction="row" spacing={2} alignItems="center">
-					<Typography
-						variant="subtitle1"
-						fontSize={35}
-						display="inline"
-					>
+					<Typography variant="subtitle1" fontSize={35} display="inline">
 						$296
 					</Typography>
 					<Typography variant="caption" textTransform="uppercase">
@@ -93,11 +80,7 @@ function TabsNav() {
 				borderColor: 'divider',
 			}}
 		>
-			<Tabs
-				value={value}
-				onChange={handleChange}
-				aria-label="basic tabs example"
-			>
+			<Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
 				<Tab label="Overview" />
 				<Tab label="Employee" />
 				<Tab label="Products" />
@@ -122,10 +105,7 @@ function TabsNav() {
 							onClick={() => setSlot(tab)}
 							variant={slot === tab ? 'outlined' : 'text'}
 							sx={{
-								color:
-									slot === tab
-										? 'primary.main'
-										: 'text.secondary',
+								color: slot === tab ? 'primary.main' : 'text.secondary',
 							}}
 						>
 							{tab}

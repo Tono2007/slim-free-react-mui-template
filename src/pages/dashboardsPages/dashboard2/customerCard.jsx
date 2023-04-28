@@ -21,30 +21,14 @@ function CustomersOverviewCard() {
 	return (
 		<Card>
 			<CardHeader title="Customer Overview" size="small">
-				<ButtonGroup
-					variant="outlined"
-					size="small"
-					aria-label="temporaly button group"
-				>
-					<TabButton
-						changeTab={changeTab}
-						tabKey="day"
-						activeView={viewBy}
-					>
+				<ButtonGroup variant="outlined" size="small" aria-label="temporaly button group">
+					<TabButton changeTab={changeTab} tabKey="day" activeView={viewBy}>
 						Day
 					</TabButton>
-					<TabButton
-						changeTab={changeTab}
-						tabKey="week"
-						activeView={viewBy}
-					>
+					<TabButton changeTab={changeTab} tabKey="week" activeView={viewBy}>
 						Week
 					</TabButton>
-					<TabButton
-						changeTab={changeTab}
-						tabKey="month"
-						activeView={viewBy}
-					>
+					<TabButton changeTab={changeTab} tabKey="month" activeView={viewBy}>
 						Month
 					</TabButton>
 				</ButtonGroup>
@@ -55,11 +39,7 @@ function CustomersOverviewCard() {
 }
 function TabButton({ children, tabKey, changeTab, activeView }) {
 	return (
-		<Button
-			onClick={() => changeTab(tabKey)}
-			disableElevation
-			variant={activeView === tabKey ? 'contained' : 'outlined'}
-		>
+		<Button onClick={() => changeTab(tabKey)} disableElevation variant={activeView === tabKey ? 'contained' : 'outlined'}>
 			{children}
 		</Button>
 	);

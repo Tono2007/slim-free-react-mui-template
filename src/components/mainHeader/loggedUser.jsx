@@ -63,31 +63,19 @@ function LoggedUser() {
 					</Typography>
 					<Divider sx={{ borderColor: 'primary.light', my: 1 }} />
 
-					<MenuItem
-						onClick={handleClose}
-						to="/profile"
-						component={RouterLink}
-					>
+					<MenuItem onClick={handleClose} to="/profile" component={RouterLink}>
 						<ListItemIcon>
 							<Person2OutlinedIcon fontSize="small" />
 						</ListItemIcon>
 						Perfil
 					</MenuItem>
-					<MenuItem
-						onClick={handleClose}
-						to="/profile/edit"
-						component={RouterLink}
-					>
+					<MenuItem onClick={handleClose} to="/profile/edit" component={RouterLink}>
 						<ListItemIcon>
 							<ManageAccountsOutlinedIcon fontSize="small" />
 						</ListItemIcon>
 						Editar Perfil
 					</MenuItem>
-					<MenuItem
-						onClick={handleClose}
-						component={RouterLink}
-						to="/"
-					>
+					<MenuItem onClick={handleClose} component={RouterLink} to="/">
 						<ListItemIcon>
 							<ExitToAppIcon fontSize="small" />
 						</ListItemIcon>
@@ -95,14 +83,7 @@ function LoggedUser() {
 					</MenuItem>
 				</MenuList>
 			</Menu>
-			<Stack
-				height="100%"
-				direction="row"
-				flex={1}
-				justifyContent="flex-end"
-				alignItems="center"
-				spacing={1}
-			>
+			<Stack height="100%" direction="row" flex={1} justifyContent="flex-end" alignItems="center" spacing={1}>
 				<NotificationsButton />
 				<ButtonBase
 					onClick={handleClick}
@@ -115,8 +96,7 @@ function LoggedUser() {
 						px: 1,
 						transitionProperty: 'background,color',
 						'&:hover': {
-							bgcolor: (theme) =>
-								alpha(theme.palette.primary.main, 0.06),
+							bgcolor: (theme) => alpha(theme.palette.primary.main, 0.06),
 						},
 						'&:hover .MuiSvgIcon-root': {
 							opacity: '1',
@@ -124,13 +104,7 @@ function LoggedUser() {
 						},
 					}}
 				>
-					<Stack
-						width="100%"
-						direction="row"
-						justifyContent="space-between"
-						alignItems="center"
-						spacing={1}
-					>
+					<Stack width="100%" direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
 						<Avatar
 							alt="User Img"
 							src={avatar2}

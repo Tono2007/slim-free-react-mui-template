@@ -27,9 +27,7 @@ export const getFastExitTransitionStyles = (TIMEOUT = 500) => ({
 		transform: `translateY(0px)`,
 	},
 	exiting: {
-		transition: `opacity ${TIMEOUT / 10}ms ease-in-out, transform ${
-			TIMEOUT / 10
-		}ms ease-in-out`,
+		transition: `opacity ${TIMEOUT / 10}ms ease-in-out, transform ${TIMEOUT / 10}ms ease-in-out`,
 		opacity: 0,
 		transform: `translateY(-50px)`,
 	},

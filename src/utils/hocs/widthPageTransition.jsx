@@ -1,7 +1,4 @@
-import {
-	TransitionGroup,
-	Transition as ReactTransition,
-} from 'react-transition-group';
+import { TransitionGroup, Transition as ReactTransition } from 'react-transition-group';
 import { getFastExitTransitionStyles } from '@helpers/getTransitionStyles';
 
 const TIMEOUT = 500;

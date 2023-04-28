@@ -11,10 +11,7 @@ import calcLayoutHeight from '@/utils/helpers/layoutHeight';
 function WorkInProgress() {
 	return (
 		<Box
-			minHeight={`calc(100vh - ${
-				calcLayoutHeight('header', false) +
-				calcLayoutHeight('footer', false)
-			}px)`}
+			minHeight={`calc(100vh - ${calcLayoutHeight('header', false) + calcLayoutHeight('footer', false)}px)`}
 			p="5%"
 			display="grid"
 			sx={{
@@ -46,22 +43,11 @@ function WorkInProgress() {
 				>
 					Work In Progress
 				</Typography>
-				<Typography
-					variant="h4"
-					my={2}
-					textTransform="uppercase"
-					color="inherit"
-				>
+				<Typography variant="h4" my={2} textTransform="uppercase" color="inherit">
 					coming soon
 				</Typography>
-				<Typography
-					variant="h6"
-					paragraph
-					align="center"
-					color="inherit"
-				>
-					If you want to check in the development process, you are
-					welcome to take a peek on{' '}
+				<Typography variant="h6" paragraph align="center" color="inherit">
+					If you want to check in the development process, you are welcome to take a peek on{' '}
 					<Link
 						title="Repo Github"
 						underline="hover"

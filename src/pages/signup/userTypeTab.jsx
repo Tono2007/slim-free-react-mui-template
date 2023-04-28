@@ -24,13 +24,7 @@ function SelectUserTab() {
 		setActiveStep((prevActiveStep) => prevActiveStep - 1);
 	};
 	return (
-		<Stack
-			direction="column"
-			justifyContent="flex-start"
-			alignContent="flex-start"
-			spacing={1}
-			pb={2}
-		>
+		<Stack direction="column" justifyContent="flex-start" alignContent="flex-start" spacing={1} pb={2}>
 			<Typography variant="h1">Tipo de usuario</Typography>
 			<Typography variant="body2" color="textSecondary">
 				Selecciona que tipo de usuario serás en el ecosistema
@@ -74,20 +68,11 @@ function SelectUserTab() {
 					userTypeSelected={userTypeSelected}
 				/>
 			</Stack>
-			<SignupButtonsContainer
-				handleNext={handleNext}
-				handleBack={handleBack}
-			/>
+			<SignupButtonsContainer handleNext={handleNext} handleBack={handleBack} />
 		</Stack>
 	);
 }
-function UserTypeCard({
-	text,
-	Icon,
-	type,
-	userTypeSelected,
-	setUserTypeSelected,
-}) {
+function UserTypeCard({ text, Icon, type, userTypeSelected, setUserTypeSelected }) {
 	return (
 		<Stack
 			direction="row"
@@ -106,8 +91,7 @@ function UserTypeCard({
 				/* bgcolor:
 					userTypeSelected === type ? 'secondary.light' : 'white', */
 				border: 2,
-				borderColor:
-					userTypeSelected === type ? 'primary.300' : 'transparent',
+				borderColor: userTypeSelected === type ? 'primary.300' : 'transparent',
 				borderRadius: '5px',
 				boxShadow: '0px 10px 30px -5px #0002',
 				'&:hover': {
@@ -115,11 +99,7 @@ function UserTypeCard({
 				},
 			}}
 		>
-			<Icon
-				{...(userTypeSelected !== type && { color: 'action' })}
-				fontSize="medium"
-				sx={{ display: { xs: 'none', sm: 'block' } }}
-			/>
+			<Icon {...(userTypeSelected !== type && { color: 'action' })} fontSize="medium" sx={{ display: { xs: 'none', sm: 'block' } }} />
 
 			<span>
 				<Typography variant="subtitle1" align="left">

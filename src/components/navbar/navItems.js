@@ -271,7 +271,7 @@ const NAV_LINKS_CONFIG = [
 				href: '/theme/icons',
 			}, */
 			{
-				title: 'Utilidades',
+				title: 'Utilidades(Breakpoints)',
 				href: '/theme/utils',
 			},
 		],

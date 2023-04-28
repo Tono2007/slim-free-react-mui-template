@@ -89,23 +89,11 @@ function ReportSection() {
 function ReportCard({ report }) {
 	const { total, type, Icon, series } = report;
 	return (
-		<Stack
-			direction="column"
-			height="100%"
-			spacing={2}
-			p={3}
-			justifyContent="center"
-			alignItems="center"
-		>
+		<Stack direction="column" height="100%" spacing={2} p={3} justifyContent="center" alignItems="center">
 			<Typography variant="subtitle1" fontSize={65} lineHeight={1}>
 				{total}
 			</Typography>
-			<Typography
-				variant="subtitle2"
-				textTransform="uppercase"
-				color="text.tertiary"
-				pb={3}
-			>
+			<Typography variant="subtitle2" textTransform="uppercase" color="text.tertiary" pb={3}>
 				Total {type}
 			</Typography>
 			<Rating
@@ -119,11 +107,7 @@ function ReportCard({ report }) {
 			/>
 			{series.map(({ percentage, name, color }, i) => (
 				<div style={{ width: '100%' }} key={i}>
-					<Typography
-						variant="body2"
-						color="text.secondary"
-						gutterBottom
-					>
+					<Typography variant="body2" color="text.secondary" gutterBottom>
 						{name} {percentage}%
 					</Typography>
 					<LinearProgress
@@ -197,13 +181,7 @@ function RevenueCard() {
 					1.4% up
 				</Typography>
 			</Typography>
-			<Chart
-				options={revenueGraphConfig.options}
-				series={revenueGraphConfig.series}
-				type="area"
-				width="100%"
-				height="30%"
-			/>
+			<Chart options={revenueGraphConfig.options} series={revenueGraphConfig.series} type="area" width="100%" height="30%" />
 			<Typography variant="body1" color="text.secondary" align="center">
 				Last month: &nbsp;
 				<Typography variant="body2" component="span">
@@ -221,26 +199,15 @@ function Header() {
 			title="Overall Report Summary"
 			subtitle={
 				<>
-					<CalendarMonthOutlinedIcon fontSize="small" /> January 01,
-					2023 - January 31, 2023
+					<CalendarMonthOutlinedIcon fontSize="small" /> January 01, 2023 - January 31, 2023
 				</>
 			}
 		>
 			<Stack direction="row" alignItems="center" spacing={1}>
-				<Button
-					variant="contained"
-					size="medium"
-					color="primary"
-					startIcon={<AccessTimeOutlinedIcon />}
-				>
+				<Button variant="contained" size="medium" color="primary" startIcon={<AccessTimeOutlinedIcon />}>
 					Activity logs
 				</Button>
-				<Button
-					variant="contained"
-					size="medium"
-					color="primary"
-					startIcon={<SettingsOutlinedIcon />}
-				>
+				<Button variant="contained" size="medium" color="primary" startIcon={<SettingsOutlinedIcon />}>
 					Edit Settings
 				</Button>
 			</Stack>

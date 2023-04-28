@@ -48,21 +48,14 @@ function UserListItem({ user }) {
 					<Avatar alt="Remy Sharp" src={avatarImg} />
 				</ListItemAvatar>
 				<span style={{ width: '100%' }}>
-					<Typography
-						variant="subtitle2"
-						fontSize={13}
-						color="primary.main"
-					>
+					<Typography variant="subtitle2" fontSize={13} color="primary.main">
 						{name}
 					</Typography>
 					<Typography variant="caption">{rol}</Typography>
 				</span>
 				<Tooltip title="Add Friend">
 					<IconButton>
-						<PersonAddAlt1OutlinedIcon
-							fontSize="small"
-							color="primary"
-						/>
+						<PersonAddAlt1OutlinedIcon fontSize="small" color="primary" />
 					</IconButton>
 				</Tooltip>
 			</ListItemButton>

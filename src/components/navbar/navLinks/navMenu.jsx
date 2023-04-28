@@ -26,9 +26,7 @@ const MENUITEM_FONTSIZE = 14;
 function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 	const location = useLocation();
 	const [anchorEl, setAnchorEl] = useState(null);
-	const match = menuChildren.some((el) =>
-		location.pathname.includes(el.href),
-	);
+	const match = menuChildren.some((el) => location.pathname.includes(el.href));
 
 	const handlePopoverClose = () => {
 		setAnchorEl(null);
@@ -71,22 +69,11 @@ function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 						<Paper>
 							<MenuList sx={{ px: 1 }}>
 								{menuChildren.map((item, i) => {
-									const {
-										href = '',
-										title,
-										type = 'item',
-										children,
-									} = item;
+									const { href = '', title, type = 'item', children } = item;
 									const match = useMatch({ path: href });
 									switch (type) {
 										case 'group':
-											return (
-												<NavCollapse
-													key={i}
-													title={title}
-													menuChildren={children}
-												/>
-											);
+											return <NavCollapse key={i} title={title} menuChildren={children} />;
 										case 'item':
 											return (
 												<MenuItem
@@ -94,8 +81,7 @@ function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 													component={RouterLink}
 													to={href}
 													sx={{
-														fontSize:
-															MENUITEM_FONTSIZE,
+														fontSize: MENUITEM_FONTSIZE,
 													}}
 													selected={Boolean(match)}
 												>
@@ -104,11 +90,7 @@ function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 											);
 										default:
 											return (
-												<Typography
-													variant="h6"
-													color="error"
-													align="center"
-												>
+												<Typography variant="h6" color="error" align="center">
 													Menu Items Error
 												</Typography>
 											);
@@ -170,23 +152,11 @@ function NavCollapse({ title, menuChildren, level = 1 }) {
 						<Paper>
 							<MenuList>
 								{menuChildren.map((item, i) => {
-									const {
-										href = '',
-										title,
-										type = 'item',
-										children,
-									} = item;
+									const { href = '', title, type = 'item', children } = item;
 									const match = useMatch({ path: href });
 									switch (type) {
 										case 'group':
-											return (
-												<NavCollapse
-													key={i}
-													title={title}
-													menuChildren={children}
-													level={level + 1}
-												/>
-											);
+											return <NavCollapse key={i} title={title} menuChildren={children} level={level + 1} />;
 										case 'item':
 											return (
 												<MenuItem
@@ -203,11 +173,7 @@ function NavCollapse({ title, menuChildren, level = 1 }) {
 											);
 										default:
 											return (
-												<Typography
-													variant="h6"
-													color="error"
-													align="center"
-												>
+												<Typography variant="h6" color="error" align="center">
 													Nav Menu Items Error
 												</Typography>
 											);

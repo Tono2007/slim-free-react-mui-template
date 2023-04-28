@@ -65,22 +65,9 @@ function NotificationsButton() {
 					direction="column"
 					spacing={2}
 				>
-					<Stack
-						direction="row"
-						justifyContent="space-between"
-						flexWrap="wrap"
-					>
-						<Stack
-							direction="row"
-							alignItems="center"
-							spacing={1}
-							divider={
-								<Divider orientation="vertical" flexItem />
-							}
-						>
-							<Typography variant="subtitle1">
-								Notificaciones
-							</Typography>
+					<Stack direction="row" justifyContent="space-between" flexWrap="wrap">
+						<Stack direction="row" alignItems="center" spacing={1} divider={<Divider orientation="vertical" flexItem />}>
+							<Typography variant="subtitle1">Notificaciones</Typography>
 							<Box
 								component="span"
 								bgcolor="secondary.main"
@@ -93,12 +80,7 @@ function NotificationsButton() {
 								3
 							</Box>
 						</Stack>
-						<Button
-							variant="text"
-							color="primary"
-							size="small"
-							sx={{ fontSize: 11 }}
-						>
+						<Button variant="text" color="primary" size="small" sx={{ fontSize: 11 }}>
 							Marcar como leidas
 						</Button>
 						<IconButton
@@ -117,40 +99,20 @@ function NotificationsButton() {
 
 					<Divider sx={{ my: 1 }} />
 
-					<Stack
-						direction="column"
-						spacing={1}
-						divider={<Divider flexItem />}
-					>
+					<Stack direction="column" spacing={1} divider={<Divider flexItem />}>
 						{notifications.slice(0, 5).map((notification) => (
-							<Notification
-								key={notification.id}
-								notification={notification}
-							/>
+							<Notification key={notification.id} notification={notification} />
 						))}
 					</Stack>
-					<Button
-						variant="text"
-						color="primary"
-						size="small"
-						fullWidth
-						onClick={toNotifications}
-					>
+					<Button variant="text" color="primary" size="small" fullWidth onClick={toNotifications}>
 						Ver todas las notificaciones
 					</Button>
 				</Stack>
 			</Menu>
 			<Tooltip title="Notificaciones">
 				<IconButton onClick={handleClick} size="small">
-					<Badge
-						color="secondary"
-						overlap="rectangular"
-						variant="dot"
-					>
-						<NotificationsOutlinedIcon
-							color="primary"
-							fontSize="small"
-						/>
+					<Badge color="secondary" overlap="rectangular" variant="dot">
+						<NotificationsOutlinedIcon color="primary" fontSize="small" />
 					</Badge>
 				</IconButton>
 			</Tooltip>
@@ -168,18 +130,10 @@ function Notification({ notification }) {
 					bgcolor: (theme) => alpha(theme.palette.primary.light, 0.1),
 				},
 				borderLeft: 3,
-				borderLeftColor: notification?.checked
-					? '#d3d3d3'
-					: 'primary.400',
+				borderLeftColor: notification?.checked ? '#d3d3d3' : 'primary.400',
 			}}
 		>
-			<Stack
-				width="100%"
-				direction="row"
-				spacing={2}
-				alignItems="center"
-				justifyContent="flex-start"
-			>
+			<Stack width="100%" direction="row" spacing={2} alignItems="center" justifyContent="flex-start">
 				<Avatar
 					alt="Perfil"
 					/* src={`https://picsum.photos/200/300?random=${Math.random()}`} */
@@ -191,11 +145,7 @@ function Notification({ notification }) {
 					}}
 				/>
 
-				<Stack
-					direction="column"
-					justifyContent="flex-start"
-					alignItems="flex-start"
-				>
+				<Stack direction="column" justifyContent="flex-start" alignItems="flex-start">
 					<Typography align="left">
 						<strong>{notification?.name} </strong>
 						{notification?.title}

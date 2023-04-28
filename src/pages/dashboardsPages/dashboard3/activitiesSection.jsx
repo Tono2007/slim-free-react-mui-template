@@ -44,11 +44,7 @@ const ACTIVITIES_DATA = [
 function ActivitiesCard() {
 	return (
 		<Card sx={{ height: '100%' }}>
-			<CardHeader
-				title="Users Activities"
-				size="small"
-				subtitle="Last activity was 1 hour ago"
-			>
+			<CardHeader title="Users Activities" size="small" subtitle="Last activity was 1 hour ago">
 				<Button size="small">See All</Button>
 			</CardHeader>
 			<Stack direction="column" height="100%" py={2}>

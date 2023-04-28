@@ -14,10 +14,7 @@ function SamplePage() {
 	return (
 		<>
 			<PageHeader title="Sample Page">
-				<Breadcrumbs
-					aria-label="breadcrumb"
-					sx={{ textTransform: 'uppercase' }}
-				>
+				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>

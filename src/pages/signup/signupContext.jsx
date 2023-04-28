@@ -20,11 +20,7 @@ function UserProvider({ children }) {
 		[activeStep, userType],
 	);
 
-	return (
-		<signupContext.Provider value={signupContextValue}>
-			{children}
-		</signupContext.Provider>
-	);
+	return <signupContext.Provider value={signupContextValue}>{children}</signupContext.Provider>;
 }
 
 export { UserProvider, useSignupData, signupContext };

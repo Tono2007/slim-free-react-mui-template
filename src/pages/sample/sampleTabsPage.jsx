@@ -47,16 +47,11 @@ function SampleTabsPage() {
 	return (
 		<>
 			<PageHeader title="Sample Tabs Page">
-				<Breadcrumbs
-					aria-label="breadcrumb"
-					sx={{ textTransform: 'uppercase' }}
-				>
+				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>
-					<Typography color="text.tertiary">
-						Sample Tab Page
-					</Typography>
+					<Typography color="text.tertiary">Sample Tab Page</Typography>
 				</Breadcrumbs>
 			</PageHeader>
 			<Grid container rowSpacing={2} columnSpacing={4}>
@@ -112,10 +107,7 @@ function MenuListItem({ Icon, text, ...props }) {
 function Section({ text }) {
 	return (
 		<Card sx={{ minHeight: '100vh' }}>
-			<CardHeader
-				title={`Section ${text} Title`}
-				subtitle="Section subtitle"
-			>
+			<CardHeader title={`Section ${text} Title`} subtitle="Section subtitle">
 				Optional Action
 			</CardHeader>
 			{text}

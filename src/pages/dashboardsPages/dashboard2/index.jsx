@@ -21,10 +21,7 @@ function Dashboard2() {
 	return (
 		<>
 			<PageHeader title="Dashboard 02">
-				<Breadcrumbs
-					aria-label="breadcrumb"
-					sx={{ textTransform: 'uppercase' }}
-				>
+				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>
@@ -32,26 +29,14 @@ function Dashboard2() {
 				</Breadcrumbs>
 			</PageHeader>
 			<Grid container spacing={3}>
-				<Grid
-					item
-					xs={12}
-					sm={6}
-					md={3}
-					order={{ xs: 2, sm: 1, md: 1 }}
-				>
+				<Grid item xs={12} sm={6} md={3} order={{ xs: 2, sm: 1, md: 1 }}>
 					<Stack spacing={3} direction="column">
 						<PageImpressionsCard />
 						<ActivitiesCard />
 						<TodoListCard />
 					</Stack>
 				</Grid>
-				<Grid
-					item
-					xs={12}
-					sm={12}
-					md={6}
-					order={{ xs: 1, sm: 4, md: 2 }}
-				>
+				<Grid item xs={12} sm={12} md={6} order={{ xs: 1, sm: 4, md: 2 }}>
 					<Stack spacing={3} direction="column">
 						<CustomerCard />
 						<SalesOverviewCard />

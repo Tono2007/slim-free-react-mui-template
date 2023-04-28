@@ -39,12 +39,7 @@ function SaleProgress({ saleData }) {
 			<Typography variant="body2" color="text.secondary" gutterBottom>
 				{counter.toLocaleString()} sales
 			</Typography>
-			<LinearProgress
-				variant="determinate"
-				color={color}
-				value={(counter * progress) / sale}
-				sx={{ height: 7 }}
-			/>
+			<LinearProgress variant="determinate" color={color} value={(counter * progress) / sale} sx={{ height: 7 }} />
 		</div>
 	);
 }

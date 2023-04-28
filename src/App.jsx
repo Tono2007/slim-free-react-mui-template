@@ -6,10 +6,7 @@ import '@fontsource/rubik/700.css';
 
 import ReduxProvider from '@/redux/store';
 
-import {
-	ThemeProvider as MuiThemeProvider,
-	StyledEngineProvider,
-} from '@mui/material/styles';
+import { ThemeProvider as MuiThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import theme from '@/utils/theme';

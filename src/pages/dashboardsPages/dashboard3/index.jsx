@@ -18,10 +18,7 @@ function Dashboard3() {
 	return (
 		<>
 			<PageHeader title="Dashboard 03">
-				<Breadcrumbs
-					aria-label="breadcrumb"
-					sx={{ textTransform: 'uppercase' }}
-				>
+				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>

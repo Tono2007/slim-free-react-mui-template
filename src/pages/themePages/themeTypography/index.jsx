@@ -10,10 +10,7 @@ function ThemeTypography() {
 	return (
 		<>
 			<PageHeader title="Typography">
-				<Breadcrumbs
-					aria-label="breadcrumb"
-					sx={{ textTransform: 'uppercase' }}
-				>
+				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>

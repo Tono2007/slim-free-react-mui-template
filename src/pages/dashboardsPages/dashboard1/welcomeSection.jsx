@@ -8,10 +8,7 @@ import PageHeader from '@/components/pageHeader';
 function WelcomeSection() {
 	return (
 		<PageHeader title="Dashboard 01">
-			<Breadcrumbs
-				aria-label="breadcrumb"
-				sx={{ textTransform: 'uppercase' }}
-			>
+			<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
 				<Link underline="hover" href="#!">
 					Inicio
 				</Link>

@@ -109,11 +109,7 @@ function Signup() {
 									Registrarse con Facebook
 								</Button>
 							</Stack>
-							<Typography
-								variant="body2"
-								align="left"
-								color="inherit"
-							>
+							<Typography variant="body2" align="left" color="inherit">
 								Ya tengo una cuenta.{' '}
 								<Link
 									to="/pages/login"

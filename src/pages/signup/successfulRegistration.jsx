@@ -24,23 +24,17 @@ function Verify() {
 				Activación de cuenta de usuario
 			</Typography>
 
-			<CheckCircleIcon
-				sx={{ color: 'success.light', fontSize: 90 }}
-				color="success"
-			/>
+			<CheckCircleIcon sx={{ color: 'success.light', fontSize: 90 }} color="success" />
 			<Typography variant="subtitle1">
-				<b>Elizabeth,</b> tu cuenta de tipo {userType} se ha activado
-				correctamente.
+				<b>Elizabeth,</b> tu cuenta de tipo {userType} se ha activado correctamente.
 			</Typography>
 			<Typography variant="body1">
-				Confirmaste tu cuenta correctamente con el correo{' '}
-				<strong>elizabeth@slimtemplate.com</strong>, ya puedes usar tu
-				nombre de usuario para iniciar sesión. Gracias por registrarte.
+				Confirmaste tu cuenta correctamente con el correo <strong>elizabeth@slimtemplate.com</strong>, ya puedes usar tu nombre de
+				usuario para iniciar sesión. Gracias por registrarte.
 			</Typography>
 			<Stack pt={3}>
 				<Typography variant="caption" gutterBottom>
-					Se recomienda completar los datos de tu perfil despues de
-					iniciar sesión
+					Se recomienda completar los datos de tu perfil despues de iniciar sesión
 				</Typography>
 				<Button
 					size="small"

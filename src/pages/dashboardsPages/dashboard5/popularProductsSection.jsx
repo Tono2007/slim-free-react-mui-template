@@ -73,12 +73,7 @@ function ProductCard({ product }) {
 						&nbsp;AY Dev Company
 					</Link>
 				</Typography>
-				<Stack
-					mt={2}
-					divider={<Divider orientation="vertical" flexItem />}
-					direction="row"
-					spacing={2}
-				>
+				<Stack mt={2} divider={<Divider orientation="vertical" flexItem />} direction="row" spacing={2}>
 					<div>
 						<Typography variant="subtitle1" fontSize={30}>
 							{earnings}
@@ -107,8 +102,7 @@ function Header() {
 			title="Most Popular Products"
 			subtitle={
 				<>
-					<CalendarMonthOutlinedIcon fontSize="small" /> January 01,
-					2023 - January 31, 2023
+					<CalendarMonthOutlinedIcon fontSize="small" /> January 01, 2023 - January 31, 2023
 				</>
 			}
 		>

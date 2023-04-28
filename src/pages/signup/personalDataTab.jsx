@@ -56,12 +56,7 @@ function PersonalDataTab() {
 		handleNext();
 	};
 	return (
-		<Stack
-			direction="column"
-			justifyContent="flex-start"
-			alignContent="flex-start"
-			pb={3}
-		>
+		<Stack direction="column" justifyContent="flex-start" alignContent="flex-start" pb={3}>
 			<Typography variant="h1" fontWeight="bold">
 				{userType}
 			</Typography>
@@ -70,13 +65,7 @@ function PersonalDataTab() {
 			</Typography>
 			<form onSubmit={handleSubmit}>
 				<Grid container spacing={2} mt={2} justifyContent="center">
-					<Grid
-						item
-						xs={12}
-						sm={12}
-						md={12}
-						sx={{ position: 'relative' }}
-					>
+					<Grid item xs={12} sm={12} md={12} sx={{ position: 'relative' }}>
 						<TextField
 							required
 							autoFocus
@@ -109,15 +98,7 @@ function PersonalDataTab() {
 						/>
 					</Grid>
 					<Grid item xs={12} sm={6} md={12}>
-						<TextField
-							required
-							name="firstName"
-							label="Nombre(s)"
-							fullWidth
-							variant="outlined"
-							color="primary"
-							size="medium"
-						/>
+						<TextField required name="firstName" label="Nombre(s)" fullWidth variant="outlined" color="primary" size="medium" />
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
 						<TextField
@@ -149,9 +130,7 @@ function PersonalDataTab() {
 							size="medium"
 							getOptionLabel={(option) => option?.name}
 							options={countryList}
-							renderInput={(params) => (
-								<TextField {...params} label="Pais" fullWidth />
-							)}
+							renderInput={(params) => <TextField {...params} label="Pais" fullWidth />}
 							renderOption={(props, option) => (
 								<Box
 									component="li"
@@ -186,10 +165,7 @@ function PersonalDataTab() {
 						>
 							<option aria-label="None" value="" defaultValue />
 							{SexList.map((option) => (
-								<option
-									key={option}
-									value={option.toUpperCase()}
-								>
+								<option key={option} value={option.toUpperCase()}>
 									{option}
 								</option>
 							))}
@@ -232,15 +208,8 @@ function PersonalDataTab() {
 							InputProps={{
 								endAdornment: (
 									<InputAdornment position="end">
-										<IconButton
-											onClick={handleClickShowPassword}
-											edge="end"
-										>
-											{ShowPassword ? (
-												<VisibilityOff />
-											) : (
-												<Visibility />
-											)}
+										<IconButton onClick={handleClickShowPassword} edge="end">
+											{ShowPassword ? <VisibilityOff /> : <Visibility />}
 										</IconButton>
 									</InputAdornment>
 								),
@@ -260,15 +229,8 @@ function PersonalDataTab() {
 							InputProps={{
 								endAdornment: (
 									<InputAdornment position="end">
-										<IconButton
-											onClick={handleClickShowPassword}
-											edge="end"
-										>
-											{ShowPassword ? (
-												<VisibilityOff />
-											) : (
-												<Visibility />
-											)}
+										<IconButton onClick={handleClickShowPassword} edge="end">
+											{ShowPassword ? <VisibilityOff /> : <Visibility />}
 										</IconButton>
 									</InputAdornment>
 								),
@@ -288,17 +250,9 @@ function PersonalDataTab() {
 							}}
 							variant="outlined"
 						>
-							<option
-								aria-label="None"
-								value=""
-								disabled
-								defaultValue
-							/>
+							<option aria-label="None" value="" disabled defaultValue />
 							{hearAboutUs.map((option) => (
-								<option
-									key={option}
-									value={option.toUpperCase()}
-								>
+								<option key={option} value={option.toUpperCase()}>
 									{option}
 								</option>
 							))}
@@ -309,10 +263,7 @@ function PersonalDataTab() {
 					</Grid>
 				</Grid>
 			</form>
-			<SignupButtonsContainer
-				handleNext={handleSubmit}
-				handleBack={handleBack}
-			/>
+			<SignupButtonsContainer handleNext={handleSubmit} handleBack={handleBack} />
 		</Stack>
 	);
 }
@@ -344,11 +295,7 @@ function HelperPopover() {
 				onMouseEnter={handlePopoverOpen}
 				onMouseLeave={handlePopoverClose}
 			>
-				<QuestionMarkIcon
-					color="background.paper"
-					fontSize="small"
-					sx={{ fontSize: 15 }}
-				/>
+				<QuestionMarkIcon color="background.paper" fontSize="small" sx={{ fontSize: 15 }} />
 			</Avatar>
 
 			<Popover
@@ -375,9 +322,7 @@ function HelperPopover() {
 					borderColor="info.main" */
 					p={2}
 				>
-					<Typography variant="subtitle1">
-						Cuadro de ayuda popover
-					</Typography>
+					<Typography variant="subtitle1">Cuadro de ayuda popover</Typography>
 					<Divider />
 					{[1, 2, 3, 4, 5].map((model, index) => (
 						<Typography key={index}>

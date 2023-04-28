@@ -15,12 +15,9 @@ function HoursSection() {
 						<Typography variant="subtitle1" fontSize={65}>
 							34,100
 						</Typography>
-						<Typography variant="subtitle1">
-							Total hours spent (7 days)
-						</Typography>
+						<Typography variant="subtitle1">Total hours spent (7 days)</Typography>
 						<Typography variant="body2" color="text.tertiary">
-							Maecenas tempus, tellus eget condimentum rhoncus,
-							sem quam semper libero, sit amet adipiscing sem
+							Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem
 						</Typography>
 						<Stack direction="row" spacing={3}>
 							<Link href="#!" underline="none">
@@ -70,20 +67,7 @@ const hoursGraphConfig = {
 			tickAmount: 8,
 		},
 		xaxis: {
-			categories: [
-				'Jan',
-				'Feb',
-				'Mar',
-				'Apr',
-				'May',
-				'Jun',
-				'Jul',
-				'Aug',
-				'Sep',
-				'Oct',
-				'Nov',
-				'Dec',
-			],
+			categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 		},
 	},
 	series: [
@@ -94,14 +78,7 @@ const hoursGraphConfig = {
 	],
 };
 function HoursGraph() {
-	return (
-		<Chart
-			options={hoursGraphConfig.options}
-			series={hoursGraphConfig.series}
-			type="bar"
-			width="100%"
-		/>
-	);
+	return <Chart options={hoursGraphConfig.options} series={hoursGraphConfig.series} type="bar" width="100%" />;
 }
 
 export default HoursSection;

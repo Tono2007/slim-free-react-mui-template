@@ -25,19 +25,9 @@ function NavLinks() {
 
 		switch (type) {
 			case 'group':
-				return (
-					<NavMenu
-						key={id}
-						minWidth={menuMinWidth}
-						menuChildren={children}
-						Icon={Icon}
-						title={title}
-					/>
-				);
+				return <NavMenu key={id} minWidth={menuMinWidth} menuChildren={children} Icon={Icon} title={title} />;
 			case 'item':
-				return (
-					<NavLink key={id} href={href} Icon={Icon} title={title} />
-				);
+				return <NavLink key={id} href={href} Icon={Icon} title={title} />;
 			default:
 				return (
 					<Typography variant="h6" color="error" align="center">
@@ -47,14 +37,7 @@ function NavLinks() {
 		}
 	});
 	return (
-		<Stack
-			width="100%"
-			direction="row"
-			component="nav"
-			borderLeft={1}
-			borderColor="border"
-			flexWrap="wrap"
-		>
+		<Stack width="100%" direction="row" component="nav" borderLeft={1} borderColor="border" flexWrap="wrap">
 			{navMenuItems}
 		</Stack>
 	);

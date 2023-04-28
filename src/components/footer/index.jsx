@@ -26,32 +26,11 @@ import logo from '@/assets/images/logo/png/Color_logo_nobg.png';
 
 function Footer() {
 	return (
-		<Box
-			bgcolor={(theme) => theme.palette.background.paper}
-			py={3}
-			borderTop={1}
-			borderColor="cuaternary.300"
-		>
-			<Container
-				maxWidth="lg"
-				component={Stack}
-				direction="column"
-				spacing={5}
-			>
-				<Grid
-					container
-					spacing={3}
-					alignContent="center"
-					justifyContent="center"
-					alignItems="center"
-				>
+		<Box bgcolor={(theme) => theme.palette.background.paper} py={3} borderTop={1} borderColor="cuaternary.300">
+			<Container maxWidth="lg" component={Stack} direction="column" spacing={5}>
+				<Grid container spacing={3} alignContent="center" justifyContent="center" alignItems="center">
 					<Grid item xs={12} sm={6} md={4}>
-						<Box
-							component="img"
-							src={logo}
-							alt="slim logo"
-							width="90%"
-						/>
+						<Box component="img" src={logo} alt="slim logo" width="90%" />
 					</Grid>
 					<Grid item xs={12} sm={6} md={5}>
 						<Typography variant="h6" my={1}>
@@ -65,11 +44,7 @@ function Footer() {
 									name: 'email',
 									endAdornment: (
 										<InputAdornment position="end">
-											<Button
-												type="submit"
-												variant="contained"
-												disableElevation
-											>
+											<Button type="submit" variant="contained" disableElevation>
 												Suscribirse
 											</Button>
 										</InputAdornment>
@@ -83,58 +58,26 @@ function Footer() {
 						</form>
 					</Grid>
 					<Grid item xs={12} sm={6} md={3}>
-						<Stack
-							spacing={1}
-							alignItems="center"
-							direction="column"
-						>
+						<Stack spacing={1} alignItems="center" direction="column">
 							<Typography variant="h6">SIGUENOS EN</Typography>
 							<Stack direction="row" spacing={1}>
-								<Link
-									href={constants.siteData.siteRepo}
-									target="_blank"
-									rel="noreferrer noopener"
-								>
-									<IconButton
-										aria-label="network"
-										color="primary"
-									>
+								<Link href={constants.siteData.siteRepo} target="_blank" rel="noreferrer noopener">
+									<IconButton aria-label="network" color="primary">
 										<FacebookIcon />
 									</IconButton>
 								</Link>
-								<Link
-									href={constants.siteData.siteRepo}
-									target="_blank"
-									rel="noreferrer noopener"
-								>
-									<IconButton
-										aria-label="network"
-										color="primary"
-									>
+								<Link href={constants.siteData.siteRepo} target="_blank" rel="noreferrer noopener">
+									<IconButton aria-label="network" color="primary">
 										<TwitterIcon />
 									</IconButton>
 								</Link>
-								<Link
-									href={constants.siteData.siteRepo}
-									target="_blank"
-									rel="noreferrer noopener"
-								>
-									<IconButton
-										aria-label="network"
-										color="primary"
-									>
+								<Link href={constants.siteData.siteRepo} target="_blank" rel="noreferrer noopener">
+									<IconButton aria-label="network" color="primary">
 										<GoogleIcon />
 									</IconButton>
 								</Link>
-								<Link
-									href={constants.siteData.siteRepo}
-									target="_blank"
-									rel="noreferrer noopener"
-								>
-									<IconButton
-										aria-label="network"
-										color="primary"
-									>
+								<Link href={constants.siteData.siteRepo} target="_blank" rel="noreferrer noopener">
+									<IconButton aria-label="network" color="primary">
 										<GitHubIcon />
 									</IconButton>
 								</Link>
@@ -146,18 +89,9 @@ function Footer() {
 							<Typography variant="h6" my={1}>
 								CONTACTO
 							</Typography>
-							<ContactLink
-								Icon={LocalPhoneOutlinedIcon}
-								text="+00 000 000 00 00"
-							/>
-							<ContactLink
-								Icon={EmailOutlinedIcon}
-								text="support@slim_template.com"
-							/>
-							<ContactLink
-								Icon={LocationOnOutlinedIcon}
-								text="42322 DF ciudad paleta, Noxus, México"
-							/>
+							<ContactLink Icon={LocalPhoneOutlinedIcon} text="+00 000 000 00 00" />
+							<ContactLink Icon={EmailOutlinedIcon} text="support@slim_template.com" />
+							<ContactLink Icon={LocationOnOutlinedIcon} text="42322 DF ciudad paleta, Noxus, México" />
 						</Stack>
 					</Grid>
 					<Grid item xs={12} sm={6} md={3}>
@@ -188,14 +122,9 @@ function Footer() {
 						bgcolor: (theme) => theme.palette.secondary.main,
 					}}
 				/>
-				<Stack
-					direction="row"
-					justifyContent="space-between"
-					alignItems="center"
-				>
+				<Stack direction="row" justifyContent="space-between" alignItems="center">
 					<Typography variant="body1" textAlign="center">
-						Copyright 2023 © All Rights Reserved. Slim React MUI
-						Template
+						Copyright 2023 © All Rights Reserved. Slim React MUI Template
 					</Typography>
 					<Typography variant="subtitle1" textAlign="center">
 						💻 - Construido por{' '}

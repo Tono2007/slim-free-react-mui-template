@@ -22,30 +22,14 @@ function SalesOverviewCard() {
 	return (
 		<Card>
 			<CardHeader title="Sales Overview" size="small">
-				<ButtonGroup
-					variant="text"
-					size="small"
-					aria-label="temporaly button group"
-				>
-					<TabButton
-						changeTab={changeTab}
-						tabKey="day"
-						activeView={viewBy}
-					>
+				<ButtonGroup variant="text" size="small" aria-label="temporaly button group">
+					<TabButton changeTab={changeTab} tabKey="day" activeView={viewBy}>
 						Day
 					</TabButton>
-					<TabButton
-						changeTab={changeTab}
-						tabKey="week"
-						activeView={viewBy}
-					>
+					<TabButton changeTab={changeTab} tabKey="week" activeView={viewBy}>
 						Week
 					</TabButton>
-					<TabButton
-						changeTab={changeTab}
-						tabKey="month"
-						activeView={viewBy}
-					>
+					<TabButton changeTab={changeTab} tabKey="month" activeView={viewBy}>
 						Month
 					</TabButton>
 				</ButtonGroup>
@@ -67,8 +51,7 @@ function TabButton({ children, tabKey, changeTab, activeView }) {
 			onClick={() => changeTab(tabKey)}
 			sx={{
 				...(activeView === tabKey && {
-					outline: (theme) =>
-						`2px solid ${theme.palette.primary.main}`,
+					outline: (theme) => `2px solid ${theme.palette.primary.main}`,
 				}),
 			}}
 		>
@@ -192,10 +175,7 @@ const expensesGraphConfig = {
 const xaxisCategories = {
 	day: {
 		type: 'category',
-		categories: [
-			1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-			20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
-		],
+		categories: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32],
 	},
 	week: {
 		type: 'category',

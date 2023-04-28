@@ -56,24 +56,16 @@ function EarningsSection() {
 		interval: 10,
 	});
 	return (
-		<Card
-			type="none"
-			sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-		>
+		<Card type="none" sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
 			<Stack direction="column" spacing={1} px={3} pt={3} flexGrow={1}>
 				<Typography fontSize={30} variant="subtitle1">
 					${counter.toLocaleString()}
 				</Typography>
-				<Typography
-					variant="h5"
-					fontWeight="500"
-					textTransform="uppercase"
-				>
+				<Typography variant="h5" fontWeight="500" textTransform="uppercase">
 					Today&apos;s earnings
 				</Typography>
 				<Typography variant="body2" color="text.secondary">
-					Etiam ultricies nisi vel augue. Curabitur ullamcorper
-					ultricies nisi. Nam eget dui. Etiam rhoncus...
+					Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...
 				</Typography>
 				<Button
 					variant="text"

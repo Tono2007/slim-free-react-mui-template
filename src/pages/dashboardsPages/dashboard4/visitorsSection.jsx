@@ -2,10 +2,7 @@ import { useState } from 'react';
 import useAutoCounter from '@hooks/useAutoCounter';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 
-import {
-	TransitionGroup,
-	Transition as ReactTransition,
-} from 'react-transition-group';
+import { TransitionGroup, Transition as ReactTransition } from 'react-transition-group';
 import { getDefaultTransitionStyles } from '@helpers/getTransitionStyles';
 
 import Grid from '@mui/material/Grid';
@@ -20,8 +17,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-const geoUrl =
-	'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
+const geoUrl = 'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
 const TIMEOUT = 300;
 const transitionStyles = getDefaultTransitionStyles(TIMEOUT);
 
@@ -92,11 +88,7 @@ function VisitorsLocationsCard() {
 	return (
 		<ComposableMap>
 			<Geographies geography={geoUrl}>
-				{({ geographies }) =>
-					geographies.map((geo) => (
-						<Geography key={geo.rsmKey} geography={geo} />
-					))
-				}
+				{({ geographies }) => geographies.map((geo) => <Geography key={geo.rsmKey} geography={geo} />)}
 			</Geographies>
 		</ComposableMap>
 	);
@@ -155,30 +147,14 @@ function VisitorsOpratingCard() {
 	};
 	return (
 		<Stack direction="column" spacing={3} p={3} justifyContent="center">
-			<ButtonGroup
-				variant="outlined"
-				size="small"
-				aria-label="temporaly button group"
-			>
-				<TabButton
-					changeTab={changeTab}
-					tabKey="day"
-					activeView={viewBy}
-				>
+			<ButtonGroup variant="outlined" size="small" aria-label="temporaly button group">
+				<TabButton changeTab={changeTab} tabKey="day" activeView={viewBy}>
 					Today
 				</TabButton>
-				<TabButton
-					changeTab={changeTab}
-					tabKey="week"
-					activeView={viewBy}
-				>
+				<TabButton changeTab={changeTab} tabKey="week" activeView={viewBy}>
 					This Week
 				</TabButton>
-				<TabButton
-					changeTab={changeTab}
-					tabKey="month"
-					activeView={viewBy}
-				>
+				<TabButton changeTab={changeTab} tabKey="month" activeView={viewBy}>
 					This Month
 				</TabButton>
 			</ButtonGroup>
@@ -199,8 +175,7 @@ function VisitorsOpratingCard() {
 								...transitionStyles[status],
 							}}
 						>
-							{VISITORS_DATA?.[viewBy]?.count.toLocaleString() ||
-								0}
+							{VISITORS_DATA?.[viewBy]?.count.toLocaleString() || 0}
 						</Typography>
 					)}
 				</ReactTransition>
@@ -228,8 +203,7 @@ function TabButton({ children, tabKey, changeTab, activeView }) {
 			onClick={() => changeTab(tabKey)}
 			sx={{
 				...(activeView === tabKey && {
-					outline: (theme) =>
-						`2px solid ${theme.palette.primary.main}`,
+					outline: (theme) => `2px solid ${theme.palette.primary.main}`,
 				}),
 				...(activeView !== tabKey && {
 					color: (theme) => theme.palette.text.secondary,
@@ -252,12 +226,7 @@ function SaleProgress({ saleData }) {
 			<Typography variant="body2" color="text.secondary" gutterBottom>
 				{os} ({counter}%)
 			</Typography>
-			<LinearProgress
-				variant="determinate"
-				color={color}
-				value={counter}
-				sx={{ height: 5 }}
-			/>
+			<LinearProgress variant="determinate" color={color} value={counter} sx={{ height: 5 }} />
 		</div>
 	);
 }

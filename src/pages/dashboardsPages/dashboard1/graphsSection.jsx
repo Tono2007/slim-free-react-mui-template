@@ -113,13 +113,7 @@ function BitcoinEarningsSection() {
 				/>
 			}
 		>
-			<Stack
-				spacing={1}
-				direction="column"
-				height="100%"
-				width={{ xs: '100%', md: '70%' }}
-				pb={{ xs: 30, md: 0 }}
-			>
+			<Stack spacing={1} direction="column" height="100%" width={{ xs: '100%', md: '70%' }} pb={{ xs: 30, md: 0 }}>
 				<Typography variant="subtitle1" fontSize={55}>
 					{Math.round(counter * 10000) / 10000}{' '}
 					<Typography variant="subtitle1" component="span">
@@ -128,8 +122,7 @@ function BitcoinEarningsSection() {
 				</Typography>
 				<Typography variant="subtitle1">BITCOIN EARNINGS</Typography>
 				<Typography variant="body2" color="text.secondary" pb={2}>
-					Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-					rhoncus...
+					Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...
 				</Typography>
 				<Button
 					variant="outlined"
@@ -220,10 +213,7 @@ function EtereumWalletSection() {
 					</Typography>
 				</Typography>
 				<Typography variant="subtitle1">ETHEREUM WALLET</Typography>
-				<Typography variant="subtitle2">
-					Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-					rhoncus...
-				</Typography>
+				<Typography variant="subtitle2">Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...</Typography>
 				<Button
 					variant="text"
 					size="small"
@@ -299,20 +289,13 @@ function MaleVisitorsSection() {
 				/>
 			}
 		>
-			<Stack
-				spacing={0}
-				direction="column"
-				width="100%"
-				justifyContent="center"
-				alignItems="center"
-			>
+			<Stack spacing={0} direction="column" width="100%" justifyContent="center" alignItems="center">
 				<Typography variant="subtitle1" fontSize={35}>
 					{counter.toLocaleString()}
 				</Typography>
 				<Typography variant="subtitle1">MALE VISITORS</Typography>
 				<Typography variant="subtitle2" color="text.secondary" pb={2}>
-					Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-					rhoncus...
+					Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...
 				</Typography>
 			</Stack>
 		</SectionContainer>
@@ -380,20 +363,13 @@ function FemaleVisitorsSection() {
 				/>
 			}
 		>
-			<Stack
-				spacing={0}
-				direction="column"
-				width="100%"
-				justifyContent="center"
-				alignItems="center"
-			>
+			<Stack spacing={0} direction="column" width="100%" justifyContent="center" alignItems="center">
 				<Typography variant="subtitle1" fontSize={35}>
 					{counter.toLocaleString()}
 				</Typography>
 				<Typography variant="subtitle1">FEMALE VISITORS</Typography>
 				<Typography variant="subtitle2" color="text.secondary" pb={2}>
-					Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-					rhoncus...
+					Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...
 				</Typography>
 			</Stack>
 		</SectionContainer>

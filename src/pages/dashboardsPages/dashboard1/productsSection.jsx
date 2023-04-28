@@ -29,11 +29,7 @@ function ProductsSection() {
 					Products Purchases
 				</Typography>
 				<ProductsTable />
-				<Button
-					size="small"
-					startIcon={<KeyboardArrowDownIcon />}
-					sx={{ m: 1 }}
-				>
+				<Button size="small" startIcon={<KeyboardArrowDownIcon />} sx={{ m: 1 }}>
 					View All Products
 				</Button>
 			</Stack>
@@ -108,10 +104,7 @@ function ProductsTable() {
 				</TableHead>
 				<TableBody>
 					{PURCHASES_DATA.map((purchase) => (
-						<ProductsTableRow
-							key={purchase.id}
-							purchase={purchase}
-						/>
+						<ProductsTableRow key={purchase.id} purchase={purchase} />
 					))}
 				</TableBody>
 			</Table>
@@ -146,9 +139,7 @@ function ProductsTableRow({ purchase }) {
 						component="span"
 						width={8}
 						height={8}
-						bgcolor={
-							STATUS_CONFIG[stock?.status]?.color || '#d3d3d3'
-						}
+						bgcolor={STATUS_CONFIG[stock?.status]?.color || '#d3d3d3'}
 						borderRadius="50%"
 					/>
 					<Typography variant="caption" color="text.tertiary">
@@ -163,20 +154,8 @@ function ProductsTableRow({ purchase }) {
 			</TableCell>
 			<TableCell align="left">
 				<Typography variant="body1" color="text.tertiary">
-					<Typography
-						component="span"
-						variant="inherit"
-						color={`${
-							Math.sign(gain) === 1
-								? 'success.light'
-								: 'error.main'
-						}`}
-					>
-						{Math.sign(gain) === 1 ? (
-							<ArrowUpwardIcon fontSize="inherit" />
-						) : (
-							<ArrowDownwardIcon fontSize="inherit" />
-						)}
+					<Typography component="span" variant="inherit" color={`${Math.sign(gain) === 1 ? 'success.light' : 'error.main'}`}>
+						{Math.sign(gain) === 1 ? <ArrowUpwardIcon fontSize="inherit" /> : <ArrowDownwardIcon fontSize="inherit" />}
 						&nbsp;{gain}%&nbsp;
 					</Typography>
 					from last week

@@ -28,28 +28,15 @@ function ProductsSection() {
 	return (
 		<Card type="none">
 			<Stack direction="column">
-				<CardHeader
-					title="Products Purchases"
-					size="small"
-					sx={{ m: 2 }}
-				>
-					<ButtonGroup
-						variant="outlined"
-						size="small"
-						aria-label="temporaly button group"
-					>
+				<CardHeader title="Products Purchases" size="small" sx={{ m: 2 }}>
+					<ButtonGroup variant="outlined" size="small" aria-label="temporaly button group">
 						{['Today', 'This Month', 'This Week'].map((tab, i) => (
 							<Button
 								key={i}
-								variant={
-									tab === 'This Week'
-										? 'contained'
-										: 'outlined'
-								}
+								variant={tab === 'This Week' ? 'contained' : 'outlined'}
 								sx={{
 									...(tab === 'This Week' && {
-										outline: (theme) =>
-											`2px solid ${theme.palette.primary.main}`,
+										outline: (theme) => `2px solid ${theme.palette.primary.main}`,
 									}),
 								}}
 							>
@@ -59,11 +46,7 @@ function ProductsSection() {
 					</ButtonGroup>
 				</CardHeader>
 				<ProductsTable />
-				<Button
-					size="small"
-					startIcon={<KeyboardArrowDownIcon />}
-					sx={{ m: 1 }}
-				>
+				<Button size="small" startIcon={<KeyboardArrowDownIcon />} sx={{ m: 1 }}>
 					View All Products
 				</Button>
 			</Stack>
@@ -156,10 +139,7 @@ function ProductsTable() {
 				</TableHead>
 				<TableBody>
 					{PURCHASES_DATA.map((purchase) => (
-						<ProductsTableRow
-							key={purchase.id}
-							purchase={purchase}
-						/>
+						<ProductsTableRow key={purchase.id} purchase={purchase} />
 					))}
 				</TableBody>
 			</Table>
@@ -194,9 +174,7 @@ function ProductsTableRow({ purchase }) {
 						component="span"
 						width={8}
 						height={8}
-						bgcolor={
-							STATUS_CONFIG[stock?.status]?.color || '#d3d3d3'
-						}
+						bgcolor={STATUS_CONFIG[stock?.status]?.color || '#d3d3d3'}
 						borderRadius="50%"
 					/>
 					<Typography variant="caption" color="text.tertiary">
@@ -210,28 +188,12 @@ function ProductsTableRow({ purchase }) {
 				</Typography>
 			</TableCell>
 			<TableCell align="center">
-				<img
-					alt="location"
-					src={`https://flagsapi.com/${location}/flat/32.png`}
-					height={30}
-				/>
+				<img alt="location" src={`https://flagsapi.com/${location}/flat/32.png`} height={30} />
 			</TableCell>
 			<TableCell align="left">
 				<Typography variant="body1" color="text.tertiary">
-					<Typography
-						component="span"
-						variant="inherit"
-						color={`${
-							Math.sign(gain) === 1
-								? 'success.light'
-								: 'error.main'
-						}`}
-					>
-						{Math.sign(gain) === 1 ? (
-							<ArrowUpwardIcon fontSize="inherit" />
-						) : (
-							<ArrowDownwardIcon fontSize="inherit" />
-						)}
+					<Typography component="span" variant="inherit" color={`${Math.sign(gain) === 1 ? 'success.light' : 'error.main'}`}>
+						{Math.sign(gain) === 1 ? <ArrowUpwardIcon fontSize="inherit" /> : <ArrowDownwardIcon fontSize="inherit" />}
 						&nbsp;{gain}%&nbsp;
 					</Typography>
 					from last week

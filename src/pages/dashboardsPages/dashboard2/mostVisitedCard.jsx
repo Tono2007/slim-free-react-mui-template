@@ -26,11 +26,7 @@ const impressionsGraphConfig = {
 			position: 'bottom',
 			horizontalAlign: 'left',
 			formatter(seriesName, opts) {
-				return [
-					seriesName,
-					' - ',
-					opts.w.globals.series[opts.seriesIndex].toLocaleString(),
-				];
+				return [seriesName, ' - ', opts.w.globals.series[opts.seriesIndex].toLocaleString()];
 			},
 			fontFamily: 'inherit',
 			fontSize: 13,

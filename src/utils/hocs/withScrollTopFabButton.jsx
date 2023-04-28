@@ -17,11 +17,7 @@ function withScrollTopFabButton(Component) {
 
 	return (
 		<Fade in={trigger}>
-			<Box
-				onClick={handleClick}
-				role="presentation"
-				sx={{ position: 'fixed', bottom: 16, right: 16 }}
-			>
+			<Box onClick={handleClick} role="presentation" sx={{ position: 'fixed', bottom: 16, right: 16 }}>
 				<Component />
 			</Box>
 		</Fade>

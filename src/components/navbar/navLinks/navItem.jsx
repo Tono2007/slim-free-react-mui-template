@@ -32,10 +32,7 @@ export function NavItem({ Icon, title, showExpand = false, selected = false }) {
 			<Icon
 				sx={{
 					fontSize: 18,
-					color: (theme) =>
-						selected
-							? theme.palette.primary.contrastText
-							: theme.palette.primary[300],
+					color: (theme) => (selected ? theme.palette.primary.contrastText : theme.palette.primary[300]),
 				}}
 			/>
 			<Typography
@@ -52,9 +49,7 @@ export function NavItem({ Icon, title, showExpand = false, selected = false }) {
 				<ExpandMoreIcon
 					fontSize="small"
 					sx={{
-						color: selected
-							? 'primary.contrastText'
-							: 'text.secondary',
+						color: selected ? 'primary.contrastText' : 'text.secondary',
 						fontSize: 17,
 					}}
 				/>

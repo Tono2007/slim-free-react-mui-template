@@ -30,10 +30,7 @@ function SalesOverviewCard() {
 							variant={viewBy === tab ? 'outlined' : 'text'}
 							sx={{
 								textTransform: 'capitalize',
-								color:
-									viewBy === tab
-										? 'primary.main'
-										: 'text.secondary',
+								color: viewBy === tab ? 'primary.main' : 'text.secondary',
 							}}
 						>
 							{tab}
@@ -78,8 +75,7 @@ function TabButton({ children, tabKey, changeTab, activeView }) {
 			onClick={() => changeTab(tabKey)}
 			sx={{
 				...(activeView === tabKey && {
-					outline: (theme) =>
-						`2px solid ${theme.palette.primary.main}`,
+					outline: (theme) => `2px solid ${theme.palette.primary.main}`,
 				}),
 			}}
 		>

@@ -16,12 +16,7 @@ function Page403() {
 			minHeight={`calc(100vh - ${calcHeaderHeight('header')})`}
 			color="text.tertiary"
 		>
-			<Typography
-				variant="h1"
-				fontSize={150}
-				borderBottom={1}
-				sx={{ textDecoration: 'dotted underline' }}
-			>
+			<Typography variant="h1" fontSize={150} borderBottom={1} sx={{ textDecoration: 'dotted underline' }}>
 				403
 			</Typography>
 			{/* <Typography variant="h2" color="inherit">
@@ -40,9 +35,7 @@ function Page403() {
 				Por favor comunicate con el administrador.
 			</Typography>
 			<SentimentVeryDissatisfiedIcon sx={{ fontSize: 110 }} />
-			<Typography variant="caption">
-				SLIM React MUI Template. 2023
-			</Typography>
+			<Typography variant="caption">SLIM React MUI Template. 2023</Typography>
 		</Stack>
 	);
 }

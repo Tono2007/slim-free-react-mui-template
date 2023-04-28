@@ -26,11 +26,7 @@ function TransactionsSection() {
 					User Transaction History
 				</Typography>
 				<TransactionsTable />
-				<Button
-					size="small"
-					startIcon={<KeyboardArrowDownIcon />}
-					sx={{ m: 1 }}
-				>
+				<Button size="small" startIcon={<KeyboardArrowDownIcon />} sx={{ m: 1 }}>
 					View All Transaction History
 				</Button>
 			</Stack>
@@ -107,10 +103,7 @@ function TransactionsTable() {
 				</TableHead>
 				<TableBody>
 					{TRANSACTIONS_DATA.map((transaction) => (
-						<TransactionRow
-							key={transaction.id}
-							transaction={transaction}
-						/>
+						<TransactionRow key={transaction.id} transaction={transaction} />
 					))}
 				</TableBody>
 			</Table>
@@ -155,9 +148,7 @@ function TransactionRow({ transaction }) {
 						component="span"
 						width={8}
 						height={8}
-						bgcolor={
-							STATUS_CONFIG[type?.status]?.color || '#d3d3d3'
-						}
+						bgcolor={STATUS_CONFIG[type?.status]?.color || '#d3d3d3'}
 						borderRadius="50%"
 					/>
 					<Typography variant="caption" color="text.tertiary">

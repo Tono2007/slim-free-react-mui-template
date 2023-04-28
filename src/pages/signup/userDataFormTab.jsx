@@ -35,23 +35,9 @@ const IndustryList = [
 	'Textil',
 	'Turismo',
 ];
-const CompanyTypeList = [
-	'Corporación global',
-	'Corporación local',
-	'Familiar',
-	'PYME',
-	'Unipersonal',
-];
+const CompanyTypeList = ['Corporación global', 'Corporación local', 'Familiar', 'PYME', 'Unipersonal'];
 const SectorList = ['Gobierno', 'Privado'];
-const TargetMarketList = [
-	'América del Norte',
-	'Asia',
-	'Africa',
-	'Europa',
-	'Global',
-	'Latinoamerica',
-	'Local',
-];
+const TargetMarketList = ['América del Norte', 'Asia', 'Africa', 'Europa', 'Global', 'Latinoamerica', 'Local'];
 function UserDataFormTab() {
 	const { setActiveStep, userType } = useSignupData();
 	const handleNext = () => {
@@ -66,36 +52,19 @@ function UserDataFormTab() {
 		handleNext();
 	};
 	return (
-		<Stack
-			direction="column"
-			justifyContent="flex-start"
-			alignContent="flex-start"
-			pb={3}
-		>
+		<Stack direction="column" justifyContent="flex-start" alignContent="flex-start" pb={3}>
 			<Typography variant="h2" fontSize="2rem" fontWeight="bold">
 				Datos
 			</Typography>
-			<Typography
-				variant="body2"
-				color="textSecondary"
-				mt={1}
-				gutterBottom
-			>
-				Usuario de tipo {userType} te damos la bienvenida a la
-				plataforma que impulsa tu potencial financiero.
+			<Typography variant="body2" color="textSecondary" mt={1} gutterBottom>
+				Usuario de tipo {userType} te damos la bienvenida a la plataforma que impulsa tu potencial financiero.
 			</Typography>
 			<Typography variant="body2" color="textSecondary">
 				Llena este ultimo formulario para continuar.
 			</Typography>
 			<form onSubmit={handleSubmit}>
 				<Grid container spacing={2} mt={2}>
-					<Grid
-						item
-						xs={12}
-						sm={12}
-						md={12}
-						sx={{ position: 'relative' }}
-					>
+					<Grid item xs={12} sm={12} md={12} sx={{ position: 'relative' }}>
 						<TextField
 							required
 							autoFocus
@@ -109,77 +78,36 @@ function UserDataFormTab() {
 						<HelperPopover />
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
-						<TextField
-							required
-							select
-							name="industry"
-							fullWidth
-							label="Industria"
-							variant="outlined"
-						>
+						<TextField required select name="industry" fullWidth label="Industria" variant="outlined">
 							{IndustryList.sort().map((option) => (
-								<MenuItem
-									key={option}
-									value={option.toUpperCase()}
-								>
+								<MenuItem key={option} value={option.toUpperCase()}>
 									{option}
 								</MenuItem>
 							))}
 						</TextField>
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
-						<TextField
-							required
-							select
-							name="companyType"
-							fullWidth
-							label="Tipo de empresa"
-							variant="outlined"
-						>
+						<TextField required select name="companyType" fullWidth label="Tipo de empresa" variant="outlined">
 							{CompanyTypeList.sort().map((option) => (
-								<MenuItem
-									key={option}
-									value={option.toUpperCase()}
-								>
+								<MenuItem key={option} value={option.toUpperCase()}>
 									{option}
 								</MenuItem>
 							))}
 						</TextField>
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
-						<TextField
-							required
-							select
-							name="sector"
-							fullWidth
-							label="Sector"
-							variant="outlined"
-							defaultValue=""
-						>
+						<TextField required select name="sector" fullWidth label="Sector" variant="outlined" defaultValue="">
 							{SectorList.sort().map((option) => (
-								<MenuItem
-									key={option}
-									value={option.toUpperCase()}
-								>
+								<MenuItem key={option} value={option.toUpperCase()}>
 									{option}
 								</MenuItem>
 							))}
 						</TextField>
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
-						<TextField
-							required
-							fullWidth
-							select
-							name="targetMarket"
-							label="Mercado Objetivo"
-							variant="outlined"
-						>
+						<TextField required fullWidth select name="targetMarket" label="Mercado Objetivo" variant="outlined">
 							{TargetMarketList.sort().map((option) => (
-								<MenuItem
-									key={option}
-									value={option.toUpperCase()}
-								>
+								<MenuItem key={option} value={option.toUpperCase()}>
 									{option}
 								</MenuItem>
 							))}
@@ -191,11 +119,7 @@ function UserDataFormTab() {
 							label={
 								<Typography variant="subtitle2">
 									{'Acepto el '}
-									<Link
-										href="#!"
-										rel="noopener noreferrer"
-										target="_blank"
-									>
+									<Link href="#!" rel="noopener noreferrer" target="_blank">
 										<b>aviso de privacidad</b>
 									</Link>
 									{' y la jurisdicción aplicable.'}
@@ -205,10 +129,7 @@ function UserDataFormTab() {
 					</Grid>
 				</Grid>
 			</form>
-			<SignupButtonsContainer
-				handleNext={handleSubmit}
-				handleBack={handleBack}
-			/>
+			<SignupButtonsContainer handleNext={handleSubmit} handleBack={handleBack} />
 		</Stack>
 	);
 }
@@ -240,11 +161,7 @@ function HelperPopover() {
 				onMouseEnter={handlePopoverOpen}
 				onMouseLeave={handlePopoverClose}
 			>
-				<QuestionMarkIcon
-					color="background.paper"
-					fontSize="small"
-					sx={{ fontSize: 15 }}
-				/>
+				<QuestionMarkIcon color="background.paper" fontSize="small" sx={{ fontSize: 15 }} />
 			</Avatar>
 
 			<Popover
@@ -271,9 +188,7 @@ function HelperPopover() {
 					borderColor="info.main" */
 					p={2}
 				>
-					<Typography variant="subtitle1">
-						Opciones Etapas de inversión
-					</Typography>
+					<Typography variant="subtitle1">Opciones Etapas de inversión</Typography>
 					<Divider />
 					{TargetMarketList.map((model, index) => (
 						<Typography key={index}>

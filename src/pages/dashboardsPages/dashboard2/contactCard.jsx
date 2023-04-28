@@ -8,27 +8,11 @@ import CardHeader from '@/components/cardHeader';
 function ContactCard() {
 	return (
 		<Card>
-			<CardHeader
-				title="Quick contact form"
-				size="small"
-				sx={{ mb: 2 }}
-			/>
+			<CardHeader title="Quick contact form" size="small" sx={{ mb: 2 }} />
 			<Stack spacing={2} direction="column">
-				<TextField
-					id="outlined-basic"
-					placeholder="Enter your Name"
-					variant="outlined"
-				/>
-				<TextField
-					id="outlined-basic"
-					placeholder="Enter your Email"
-					variant="outlined"
-				/>
-				<TextField
-					placeholder="Enter your message"
-					multiline
-					minRows={4}
-				/>
+				<TextField id="outlined-basic" placeholder="Enter your Name" variant="outlined" />
+				<TextField id="outlined-basic" placeholder="Enter your Email" variant="outlined" />
+				<TextField placeholder="Enter your message" multiline minRows={4} />
 				<Button variant="contained" disableElevation>
 					Send message
 				</Button>

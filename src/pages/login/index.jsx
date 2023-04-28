@@ -40,13 +40,7 @@ function LoginPage() {
 			}}
 		>
 			<Stack direction="column" spacing={2}>
-				<Box
-					component="img"
-					src={logo}
-					width="90%"
-					mx="auto"
-					alt="slim logo"
-				/>
+				<Box component="img" src={logo} width="90%" mx="auto" alt="slim logo" />
 				<div>
 					<Typography variant="h1">¡Bienvenido!</Typography>
 					<Typography variant="body2" color="textSecondary">
@@ -66,14 +60,7 @@ function LoginPage() {
 					to="/home"
 					component={RouterLink}
 				>
-					<Box
-						sx={{ mr: { xs: 1, sm: 2 }, mt: 0 }}
-						width={16}
-						height={16}
-						component="img"
-						src={Google}
-						alt="google"
-					/>
+					<Box sx={{ mr: { xs: 1, sm: 2 }, mt: 0 }} width={16} height={16} component="img" src={Google} alt="google" />
 					Ingresar con Google
 				</Button>
 				<Divider>
@@ -85,14 +72,7 @@ function LoginPage() {
 				</Typography>
 				<LoginForm />
 
-				<Button
-					variant="outlined"
-					fullWidth
-					color="primary"
-					to="/pages/signup"
-					size="small"
-					component={RouterLink}
-				>
+				<Button variant="outlined" fullWidth color="primary" to="/pages/signup" size="small" component={RouterLink}>
 					Registrarse
 				</Button>
 				{/* <Typography>
@@ -102,13 +82,7 @@ function LoginPage() {
 					</Link>
 				</Typography> */}
 				<Divider sx={{ my: 0 }} />
-				<Link
-					textAlign="center"
-					to="/resetPassword"
-					variant="body2"
-					component={RouterLink}
-					color="tertiary.main"
-				>
+				<Link textAlign="center" to="/resetPassword" variant="body2" component={RouterLink} color="tertiary.main">
 					¿Has olvidado tu contraseña?
 				</Link>
 			</Stack>
@@ -173,18 +147,8 @@ function LoginForm() {
 				fullWidth
 			/>
 			<Stack direction="row" justifyContent="space-between">
-				<FormControlLabel
-					control={
-						<Switch defaultChecked size="small" color="primary" />
-					}
-					label="Recordarme"
-					sx={{ ml: 0.5 }}
-				/>
-				<Typography
-					htmlFor="showPassword"
-					variant="caption"
-					component="label"
-				>
+				<FormControlLabel control={<Switch defaultChecked size="small" color="primary" />} label="Recordarme" sx={{ ml: 0.5 }} />
+				<Typography htmlFor="showPassword" variant="caption" component="label">
 					<Checkbox
 						color="secondary"
 						name="showPassword"
@@ -203,17 +167,7 @@ function LoginForm() {
 				type="submit"
 				variant="contained"
 				disabled={isLoading}
-				endIcon={
-					isLoading ? (
-						<CircularProgress
-							color="secondary"
-							size={25}
-							sx={{ my: 'auto' }}
-						/>
-					) : (
-						<LoginIcon />
-					)
-				}
+				endIcon={isLoading ? <CircularProgress color="secondary" size={25} sx={{ my: 'auto' }} /> : <LoginIcon />}
 				size="small"
 				fullWidth
 				color="primary"

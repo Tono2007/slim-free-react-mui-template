@@ -1,9 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import {
-	Provider as ReduxProvider,
-	useSelector,
-	useDispatch,
-} from 'react-redux';
+import { Provider as ReduxProvider, useSelector, useDispatch } from 'react-redux';
 
 const store = configureStore({
 	devTools: process.env.NODE_ENV !== 'production',

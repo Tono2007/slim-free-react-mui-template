@@ -21,13 +21,7 @@ const VARIANTS_CONFIG = {
 
 function CardHeader({ children, title, subtitle, size = 'medium', sx }) {
 	return (
-		<Stack
-			mb={VARIANTS_CONFIG?.[size]?.headerMb}
-			direction="row"
-			justifyContent="space-between"
-			flexWrap="wrap"
-			sx={sx}
-		>
+		<Stack mb={VARIANTS_CONFIG?.[size]?.headerMb} direction="row" justifyContent="space-between" flexWrap="wrap" sx={sx}>
 			<Stack>
 				<Typography
 					variant={VARIANTS_CONFIG?.[size]?.titleVariant}

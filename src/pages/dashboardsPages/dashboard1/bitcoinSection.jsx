@@ -21,20 +21,10 @@ function BitcoinSection() {
 		<section>
 			<Grid container spacing={3}>
 				<Grid item xs={12} sm={6} md={4}>
-					<BitcoinCard
-						img={bitcoin1}
-						title="Safe & Secure"
-						content={BITCOIN_CARD_DESCRIPTION}
-						buttonText="Getting Stared"
-					/>
+					<BitcoinCard img={bitcoin1} title="Safe & Secure" content={BITCOIN_CARD_DESCRIPTION} buttonText="Getting Stared" />
 				</Grid>
 				<Grid item xs={12} sm={6} md={4}>
-					<BitcoinCard
-						img={bitcoin2}
-						title="Instant Exchange"
-						content={BITCOIN_CARD_DESCRIPTION}
-						buttonText="Take a Tour"
-					/>
+					<BitcoinCard img={bitcoin2} title="Instant Exchange" content={BITCOIN_CARD_DESCRIPTION} buttonText="Take a Tour" />
 				</Grid>
 				<Grid item xs={12} sm={12} md={4}>
 					<Stack direction="column" spacing={3} height="100%">
@@ -50,13 +40,7 @@ function BitcoinCard(props) {
 	const { img, title, content, buttonText } = props;
 	return (
 		<Card sx={{ height: '100%' }}>
-			<Stack
-				height="100%"
-				direction="column"
-				spacing={3}
-				justifyContent="center"
-				alignItems="center"
-			>
+			<Stack height="100%" direction="column" spacing={3} justifyContent="center" alignItems="center">
 				<img src={img} alt="bitcoin 1" width="40%" />
 				<Typography variant="h3">{title}</Typography>
 				<Typography variant="body2" color="text.secondary">
@@ -79,11 +63,7 @@ function SalesCard() {
 	return (
 		<Card sx={{ height: '50%' }}>
 			<Stack direction="column" spacing={1} justifyContent="center">
-				<Typography
-					color="primary.main"
-					variant="h5"
-					textTransform="uppercase"
-				>
+				<Typography color="primary.main" variant="h5" textTransform="uppercase">
 					Sales Report
 				</Typography>
 				<Stack
@@ -107,11 +87,7 @@ function SalesCard() {
 				</Stack>
 
 				<Box sx={{ width: '100%', position: 'relative' }}>
-					<LinearProgress
-						variant="determinate"
-						value={50}
-						sx={{ height: 15 }}
-					/>
+					<LinearProgress variant="determinate" value={50} sx={{ height: 15 }} />
 					<Box
 						sx={{
 							width: '50%',
@@ -125,18 +101,12 @@ function SalesCard() {
 							justifyContent: 'center',
 						}}
 					>
-						<Typography
-							variant="caption"
-							component="div"
-							color="primary.contrastText"
-						>
+						<Typography variant="caption" component="div" color="primary.contrastText">
 							{`${Math.round(50)}%`}
 						</Typography>
 					</Box>
 				</Box>
-				<Typography color="text.secondary">
-					Maecenas tempus, tellus eget conditum rhon.
-				</Typography>
+				<Typography color="text.secondary">Maecenas tempus, tellus eget conditum rhon.</Typography>
 			</Stack>
 		</Card>
 	);
@@ -182,11 +152,7 @@ function ImpressionsCard() {
 	return (
 		<Card sx={{ position: 'relative', height: '50%' }}>
 			<Stack direction="column" spacing={1} pb={6}>
-				<Typography
-					color="primary.main"
-					variant="h5"
-					textTransform="uppercase"
-				>
+				<Typography color="primary.main" variant="h5" textTransform="uppercase">
 					Impressions
 				</Typography>
 				<Typography variant="body2" fontSize={27}>
