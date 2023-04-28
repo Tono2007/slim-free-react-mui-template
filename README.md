@@ -8,9 +8,9 @@ It can be used for most type of dashboard and app templates like analytics, admi
 
 ⭐ ⭐ ⭐
 
-## Free Berry React version
+## Free SLIM MUI React js version
 
--   [Preview](https://github.com/Tono2007/slim-free-react-mui-template)
+-   [Preview](https://slim-free-react-mui-template.netlify.app/)
 -   [Download from Github](https://github.com/Tono2007/slim-free-react-mui-template)
 
 ## Getting Started
@@ -54,21 +54,30 @@ We use three different colors
 ├── public
 ├── README.md
 ├── src
-│   ├── _mockApis          -> Mock Json data to be used for working apps
+│   ├── _mocks             -> Mock Json data to be used for working apps
 │   ├── assets
 │   │   ├── images
 │   │   ├── css            -> Template css files
 │   │       ├── style.css  -> Application main css file
 │   ├── components
-│   │   ├── LandingLayout  -> Layout for landing components & routers
-│   │   ├── MainLayout     -> Layout for main components & routers
-│   │   ├── MinimalLayout  -> Layout for mimimal components & routers
-│   └── pages              -> View files for all pages
-│   ├── contexts           -> State context
-│   ├── hooks              -> Custom hooks
-├── App.js                 -> starting point of application
-├── config.js              -> Template constant value and live customization
-├── index.js
+│   │   │── layouts
+│   │       ├── LandingLayout  -> Layout for landing components & routers
+│   │       ├── MainLayout     -> Layout for main components & routers
+│   │       ├── MinimalLayout  -> Layout for mimimal components & routers
+│   │   ├── loader   
+│   │   ├── modal     
+│   │── pages              -> View files for all pages
+│   ├── contexts/redux     -> State management
+│   ├── utils     
+│   │   ├── helpers        -> helpers utilities
+│   │   ├── hocs           -> Custom hocs
+│   │   ├── hooks          -> Custom hooks
+│   │   ├── routes         -> router
+│   │   ├── theme          -> custom theme provider
+│   │   ├── constants      -> general app constants
+│   ├──App.js              -> starting point of application
+├── vite.config.js         -> Template constant value and live customization
+├── index.html
 ```
 
 ## DOC
