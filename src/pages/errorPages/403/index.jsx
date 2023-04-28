@@ -1,20 +1,19 @@
-import { useLocation, Link } from 'react-router-dom';
+import calcHeaderHeight from '@helpers/layoutHeight';
 // MUI
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 
 // Icons
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
 
-function PageNotFound() {
+function Page403() {
 	return (
 		<Stack
 			direction="column"
-			spacing={2}
+			spacing={1}
 			justifyContent="center"
 			alignItems="center"
-			minHeight="100vh"
+			minHeight={`calc(100vh - ${calcHeaderHeight('header')})`}
 			color="text.tertiary"
 		>
 			<Typography
@@ -23,31 +22,29 @@ function PageNotFound() {
 				borderBottom={1}
 				sx={{ textDecoration: 'dotted underline' }}
 			>
-				404
+				403
 			</Typography>
 			{/* <Typography variant="h2" color="inherit">
 				Page not found
 			</Typography> */}
 			<Typography variant="h2" color="inherit">
-				Oopps. The page you were looking for doesn&apos;t exist.
+				Lo sentimos...
 			</Typography>
 			{/* <Typography variant="body2" color="inherit">
 				You may have mistyped the address or the page may have moved.
 			</Typography> */}
 			<Typography variant="body2" color="inherit">
-				The page you are looking for {useLocation().pathname}{' '}
-				doesn&apos;t exist or an other error ocurred. Go back, or choose
-				a new direction
+				La página que intenta acceder tiene un acceso restringido.
 			</Typography>
-			<SentimentVeryDissatisfiedIcon sx={{ fontSize: 50 }} />
-			<Button variant="outlined" size="small" component={Link} to="/">
-				BACK TO HOME
-			</Button>
+			<Typography variant="body2" color="inherit">
+				Por favor comunicate con el administrador.
+			</Typography>
+			<SentimentVeryDissatisfiedIcon sx={{ fontSize: 110 }} />
 			<Typography variant="caption">
-				© Copyright 2023. All Rights Reserved. Slim React MUI Template
+				SLIM React MUI Template. 2023
 			</Typography>
 		</Stack>
 	);
 }
 
-export default PageNotFound;
+export default Page403;

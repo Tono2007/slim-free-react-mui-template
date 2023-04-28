@@ -9,8 +9,6 @@ import MainLayout from '@/components/layouts/mainLayout';
 
 import Page404 from '@/pages/errorPages/404';
 
-const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
-const SignupPage = withLazyLoadably(lazy(() => import('@/pages/signup')));
 const Dashboard1Page = withLazyLoadably(
 	lazy(() => import('@/pages/dashboardsPages/dashboard1')),
 );
@@ -26,6 +24,20 @@ const Dashboard4Page = withLazyLoadably(
 const Dashboard5Page = withLazyLoadably(
 	lazy(() => import('@/pages/dashboardsPages/dashboard5')),
 );
+const FormsComponentPage = withLazyLoadably(
+	lazy(() => import('@/pages/componentsPages/forms')),
+);
+const LoadersComponentPage = withLazyLoadably(
+	lazy(() => import('@/pages/componentsPages/loaders')),
+);
+const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
+const Page403 = withLazyLoadably(lazy(() => import('@/pages/errorPages/403')));
+const Page500 = withLazyLoadably(lazy(() => import('@/pages/errorPages/500')));
+const Page503 = withLazyLoadably(lazy(() => import('@/pages/errorPages/503')));
+const Page505 = withLazyLoadably(lazy(() => import('@/pages/errorPages/505')));
+const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
+const SignupPage = withLazyLoadably(lazy(() => import('@/pages/signup')));
+const SamplePage = withLazyLoadably(lazy(() => import('@/pages/sample')));
 const ThemeTypographyPage = withLazyLoadably(
 	lazy(() => import('@/pages/themePages/themeTypography')),
 );
@@ -35,8 +47,6 @@ const ThemeColorsPage = withLazyLoadably(
 const ThemeShadowPage = withLazyLoadably(
 	lazy(() => import('@/pages/themePages/themeShadow')),
 );
-const SamplePage = withLazyLoadably(lazy(() => import('@/pages/sample')));
-const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
 
 function Router() {
 	return (
@@ -75,6 +85,16 @@ function Router() {
 								element={<Dashboard5Page />}
 							/>
 						</Route>
+						<Route path="components/">
+							<Route
+								path="forms"
+								element={<FormsComponentPage />}
+							/>
+							<Route
+								path="loaders"
+								element={<LoadersComponentPage />}
+							/>
+						</Route>
 						<Route path="theme/">
 							<Route
 								path="typography"
@@ -92,6 +112,10 @@ function Router() {
 						<Route path="pages/">
 							<Route path="error/">
 								<Route path="404" element={<Page404 />} />
+								<Route path="403" element={<Page403 />} />
+								<Route path="500" element={<Page500 />} />
+								<Route path="503" element={<Page503 />} />
+								<Route path="505" element={<Page505 />} />
 							</Route>
 						</Route>
 					</Route>

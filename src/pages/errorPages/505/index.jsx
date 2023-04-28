@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 // Icons
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
 
-function PageNotFound() {
+function Page505() {
 	return (
 		<Stack
 			direction="column"
@@ -23,21 +23,15 @@ function PageNotFound() {
 				borderBottom={1}
 				sx={{ textDecoration: 'dotted underline' }}
 			>
-				404
+				505
 			</Typography>
-			{/* <Typography variant="h2" color="inherit">
-				Page not found
-			</Typography> */}
 			<Typography variant="h2" color="inherit">
-				Oopps. The page you were looking for doesn&apos;t exist.
+				Oopps. Something is broken.
 			</Typography>
-			{/* <Typography variant="body2" color="inherit">
-				You may have mistyped the address or the page may have moved.
-			</Typography> */}
+
 			<Typography variant="body2" color="inherit">
-				The page you are looking for {useLocation().pathname}{' '}
-				doesn&apos;t exist or an other error ocurred. Go back, or choose
-				a new direction
+				We&apos;ve been automatically alerted of the issue and will work
+				to fix it asap.
 			</Typography>
 			<SentimentVeryDissatisfiedIcon sx={{ fontSize: 50 }} />
 			<Button variant="outlined" size="small" component={Link} to="/">
@@ -50,4 +44,4 @@ function PageNotFound() {
 	);
 }
 
-export default PageNotFound;
+export default Page505;

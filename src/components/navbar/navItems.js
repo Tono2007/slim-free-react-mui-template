@@ -58,31 +58,31 @@ const NAV_LINKS_CONFIG = [
 		children: [
 			{
 				title: 'Forms',
-				href: '/producers/new',
+				href: '/components/forms',
 			},
 			{
 				title: 'Tables',
-				href: '/producers/new',
+				href: '/components/new',
 			},
 			{
 				title: 'Modal',
-				href: '/producers/new',
+				href: '/components/new',
 			},
 			{
-				title: 'Loader',
-				href: '/producers/new',
+				title: 'Loaders',
+				href: '/components/loaders',
 			},
 			{
 				title: 'Alerts/Snackbar/Toasts',
-				href: '/producers/new',
+				href: '/components/new',
 			},
 			{
 				title: 'Carousel',
-				href: '/producers/new',
+				href: '/components/new',
 			},
 			{
 				title: 'Navigation/Navbar',
-				href: '/producers/new',
+				href: '/components/new',
 			},
 			{
 				title: 'UI Elements',
@@ -201,20 +201,24 @@ const NAV_LINKS_CONFIG = [
 				type: 'group',
 				children: [
 					{
-						title: '404',
+						title: '403 Unauthorized',
+						href: '/pages/error/403',
+					},
+					{
+						title: '404 Not Found',
 						href: '/pages/error/404',
 					},
 					{
-						title: '405',
-						href: '/pages/error/404',
+						title: '500 Internal Server',
+						href: '/pages/error/500',
 					},
 					{
-						title: '403',
-						href: '/pages/error/404',
+						title: '503 Service Unavvailable',
+						href: '/pages/error/503',
 					},
 					{
-						title: '401',
-						href: '/pages/error/404',
+						title: '505 Forbidden',
+						href: '/pages/error/505',
 					},
 				],
 			},
