@@ -65,7 +65,10 @@ To report a bug, please submit an [issue](https://github.com/Tono2007/slim-free-
 
 ### Color Presets
 
-We use three different colors
+We use different colors
+
+| <div style="background:#1560BD; width:30px;height:30px"/> | <div style="background:#FEC604; width:30px;height:30px"/> | <div style="background:#E219D7; width:30px;height:30px"/> | <div style="background:#17A3F1; width:30px;height:30px"/> | <div style="background:#F0F2F7; width:30px;height:30px"/> |
+| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
 
 ### Changelog
 

@@ -59,7 +59,7 @@ function SampleTabsPage() {
 					<Card
 						sx={{
 							position: 'sticky',
-							top: `${calcHeaderHeight('nav', false) + 40}px`,
+							top: `${calcHeaderHeight('nav', false) + 30}px`,
 						}}
 						component="aside"
 					>
@@ -106,7 +106,7 @@ function MenuListItem({ Icon, text, ...props }) {
 
 function Section({ text }) {
 	return (
-		<Card sx={{ minHeight: '100vh' }}>
+		<Card sx={{ minHeight: '100vh' }} type="section">
 			<CardHeader title={`Section ${text} Title`} subtitle="Section subtitle">
 				Optional Action
 			</CardHeader>

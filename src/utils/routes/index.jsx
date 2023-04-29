@@ -9,27 +9,13 @@ import MainLayout from '@/components/layouts/mainLayout';
 
 import Page404 from '@/pages/errorPages/404';
 
-const Dashboard1Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboardsPages/dashboard1')),
-);
-const Dashboard2Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboardsPages/dashboard2')),
-);
-const Dashboard3Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboardsPages/dashboard3')),
-);
-const Dashboard4Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboardsPages/dashboard4')),
-);
-const Dashboard5Page = withLazyLoadably(
-	lazy(() => import('@/pages/dashboardsPages/dashboard5')),
-);
-const FormsComponentPage = withLazyLoadably(
-	lazy(() => import('@/pages/componentsPages/forms')),
-);
-const LoadersComponentPage = withLazyLoadably(
-	lazy(() => import('@/pages/componentsPages/loaders')),
-);
+const Dashboard1Page = withLazyLoadably(lazy(() => import('@/pages/dashboardsPages/dashboard1')));
+const Dashboard2Page = withLazyLoadably(lazy(() => import('@/pages/dashboardsPages/dashboard2')));
+const Dashboard3Page = withLazyLoadably(lazy(() => import('@/pages/dashboardsPages/dashboard3')));
+const Dashboard4Page = withLazyLoadably(lazy(() => import('@/pages/dashboardsPages/dashboard4')));
+const Dashboard5Page = withLazyLoadably(lazy(() => import('@/pages/dashboardsPages/dashboard5')));
+const FormsComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/forms')));
+const LoadersComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/loaders')));
 const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
 const Page403 = withLazyLoadably(lazy(() => import('@/pages/errorPages/403')));
 const Page500 = withLazyLoadably(lazy(() => import('@/pages/errorPages/500')));
@@ -38,15 +24,9 @@ const Page505 = withLazyLoadably(lazy(() => import('@/pages/errorPages/505')));
 const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
 const SignupPage = withLazyLoadably(lazy(() => import('@/pages/signup')));
 const SamplePage = withLazyLoadably(lazy(() => import('@/pages/sample')));
-const ThemeTypographyPage = withLazyLoadably(
-	lazy(() => import('@/pages/themePages/themeTypography')),
-);
-const ThemeColorsPage = withLazyLoadably(
-	lazy(() => import('@/pages/themePages/themeColors')),
-);
-const ThemeShadowPage = withLazyLoadably(
-	lazy(() => import('@/pages/themePages/themeShadow')),
-);
+const ThemeTypographyPage = withLazyLoadably(lazy(() => import('@/pages/themePages/themeTypography')));
+const ThemeColorsPage = withLazyLoadably(lazy(() => import('@/pages/themePages/themeColors')));
+const ThemeShadowPage = withLazyLoadably(lazy(() => import('@/pages/themePages/themeShadow')));
 
 function Router() {
 	return (
@@ -64,50 +44,20 @@ function Router() {
 						<Route path="samplePage" element={<SamplePage />} />
 
 						<Route path="dashboards/">
-							<Route
-								path="dashboard1"
-								element={<Dashboard1Page />}
-							/>
-							<Route
-								path="dashboard2"
-								element={<Dashboard2Page />}
-							/>
-							<Route
-								path="dashboard3"
-								element={<Dashboard3Page />}
-							/>
-							<Route
-								path="dashboard4"
-								element={<Dashboard4Page />}
-							/>
-							<Route
-								path="dashboard5"
-								element={<Dashboard5Page />}
-							/>
+							<Route path="dashboard1" element={<Dashboard1Page />} />
+							<Route path="dashboard2" element={<Dashboard2Page />} />
+							<Route path="dashboard3" element={<Dashboard3Page />} />
+							<Route path="dashboard4" element={<Dashboard4Page />} />
+							<Route path="dashboard5" element={<Dashboard5Page />} />
 						</Route>
 						<Route path="components/">
-							<Route
-								path="forms"
-								element={<FormsComponentPage />}
-							/>
-							<Route
-								path="loaders"
-								element={<LoadersComponentPage />}
-							/>
+							<Route path="forms" element={<FormsComponentPage />} />
+							<Route path="loaders" element={<LoadersComponentPage />} />
 						</Route>
 						<Route path="theme/">
-							<Route
-								path="typography"
-								element={<ThemeTypographyPage />}
-							/>
-							<Route
-								path="colors"
-								element={<ThemeColorsPage />}
-							/>
-							<Route
-								path="boxShadow"
-								element={<ThemeShadowPage />}
-							/>
+							<Route path="typography" element={<ThemeTypographyPage />} />
+							<Route path="colors" element={<ThemeColorsPage />} />
+							<Route path="boxShadow" element={<ThemeShadowPage />} />
 						</Route>
 						<Route path="pages/">
 							<Route path="error/">
@@ -119,10 +69,7 @@ function Router() {
 							</Route>
 						</Route>
 					</Route>
-					<Route
-						path="/"
-						element={<MainLayout container={false} pb={false} />}
-					>
+					<Route path="/" element={<MainLayout container={false} pb={false} />}>
 						<Route path="pages/">
 							<Route path="wip" element={<WIPPage />} />
 						</Route>
