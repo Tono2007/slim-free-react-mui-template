@@ -58,7 +58,6 @@ function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 				open={open}
 				anchorEl={anchorEl}
 				placement="bottom-start"
-				keepMounted
 				onClose={handlePopoverClose}
 				disablePortal
 				sx={{ zIndex: 9999, minWidth }}
