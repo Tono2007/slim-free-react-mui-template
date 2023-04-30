@@ -47,6 +47,12 @@ export default {
 		800: '#064668',
 		contrastText: '#fff',
 	},
+	success: {
+		light: '#81c784',
+		main: '#4caf50',
+		dark: '#388e3c',
+		contrastText: '#fff',
+	},
 	border: '#DEE2E6',
 
 	text: {

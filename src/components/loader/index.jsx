@@ -83,7 +83,7 @@ const DoubleBounceChild = styled('div')(({ theme, color }) => ({
 	left: 0,
 	animation: `${doubleBounceKeyframe} 2s infinite ease-in-out`,
 	webkitAnimation: `${doubleBounceKeyframe} 2s infinite ease-in-out`,
-	'&:nth-child(2)': {
+	'&:nth-of-type(2)': {
 		animationDelay: '-1s',
 	},
 }));
@@ -114,19 +114,19 @@ const WaveChild = styled('div')(({ theme, color }) => ({
 	backgroundColor: theme.palette?.[color]?.main || theme.palette.primary.main,
 	animation: `${waveStretchKeyframe} 2s infinite ease-in-out`,
 	webkitAnimation: `${waveStretchKeyframe} 2s infinite ease-in-out`,
-	'&:nth-child(1)': {
+	'&:nth-of-type(1)': {
 		animationDelay: '-1.2s',
 	},
-	'&:nth-child(2)': {
+	'&:nth-of-type(2)': {
 		animationDelay: '-1.1s',
 	},
-	'&:nth-child(3)': {
+	'&:nth-of-type(3)': {
 		animationDelay: '-1s',
 	},
-	'&:nth-child(4)': {
+	'&:nth-of-type(4)': {
 		animationDelay: '-.9s',
 	},
-	'&:nth-child(5)': {
+	'&:nth-of-type(5)': {
 		animationDelay: '-.8s',
 	},
 }));
@@ -179,7 +179,7 @@ const CubeChild = styled('div')(({ theme, color }) => ({
 	animation: `${wanderingCubeKeyframe}  1.8s ease-in-out -1.8s infinite both`,
 	webkitAnimation: `${wanderingCubeKeyframe}  1.8s ease-in-out -1.8s infinite both`,
 
-	'&:nth-child(2)': {
+	'&:nth-of-type(2)': {
 		animationDelay: '-.9s',
 	},
 }));
@@ -213,7 +213,7 @@ const DotsChild = styled('div')(({ theme, color }) => ({
 	animation: `${chasingDotsBounceKeyframe} 2s infinite ease-in-out`,
 	webkitAnimation: `${chasingDotsBounceKeyframe} 2s infinite ease-in-out`,
 
-	'&:nth-child(2)': {
+	'&:nth-of-type(2)': {
 		animationDelay: '-1s',
 		top: 'auto',
 		bottom: 0,
@@ -262,10 +262,10 @@ const BounceChild = styled('div')(({ theme, color, size }) => ({
 	animation: `${threeBounceKeyframe}  1.4s ease-in-out 0s infinite both`,
 	webkitAnimation: `${threeBounceKeyframe}  1.4s ease-in-out 0s infinite both`,
 
-	'&:nth-child(1)': {
+	'&:nth-of-type(1)': {
 		animationDelay: '-.32s',
 	},
-	'&:nth-child(2)': {
+	'&:nth-of-type(2)': {
 		animationDelay: '-.16s',
 	},
 }));
@@ -297,28 +297,28 @@ const CubeGridChild = styled('div')(({ theme, color }) => ({
 	animation: `${cubeGridScaleDelayKeyFrame} 1.3s infinite ease-in-out`,
 	webkitAnimation: `${cubeGridScaleDelayKeyFrame} 1.3s infinite ease-in-out`,
 
-	'&:nth-child(1)': {
+	'&:nth-of-type(1)': {
 		animationDelay: '.2s',
 	},
-	'&:nth-child(2)': {
+	'&:nth-of-type(2)': {
 		animationDelay: '.3s',
 	},
-	'&:nth-child(3)': {
+	'&:nth-of-type(3)': {
 		animationDelay: '.4s',
 	},
-	'&:nth-child(4)': {
+	'&:nth-of-type(4)': {
 		animationDelay: '.1s',
 	},
-	'&:nth-child(5)': {
+	'&:nth-of-type(5)': {
 		animationDelay: '.2s',
 	},
-	'&:nth-child(6)': {
+	'&:nth-of-type(6)': {
 		animationDelay: '.3s',
 	},
-	'&:nth-child(8)': {
+	'&:nth-of-type(8)': {
 		animationDelay: '.1s',
 	},
-	'&:nth-child(9)': {
+	'&:nth-of-type(9)': {
 		animationDelay: '.2s',
 	},
 }));
@@ -368,71 +368,71 @@ const FadingCircleChild = styled('div')(({ theme, color, keyframe }) => ({
 		webkitAnimation: `${keyframe} 1.2s infinite ease-in-out both`,
 	},
 
-	'&:nth-child(2):before': {
+	'&:nth-of-type(2):before': {
 		animationDelay: '-1.1s',
 	},
-	'&:nth-child(3):before': {
+	'&:nth-of-type(3):before': {
 		animationDelay: '-1s',
 	},
-	'&:nth-child(4):before': {
+	'&:nth-of-type(4):before': {
 		animationDelay: '-.9s',
 	},
-	'&:nth-child(5):before': {
+	'&:nth-of-type(5):before': {
 		animationDelay: '-.8s',
 	},
-	'&:nth-child(6):before': {
+	'&:nth-of-type(6):before': {
 		animationDelay: '-.7s',
 	},
-	'&:nth-child(7):before': {
+	'&:nth-of-type(7):before': {
 		animationDelay: '-.6s',
 	},
-	'&:nth-child(8):before': {
+	'&:nth-of-type(8):before': {
 		animationDelay: '-.5s',
 	},
-	'&:nth-child(9):before': {
+	'&:nth-of-type(9):before': {
 		animationDelay: '-.4s',
 	},
-	'&:nth-child(10):before': {
+	'&:nth-of-type(10):before': {
 		animationDelay: '-.3s',
 	},
-	'&:nth-child(11):before': {
+	'&:nth-of-type(11):before': {
 		animationDelay: '-.2s',
 	},
-	'&:nth-child(12):before': {
+	'&:nth-of-type(12):before': {
 		animationDelay: '-.1s',
 	},
 
-	'&:nth-child(2)': {
+	'&:nth-of-type(2)': {
 		transform: 'rotate(30deg)',
 	},
-	'&:nth-child(3)': {
+	'&:nth-of-type(3)': {
 		transform: 'rotate(60deg)',
 	},
-	'&:nth-child(4)': {
+	'&:nth-of-type(4)': {
 		transform: 'rotate(90deg)',
 	},
-	'&:nth-child(5)': {
+	'&:nth-of-type(5)': {
 		transform: 'rotate(120deg)',
 	},
-	'&:nth-child(6)': {
+	'&:nth-of-type(6)': {
 		transform: 'rotate(150deg)',
 	},
-	'&:nth-child(7)': {
+	'&:nth-of-type(7)': {
 		transform: 'rotate(180deg)',
 	},
-	'&:nth-child(8)': {
+	'&:nth-of-type(8)': {
 		transform: 'rotate(210deg)',
 	},
-	'&:nth-child(9)': {
+	'&:nth-of-type(9)': {
 		transform: 'rotate(240deg)',
 	},
-	'&:nth-child(10)': {
+	'&:nth-of-type(10)': {
 		transform: 'rotate(270deg)',
 	},
-	'&:nth-child(11)': {
+	'&:nth-of-type(11)': {
 		transform: 'rotate(300deg)',
 	},
-	'&:nth-child(12)': {
+	'&:nth-of-type(12)': {
 		transform: 'rotate(330deg)',
 	},
 }));

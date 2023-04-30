@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
+import Skeleton from '@mui/material/Skeleton';
 import CircularProgress, { circularProgressClasses } from '@mui/material/CircularProgress';
 
 import PageHeader from '@/components/pageHeader';
@@ -191,6 +192,18 @@ function LoadersComponentsPage() {
 								</Stack>
 							))}
 						</Stack>
+					</Stack>
+				</Card>
+				<Card type="section">
+					<CardHeader title="MUI Skeleton" />
+					<Stack spacing={1}>
+						<Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+						<Skeleton variant="circular" width={40} height={40} />
+						<Skeleton variant="rectangular" width={210} height={60} />
+						<Skeleton variant="rounded" width={210} height={60} />
+						<Skeleton />
+						<Skeleton animation="wave" />
+						<Skeleton animation={false} />
 					</Stack>
 				</Card>
 			</Stack>

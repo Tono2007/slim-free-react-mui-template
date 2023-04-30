@@ -24,7 +24,7 @@ function Verify() {
 				Activación de cuenta de usuario
 			</Typography>
 
-			<CheckCircleIcon sx={{ color: 'success.light', fontSize: 90 }} color="success" />
+			<CheckCircleIcon sx={{ color: 'success.main', fontSize: 90 }} color="success" />
 			<Typography variant="subtitle1">
 				<b>Elizabeth,</b> tu cuenta de tipo {userType} se ha activado correctamente.
 			</Typography>
@@ -37,9 +37,9 @@ function Verify() {
 					Se recomienda completar los datos de tu perfil despues de iniciar sesión
 				</Typography>
 				<Button
-					size="small"
+					disableElevation
 					variant="contained"
-					color="secondary"
+					color="success"
 					onClick={() => {
 						navigate('/pages/login');
 					}}

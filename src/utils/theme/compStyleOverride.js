@@ -105,6 +105,7 @@ export default {
 			},
 		},
 	},
+
 	MuiOutlinedInput: {
 		styleOverrides: {
 			root: ({ ownerState }) => ({
@@ -139,6 +140,15 @@ export default {
 					borderColor: palette?.[ownerState.color]?.[400] || '#000',
 				},
 			}),
+		},
+	},
+	MuiInputBase: {
+		styleOverrides: {
+			root: {
+				'&.Mui-disabled, &.Mui-readOnly': {
+					pointerEvents: 'none',
+				},
+			},
 		},
 	},
 	MuiTableHead: {
