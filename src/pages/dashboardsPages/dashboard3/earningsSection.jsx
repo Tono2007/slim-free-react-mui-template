@@ -36,7 +36,9 @@ const earningsGraphConfig = {
 		tooltip: {
 			enabled: false,
 		},
-		yaxis: { show: false },
+		yaxis: {
+			show: false,
+		},
 	},
 	series: [
 		{
@@ -56,7 +58,14 @@ function EarningsSection() {
 		interval: 10,
 	});
 	return (
-		<Card type="none" sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+		<Card
+			type="none"
+			sx={{
+				height: '100%',
+				display: 'flex',
+				flexDirection: 'column',
+			}}
+		>
 			<Stack direction="column" spacing={1} px={3} pt={3} flexGrow={1}>
 				<Typography fontSize={30} variant="subtitle1">
 					${counter.toLocaleString()}
@@ -71,13 +80,18 @@ function EarningsSection() {
 					variant="text"
 					size="small"
 					endIcon={<ChevronRightIcon />}
-					sx={{ width: 'fit-content', textTransform: 'uppercase' }}
+					sx={{
+						width: 'fit-content',
+						textTransform: 'uppercase',
+					}}
 				>
 					View Report
 				</Button>
 			</Stack>
 			<Chart
-				style={{ marginTop: 'auto' }}
+				style={{
+					marginTop: 'auto',
+				}}
 				options={earningsGraphConfig.options}
 				series={earningsGraphConfig.series}
 				type="bar"

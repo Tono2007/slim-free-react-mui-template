@@ -28,8 +28,16 @@ const REPORTS_DATA = [
 		type: 'employee',
 		Icon: AccessibilityNewIcon,
 		series: [
-			{ name: 'Female', percentage: 66, color: 'cuaternary' },
-			{ name: 'Male', percentage: 34, color: 'error' },
+			{
+				name: 'Female',
+				percentage: 66,
+				color: 'cuaternary',
+			},
+			{
+				name: 'Male',
+				percentage: 34,
+				color: 'error',
+			},
 		],
 	},
 	{
@@ -37,8 +45,16 @@ const REPORTS_DATA = [
 		type: 'products',
 		Icon: Inventory2Icon,
 		series: [
-			{ name: 'Digital products', percentage: 85, color: 'warning' },
-			{ name: 'Non-digital products', percentage: 15, color: 'success' },
+			{
+				name: 'Digital products',
+				percentage: 85,
+				color: 'warning',
+			},
+			{
+				name: 'Non-digital products',
+				percentage: 15,
+				color: 'success',
+			},
 		],
 	},
 	{
@@ -46,8 +62,16 @@ const REPORTS_DATA = [
 		type: 'franchise',
 		Icon: LocationOnIcon,
 		series: [
-			{ name: 'Local', percentage: 75, color: 'tertiary' },
-			{ name: 'International', percentage: 25, color: 'secondary' },
+			{
+				name: 'Local',
+				percentage: 75,
+				color: 'tertiary',
+			},
+			{
+				name: 'International',
+				percentage: 25,
+				color: 'secondary',
+			},
 		],
 	},
 ];
@@ -106,7 +130,12 @@ function ReportCard({ report }) {
 				emptyIcon={<Icon fontSize="inherit" color="disabled" />}
 			/>
 			{series.map(({ percentage, name, color }, i) => (
-				<div style={{ width: '100%' }} key={i}>
+				<div
+					style={{
+						width: '100%',
+					}}
+					key={i}
+				>
 					<Typography variant="body2" color="text.secondary" gutterBottom>
 						{name} {percentage}%
 					</Typography>
@@ -157,7 +186,9 @@ const revenueGraphConfig = {
 		tooltip: {
 			enabled: false,
 		},
-		yaxis: { show: false },
+		yaxis: {
+			show: false,
+		},
 	},
 	series: [
 		{
@@ -181,7 +212,13 @@ function RevenueCard() {
 					1.4% up
 				</Typography>
 			</Typography>
-			<Chart options={revenueGraphConfig.options} series={revenueGraphConfig.series} type="area" width="100%" height="30%" />
+			<Chart
+				options={revenueGraphConfig.options}
+				series={revenueGraphConfig.series}
+				type="area"
+				width="100%"
+				height="30%"
+			/>
 			<Typography variant="body1" color="text.secondary" align="center">
 				Last month: &nbsp;
 				<Typography variant="body2" component="span">

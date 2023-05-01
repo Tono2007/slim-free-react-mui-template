@@ -8,11 +8,31 @@ import LinearProgress from '@mui/material/LinearProgress';
 import CardHeader from '@/components/cardHeader';
 
 const SALES_PROGRESS_DATA = [
-	{ sale: 43765, progress: 70, color: 'info' },
-	{ sale: 14220, progress: 30, color: 'error' },
-	{ sale: 20220, progress: 80, color: 'success' },
-	{ sale: 24224, progress: 50, color: 'warning' },
-	{ sale: 35224, progress: 75, color: 'tertiary' },
+	{
+		sale: 43765,
+		progress: 70,
+		color: 'info',
+	},
+	{
+		sale: 14220,
+		progress: 30,
+		color: 'error',
+	},
+	{
+		sale: 20220,
+		progress: 80,
+		color: 'success',
+	},
+	{
+		sale: 24224,
+		progress: 50,
+		color: 'warning',
+	},
+	{
+		sale: 35224,
+		progress: 75,
+		color: 'tertiary',
+	},
 ];
 function SaleProgressCard() {
 	return (
@@ -39,7 +59,14 @@ function SaleProgress({ saleData }) {
 			<Typography variant="body2" color="text.secondary" gutterBottom>
 				{counter.toLocaleString()} sales
 			</Typography>
-			<LinearProgress variant="determinate" color={color} value={(counter * progress) / sale} sx={{ height: 7 }} />
+			<LinearProgress
+				variant="determinate"
+				color={color}
+				value={(counter * progress) / sale}
+				sx={{
+					height: 7,
+				}}
+			/>
 		</div>
 	);
 }

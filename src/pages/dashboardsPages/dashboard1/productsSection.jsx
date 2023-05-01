@@ -29,7 +29,13 @@ function ProductsSection() {
 					Products Purchases
 				</Typography>
 				<ProductsTable />
-				<Button size="small" startIcon={<KeyboardArrowDownIcon />} sx={{ m: 1 }}>
+				<Button
+					size="small"
+					startIcon={<KeyboardArrowDownIcon />}
+					sx={{
+						m: 1,
+					}}
+				>
 					View All Products
 				</Button>
 			</Stack>
@@ -42,35 +48,50 @@ const PURCHASES_DATA = [
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 1),
 		sold: '3,345',
-		stock: { title: '20 remaining', status: 'error' },
+		stock: {
+			title: '20 remaining',
+			status: 'error',
+		},
 		gain: 33.34,
 	},
 	{
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 2),
 		sold: '720',
-		stock: { title: 'In stock', status: 'success' },
+		stock: {
+			title: 'In stock',
+			status: 'success',
+		},
 		gain: -21.2,
 	},
 	{
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 3),
 		sold: '1,445',
-		stock: { title: 'In stock', status: 'success' },
+		stock: {
+			title: 'In stock',
+			status: 'success',
+		},
 		gain: 23.34,
 	},
 	{
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 4),
 		sold: '2,500',
-		stock: { title: '45 remaining', status: 'warning' },
+		stock: {
+			title: '45 remaining',
+			status: 'warning',
+		},
 		gain: 28.78,
 	},
 	{
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 5),
 		sold: '223',
-		stock: { title: 'Paused', status: '' },
+		stock: {
+			title: 'Paused',
+			status: '',
+		},
 		gain: -18.18,
 	},
 ];
@@ -154,9 +175,19 @@ function ProductsTableRow({ purchase }) {
 			</TableCell>
 			<TableCell align="left">
 				<Typography variant="body1" color="text.tertiary">
-					<Typography component="span" variant="inherit" color={`${Math.sign(gain) === 1 ? 'success.light' : 'error.main'}`}>
-						{Math.sign(gain) === 1 ? <ArrowUpwardIcon fontSize="inherit" /> : <ArrowDownwardIcon fontSize="inherit" />}
-						&nbsp;{gain}%&nbsp;
+					<Typography
+						component="span"
+						variant="inherit"
+						color={`${Math.sign(gain) === 1 ? 'success.light' : 'error.main'}`}
+					>
+						{Math.sign(gain) === 1 ? (
+							<ArrowUpwardIcon fontSize="inherit" />
+						) : (
+							<ArrowDownwardIcon fontSize="inherit" />
+						)}
+						&nbsp;
+						{gain}
+						%&nbsp;
 					</Typography>
 					from last week
 				</Typography>

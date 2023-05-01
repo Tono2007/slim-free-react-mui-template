@@ -9,8 +9,22 @@ import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDiss
 
 function Page500() {
 	return (
-		<Stack direction="column" spacing={2} justifyContent="center" alignItems="center" minHeight="100vh" color="text.tertiary">
-			<Typography variant="h1" fontSize={150} borderBottom={1} sx={{ textDecoration: 'dotted underline' }}>
+		<Stack
+			direction="column"
+			spacing={2}
+			justifyContent="center"
+			alignItems="center"
+			minHeight="100vh"
+			color="text.tertiary"
+		>
+			<Typography
+				variant="h1"
+				fontSize={150}
+				borderBottom={1}
+				sx={{
+					textDecoration: 'dotted underline',
+				}}
+			>
 				500
 			</Typography>
 			<Typography variant="h2" color="inherit">
@@ -20,7 +34,11 @@ function Page500() {
 			<Typography variant="body2" color="inherit">
 				The server encountered an internal server error and was unable to complete your request.
 			</Typography>
-			<SentimentVeryDissatisfiedIcon sx={{ fontSize: 50 }} />
+			<SentimentVeryDissatisfiedIcon
+				sx={{
+					fontSize: 50,
+				}}
+			/>
 			<Button variant="outlined" size="small" component={Link} to="/">
 				BACK TO HOME
 			</Button>

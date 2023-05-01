@@ -37,7 +37,9 @@ function MainLayout({ container = 'lg', pb = true }) {
 				component="main"
 				sx={{
 					flex: '1 0 auto',
-					...(pb && { pb: 5 }),
+					...(pb && {
+						pb: 5,
+					}),
 				}}
 			>
 				{/* <WidthPageTransition location={location.key}>

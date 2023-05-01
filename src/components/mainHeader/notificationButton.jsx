@@ -66,7 +66,12 @@ function NotificationsButton() {
 					spacing={2}
 				>
 					<Stack direction="row" justifyContent="space-between" flexWrap="wrap">
-						<Stack direction="row" alignItems="center" spacing={1} divider={<Divider orientation="vertical" flexItem />}>
+						<Stack
+							direction="row"
+							alignItems="center"
+							spacing={1}
+							divider={<Divider orientation="vertical" flexItem />}
+						>
 							<Typography variant="subtitle1">Notificaciones</Typography>
 							<Box
 								component="span"
@@ -80,7 +85,14 @@ function NotificationsButton() {
 								3
 							</Box>
 						</Stack>
-						<Button variant="text" color="primary" size="small" sx={{ fontSize: 11 }}>
+						<Button
+							variant="text"
+							color="primary"
+							size="small"
+							sx={{
+								fontSize: 11,
+							}}
+						>
 							Marcar como leidas
 						</Button>
 						<IconButton
@@ -90,14 +102,21 @@ function NotificationsButton() {
 							color="primary"
 							sx={{
 								border: 1,
-								display: { sm: 'none', xs: 'inline-flex' },
+								display: {
+									sm: 'none',
+									xs: 'inline-flex',
+								},
 							}}
 						>
 							<CloseIcon fontSize="inherit" />
 						</IconButton>
 					</Stack>
 
-					<Divider sx={{ my: 1 }} />
+					<Divider
+						sx={{
+							my: 1,
+						}}
+					/>
 
 					<Stack direction="column" spacing={1} divider={<Divider flexItem />}>
 						{notifications.slice(0, 5).map((notification) => (
@@ -151,7 +170,12 @@ function Notification({ notification }) {
 						{notification?.title}
 					</Typography>
 					<Typography variant="caption">
-						<AccessTimeIcon fontSize="inherit" sx={{ mr: 0.3 }} />
+						<AccessTimeIcon
+							fontSize="inherit"
+							sx={{
+								mr: 0.3,
+							}}
+						/>
 						{notification?.date}
 					</Typography>
 				</Stack>

@@ -28,7 +28,13 @@ function ProductsSection() {
 	return (
 		<Card type="none">
 			<Stack direction="column">
-				<CardHeader title="Products Purchases" size="small" sx={{ m: 2 }}>
+				<CardHeader
+					title="Products Purchases"
+					size="small"
+					sx={{
+						m: 2,
+					}}
+				>
 					<ButtonGroup variant="outlined" size="small" aria-label="temporaly button group">
 						{['Today', 'This Month', 'This Week'].map((tab, i) => (
 							<Button
@@ -46,7 +52,13 @@ function ProductsSection() {
 					</ButtonGroup>
 				</CardHeader>
 				<ProductsTable />
-				<Button size="small" startIcon={<KeyboardArrowDownIcon />} sx={{ m: 1 }}>
+				<Button
+					size="small"
+					startIcon={<KeyboardArrowDownIcon />}
+					sx={{
+						m: 1,
+					}}
+				>
 					View All Products
 				</Button>
 			</Stack>
@@ -59,7 +71,10 @@ const PURCHASES_DATA = [
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 1),
 		sold: '3,345',
-		stock: { title: '20 remaining', status: 'error' },
+		stock: {
+			title: '20 remaining',
+			status: 'error',
+		},
 		added: '10/21/2017	',
 		updated: 'an hour ago',
 		location: 'MX',
@@ -69,7 +84,10 @@ const PURCHASES_DATA = [
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 2),
 		sold: '720',
-		stock: { title: 'In stock', status: 'success' },
+		stock: {
+			title: 'In stock',
+			status: 'success',
+		},
 		added: '10/20/2017',
 		updated: '3 hours ago',
 		location: 'BE',
@@ -79,7 +97,10 @@ const PURCHASES_DATA = [
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 3),
 		sold: '1,445',
-		stock: { title: 'In stock', status: 'success' },
+		stock: {
+			title: 'In stock',
+			status: 'success',
+		},
 		added: '10/19/2017	',
 		updated: '5 hours ago	',
 		location: 'PR',
@@ -89,7 +110,10 @@ const PURCHASES_DATA = [
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 4),
 		sold: '2,500',
-		stock: { title: '45 remaining', status: 'warning' },
+		stock: {
+			title: '45 remaining',
+			status: 'warning',
+		},
 		added: '10/17/2017',
 		updated: '1 day ago',
 		location: 'AR',
@@ -99,7 +123,10 @@ const PURCHASES_DATA = [
 		id: uuid(),
 		product: productsData.find((product) => product?.id === 5),
 		sold: '223',
-		stock: { title: 'Paused', status: '' },
+		stock: {
+			title: 'Paused',
+			status: '',
+		},
 		added: '10/16/2017',
 		updated: 'a week ago',
 		location: 'GB',
@@ -192,9 +219,19 @@ function ProductsTableRow({ purchase }) {
 			</TableCell>
 			<TableCell align="left">
 				<Typography variant="body1" color="text.tertiary">
-					<Typography component="span" variant="inherit" color={`${Math.sign(gain) === 1 ? 'success.light' : 'error.main'}`}>
-						{Math.sign(gain) === 1 ? <ArrowUpwardIcon fontSize="inherit" /> : <ArrowDownwardIcon fontSize="inherit" />}
-						&nbsp;{gain}%&nbsp;
+					<Typography
+						component="span"
+						variant="inherit"
+						color={`${Math.sign(gain) === 1 ? 'success.light' : 'error.main'}`}
+					>
+						{Math.sign(gain) === 1 ? (
+							<ArrowUpwardIcon fontSize="inherit" />
+						) : (
+							<ArrowDownwardIcon fontSize="inherit" />
+						)}
+						&nbsp;
+						{gain}
+						%&nbsp;
 					</Typography>
 					from last week
 				</Typography>

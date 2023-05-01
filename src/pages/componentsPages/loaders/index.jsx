@@ -10,7 +10,18 @@ import CircularProgress, { circularProgressClasses } from '@mui/material/Circula
 
 import PageHeader from '@/components/pageHeader';
 import CardHeader from '@/components/cardHeader';
-import { LogoLoader, Loader1, Loader2, Loader3, Loader4, Loader5, Loader6, Loader7, Loader8, Loader9 } from '@/components/loader';
+import {
+	LogoLoader,
+	Loader1,
+	Loader2,
+	Loader3,
+	Loader4,
+	Loader5,
+	Loader6,
+	Loader7,
+	Loader8,
+	Loader9,
+} from '@/components/loader';
 
 const COLORS = ['primary', 'secondary', 'tertiary', 'cuaternary', 'error', 'warning', 'success', 'info'];
 
@@ -18,7 +29,12 @@ function LoadersComponentsPage() {
 	return (
 		<>
 			<PageHeader title="Loaders Elements">
-				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
+				<Breadcrumbs
+					aria-label="breadcrumb"
+					sx={{
+						textTransform: 'uppercase',
+					}}
+				>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>
@@ -60,11 +76,16 @@ function LoadersComponentsPage() {
 						<Stack direction="row" spacing={2} flexWrap="wrap">
 							{COLORS.map((color, i) => (
 								<Stack key={i} spacing={1}>
-									<Box sx={{ position: 'relative' }}>
+									<Box
+										sx={{
+											position: 'relative',
+										}}
+									>
 										<CircularProgress
 											variant="determinate"
 											sx={{
-												color: (theme) => theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
+												color: (theme) =>
+													theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
 											}}
 											size={70}
 											thickness={6}
@@ -197,7 +218,12 @@ function LoadersComponentsPage() {
 				<Card type="section">
 					<CardHeader title="MUI Skeleton" />
 					<Stack spacing={1}>
-						<Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+						<Skeleton
+							variant="text"
+							sx={{
+								fontSize: '1rem',
+							}}
+						/>
 						<Skeleton variant="circular" width={40} height={40} />
 						<Skeleton variant="rectangular" width={210} height={60} />
 						<Skeleton variant="rounded" width={210} height={60} />

@@ -16,7 +16,12 @@ function ThemeShadow() {
 	return (
 		<>
 			<PageHeader title="Shadow">
-				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
+				<Breadcrumbs
+					aria-label="breadcrumb"
+					sx={{
+						textTransform: 'uppercase',
+					}}
+				>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>
@@ -31,7 +36,12 @@ function ThemeShadow() {
 					<MuiLogo link={link} />
 				</CardHeader>
 				<Grid container spacing={8}>
-					{Array.from({ length: 28 }, (_, i) => i)
+					{Array.from(
+						{
+							length: 28,
+						},
+						(_, i) => i,
+					)
 						.slice(1)
 						.map((shadow, i) => (
 							<Grid item xs={12} sm={4} md={3} lg={2} key={i}>

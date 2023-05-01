@@ -39,7 +39,9 @@ const impressionsGraphConfig = {
 		tooltip: {
 			enabled: false,
 		},
-		yaxis: { show: false },
+		yaxis: {
+			show: false,
+		},
 	},
 	series: [
 		{

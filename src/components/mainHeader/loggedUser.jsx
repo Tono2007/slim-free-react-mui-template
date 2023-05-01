@@ -54,14 +54,23 @@ function LoggedUser() {
 				open={Boolean(anchorEl)}
 				onClose={handleClose}
 			>
-				<MenuList sx={{ p: 1 }}>
+				<MenuList
+					sx={{
+						p: 1,
+					}}
+				>
 					<Typography variant="subtitle1" textAlign="center">
 						Elizabeth Lumaad Olsen
 					</Typography>
 					<Typography variant="subtitle2" textAlign="center">
 						Executive Director
 					</Typography>
-					<Divider sx={{ borderColor: 'primary.light', my: 1 }} />
+					<Divider
+						sx={{
+							borderColor: 'primary.light',
+							my: 1,
+						}}
+					/>
 
 					<MenuItem onClick={handleClose} to="/profile" component={RouterLink}>
 						<ListItemIcon>

@@ -69,7 +69,13 @@ function StatSection({ statData }) {
 	return (
 		<Card>
 			<Stack direction="row" spacing={1} alignItems="center">
-				<Icon sx={{ fontSize: 70, color }} color="disabled" />
+				<Icon
+					sx={{
+						fontSize: 70,
+						color,
+					}}
+					color="disabled"
+				/>
 				<span>
 					<Typography fontSize={30} variant="subtitle1">
 						{counter.toLocaleString()}

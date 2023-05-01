@@ -47,7 +47,12 @@ function SampleTabsPage() {
 	return (
 		<>
 			<PageHeader title="Sample Tabs Page">
-				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
+				<Breadcrumbs
+					aria-label="breadcrumb"
+					sx={{
+						textTransform: 'uppercase',
+					}}
+				>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>
@@ -106,7 +111,12 @@ function MenuListItem({ Icon, text, ...props }) {
 
 function Section({ text }) {
 	return (
-		<Card sx={{ minHeight: '100vh' }} type="section">
+		<Card
+			sx={{
+				minHeight: '100vh',
+			}}
+			type="section"
+		>
 			<CardHeader title={`Section ${text} Title`} subtitle="Section subtitle">
 				Optional Action
 			</CardHeader>

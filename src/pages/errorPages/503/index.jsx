@@ -9,8 +9,22 @@ import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDiss
 
 function Page503() {
 	return (
-		<Stack direction="column" spacing={2} justifyContent="center" alignItems="center" minHeight="100vh" color="text.tertiary">
-			<Typography variant="h1" fontSize={150} borderBottom={1} sx={{ textDecoration: 'dotted underline' }}>
+		<Stack
+			direction="column"
+			spacing={2}
+			justifyContent="center"
+			alignItems="center"
+			minHeight="100vh"
+			color="text.tertiary"
+		>
+			<Typography
+				variant="h1"
+				fontSize={150}
+				borderBottom={1}
+				sx={{
+					textDecoration: 'dotted underline',
+				}}
+			>
 				503
 			</Typography>
 			<Typography variant="h2" color="inherit">
@@ -20,7 +34,11 @@ function Page503() {
 			<Typography variant="body2" color="inherit">
 				We&apos;ve been automatically alerted of the issue and will work to fix it asap.
 			</Typography>
-			<SentimentVeryDissatisfiedIcon sx={{ fontSize: 50 }} />
+			<SentimentVeryDissatisfiedIcon
+				sx={{
+					fontSize: 50,
+				}}
+			/>
 			<Button variant="outlined" size="small" component={Link} to="/">
 				BACK TO HOME
 			</Button>

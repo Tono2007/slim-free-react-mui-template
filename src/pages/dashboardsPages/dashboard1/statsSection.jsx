@@ -77,7 +77,13 @@ function StatSection({ statData }) {
 
 	return (
 		<Stack p={3} direction="row" spacing={3} alignItems="center">
-			<Icon sx={{ fontSize: 60, color }} color="disabled" />
+			<Icon
+				sx={{
+					fontSize: 60,
+					color,
+				}}
+				color="disabled"
+			/>
 			<span>
 				<Typography color={color} variant="h5" textTransform="uppercase">
 					{name}

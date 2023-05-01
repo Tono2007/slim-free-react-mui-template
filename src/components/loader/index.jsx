@@ -13,15 +13,29 @@ export function LogoLoader({ addSx, ...rest }) {
 	return (
 		<Card
 			sx={{
-				mx: { xs: 1, sm: 'auto' },
+				mx: {
+					xs: 1,
+					sm: 'auto',
+				},
 				my: 'auto',
-				width: { xs: '100%', sm: 'fit-content' },
+				width: {
+					xs: '100%',
+					sm: 'fit-content',
+				},
 				...addSx,
 			}}
 			{...rest}
 		>
 			<Stack direction="column" spacing={1}>
-				<Box component="img" src={logo} alt="Slim Logo" width={{ xs: '30vw', md: '15vw' }} />
+				<Box
+					component="img"
+					src={logo}
+					alt="Slim Logo"
+					width={{
+						xs: '30vw',
+						md: '15vw',
+					}}
+				/>
 				<LinearProgress />
 				<Typography my={1} textAlign="center" variant="caption">
 					Cargando Contenido, favor de esperar.
@@ -90,7 +104,14 @@ const DoubleBounceChild = styled('div')(({ theme, color }) => ({
 
 export function Loader2({ size = 40, color = 'primary', addSx }) {
 	return (
-		<Box position="relative" width={size} height={size} sx={{ ...addSx }}>
+		<Box
+			position="relative"
+			width={size}
+			height={size}
+			sx={{
+				...addSx,
+			}}
+		>
 			<DoubleBounceChild color={color} />
 			<DoubleBounceChild color={color} />
 		</Box>
@@ -132,7 +153,16 @@ const WaveChild = styled('div')(({ theme, color }) => ({
 }));
 export function Loader3({ size = 40, color = 'primary', addSx }) {
 	return (
-		<Stack direction="row" width={size} height={size} spacing="3px" alignItems="center" sx={{ ...addSx }}>
+		<Stack
+			direction="row"
+			width={size}
+			height={size}
+			spacing="3px"
+			alignItems="center"
+			sx={{
+				...addSx,
+			}}
+		>
 			<WaveChild color={color} />
 			<WaveChild color={color} />
 			<WaveChild color={color} />
@@ -185,7 +215,14 @@ const CubeChild = styled('div')(({ theme, color }) => ({
 }));
 export function Loader4({ color = 'primary', addSx }) {
 	return (
-		<Box position="relative" width={40} height={40} sx={{ ...addSx }}>
+		<Box
+			position="relative"
+			width={40}
+			height={40}
+			sx={{
+				...addSx,
+			}}
+		>
 			<CubeChild color={color} />
 			<CubeChild color={color} />
 		</Box>
@@ -271,7 +308,13 @@ const BounceChild = styled('div')(({ theme, color, size }) => ({
 }));
 export function Loader6({ size = 30, color = 'primary', addSx }) {
 	return (
-		<Stack direction="row" spacing="5px" sx={{ ...addSx }}>
+		<Stack
+			direction="row"
+			spacing="5px"
+			sx={{
+				...addSx,
+			}}
+		>
 			<BounceChild color={color} size={size} />
 			<BounceChild color={color} size={size} />
 			<BounceChild color={color} size={size} />
@@ -324,7 +367,13 @@ const CubeGridChild = styled('div')(({ theme, color }) => ({
 }));
 export function Loader7({ size = 40, color = 'primary', addSx }) {
 	return (
-		<Box width={size} height={size} sx={{ ...addSx }}>
+		<Box
+			width={size}
+			height={size}
+			sx={{
+				...addSx,
+			}}
+		>
 			<CubeGridChild color={color} />
 			<CubeGridChild color={color} />
 			<CubeGridChild color={color} />
@@ -438,7 +487,14 @@ const FadingCircleChild = styled('div')(({ theme, color, keyframe }) => ({
 }));
 export function Loader8({ size = 50, color = 'primary', addSx }) {
 	return (
-		<Box width={size} height={size} position="relative" sx={{ ...addSx }}>
+		<Box
+			width={size}
+			height={size}
+			position="relative"
+			sx={{
+				...addSx,
+			}}
+		>
 			<FadingCircleChild color={color} keyframe={circleBounceDelayKeyframe} />
 			<FadingCircleChild color={color} keyframe={circleBounceDelayKeyframe} />
 			<FadingCircleChild color={color} keyframe={circleBounceDelayKeyframe} />
@@ -466,7 +522,14 @@ const circleFadeDelayKeyframe = keyframes`
 `;
 export function Loader9({ size = 50, color = 'primary', addSx }) {
 	return (
-		<Box width={size} height={size} position="relative" sx={{ ...addSx }}>
+		<Box
+			width={size}
+			height={size}
+			position="relative"
+			sx={{
+				...addSx,
+			}}
+		>
 			<FadingCircleChild color={color} keyframe={circleFadeDelayKeyframe} />
 			<FadingCircleChild color={color} keyframe={circleFadeDelayKeyframe} />
 			<FadingCircleChild color={color} keyframe={circleFadeDelayKeyframe} />

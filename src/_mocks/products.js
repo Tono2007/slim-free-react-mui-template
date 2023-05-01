@@ -5,7 +5,11 @@ import product4 from '@/assets/images/products/product_4.jpg';
 import product5 from '@/assets/images/products/product_5.jpg';
 
 function createData(id, productImg, name) {
-	return { id, productImg, name };
+	return {
+		id,
+		productImg,
+		name,
+	};
 }
 
 export default [

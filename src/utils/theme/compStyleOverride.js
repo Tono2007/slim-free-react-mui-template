@@ -22,7 +22,9 @@ export default {
 		},
 		variants: [
 			{
-				props: { variant: 'outlinedElevation' },
+				props: {
+					variant: 'outlinedElevation',
+				},
 				style: ({ ownerState, theme }) => ({
 					boxShadow: theme.shadows[ownerState.elevation],
 					border: `1px solid ${palette.border}`,
@@ -33,13 +35,17 @@ export default {
 	MuiCard: {
 		variants: [
 			{
-				props: { type: 'none' },
+				props: {
+					type: 'none',
+				},
 				style: {
 					padding: 0,
 				},
 			},
 			{
-				props: { type: 'card' },
+				props: {
+					type: 'card',
+				},
 				style: {
 					padding: 25,
 					'@media (max-width: 600px)': {
@@ -48,7 +54,9 @@ export default {
 				},
 			},
 			{
-				props: { type: 'section' },
+				props: {
+					type: 'section',
+				},
 				style: {
 					paddingTop: 40,
 					paddingBottom: 40,

@@ -21,7 +21,10 @@ function SuggestedPeople() {
 				title="People you may know"
 				subtitle="Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi."
 				size="small"
-				sx={{ p: 3, pb: 0 }}
+				sx={{
+					p: 3,
+					pb: 0,
+				}}
 			/>
 			<List
 				sx={{
@@ -47,7 +50,11 @@ function UserListItem({ user }) {
 				<ListItemAvatar>
 					<Avatar alt="Remy Sharp" src={avatarImg} />
 				</ListItemAvatar>
-				<span style={{ width: '100%' }}>
+				<span
+					style={{
+						width: '100%',
+					}}
+				>
 					<Typography variant="subtitle2" fontSize={13} color="primary.main">
 						{name}
 					</Typography>

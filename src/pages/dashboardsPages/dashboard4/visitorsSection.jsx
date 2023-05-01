@@ -43,7 +43,15 @@ function VisitorsSection() {
 				<Grid item xs={12} sm={6} md={4}>
 					<VisitorsOpratingCard />
 				</Grid>
-				<Grid item xs={12} sm={6} md={8} sx={{ p: 3 }}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					md={8}
+					sx={{
+						p: 3,
+					}}
+				>
 					<CardHeader title="Visitor's locations">
 						<IconButton size="small">
 							<MoreVertIcon />
@@ -114,28 +122,76 @@ const VISITORS_DATA = {
 	day: {
 		count: 963,
 		osData: [
-			{ os: 'macOS', progress: 30, color: 'warning' },
-			{ os: 'Windows', progress: 50, color: 'success' },
-			{ os: 'Linux', progress: 10, color: 'error' },
-			{ os: 'Ubuntu', progress: 10, color: 'error' },
+			{
+				os: 'macOS',
+				progress: 30,
+				color: 'warning',
+			},
+			{
+				os: 'Windows',
+				progress: 50,
+				color: 'success',
+			},
+			{
+				os: 'Linux',
+				progress: 10,
+				color: 'error',
+			},
+			{
+				os: 'Ubuntu',
+				progress: 10,
+				color: 'error',
+			},
 		],
 	},
 	week: {
 		count: 8677,
 		osData: [
-			{ os: 'macOS', progress: 35, color: 'warning' },
-			{ os: 'Windows', progress: 60, color: 'success' },
-			{ os: 'Linux', progress: 15, color: 'error' },
-			{ os: 'Ubuntu', progress: 10, color: 'error' },
+			{
+				os: 'macOS',
+				progress: 35,
+				color: 'warning',
+			},
+			{
+				os: 'Windows',
+				progress: 60,
+				color: 'success',
+			},
+			{
+				os: 'Linux',
+				progress: 15,
+				color: 'error',
+			},
+			{
+				os: 'Ubuntu',
+				progress: 10,
+				color: 'error',
+			},
 		],
 	},
 	month: {
 		count: 25766,
 		osData: [
-			{ os: 'macOS', progress: 25, color: 'warning' },
-			{ os: 'Windows', progress: 70, color: 'success' },
-			{ os: 'Linux', progress: 20, color: 'warning' },
-			{ os: 'Ubuntu', progress: 10, color: 'error' },
+			{
+				os: 'macOS',
+				progress: 25,
+				color: 'warning',
+			},
+			{
+				os: 'Windows',
+				progress: 70,
+				color: 'success',
+			},
+			{
+				os: 'Linux',
+				progress: 20,
+				color: 'warning',
+			},
+			{
+				os: 'Ubuntu',
+				progress: 10,
+				color: 'error',
+			},
 		],
 	},
 };
@@ -158,7 +214,11 @@ function VisitorsOpratingCard() {
 					This Month
 				</TabButton>
 			</ButtonGroup>
-			<TransitionGroup style={{ position: 'relative' }}>
+			<TransitionGroup
+				style={{
+					position: 'relative',
+				}}
+			>
 				<ReactTransition
 					key={viewBy}
 					timeout={{
@@ -224,9 +284,17 @@ function SaleProgress({ saleData }) {
 	return (
 		<div>
 			<Typography variant="body2" color="text.secondary" gutterBottom>
-				{os} ({counter}%)
+				{os} ({counter}
+				%)
 			</Typography>
-			<LinearProgress variant="determinate" color={color} value={counter} sx={{ height: 5 }} />
+			<LinearProgress
+				variant="determinate"
+				color={color}
+				value={counter}
+				sx={{
+					height: 5,
+				}}
+			/>
 		</div>
 	);
 }

@@ -26,7 +26,13 @@ function TransactionsSection() {
 					User Transaction History
 				</Typography>
 				<TransactionsTable />
-				<Button size="small" startIcon={<KeyboardArrowDownIcon />} sx={{ m: 1 }}>
+				<Button
+					size="small"
+					startIcon={<KeyboardArrowDownIcon />}
+					sx={{
+						m: 1,
+					}}
+				>
 					View All Transaction History
 				</Button>
 			</Stack>
@@ -40,7 +46,10 @@ const TRANSACTIONS_DATA = [
 		userId: 1,
 		user: customersData.find((customer) => customer?.id === 1),
 		transId: '1234567890',
-		type: { title: 'Email verified', status: 'success' },
+		type: {
+			title: 'Email verified',
+			status: 'success',
+		},
 		date: 'Just Now',
 	},
 	{
@@ -48,7 +57,10 @@ const TRANSACTIONS_DATA = [
 		userId: 1,
 		user: customersData.find((customer) => customer?.id === 2),
 		transId: '4234592890',
-		type: { title: 'Pending verification', status: 'warning' },
+		type: {
+			title: 'Pending verification',
+			status: 'warning',
+		},
 		date: 'Apr 21, 2017 8:34am',
 	},
 	{
@@ -56,7 +68,10 @@ const TRANSACTIONS_DATA = [
 		userId: 1,
 		user: customersData.find((customer) => customer?.id === 3),
 		transId: '7245567890',
-		type: { title: 'Purchased success', status: 'success' },
+		type: {
+			title: 'Purchased success',
+			status: 'success',
+		},
 		date: 'Apr 10, 2017 4:40pm',
 	},
 	{
@@ -64,7 +79,10 @@ const TRANSACTIONS_DATA = [
 		userId: 1,
 		user: customersData.find((customer) => customer?.id === 4),
 		transId: '8234568790',
-		type: { title: 'Payment on hold', status: 'error' },
+		type: {
+			title: 'Payment on hold',
+			status: 'error',
+		},
 		date: 'Apr 02, 2017 6:45pm',
 	},
 	{
@@ -72,7 +90,10 @@ const TRANSACTIONS_DATA = [
 		userId: 1,
 		user: customersData.find((customer) => customer?.id === 5),
 		transId: '7234524890',
-		type: { title: 'Account desactivated', status: '' },
+		type: {
+			title: 'Account desactivated',
+			status: '',
+		},
 		date: 'Mar 30, 2017 10:30am',
 	},
 ];

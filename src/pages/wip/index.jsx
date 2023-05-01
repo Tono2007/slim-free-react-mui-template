@@ -34,12 +34,22 @@ function WorkInProgress() {
 					gap: 1,
 				}}
 			>
-				<CodeIcon sx={{ fontSize: 110 }} />
+				<CodeIcon
+					sx={{
+						fontSize: 110,
+					}}
+				/>
 				<Typography
 					color="inherit"
 					variant="subtitle2"
-					fontSize={{ xs: '50px', sm: '96px' }}
-					lineHeight={{ xs: '50px', sm: '96px' }}
+					fontSize={{
+						xs: '50px',
+						sm: '96px',
+					}}
+					lineHeight={{
+						xs: '50px',
+						sm: '96px',
+					}}
 				>
 					Work In Progress
 				</Typography>

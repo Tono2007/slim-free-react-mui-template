@@ -42,7 +42,14 @@ const ACTIVITIES_DATA = [
 function ActivitiesCard() {
 	return (
 		<Card>
-			<CardHeader title="Recent Activities" size="small" sx={{ mb: 2 }} subtitle="Last activity was 1 hour ago" />
+			<CardHeader
+				title="Recent Activities"
+				size="small"
+				sx={{
+					mb: 2,
+				}}
+				subtitle="Last activity was 1 hour ago"
+			/>
 			<Stack direction="column" spacing={0}>
 				{ACTIVITIES_DATA.map((activity, index) => (
 					<ActivityListItem key={index} activity={activity} />
@@ -71,7 +78,13 @@ function ActivityListItem({ activity: { title, color, Icon } }) {
 				},
 			}}
 		>
-			<Avatar sx={{ bgcolor: color, width: 50, height: 50 }}>
+			<Avatar
+				sx={{
+					bgcolor: color,
+					width: 50,
+					height: 50,
+				}}
+			>
 				<Icon fontSize="medium" />
 			</Avatar>
 			<Stack spacing={0.5} pb={2} pt={1}>

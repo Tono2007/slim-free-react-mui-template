@@ -65,7 +65,15 @@ function PersonalDataTab() {
 			</Typography>
 			<form onSubmit={handleSubmit}>
 				<Grid container spacing={2} mt={2} justifyContent="center">
-					<Grid item xs={12} sm={12} md={12} sx={{ position: 'relative' }}>
+					<Grid
+						item
+						xs={12}
+						sm={12}
+						md={12}
+						sx={{
+							position: 'relative',
+						}}
+					>
 						<TextField
 							required
 							autoFocus
@@ -98,7 +106,15 @@ function PersonalDataTab() {
 						/>
 					</Grid>
 					<Grid item xs={12} sm={6} md={12}>
-						<TextField required name="firstName" label="Nombre(s)" fullWidth variant="outlined" color="primary" size="medium" />
+						<TextField
+							required
+							name="firstName"
+							label="Nombre(s)"
+							fullWidth
+							variant="outlined"
+							color="primary"
+							size="medium"
+						/>
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
 						<TextField
@@ -135,7 +151,10 @@ function PersonalDataTab() {
 								<Box
 									component="li"
 									sx={{
-										'& > img': { mr: 2, flexShrink: 0 },
+										'& > img': {
+											mr: 2,
+											flexShrink: 0,
+										},
 									}}
 									{...props}
 								>
@@ -257,7 +276,12 @@ function PersonalDataTab() {
 								</option>
 							))}
 						</TextField>
-						<button type="submit" style={{ display: 'none' }}>
+						<button
+							type="submit"
+							style={{
+								display: 'none',
+							}}
+						>
 							dsd
 						</button>
 					</Grid>
@@ -289,13 +313,23 @@ function HelperPopover() {
 			}}
 		>
 			<Avatar
-				sx={{ bgcolor: 'primary.main', width: 20, height: 20 }}
+				sx={{
+					bgcolor: 'primary.main',
+					width: 20,
+					height: 20,
+				}}
 				aria-owns={open ? 'mouse-over-popover' : undefined}
 				aria-haspopup="true"
 				onMouseEnter={handlePopoverOpen}
 				onMouseLeave={handlePopoverClose}
 			>
-				<QuestionMarkIcon color="background.paper" fontSize="small" sx={{ fontSize: 15 }} />
+				<QuestionMarkIcon
+					color="background.paper"
+					fontSize="small"
+					sx={{
+						fontSize: 15,
+					}}
+				/>
 			</Avatar>
 
 			<Popover

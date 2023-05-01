@@ -6,7 +6,11 @@ const transitionStyles = getFastExitTransitionStyles(TIMEOUT);
 
 function WidthPageTransition({ children, location }) {
 	return (
-		<TransitionGroup style={{ position: 'relative' }}>
+		<TransitionGroup
+			style={{
+				position: 'relative',
+			}}
+		>
 			<ReactTransition
 				key={location}
 				timeout={{

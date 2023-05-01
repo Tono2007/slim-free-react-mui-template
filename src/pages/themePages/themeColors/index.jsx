@@ -22,7 +22,12 @@ function ThemeColors() {
 	return (
 		<>
 			<PageHeader title="Color Palette">
-				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
+				<Breadcrumbs
+					aria-label="breadcrumb"
+					sx={{
+						textTransform: 'uppercase',
+					}}
+				>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>
@@ -44,7 +49,12 @@ function ThemeColors() {
 						{mainColor.map(({ title, palette }) => (
 							<TypographyCard variant="outlined" key={title}>
 								<Typography variant="subtitle1">{title}</Typography>
-								<Divider sx={{ my: 1, mb: 3 }} />
+								<Divider
+									sx={{
+										my: 1,
+										mb: 3,
+									}}
+								/>
 								<Grid container spacing={3}>
 									{palette.map((color, i) => (
 										<Grid item xs={12} sm={4} md={3} lg={2} key={i}>
@@ -62,7 +72,12 @@ function ThemeColors() {
 						{systemColor.map(({ title, palette }) => (
 							<TypographyCard variant="outlined" key={title}>
 								<Typography variant="subtitle1">{title}</Typography>
-								<Divider sx={{ my: 1, mb: 3 }} />
+								<Divider
+									sx={{
+										my: 1,
+										mb: 3,
+									}}
+								/>
 								<Grid container spacing={3}>
 									{palette.map((color, i) => (
 										<Grid item xs={12} sm={4} md={3} lg={2} key={i}>
@@ -80,7 +95,12 @@ function ThemeColors() {
 						{extraColor.map(({ title, palette }) => (
 							<TypographyCard variant="outlined" key={title}>
 								<Typography variant="subtitle1">{title}</Typography>
-								<Divider sx={{ my: 1, mb: 3 }} />
+								<Divider
+									sx={{
+										my: 1,
+										mb: 3,
+									}}
+								/>
 								<Grid container spacing={3}>
 									{palette.map((color, i) => (
 										<Grid item xs={12} sm={4} md={3} lg={2} key={i}>
@@ -104,7 +124,15 @@ function ColorBox({ color: colorData }) {
 	const { bgcolor, color, hex, dark } = colorData;
 	return (
 		<>
-			<Box width="100%" height={130} bgcolor={bgcolor} borderRadius={5} display="grid" justifyContent="center" alignItems="center">
+			<Box
+				width="100%"
+				height={130}
+				bgcolor={bgcolor}
+				borderRadius={5}
+				display="grid"
+				justifyContent="center"
+				alignItems="center"
+			>
 				<Typography
 					variant="subtitle1"
 					sx={{

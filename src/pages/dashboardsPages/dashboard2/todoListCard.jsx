@@ -10,7 +10,13 @@ import CardHeader from '@/components/cardHeader';
 function TodoListCard() {
 	return (
 		<Card>
-			<CardHeader title="Todo Item List" size="small" sx={{ mb: 2 }} />
+			<CardHeader
+				title="Todo Item List"
+				size="small"
+				sx={{
+					mb: 2,
+				}}
+			/>
 			<FormGroup>
 				<TodoItem text="Do something" defaultChecked />
 				<TodoItem text="Do more stuff" />
@@ -33,7 +39,9 @@ function TodoItem(props) {
 		<FormControlLabel
 			slotProps={{
 				typography: {
-					sx: { textDecoration: checked ? 'line-through' : '' },
+					sx: {
+						textDecoration: checked ? 'line-through' : '',
+					},
 				},
 			}}
 			control={
@@ -42,7 +50,10 @@ function TodoItem(props) {
 					defaultChecked={defaultChecked}
 					value={checked}
 					size="small"
-					sx={{ p: 0.5, px: 1 }}
+					sx={{
+						p: 0.5,
+						px: 1,
+					}}
 					color={color}
 				/>
 			}

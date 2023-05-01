@@ -286,9 +286,18 @@ const NAV_LINKS_CONFIG = [
 				title: 'Ecommerce',
 				href: '/profile',
 			},
-			{ title: 'Social Feed', href: '/profile' },
-			{ title: 'Calendar', href: '/profile' },
-			{ title: 'Chat', href: '/profile' },
+			{
+				title: 'Social Feed',
+				href: '/profile',
+			},
+			{
+				title: 'Calendar',
+				href: '/profile',
+			},
+			{
+				title: 'Chat',
+				href: '/profile',
+			},
 		],
 	},
 	{

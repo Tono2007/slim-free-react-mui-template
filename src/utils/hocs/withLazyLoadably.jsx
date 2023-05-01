@@ -4,7 +4,15 @@ import Loader from '@/components/loader';
 // eslint-disable-next-line react/function-component-definition
 const Loadable = (Component) => (props) =>
 	(
-		<Suspense fallback={<Loader addSx={{ mt: 5 }} />}>
+		<Suspense
+			fallback={
+				<Loader
+					addSx={{
+						mt: 5,
+					}}
+				/>
+			}
+		>
 			<Component {...props} />
 		</Suspense>
 	);

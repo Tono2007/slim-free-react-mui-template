@@ -39,7 +39,11 @@ function CustomersOverviewCard() {
 }
 function TabButton({ children, tabKey, changeTab, activeView }) {
 	return (
-		<Button onClick={() => changeTab(tabKey)} disableElevation variant={activeView === tabKey ? 'contained' : 'outlined'}>
+		<Button
+			onClick={() => changeTab(tabKey)}
+			disableElevation
+			variant={activeView === tabKey ? 'contained' : 'outlined'}
+		>
 			{children}
 		</Button>
 	);

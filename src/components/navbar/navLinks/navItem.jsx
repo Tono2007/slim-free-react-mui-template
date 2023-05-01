@@ -37,7 +37,10 @@ export function NavItem({ Icon, title, showExpand = false, selected = false }) {
 			/>
 			<Typography
 				pt={0.2}
-				display={{ xs: 'none', md: 'inline' }}
+				display={{
+					xs: 'none',
+					md: 'inline',
+				}}
 				textTransform="uppercase"
 				fontWeight="500"
 				fontSize="13px"
@@ -80,7 +83,9 @@ export function NavItemButton({ children, selected, sx, ...rest }) {
 	);
 }
 export function NavLink({ href, Icon, title }) {
-	const match = useMatch({ path: href });
+	const match = useMatch({
+		path: href,
+	});
 
 	return (
 		<NavItemButton selected={match} component={RouterLink} to={href}>

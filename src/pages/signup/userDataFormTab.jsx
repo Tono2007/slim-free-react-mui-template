@@ -64,7 +64,15 @@ function UserDataFormTab() {
 			</Typography>
 			<form onSubmit={handleSubmit}>
 				<Grid container spacing={2} mt={2}>
-					<Grid item xs={12} sm={12} md={12} sx={{ position: 'relative' }}>
+					<Grid
+						item
+						xs={12}
+						sm={12}
+						md={12}
+						sx={{
+							position: 'relative',
+						}}
+					>
 						<TextField
 							required
 							autoFocus
@@ -87,7 +95,14 @@ function UserDataFormTab() {
 						</TextField>
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
-						<TextField required select name="companyType" fullWidth label="Tipo de empresa" variant="outlined">
+						<TextField
+							required
+							select
+							name="companyType"
+							fullWidth
+							label="Tipo de empresa"
+							variant="outlined"
+						>
 							{CompanyTypeList.sort().map((option) => (
 								<MenuItem key={option} value={option.toUpperCase()}>
 									{option}
@@ -96,7 +111,15 @@ function UserDataFormTab() {
 						</TextField>
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
-						<TextField required select name="sector" fullWidth label="Sector" variant="outlined" defaultValue="">
+						<TextField
+							required
+							select
+							name="sector"
+							fullWidth
+							label="Sector"
+							variant="outlined"
+							defaultValue=""
+						>
 							{SectorList.sort().map((option) => (
 								<MenuItem key={option} value={option.toUpperCase()}>
 									{option}
@@ -105,7 +128,14 @@ function UserDataFormTab() {
 						</TextField>
 					</Grid>
 					<Grid item xs={12} sm={6} md={6}>
-						<TextField required fullWidth select name="targetMarket" label="Mercado Objetivo" variant="outlined">
+						<TextField
+							required
+							fullWidth
+							select
+							name="targetMarket"
+							label="Mercado Objetivo"
+							variant="outlined"
+						>
 							{TargetMarketList.sort().map((option) => (
 								<MenuItem key={option} value={option.toUpperCase()}>
 									{option}
@@ -155,13 +185,23 @@ function HelperPopover() {
 			}}
 		>
 			<Avatar
-				sx={{ bgcolor: 'primary.main', width: 20, height: 20 }}
+				sx={{
+					bgcolor: 'primary.main',
+					width: 20,
+					height: 20,
+				}}
 				aria-owns={open ? 'mouse-over-popover' : undefined}
 				aria-haspopup="true"
 				onMouseEnter={handlePopoverOpen}
 				onMouseLeave={handlePopoverClose}
 			>
-				<QuestionMarkIcon color="background.paper" fontSize="small" sx={{ fontSize: 15 }} />
+				<QuestionMarkIcon
+					color="background.paper"
+					fontSize="small"
+					sx={{
+						fontSize: 15,
+					}}
+				/>
 			</Avatar>
 
 			<Popover

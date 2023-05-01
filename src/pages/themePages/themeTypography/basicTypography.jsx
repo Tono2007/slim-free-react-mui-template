@@ -22,7 +22,11 @@ function BasicTypography() {
 					<Grid item xs={12} sm={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Heading</Typography>
-							<Divider sx={{ my: 2 }} />
+							<Divider
+								sx={{
+									my: 2,
+								}}
+							/>
 							<Typography variant="h1" gutterBottom>
 								h1. Heading
 							</Typography>
@@ -46,35 +50,49 @@ function BasicTypography() {
 					<Grid item xs={12} sm={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Subtitles</Typography>
-							<Divider sx={{ my: 2 }} />
+							<Divider
+								sx={{
+									my: 2,
+								}}
+							/>
 							<Typography variant="subtitle1" gutterBottom>
-								subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+								subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis
+								tenetur
 							</Typography>
 							<Typography variant="subtitle2" gutterBottom>
-								subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+								subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis
+								tenetur
 							</Typography>
 						</TypographyCard>
 					</Grid>
 					<Grid item xs={12} sm={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Body</Typography>
-							<Divider sx={{ my: 2 }} />
+							<Divider
+								sx={{
+									my: 2,
+								}}
+							/>
 							<Typography variant="body1" gutterBottom>
-								body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam
-								beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti?
-								Eum quasi quidem quibusdam.
+								body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+								unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate
+								numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
 							</Typography>
 							<Typography variant="body2" gutterBottom>
-								body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam
-								beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti?
-								Eum quasi quidem quibusdam.
+								body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+								unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate
+								numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
 							</Typography>
 						</TypographyCard>
 					</Grid>
 					<Grid item xs={12} sm={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Extra</Typography>
-							<Divider sx={{ my: 2 }} />
+							<Divider
+								sx={{
+									my: 2,
+								}}
+							/>
 							<Typography variant="button" display="block" gutterBottom>
 								button text
 							</Typography>
@@ -84,13 +102,19 @@ function BasicTypography() {
 							<Typography variant="overline" display="block" gutterBottom>
 								overline text
 							</Typography>
-							<Link href="https://github.com/Tono2007/slim-free-react-mui-template">React MUI Template</Link>
+							<Link href="https://github.com/Tono2007/slim-free-react-mui-template">
+								React MUI Template
+							</Link>
 						</TypographyCard>
 					</Grid>
 					<Grid item xs={12} sm={12} md={12}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Font Family</Typography>
-							<Divider sx={{ my: 2 }} />
+							<Divider
+								sx={{
+									my: 2,
+								}}
+							/>
 							<Typography variant="h2" gutterBottom>
 								Rubik Font
 							</Typography>
@@ -110,7 +134,11 @@ function BasicTypography() {
 					<Grid item xs={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Text Color</Typography>
-							<Divider sx={{ my: 2 }} />
+							<Divider
+								sx={{
+									my: 2,
+								}}
+							/>
 							<Typography variant="h1" gutterBottom color="text.primary">
 								text.primary.
 							</Typography>
@@ -125,7 +153,11 @@ function BasicTypography() {
 					<Grid item xs={12} md={6}>
 						<TypographyCard variant="outlined">
 							<Typography variant="subtitle1">Theme Color</Typography>
-							<Divider sx={{ my: 2 }} />
+							<Divider
+								sx={{
+									my: 2,
+								}}
+							/>
 							<Typography variant="h1" gutterBottom color="primary.main">
 								primary.main
 							</Typography>
@@ -144,7 +176,11 @@ function BasicTypography() {
 			</Card>
 			<Card type="section">
 				<CardHeader title="Dark Theme Typography" subtitle="WIP" />
-				<Divider sx={{ mb: 6 }} />
+				<Divider
+					sx={{
+						mb: 6,
+					}}
+				/>
 			</Card>
 		</Stack>
 	);

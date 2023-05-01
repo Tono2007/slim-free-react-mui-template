@@ -21,9 +21,17 @@ function Dashboard5() {
 			<Header />
 			<TabsNav />
 			<HoursSection />
-			<Divider sx={{ my: 8 }} />
+			<Divider
+				sx={{
+					my: 8,
+				}}
+			/>
 			<ReportSection />
-			<Divider sx={{ my: 8 }} />
+			<Divider
+				sx={{
+					my: 8,
+				}}
+			/>
 			<PopularProductsSection />
 		</>
 	);
@@ -32,7 +40,9 @@ function Dashboard5() {
 function Header() {
 	return (
 		<CardHeader
-			sx={{ mt: 4 }}
+			sx={{
+				mt: 4,
+			}}
 			size="large"
 			title="Good morning, Katherine!"
 			subtitle={`Today is ${new Date().toLocaleDateString('default', {
@@ -42,7 +52,12 @@ function Header() {
 				day: 'numeric',
 			})}`}
 		>
-			<Stack divider={<Divider orientation="vertical" flexItem />} direction="row" alignItems="center" spacing={3}>
+			<Stack
+				divider={<Divider orientation="vertical" flexItem />}
+				direction="row"
+				alignItems="center"
+				spacing={3}
+			>
 				<Stack direction="row" spacing={2} alignItems="center">
 					<Typography variant="subtitle1" fontSize={35} display="inline">
 						$1,433

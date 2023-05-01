@@ -83,7 +83,10 @@ function UserTypeCard({ text, Icon, type, userTypeSelected, setUserTypeSelected 
 			width="100%"
 			border={0}
 			py={1}
-			px={{ xs: 1, sm: 2 }}
+			px={{
+				xs: 1,
+				sm: 2,
+			}}
 			sx={{
 				cursor: 'pointer',
 				bgcolor: 'background.paper',
@@ -99,7 +102,18 @@ function UserTypeCard({ text, Icon, type, userTypeSelected, setUserTypeSelected 
 				},
 			}}
 		>
-			<Icon {...(userTypeSelected !== type && { color: 'action' })} fontSize="medium" sx={{ display: { xs: 'none', sm: 'block' } }} />
+			<Icon
+				{...(userTypeSelected !== type && {
+					color: 'action',
+				})}
+				fontSize="medium"
+				sx={{
+					display: {
+						xs: 'none',
+						sm: 'block',
+					},
+				}}
+			/>
 
 			<span>
 				<Typography variant="subtitle1" align="left">

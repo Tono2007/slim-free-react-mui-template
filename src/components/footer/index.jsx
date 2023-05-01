@@ -49,7 +49,9 @@ function Footer() {
 											</Button>
 										</InputAdornment>
 									),
-									sx: { pr: 0 },
+									sx: {
+										pr: 0,
+									},
 								}}
 								placeholder="Email"
 								variant="outlined"
@@ -130,7 +132,9 @@ function Footer() {
 						💻 - Construido por{' '}
 						<Link
 							underline="hover"
-							sx={{ cursor: 'pointer' }}
+							sx={{
+								cursor: 'pointer',
+							}}
 							href="https://antonioayola.netlify.app/"
 							target="_blank"
 							rel="noreferrer noopener"
@@ -149,7 +153,12 @@ function Footer() {
 function ContactLink({ Icon, text }) {
 	return (
 		<Stack spacing={1} alignItems="center" direction="row">
-			<Icon color="primary" sx={{ mr: 3 }} />
+			<Icon
+				color="primary"
+				sx={{
+					mr: 3,
+				}}
+			/>
 			<Typography variant="body1">{text}</Typography>
 		</Stack>
 	);

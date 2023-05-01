@@ -337,21 +337,51 @@ const BACKGROUND_COLOR_PALETTE = [
 	},
 ];
 const EXTRA_COLOR_PALETTE = [
-	{ title: 'Text color', palette: TEXT_COLOR_PALETTE },
-	{ title: 'Background color', palette: BACKGROUND_COLOR_PALETTE },
+	{
+		title: 'Text color',
+		palette: TEXT_COLOR_PALETTE,
+	},
+	{
+		title: 'Background color',
+		palette: BACKGROUND_COLOR_PALETTE,
+	},
 ];
 
 const MAIN_COLORS = [
-	{ title: 'Primary color', palette: PRIMARY_COLOR_PALETTE },
-	{ title: 'Secondary color', palette: SECONDARY_COLOR_PALETTE },
-	{ title: 'Tertiary color', palette: TERTIARY_COLOR_PALETTE },
-	{ title: 'Cuaternary color', palette: CUATERNARY_COLOR_PALETTE },
+	{
+		title: 'Primary color',
+		palette: PRIMARY_COLOR_PALETTE,
+	},
+	{
+		title: 'Secondary color',
+		palette: SECONDARY_COLOR_PALETTE,
+	},
+	{
+		title: 'Tertiary color',
+		palette: TERTIARY_COLOR_PALETTE,
+	},
+	{
+		title: 'Cuaternary color',
+		palette: CUATERNARY_COLOR_PALETTE,
+	},
 ];
 const SYSTEM_COLORS = [
-	{ title: 'Succes', palette: SUCCESS_COLOR_PALETTE },
-	{ title: 'Warning', palette: WARNING_COLOR_PALETTE },
-	{ title: 'Info', palette: INFO_COLOR_PALETTE },
-	{ title: 'Error', palette: ERROR_COLOR_PALETTE },
+	{
+		title: 'Succes',
+		palette: SUCCESS_COLOR_PALETTE,
+	},
+	{
+		title: 'Warning',
+		palette: WARNING_COLOR_PALETTE,
+	},
+	{
+		title: 'Info',
+		palette: INFO_COLOR_PALETTE,
+	},
+	{
+		title: 'Error',
+		palette: ERROR_COLOR_PALETTE,
+	},
 ];
 
 export default {

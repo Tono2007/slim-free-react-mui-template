@@ -60,16 +60,25 @@ function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 				placement="bottom-start"
 				onClose={handlePopoverClose}
 				disablePortal
-				sx={{ zIndex: 9999, minWidth }}
+				sx={{
+					zIndex: 9999,
+					minWidth,
+				}}
 				transition
 			>
 				{({ TransitionProps }) => (
 					<Fade {...TransitionProps} timeout={350}>
 						<Paper>
-							<MenuList sx={{ px: 1 }}>
+							<MenuList
+								sx={{
+									px: 1,
+								}}
+							>
 								{menuChildren.map((item, i) => {
 									const { href = '', title, type = 'item', children } = item;
-									const match = useMatch({ path: href });
+									const match = useMatch({
+										path: href,
+									});
 									switch (type) {
 										case 'group':
 											return <NavCollapse key={i} title={title} menuChildren={children} />;
@@ -143,7 +152,9 @@ function NavCollapse({ title, menuChildren, level = 1 }) {
 				keepMounted
 				onClose={handlePopoverClose}
 				disablePortal
-				sx={{ zIndex: 9999 }}
+				sx={{
+					zIndex: 9999,
+				}}
 				transition
 			>
 				{({ TransitionProps }) => (
@@ -152,10 +163,19 @@ function NavCollapse({ title, menuChildren, level = 1 }) {
 							<MenuList>
 								{menuChildren.map((item, i) => {
 									const { href = '', title, type = 'item', children } = item;
-									const match = useMatch({ path: href });
+									const match = useMatch({
+										path: href,
+									});
 									switch (type) {
 										case 'group':
-											return <NavCollapse key={i} title={title} menuChildren={children} level={level + 1} />;
+											return (
+												<NavCollapse
+													key={i}
+													title={title}
+													menuChildren={children}
+													level={level + 1}
+												/>
+											);
 										case 'item':
 											return (
 												<MenuItem

@@ -39,7 +39,12 @@ function GraphsSection() {
 
 function SectionContainer({ children, background }) {
 	return (
-		<Card sx={{ position: 'relative', height: '100%' }}>
+		<Card
+			sx={{
+				position: 'relative',
+				height: '100%',
+			}}
+		>
 			<Box position="absolute" top="0" bottom="0" left="0" right="0">
 				{background}
 			</Box>
@@ -75,7 +80,9 @@ const bitcoinGraphConfig = {
 		tooltip: {
 			enabled: false,
 		},
-		yaxis: { show: false },
+		yaxis: {
+			show: false,
+		},
 	},
 	series: [
 		{
@@ -113,7 +120,19 @@ function BitcoinEarningsSection() {
 				/>
 			}
 		>
-			<Stack spacing={1} direction="column" height="100%" width={{ xs: '100%', md: '70%' }} pb={{ xs: 30, md: 0 }}>
+			<Stack
+				spacing={1}
+				direction="column"
+				height="100%"
+				width={{
+					xs: '100%',
+					md: '70%',
+				}}
+				pb={{
+					xs: 30,
+					md: 0,
+				}}
+			>
 				<Typography variant="subtitle1" fontSize={55}>
 					{Math.round(counter * 10000) / 10000}{' '}
 					<Typography variant="subtitle1" component="span">
@@ -168,7 +187,9 @@ const ethereumGraphConfig = {
 		tooltip: {
 			enabled: false,
 		},
-		yaxis: { show: false },
+		yaxis: {
+			show: false,
+		},
 	},
 	series: [
 		{
@@ -213,12 +234,17 @@ function EtereumWalletSection() {
 					</Typography>
 				</Typography>
 				<Typography variant="subtitle1">ETHEREUM WALLET</Typography>
-				<Typography variant="subtitle2">Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...</Typography>
+				<Typography variant="subtitle2">
+					Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus...
+				</Typography>
 				<Button
 					variant="text"
 					size="small"
 					endIcon={<ChevronRightIcon />}
-					sx={{ width: 'fit-content', textTransform: 'uppercase' }}
+					sx={{
+						width: 'fit-content',
+						textTransform: 'uppercase',
+					}}
 				>
 					View Report
 				</Button>
@@ -255,7 +281,9 @@ const maleVisitorsGraphConfig = {
 		tooltip: {
 			enabled: false,
 		},
-		yaxis: { show: false },
+		yaxis: {
+			show: false,
+		},
 	},
 	series: [
 		{
@@ -329,7 +357,9 @@ const femaleVisitorsGraphConfig = {
 		tooltip: {
 			enabled: false,
 		},
-		yaxis: { show: false },
+		yaxis: {
+			show: false,
+		},
 	},
 	series: [
 		{

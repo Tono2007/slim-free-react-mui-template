@@ -14,14 +14,24 @@ function SamplePage() {
 	return (
 		<>
 			<PageHeader title="Sample Page">
-				<Breadcrumbs aria-label="breadcrumb" sx={{ textTransform: 'uppercase' }}>
+				<Breadcrumbs
+					aria-label="breadcrumb"
+					sx={{
+						textTransform: 'uppercase',
+					}}
+				>
 					<Link underline="hover" href="#!">
 						Inicio
 					</Link>
 					<Typography color="text.tertiary">Sample</Typography>
 				</Breadcrumbs>
 			</PageHeader>
-			<Card type="section" sx={{ minHeight: '60vh' }}>
+			<Card
+				type="section"
+				sx={{
+					minHeight: '60vh',
+				}}
+			>
 				<CardHeader title="Section Title" subtitle="Section subtitle">
 					Optional Action
 				</CardHeader>

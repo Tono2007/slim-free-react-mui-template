@@ -28,7 +28,13 @@ function Signup() {
 	return (
 		<Container>
 			<Card elevation={20} type="none" variant="elevation">
-				<Grid container spacing={0} sx={{ minHeight: 500 }}>
+				<Grid
+					container
+					spacing={0}
+					sx={{
+						minHeight: 500,
+					}}
+				>
 					<Grid item xs={12} sm={12} md={5} lg={4}>
 						<Stack
 							bgcolor="primary.700"
@@ -79,7 +85,13 @@ function Signup() {
 									component={RouterLink}
 								>
 									<Box
-										sx={{ mr: { xs: 1, sm: 2 }, mt: 0 }}
+										sx={{
+											mr: {
+												xs: 1,
+												sm: 2,
+											},
+											mt: 0,
+										}}
 										width={16}
 										height={16}
 										component="img"
@@ -99,7 +111,13 @@ function Signup() {
 									component={RouterLink}
 								>
 									<Box
-										sx={{ mr: { xs: 1, sm: 2 }, mt: 0 }}
+										sx={{
+											mr: {
+												xs: 1,
+												sm: 2,
+											},
+											mt: 0,
+										}}
 										width={16}
 										height={16}
 										component="img"
@@ -116,7 +134,10 @@ function Signup() {
 									variant="body2"
 									component={RouterLink}
 									color="tertiary.light"
-									sx={{ mt: 0.5, mb: 0 }}
+									sx={{
+										mt: 0.5,
+										mb: 0,
+									}}
 								>
 									Iniciar Sesión
 								</Link>
@@ -145,10 +166,16 @@ function SignupContainer() {
 		<Stack
 			width="100%"
 			py={5}
-			px={{ xs: 1, md: 5 }}
+			px={{
+				xs: 1,
+				md: 5,
+			}}
 			direction="column"
 			height="100%"
-			maxHeight={{ xs: '100%', md: '80vh' }}
+			maxHeight={{
+				xs: '100%',
+				md: '80vh',
+			}}
 			overflow="auto"
 		>
 			<Stepper activeStep={activeStep}>

@@ -43,7 +43,11 @@ const ACTIVITIES_DATA = [
 
 function ActivitiesCard() {
 	return (
-		<Card sx={{ height: '100%' }}>
+		<Card
+			sx={{
+				height: '100%',
+			}}
+		>
 			<CardHeader title="Users Activities" size="small" subtitle="Last activity was 1 hour ago">
 				<Button size="small">See All</Button>
 			</CardHeader>
@@ -78,7 +82,13 @@ function ActivityListItem({ activity: { title, user } }) {
 				},
 			}}
 		>
-			<Avatar sx={{ width: 40, height: 40 }} src={user.avatarImg} />
+			<Avatar
+				sx={{
+					width: 40,
+					height: 40,
+				}}
+				src={user.avatarImg}
+			/>
 			<Stack spacing={0.5} pb={2} pt={0}>
 				<Typography variant="h5">{user.name}</Typography>
 				<Typography variant="body1" color="text.secondary">
