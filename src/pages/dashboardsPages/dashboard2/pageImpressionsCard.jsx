@@ -6,6 +6,9 @@ import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
+import Avatar from '@mui/material/Avatar';
+
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 import CardHeader from '@/components/cardHeader';
 
@@ -63,8 +66,19 @@ function PageImpressionsCard() {
 				<Typography variant="body2" fontSize={35} color="primary.main">
 					{counter.toLocaleString()}
 				</Typography>
-				<Typography variant="body1" color="text.secondary">
-					<Typography color="primary.main" component="span">
+				<Typography variant="body1" color="text.secondary" display="flex" alignItems="center">
+					<Avatar
+						sx={{
+							bgcolor: 'error.light',
+							color: 'error.dark',
+							width: 24,
+							height: 24,
+						}}
+						variant="rounded"
+					>
+						<ArrowDownwardIcon fontSize="small" />
+					</Avatar>
+					<Typography color="error.main" component="span" ml={1}>
 						2.5%{' '}
 					</Typography>
 					change from yesterday

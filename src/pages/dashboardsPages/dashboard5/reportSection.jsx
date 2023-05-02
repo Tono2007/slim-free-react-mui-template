@@ -208,7 +208,7 @@ function RevenueCard() {
 			</Typography>
 			<Typography variant="subtitle1" fontSize={35}>
 				$32,500
-				<Typography variant="caption" color="success.light">
+				<Typography variant="caption" color="success.main">
 					1.4% up
 				</Typography>
 			</Typography>

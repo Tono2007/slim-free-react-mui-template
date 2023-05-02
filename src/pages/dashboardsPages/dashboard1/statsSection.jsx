@@ -33,7 +33,7 @@ const STATS_DATA = [
 	},
 	{
 		id: 4,
-		color: 'success.light',
+		color: 'success.main',
 		name: 'Earnings',
 		total: 369657,
 		Icon: MonetizationOnOutlinedIcon,

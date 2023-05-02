@@ -37,7 +37,7 @@ const STATS_DATA = [
 	},
 	{
 		id: 4,
-		color: 'success.light',
+		color: 'success.main',
 		name: 'Total analytics',
 		total: 2942,
 		Icon: AssessmentOutlinedIcon,

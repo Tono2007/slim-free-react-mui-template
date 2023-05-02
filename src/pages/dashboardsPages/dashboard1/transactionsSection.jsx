@@ -100,7 +100,7 @@ const TRANSACTIONS_DATA = [
 
 const STATUS_CONFIG = {
 	success: {
-		color: 'success.light',
+		color: 'success.main',
 	},
 	error: {
 		color: 'error.main',

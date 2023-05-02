@@ -98,7 +98,7 @@ const PURCHASES_DATA = [
 
 const STATUS_CONFIG = {
 	success: {
-		color: 'success.light',
+		color: 'success.main',
 	},
 	error: {
 		color: 'error.main',
@@ -178,7 +178,7 @@ function ProductsTableRow({ purchase }) {
 					<Typography
 						component="span"
 						variant="inherit"
-						color={`${Math.sign(gain) === 1 ? 'success.light' : 'error.main'}`}
+						color={`${Math.sign(gain) === 1 ? 'success.dark' : 'error.main'}`}
 					>
 						{Math.sign(gain) === 1 ? (
 							<ArrowUpwardIcon fontSize="inherit" />

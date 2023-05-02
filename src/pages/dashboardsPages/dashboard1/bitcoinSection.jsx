@@ -4,11 +4,14 @@ import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import LinearProgress from '@mui/material/LinearProgress';
+
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 import bitcoin1 from '@/assets/images/bitcoin_1.svg';
 import bitcoin2 from '@/assets/images/bitcoin_2.svg';
@@ -206,8 +209,19 @@ function ImpressionsCard() {
 				<Typography variant="body2" fontSize={27}>
 					323,360
 				</Typography>
-				<Typography variant="body1" color="text.secondary">
-					<Typography color="primary.main" component="span">
+				<Typography variant="body1" color="text.secondary" display="flex" alignItems="center">
+					<Avatar
+						sx={{
+							bgcolor: 'success.light',
+							color: 'success.dark',
+							width: 24,
+							height: 24,
+						}}
+						variant="rounded"
+					>
+						<ArrowUpwardIcon fontSize="small" />
+					</Avatar>
+					<Typography color="success.main" component="span" ml={1}>
 						2.5%{' '}
 					</Typography>
 					change from yesterday

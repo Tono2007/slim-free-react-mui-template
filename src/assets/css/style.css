@@ -22,6 +22,7 @@
 	::-webkit-scrollbar-track {
 		background-color: #eee;
 		/* 	background-color: rgb(129, 130, 134); */
+		border-left: 1px solid #2121213e;
 	}
 
 	::-webkit-scrollbar-button:single-button:vertical {

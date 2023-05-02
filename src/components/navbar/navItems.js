@@ -62,7 +62,7 @@ const NAV_LINKS_CONFIG = [
 			},
 			{
 				title: 'Tables',
-				href: '/components/new',
+				href: '/components/tables',
 			},
 			{
 				title: 'Modal',
@@ -213,7 +213,7 @@ const NAV_LINKS_CONFIG = [
 						href: '/pages/error/500',
 					},
 					{
-						title: '503 Service Unavvailable',
+						title: '503 Service Unavailable',
 						href: '/pages/error/503',
 					},
 					{
@@ -274,6 +274,7 @@ const NAV_LINKS_CONFIG = [
 				title: 'Utilidades(Breakpoints)',
 				href: '/theme/utils',
 			},
+			// libraries/ packgaes ej.> moment
 		],
 	},
 	{
