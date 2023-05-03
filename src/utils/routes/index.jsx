@@ -16,13 +16,14 @@ const Dashboard4Page = withLazyLoadably(lazy(() => import('@/pages/dashboardsPag
 const Dashboard5Page = withLazyLoadably(lazy(() => import('@/pages/dashboardsPages/dashboard5')));
 const FormsComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/forms')));
 const LoadersComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/loaders')));
+const TablesComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/tables')));
 const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
 const Page403 = withLazyLoadably(lazy(() => import('@/pages/errorPages/403')));
 const Page500 = withLazyLoadably(lazy(() => import('@/pages/errorPages/500')));
 const Page503 = withLazyLoadably(lazy(() => import('@/pages/errorPages/503')));
 const Page505 = withLazyLoadably(lazy(() => import('@/pages/errorPages/505')));
-const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
 const SignupPage = withLazyLoadably(lazy(() => import('@/pages/signup')));
+const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
 const SamplePage = withLazyLoadably(lazy(() => import('@/pages/sample')));
 const ThemeTypographyPage = withLazyLoadably(lazy(() => import('@/pages/themePages/themeTypography')));
 const ThemeColorsPage = withLazyLoadably(lazy(() => import('@/pages/themePages/themeColors')));
@@ -53,6 +54,7 @@ function Router() {
 						<Route path="components/">
 							<Route path="forms" element={<FormsComponentPage />} />
 							<Route path="loaders" element={<LoadersComponentPage />} />
+							<Route path="tables" element={<TablesComponentPage />} />
 						</Route>
 						<Route path="theme/">
 							<Route path="typography" element={<ThemeTypographyPage />} />

@@ -175,9 +175,25 @@ const NAV_LINKS_CONFIG = [
 				title: 'Sign in',
 				href: '/pages/login',
 			},
+
 			{
+				id: uuid(),
 				title: 'Sign up',
-				href: '/pages/signup',
+				type: 'group',
+				children: [
+					{
+						title: 'Sign up',
+						href: '/pages/signup',
+					},
+					{
+						title: 'Sign up Simple',
+						href: '/pages/signup/simple',
+					},
+					{
+						title: 'Sign up Split',
+						href: '/pages/signup/split',
+					},
+				],
 			},
 			{
 				title: 'WIP',
