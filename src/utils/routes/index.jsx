@@ -25,6 +25,7 @@ const Page505 = withLazyLoadably(lazy(() => import('@/pages/errorPages/505')));
 const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
 const SignupSplitPage = withLazyLoadably(lazy(() => import('@/pages/signupPages/signupSplit')));
 const SignupSimplePage = withLazyLoadably(lazy(() => import('@/pages/signupPages/signupSimple')));
+const SignupPage = withLazyLoadably(lazy(() => import('@/pages/signupPages/signup')));
 const SamplePage = withLazyLoadably(lazy(() => import('@/pages/sample')));
 const ThemeTypographyPage = withLazyLoadably(lazy(() => import('@/pages/themePages/themeTypography')));
 const ThemeColorsPage = withLazyLoadably(lazy(() => import('@/pages/themePages/themeColors')));
@@ -38,7 +39,7 @@ function Router() {
 					<Route path="/" element={<MinimalLayout />}>
 						<Route path="pages/">
 							<Route path="login" element={<LoginPage />} />
-							<Route path="signup" element={<LoginPage />} />
+							<Route path="signup" element={<SignupPage />} />
 							<Route path="signup/simple" element={<SignupSimplePage />} />
 							<Route path="signup/split" element={<SignupSplitPage />} />
 						</Route>

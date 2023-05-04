@@ -66,7 +66,7 @@ function PageImpressionsCard() {
 				<Typography variant="body2" fontSize={35} color="primary.main">
 					{counter.toLocaleString()}
 				</Typography>
-				<Typography variant="body1" color="text.secondary" display="flex" alignItems="center">
+				<Stack direction="row" alignItems="center" spacing={0.5}>
 					<Avatar
 						sx={{
 							bgcolor: 'error.light',
@@ -79,10 +79,12 @@ function PageImpressionsCard() {
 						<ArrowDownwardIcon fontSize="small" />
 					</Avatar>
 					<Typography color="error.main" component="span" ml={1}>
-						2.5%{' '}
+						2.5%
 					</Typography>
-					change from yesterday
-				</Typography>
+					<Typography variant="body1" color="text.secondary">
+						change from yesterday
+					</Typography>
+				</Stack>
 			</Stack>
 			<Chart
 				options={impressionsGraphConfig.options}

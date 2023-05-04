@@ -93,6 +93,14 @@ const NAV_LINKS_CONFIG = [
 						href: '/theme/components/paper',
 					},
 					{
+						title: 'CardHeader',
+						href: '/theme/components/paper',
+					},
+					{
+						title: 'PageHeader',
+						href: '/theme/components/paper',
+					},
+					{
 						title: 'Menu',
 						href: '/theme/components/paper',
 					},
@@ -172,10 +180,24 @@ const NAV_LINKS_CONFIG = [
 		Icon: AutoStoriesOutlinedIcon,
 		children: [
 			{
+				id: uuid(),
 				title: 'Sign in',
-				href: '/pages/login',
+				type: 'group',
+				children: [
+					{
+						title: 'Sign in',
+						href: '/pages/login',
+					},
+					{
+						title: 'Sign in Simple',
+						href: '/pages/login/simple',
+					},
+					{
+						title: 'Sign in Split',
+						href: '/pages/login/split',
+					},
+				],
 			},
-
 			{
 				id: uuid(),
 				title: 'Sign up',
@@ -287,7 +309,8 @@ const NAV_LINKS_CONFIG = [
 				href: '/theme/icons',
 			}, */
 			{
-				title: 'Utilidades(Breakpoints)',
+				title: 'Utilities',
+				// Breakpoints
 				href: '/theme/utils',
 			},
 			// libraries/ packgaes ej.> moment

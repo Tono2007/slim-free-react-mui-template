@@ -209,7 +209,7 @@ function ImpressionsCard() {
 				<Typography variant="body2" fontSize={27}>
 					323,360
 				</Typography>
-				<Typography variant="body1" color="text.secondary" display="flex" alignItems="center">
+				<Stack direction="row" alignItems="center" spacing={0.5}>
 					<Avatar
 						sx={{
 							bgcolor: 'success.light',
@@ -222,10 +222,12 @@ function ImpressionsCard() {
 						<ArrowUpwardIcon fontSize="small" />
 					</Avatar>
 					<Typography color="success.main" component="span" ml={1}>
-						2.5%{' '}
+						2.5%
 					</Typography>
-					change from yesterday
-				</Typography>
+					<Typography variant="body1" color="text.secondary">
+						change from yesterday
+					</Typography>
+				</Stack>
 			</Stack>
 			<Box position="absolute" top="0" bottom="0" left="0" right="0">
 				<Chart

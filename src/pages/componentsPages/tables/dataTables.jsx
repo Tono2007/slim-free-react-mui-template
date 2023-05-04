@@ -29,9 +29,8 @@ import employeesData from '@/_mocks/employees';
 function DataTables() {
 	return (
 		<>
-			<DataTable1 />
-			<DataTable1 />
-			<DataTable1 />
+			<DataTable1 name="Basic" />
+			<DataTable1 name="Dense" props={{ dense: true }} />
 		</>
 	);
 }
@@ -74,11 +73,11 @@ const getHeadCells = [
 		label: 'Opciones',
 	},
 ];
-function DataTable1() {
+function DataTable1({ name, props }) {
 	return (
 		<Card component="section" type="section">
 			<CardHeader
-				title="Basic Data Table"
+				title={`${name} Data Table`}
 				subtitle="Searching, ordering and paging goodness will be immediately added to the table, as shown in this example."
 			>
 				<Button variant="contained" disableElevation endIcon={<AddIcon />}>
@@ -86,9 +85,10 @@ function DataTable1() {
 				</Button>
 			</CardHeader>
 			<DataTable
+				{...props}
 				headCells={getHeadCells}
 				rows={employeesData.slice(0, 27)}
-				emptyRowsHeight={{ default: 66.8 }}
+				emptyRowsHeight={{ default: 66.8, dense: 46.8 }}
 				render={(row) => (
 					<TableRow hover tabIndex={-1} key={row.id}>
 						<TableCell>{row.id}</TableCell>

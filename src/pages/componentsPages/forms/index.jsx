@@ -733,7 +733,7 @@ function FormValidatorSection() {
 							>
 								{[1, 2, 3, 4, 5].map((option) => (
 									<MenuItem key={option} value={option}>
-										opcion no. sd fsdf sdf sdfa fads fa sdf a fasd fa dfa sdf adf ad{option}
+										opcion no. {option}
 									</MenuItem>
 								))}
 							</FormInput>

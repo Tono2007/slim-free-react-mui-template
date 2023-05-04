@@ -59,6 +59,11 @@ export default {
 		800: '#193A1A',
 		contrastText: '#fff',
 	},
+	warning: {
+		light: '#ff9800',
+		main: '#ed6c02',
+		dark: '#e65100',
+	},
 	error: {
 		light: '#F3C7C7',
 		100: '#EFB6B6',

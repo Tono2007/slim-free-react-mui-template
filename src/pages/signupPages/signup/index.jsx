@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, Link as RouterLink } from 'react-router-dom';
+import { strengthColor, strengthIndicator } from '@/utils/helpers/passwordStrength';
 // MUI
 import Typography from '@mui/material/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -19,6 +20,8 @@ import Chip from '@mui/material/Chip';
 import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LoginIcon from '@mui/icons-material/Login';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 // assets
 import logo from '@/assets/images/logo/png/Color_logo_nobg.png';
@@ -39,7 +42,7 @@ function SignupPage() {
 			}}
 		>
 			<Stack direction="column" spacing={3}>
-				<Box component="img" src={logo} width="80%" mx="auto" alt="slim logo" />
+				<Box component="img" src={logo} width="60%" mx="auto" alt="slim logo" />
 				<div>
 					<Typography variant="h1" fontWeight="light">
 						Get Started!
@@ -50,6 +53,85 @@ function SignupPage() {
 				</div>
 
 				<LoginForm />
+				<Divider sx={{ color: 'text.secondary' }}>or signup using</Divider>
+				<Stack spacing={1}>
+					<Button
+						disableElevation
+						fullWidth
+						size="small"
+						variant="outlined"
+						sx={{
+							color: 'grey.700',
+							backgroundColor: (theme) => theme.palette.grey[50],
+							borderColor: (theme) => theme.palette.grey[300],
+						}}
+						to="/home"
+						component={RouterLink}
+					>
+						<Box
+							sx={{
+								mr: {
+									xs: 1,
+									sm: 2,
+								},
+							}}
+							width={16}
+							height={16}
+							component="img"
+							src={Google}
+							alt="google"
+						/>
+						Sign Up Using Google
+					</Button>
+					<Button
+						disableElevation
+						fullWidth
+						size="small"
+						variant="outlined"
+						sx={{
+							color: 'grey.700',
+							backgroundColor: (theme) => theme.palette.grey[50],
+							borderColor: (theme) => theme.palette.grey[300],
+						}}
+						to="/home"
+						component={RouterLink}
+					>
+						<FacebookIcon
+							sx={{
+								color: '#4267B2',
+								mr: {
+									xs: 1,
+									sm: 2,
+								},
+							}}
+						/>
+						Sign Up Using Facebook
+					</Button>
+					<Button
+						disableElevation
+						fullWidth
+						size="small"
+						variant="outlined"
+						sx={{
+							color: 'grey.700',
+							backgroundColor: (theme) => theme.palette.grey[50],
+							borderColor: (theme) => theme.palette.grey[300],
+						}}
+						to="/home"
+						component={RouterLink}
+					>
+						<TwitterIcon
+							sx={{
+								color: '#1DA1F2',
+								mr: {
+									xs: 1,
+									sm: 2,
+								},
+							}}
+						/>
+						Sign Up Using Twitter
+					</Button>
+				</Stack>
 				<Typography>
 					Already have an account?{' '}
 					<Link to="/pages/login" component={RouterLink}>
@@ -64,6 +146,13 @@ function SignupPage() {
 function LoginForm() {
 	const navigate = useNavigate();
 	const [isLoading, setIsLoading] = useState(false);
+	const [formPassword, setFormPassword] = useState('');
+	const [level, setLevel] = useState(0);
+
+	const changePassword = (value) => {
+		const temp = strengthIndicator(value);
+		setLevel(strengthColor(temp));
+	};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -74,19 +163,21 @@ function LoginForm() {
 			navigate('/');
 		}, 1000);
 	};
+
+	useEffect(() => {
+		changePassword('123456');
+	}, []);
 	return (
 		<form onSubmit={handleSubmit}>
 			<TextField
 				color="primary"
 				autoFocus
 				name="nickname"
-				label="Name"
+				label="Username"
 				margin="normal"
 				variant="outlined"
 				fullWidth
 			/>
-			<TextField color="primary" name="nickname" label="Last Name" margin="normal" variant="outlined" fullWidth />
-			<TextField color="primary" name="Email" label="Email" margin="normal" variant="outlined" fullWidth />
 			<TextField
 				color="primary"
 				name="password"
@@ -94,8 +185,19 @@ function LoginForm() {
 				margin="normal"
 				label="Password"
 				variant="outlined"
+				value={formPassword}
+				onChange={(e) => {
+					setFormPassword(e.target.value);
+					changePassword(e.target.value);
+				}}
 				fullWidth
 			/>
+			<Box>
+				<Box style={{ backgroundColor: level?.color }} sx={{ width: 85, height: 8, borderRadius: '7px' }} />
+				<Typography variant="body2" color="textSecondary">
+					{level?.label}&nbsp;
+				</Typography>
+			</Box>
 
 			<Button
 				sx={{
