@@ -36,13 +36,14 @@ function LoginPage() {
 					md: '50%',
 					lg: '30%',
 				},
-				border: 0,
 			}}
 		>
 			<Stack direction="column" spacing={2}>
-				<Box component="img" src={logo} width="90%" mx="auto" alt="slim logo" />
+				<Box component="img" src={logo} width="80%" mx="auto" alt="slim logo" />
 				<div>
-					<Typography variant="h1">¡Bienvenido!</Typography>
+					<Typography variant="h1" fontWeight="light">
+						¡Bienvenido!
+					</Typography>
 					<Typography variant="body2" color="textSecondary">
 						Inicia sesión para poder continuar.
 					</Typography>
@@ -55,7 +56,7 @@ function LoginPage() {
 					sx={{
 						color: 'grey.700',
 						backgroundColor: (theme) => theme.palette.grey[50],
-						borderColor: (theme) => theme.palette.grey[100],
+						borderColor: (theme) => theme.palette.grey[300],
 					}}
 					to="/home"
 					component={RouterLink}
@@ -85,14 +86,7 @@ function LoginPage() {
 				</Typography>
 				<LoginForm />
 
-				<Button
-					variant="outlined"
-					fullWidth
-					color="primary"
-					to="/pages/signup"
-					size="small"
-					component={RouterLink}
-				>
+				<Button variant="outlined" fullWidth color="primary" to="/pages/signup" component={RouterLink}>
 					Registrarse
 				</Button>
 				{/* <Typography>
@@ -138,7 +132,7 @@ function LoginForm() {
 		setTimeout(() => {
 			setIsLoading(false);
 			navigate('/');
-		}, 3000);
+		}, 1500);
 	};
 	return (
 		<Box onSubmit={handleSubmit} component="form">
@@ -204,6 +198,15 @@ function LoginForm() {
 			<Button
 				sx={{
 					mt: 2,
+					color: 'primary.contrastText',
+					' &:not(:disabled)': {
+						background: (theme) =>
+							`linear-gradient(90deg, ${theme.palette.primary.main} 0%, ${theme.palette.tertiary.main} 100%)`,
+					},
+					'&:hover': {
+						background: (theme) =>
+							`linear-gradient(90deg, ${theme.palette.primary.dark} 0%, ${theme.palette.tertiary.dark} 100%)`,
+					},
 				}}
 				type="submit"
 				variant="contained"
@@ -221,7 +224,6 @@ function LoginForm() {
 						<LoginIcon />
 					)
 				}
-				size="small"
 				fullWidth
 				color="primary"
 			>

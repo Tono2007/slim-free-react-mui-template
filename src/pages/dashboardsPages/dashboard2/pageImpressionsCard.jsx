@@ -79,7 +79,7 @@ function PageImpressionsCard() {
 						<ArrowDownwardIcon fontSize="small" />
 					</Avatar>
 					<Typography color="error.main" component="span" ml={1}>
-						2.5%
+						-2.5%
 					</Typography>
 					<Typography variant="body1" color="text.secondary">
 						change from yesterday

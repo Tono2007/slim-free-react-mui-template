@@ -22,7 +22,9 @@ const Page403 = withLazyLoadably(lazy(() => import('@/pages/errorPages/403')));
 const Page500 = withLazyLoadably(lazy(() => import('@/pages/errorPages/500')));
 const Page503 = withLazyLoadably(lazy(() => import('@/pages/errorPages/503')));
 const Page505 = withLazyLoadably(lazy(() => import('@/pages/errorPages/505')));
-const LoginPage = withLazyLoadably(lazy(() => import('@/pages/login')));
+const LoginPage = withLazyLoadably(lazy(() => import('@/pages/loginPages/login')));
+const LoginSimplePage = withLazyLoadably(lazy(() => import('@/pages/loginPages/loginSimple')));
+const LoginSplitPage = withLazyLoadably(lazy(() => import('@/pages/loginPages/loginSplit')));
 const SignupSplitPage = withLazyLoadably(lazy(() => import('@/pages/signupPages/signupSplit')));
 const SignupSimplePage = withLazyLoadably(lazy(() => import('@/pages/signupPages/signupSimple')));
 const SignupPage = withLazyLoadably(lazy(() => import('@/pages/signupPages/signup')));
@@ -39,6 +41,8 @@ function Router() {
 					<Route path="/" element={<MinimalLayout />}>
 						<Route path="pages/">
 							<Route path="login" element={<LoginPage />} />
+							<Route path="login/simple" element={<LoginSimplePage />} />
+							<Route path="login/split" element={<LoginSplitPage />} />
 							<Route path="signup" element={<SignupPage />} />
 							<Route path="signup/simple" element={<SignupSimplePage />} />
 							<Route path="signup/split" element={<SignupSplitPage />} />
