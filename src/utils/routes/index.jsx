@@ -17,6 +17,7 @@ const Dashboard5Page = withLazyLoadably(lazy(() => import('@/pages/dashboardsPag
 const FormsComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/forms')));
 const LoadersComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/loaders')));
 const TablesComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/tables')));
+const ModalComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/modal')));
 const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
 const Page403 = withLazyLoadably(lazy(() => import('@/pages/errorPages/403')));
 const Page500 = withLazyLoadably(lazy(() => import('@/pages/errorPages/500')));
@@ -59,16 +60,20 @@ function Router() {
 							<Route path="dashboard4" element={<Dashboard4Page />} />
 							<Route path="dashboard5" element={<Dashboard5Page />} />
 						</Route>
+
 						<Route path="components/">
 							<Route path="forms" element={<FormsComponentPage />} />
 							<Route path="loaders" element={<LoadersComponentPage />} />
 							<Route path="tables" element={<TablesComponentPage />} />
+							<Route path="modal" element={<ModalComponentPage />} />
 						</Route>
+
 						<Route path="theme/">
 							<Route path="typography" element={<ThemeTypographyPage />} />
 							<Route path="colors" element={<ThemeColorsPage />} />
 							<Route path="boxShadow" element={<ThemeShadowPage />} />
 						</Route>
+
 						<Route path="pages/">
 							<Route path="error/">
 								<Route path="404" element={<Page404 />} />

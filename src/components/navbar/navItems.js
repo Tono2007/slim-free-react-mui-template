@@ -66,7 +66,7 @@ const NAV_LINKS_CONFIG = [
 			},
 			{
 				title: 'Modal',
-				href: '/components/new',
+				href: '/components/modal',
 			},
 			{
 				title: 'Loaders',
@@ -77,15 +77,16 @@ const NAV_LINKS_CONFIG = [
 				href: '/components/new',
 			},
 			{
-				title: 'Carousel',
+				title: 'Carousel WIP',
 				href: '/components/new',
 			},
 			{
-				title: 'Navigation/Navbar',
+				title: 'Navigation WIP',
+				// navbar
 				href: '/components/new',
 			},
 			{
-				title: 'UI Elements',
+				title: 'UI Elements WIP',
 				type: 'group',
 				children: [
 					{
@@ -222,15 +223,15 @@ const NAV_LINKS_CONFIG = [
 				href: '/pages/wip',
 			},
 			{
-				title: 'Edit Profile',
+				title: 'Edit Profile WIP',
 				href: '/pages/login',
 			},
 			{
-				title: 'Notifications',
+				title: 'Notifications WIP',
 				href: '/pages/login',
 			},
 			{
-				title: 'Profile',
+				title: 'Profile WIP',
 				href: '/pages/login',
 			},
 			{
@@ -262,7 +263,7 @@ const NAV_LINKS_CONFIG = [
 			},
 			{
 				id: uuid(),
-				title: 'Landing Pages',
+				title: 'Landing Pages WIP',
 				type: 'group',
 				children: [
 					{
@@ -309,7 +310,7 @@ const NAV_LINKS_CONFIG = [
 				href: '/theme/icons',
 			}, */
 			{
-				title: 'Utilities',
+				title: 'Utilities WIP',
 				// Breakpoints
 				href: '/theme/utils',
 			},
@@ -323,20 +324,20 @@ const NAV_LINKS_CONFIG = [
 		Icon: InventoryOutlinedIcon,
 		children: [
 			{
-				title: 'Ecommerce',
-				href: '/profile',
+				title: 'Ecommerce WIP',
+				href: '/profile WIP',
 			},
 			{
-				title: 'Social Feed',
-				href: '/profile',
+				title: 'Social Feed WIP',
+				href: '/profile WIP',
 			},
 			{
-				title: 'Calendar',
-				href: '/profile',
+				title: 'Calendar WIP',
+				href: '/profile WIP',
 			},
 			{
-				title: 'Chat',
-				href: '/profile',
+				title: 'Chat WIP',
+				href: '/profile WIP',
 			},
 		],
 	},
