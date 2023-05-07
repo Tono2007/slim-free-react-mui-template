@@ -73,8 +73,8 @@ const NAV_LINKS_CONFIG = [
 				href: '/components/loaders',
 			},
 			{
-				title: 'Alerts/Snackbar/Toasts',
-				href: '/components/new',
+				title: 'Snackbar/Toast',
+				href: '/components/snackbar',
 			},
 			{
 				title: 'Carousel WIP',

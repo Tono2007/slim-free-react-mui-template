@@ -29,8 +29,9 @@ import employeesData from '@/_mocks/employees';
 function DataTables() {
 	return (
 		<>
-			<DataTable1 name="Basic" />
-			<DataTable1 name="Dense" props={{ dense: true }} />
+			<DataTableSection name="Basic" />
+			<DataTableSection name="Dense" props={{ dense: true }} />
+			<ScrolDataTableSection />
 		</>
 	);
 }
@@ -73,7 +74,7 @@ const getHeadCells = [
 		label: 'Opciones',
 	},
 ];
-function DataTable1({ name, props }) {
+function DataTableSection({ name, props }) {
 	return (
 		<Card component="section" type="section">
 			<CardHeader
@@ -86,6 +87,65 @@ function DataTable1({ name, props }) {
 			</CardHeader>
 			<DataTable
 				{...props}
+				headCells={getHeadCells}
+				rows={employeesData.slice(0, 27)}
+				emptyRowsHeight={{ default: 66.8, dense: 46.8 }}
+				render={(row) => (
+					<TableRow hover tabIndex={-1} key={row.id}>
+						<TableCell>{row.id}</TableCell>
+						<TableCell align="left">{row.name}</TableCell>
+						<TableCell align="left">{row?.position}</TableCell>
+						<TableCell align="left">{row?.email}</TableCell>
+						<TableCell align="right">${row.salary.toLocaleString()}</TableCell>
+						<TableCell align="right">
+							<Tooltip title="Editar Información" arrow>
+								<IconButton
+									aria-label="edit"
+									color="warning"
+									size="small"
+									sx={{ fontSize: 2 }}
+									onClick={(e) => {
+										e.stopPropagation();
+									}}
+								>
+									<ModeEditOutlineOutlinedIcon fontSize="medium" />
+								</IconButton>
+							</Tooltip>
+
+							<Tooltip title="Deshabilitar Usuario" arrow>
+								<IconButton
+									aria-label="edit"
+									color="error"
+									size="small"
+									sx={{ fontSize: 2 }}
+									onClick={(e) => {
+										e.stopPropagation();
+									}}
+								>
+									<PersonOffOutlinedIcon fontSize="medium" />
+								</IconButton>
+							</Tooltip>
+						</TableCell>
+					</TableRow>
+				)}
+			/>
+		</Card>
+	);
+}
+function ScrolDataTableSection() {
+	return (
+		<Card component="section" type="section">
+			<CardHeader
+				title="Scroll Data Table"
+				subtitle="Searching, ordering and paging goodness will be immediately added to the table, as shown in this example."
+			>
+				<Button variant="contained" disableElevation endIcon={<AddIcon />}>
+					New entry
+				</Button>
+			</CardHeader>
+			<DataTable
+				tableContainerProps={{ sx: { height: '200px', overflow: 'auto' } }}
+				stickyHeader
 				headCells={getHeadCells}
 				rows={employeesData.slice(0, 27)}
 				emptyRowsHeight={{ default: 66.8, dense: 46.8 }}

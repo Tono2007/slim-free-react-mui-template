@@ -86,9 +86,8 @@ export default {
 		hint: '#EEF2F6',
 	},
 	background: {
-		/* paper: theme.paper,
-		default: theme.backgroundDefault, */
 		// #fafafa
+		paper: '#fff',
 		default: '#F0F2F7',
 		dark: '#E3E7EB',
 		// #212529

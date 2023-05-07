@@ -65,8 +65,25 @@ function EnhancedTableHead(props) {
 	);
 }
 
+/**
+ * @param {object} props
+ * @param {Array} props.rows
+ * @param {Function} props.render
+ * @param {boolean} props.dense
+ * @param {Object} props.emptyRowsHeight
+ * @param {Boolean} props.stickyHeader
+ * @param {object} props.tableContainerProps
+ */
 function EnhancedTable(props) {
-	const { rows, headCells, render, dense = false, emptyRowsHeight = { default: 76, dense: 43 } } = props;
+	const {
+		rows,
+		headCells,
+		render,
+		dense = false,
+		emptyRowsHeight = { default: 76, dense: 43 },
+		stickyHeader,
+		tableContainerProps,
+	} = props;
 	const [order, setOrder] = useState('desc');
 	const [orderBy, setOrderBy] = useState('');
 	const [page, setPage] = useState(0);
@@ -92,8 +109,13 @@ function EnhancedTable(props) {
 
 	return (
 		<>
-			<TableContainer>
-				<Table sx={{ width: '100%' }} aria-labelledby="tableTitle" size={dense ? 'small' : 'medium'}>
+			<TableContainer {...tableContainerProps}>
+				<Table
+					sx={{ width: '100%' }}
+					stickyHeader={stickyHeader}
+					aria-labelledby="tableTitle"
+					size={dense ? 'small' : 'medium'}
+				>
 					<EnhancedTableHead
 						order={order}
 						orderBy={orderBy}

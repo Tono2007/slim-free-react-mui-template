@@ -12,6 +12,8 @@ import MenuList from '@mui/material/MenuList';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Badge from '@mui/material/Badge';
 
 // Icons
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -64,12 +66,18 @@ function LoggedUser() {
 			>
 				<UserMenu handleClose={handleClose} />
 			</Menu>
-			<Stack height="100%" direction="row" flex={1} justifyContent="flex-end" alignItems="center" spacing={1}>
+			<Stack height="100%" direction="row" flex={1} justifyContent="flex-end" alignItems="center" spacing={0}>
 				<NotificationsButton />
+				<IconButton size="small">
+					<Badge color="tertiary" overlap="rectangular" variant="dot">
+						<CommentOutlinedIcon color="primary" fontSize="small" />
+					</Badge>
+				</IconButton>
 				<ButtonBase
 					onClick={handleClick}
 					variant="outlined"
 					sx={{
+						ml: 1,
 						height: '100%',
 						overflow: 'hidden',
 						borderRadius: '25px',
@@ -144,26 +152,26 @@ function UserMenu({ handleClose }) {
 				<ListItemIcon>
 					<NotificationsNoneOutlinedIcon fontSize="small" />
 				</ListItemIcon>
-				Notifications <Badge color="info.main" count={10} />
+				Notifications <ListBadge color="info.main" count={10} />
 			</MenuItem>
 			<MenuItem onClick={handleClose} to="/" component={RouterLink}>
 				<ListItemIcon>
 					<DraftsOutlinedIcon fontSize="small" />
 				</ListItemIcon>
 				Messages
-				<Badge color="success.main" count={5} />
+				<ListBadge color="success.main" count={5} />
 			</MenuItem>
 			<MenuItem onClick={handleClose} to="/" component={RouterLink}>
 				<ListItemIcon>
 					<TaskOutlinedIcon fontSize="small" />
 				</ListItemIcon>
-				Tasks <Badge color="error.main" count={23} />
+				Tasks <ListBadge color="error.main" count={23} />
 			</MenuItem>
 			<MenuItem onClick={handleClose} to="/" component={RouterLink}>
 				<ListItemIcon>
 					<CommentOutlinedIcon fontSize="small" />
 				</ListItemIcon>
-				Comments <Badge color="warning.main" count={16} />
+				Comments <ListBadge color="warning.main" count={16} />
 			</MenuItem>
 			<Divider
 				sx={{
@@ -218,7 +226,7 @@ function UserMenu({ handleClose }) {
 	);
 }
 
-function Badge({ color, count }) {
+function ListBadge({ color, count }) {
 	return (
 		<Box
 			ml={1}
