@@ -1,5 +1,5 @@
 {
-	"homepage":".",
+	"homepage": ".",
 	"name": "slim-mui-template",
 	"private": true,
 	"version": "0.0.0",
@@ -11,7 +11,8 @@
 		"preview": "vite preview",
 		"lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
 		"lint:fix": "eslint --fix --ext .js,.jsx .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"install": "npm install --no-audit --no-fund --no-optional"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.10.6",
