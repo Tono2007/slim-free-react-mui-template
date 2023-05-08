@@ -37,6 +37,7 @@ function SignupPage() {
 					lg: '30%',
 				},
 			}}
+			hover={false}
 		>
 			<Stack direction="column" spacing={3}>
 				<Box component="img" src={logo} width="80%" mx="auto" alt="slim logo" />

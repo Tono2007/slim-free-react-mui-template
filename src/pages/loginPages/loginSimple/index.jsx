@@ -32,6 +32,7 @@ import Google from '@/assets/icons/social-google.svg';
 function LoginSimple() {
 	return (
 		<Card
+			hover={false}
 			elevation={20}
 			sx={{
 				display: 'block',

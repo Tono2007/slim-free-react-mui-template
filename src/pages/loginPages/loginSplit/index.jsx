@@ -24,7 +24,7 @@ import LoginIcon from '@mui/icons-material/Login';
 function LoginSplit() {
 	return (
 		<Container>
-			<Card elevation={20} type="none" variant="elevation" sx={{ my: 6 }}>
+			<Card elevation={20} type="none" variant="elevation" sx={{ my: 6 }} hover={false}>
 				<Grid
 					container
 					spacing={0}

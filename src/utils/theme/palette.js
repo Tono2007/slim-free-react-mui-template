@@ -1,4 +1,5 @@
 export default {
+	// https://www.tailwindshades.com/
 	primary: {
 		light: '#96C0F3',
 		100: '#84B5F1',

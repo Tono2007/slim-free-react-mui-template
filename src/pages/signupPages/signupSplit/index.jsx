@@ -27,7 +27,7 @@ import SuccessfulRegistration from './successfulRegistration';
 function Signup() {
 	return (
 		<Container>
-			<Card elevation={20} type="none" variant="elevation">
+			<Card elevation={20} type="none" variant="elevation" hover={false}>
 				<Grid
 					container
 					spacing={0}

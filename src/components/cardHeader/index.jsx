@@ -19,6 +19,15 @@ const VARIANTS_CONFIG = {
 	},
 };
 
+/**
+ *
+ * @param {string} title
+ * @param {string=} subtitle
+ * @param {'small'|'medium'|'large'} size
+ * @param {object=} sx
+ * @returns
+ */
+
 function CardHeader({ children, title, subtitle, size = 'medium', sx }) {
 	return (
 		<Stack

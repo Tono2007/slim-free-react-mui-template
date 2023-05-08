@@ -67,8 +67,19 @@ export default {
 					},
 				},
 			},
+			{
+				props: {
+					hover: true,
+				},
+				style: {
+					'&:hover': {
+						boxShadow: '0px 10px 20px -10px #0005',
+					},
+				},
+			},
 		],
 		defaultProps: {
+			hover: true,
 			elevation: 26,
 			type: 'card',
 			variant: 'outlinedElevation',

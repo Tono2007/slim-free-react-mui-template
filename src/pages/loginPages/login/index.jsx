@@ -27,6 +27,7 @@ import Google from '@/assets/icons/social-google.svg';
 function LoginPage() {
 	return (
 		<Card
+			hover={false}
 			elevation={20}
 			sx={{
 				display: 'block',
