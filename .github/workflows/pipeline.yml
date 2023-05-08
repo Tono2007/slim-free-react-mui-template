@@ -2,9 +2,9 @@ name: Pipeline
 
 on:
   push:
-    branches: [ "feat/gh-action-pipeline" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "feat/gh-action-pipeline" ]
+    branches: [ "main" ]
 
 jobs:
   build:
