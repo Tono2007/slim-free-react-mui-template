@@ -18,11 +18,10 @@ jobs:
 
     - uses: actions/setup-node@v3
       with:
-          cache: 'npm'
-          node-version: '18'
+           node-version: '18'
         
     - name: Install dependencies
-      run: npm run install
+      run: npm install
 
     - name: Install Prettier
       run: npm i prettier
