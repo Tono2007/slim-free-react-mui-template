@@ -1,4 +1,5 @@
 # slim-mui-template &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) ![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)
+
 <a href="https://github.com/Tono2007/slim-free-react-mui-template?style=social/issues">
   <img alt="React open issues" src="https://img.shields.io/github/stars/Tono2007/slim-free-react-mui-template?style=social">
 </a>
@@ -6,7 +7,7 @@
   <img alt="React contributors" src="https://img.shields.io/github/contributors/Tono2007/slim-free-react-mui-template">
 </a>
 
-
+![CI/CD](https://github.com/Tono2007/slim-free-react-mui-template/workflows/pipeline/badge.svg)
 
 <div align="center">
 <img src="src/assets/images/logo/png/Color_logo_nobg.png" />  
@@ -75,8 +76,8 @@ To report a bug, please submit an [issue](https://github.com/Tono2007/slim-free-
 
 We use different colors
 
-|![#f03c15](https://placehold.it/40/1560BD/1560BD?text=.)|![#f03c15](https://placehold.it/40/FEC604/FEC604?text=.) | ![#f03c15](https://placehold.it/40/E219D7/E219D7?text=.)|![#f03c15](https://placehold.it/40/17A3F1/17A3F1?text=.)|![#f03c15](https://placehold.it/40/F0F2F7/F0F2F7?text=.) |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| ![#f03c15](https://placehold.it/40/1560BD/1560BD?text=.) | ![#f03c15](https://placehold.it/40/FEC604/FEC604?text=.) | ![#f03c15](https://placehold.it/40/E219D7/E219D7?text=.) | ![#f03c15](https://placehold.it/40/17A3F1/17A3F1?text=.) | ![#f03c15](https://placehold.it/40/F0F2F7/F0F2F7?text=.) |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 
 ### Changelog
 
