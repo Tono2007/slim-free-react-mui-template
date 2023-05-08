@@ -30,9 +30,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
           cache: 'npm'
-          node-version: '18'  
-    - name: Install dependencies
-      run: npm install     
+          node-version: '18'    
     - name: Build
       run: npm run build
 
@@ -46,9 +44,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
           cache: 'npm'
-          node-version: '18'     
-    - name: Install dependencies
-      run: npm install
+          node-version: '18'    
     - name: Install Prettier
       run: npm i prettier
     - name: Lint
