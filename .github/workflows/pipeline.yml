@@ -7,21 +7,7 @@ on:
     branches: [ "feat/gh-action-pipeline" ]
 
 jobs:
-  install:
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v3
-      with:
-            fetch-depth: 0
-    - uses: actions/setup-node@v3
-      with:
-          cache: 'npm'
-          node-version: '18'       
-    - name: Install dependencies
-      run: npm run installD
-
   build:
-    needs: install
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3
@@ -30,12 +16,13 @@ jobs:
     - uses: actions/setup-node@v3
       with:
           cache: 'npm'
-          node-version: '18'    
+          node-version: '18'   
+    - name: Install dependencies
+      run: npm run installD 
     - name: Build
       run: npm run build
 
   lint:
-    needs: install
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3
@@ -44,7 +31,9 @@ jobs:
     - uses: actions/setup-node@v3
       with:
           cache: 'npm'
-          node-version: '18'    
+          node-version: '18' 
+    - name: Install dependencies
+      run: npm run installD   
     - name: Install Prettier
       run: npm i prettier
     - name: Lint
