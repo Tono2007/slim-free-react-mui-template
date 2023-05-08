@@ -6,6 +6,8 @@ import '@fontsource/rubik/700.css';
 
 import ReduxProvider from '@/redux/store';
 
+import { Provider as SnackbarProvider } from '@/components/snackbar';
+
 import { ThemeProvider as MuiThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -18,7 +20,9 @@ function App() {
 			<StyledEngineProvider injectFirst>
 				<MuiThemeProvider theme={theme}>
 					<CssBaseline />
-					<Router />
+					<SnackbarProvider>
+						<Router />
+					</SnackbarProvider>
 				</MuiThemeProvider>
 			</StyledEngineProvider>
 		</ReduxProvider>

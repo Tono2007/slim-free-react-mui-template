@@ -18,6 +18,7 @@ const FormsComponentPage = withLazyLoadably(lazy(() => import('@/pages/component
 const LoadersComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/loaders')));
 const TablesComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/tables')));
 const ModalComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/modal')));
+const SnackbarComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/snackbar')));
 const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
 const Page403 = withLazyLoadably(lazy(() => import('@/pages/errorPages/403')));
 const Page500 = withLazyLoadably(lazy(() => import('@/pages/errorPages/500')));
@@ -66,6 +67,7 @@ function Router() {
 							<Route path="loaders" element={<LoadersComponentPage />} />
 							<Route path="tables" element={<TablesComponentPage />} />
 							<Route path="modal" element={<ModalComponentPage />} />
+							<Route path="snackbar" element={<SnackbarComponentPage />} />
 						</Route>
 
 						<Route path="theme/">

@@ -143,6 +143,7 @@ function Footer() {
 							@Antonio Ayola
 						</Link>{' '}
 						con 🖤 &#x1F1F2;&#x1F1FD;
+						{/* Built by antonio ayola and contributors */}
 					</Typography>
 				</Stack>
 			</Container>

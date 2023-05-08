@@ -191,4 +191,21 @@ export default {
 			},
 		},
 	},
+
+	MuiAlert: {
+		styleOverrides: {
+			outlined: {
+				backgroundColor: palette.background.paper,
+			},
+			filled: {
+				border: 0,
+			},
+			standard: {
+				border: 0,
+			},
+			filledSuccess: {
+				color: palette.success.contrastText,
+			},
+		},
+	},
 };
