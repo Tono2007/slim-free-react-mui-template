@@ -35,7 +35,7 @@ function NotificationsButton() {
 	};
 	const toNotifications = (e) => {
 		handleClose();
-		navigate('/notifications');
+		navigate('/pages/notifications');
 	};
 
 	return (

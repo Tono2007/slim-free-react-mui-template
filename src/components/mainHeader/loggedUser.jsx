@@ -148,11 +148,11 @@ function UserMenu({ handleClose }) {
 					my: 1,
 				}}
 			/>
-			<MenuItem onClick={handleClose} to="/" component={RouterLink}>
+			<MenuItem onClick={handleClose} to="/pages/notifications" component={RouterLink}>
 				<ListItemIcon>
 					<NotificationsNoneOutlinedIcon fontSize="small" />
 				</ListItemIcon>
-				Notifications <ListBadge color="info.main" count={10} />
+				Notifications <ListBadge color="info.main" count={18} />
 			</MenuItem>
 			<MenuItem onClick={handleClose} to="/" component={RouterLink}>
 				<ListItemIcon>
@@ -171,7 +171,7 @@ function UserMenu({ handleClose }) {
 				<ListItemIcon>
 					<CommentOutlinedIcon fontSize="small" />
 				</ListItemIcon>
-				Comments <ListBadge color="warning.main" count={16} />
+				Comments <ListBadge color="warning.main" count={11} />
 			</MenuItem>
 			<Divider
 				sx={{

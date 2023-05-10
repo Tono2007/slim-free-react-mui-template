@@ -24,7 +24,7 @@ It can be used for most type of dashboard and app templates like analytics, admi
 <img src="src/assets/images/logo/png/Color_logotext_nobg.png"  height="50px"/>  
 </div>
 
-⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐
+⭐ ⭐ ⭐ Do not forget to star (Top right of this page) it if you like the theme ⭐ ⭐ ⭐
 
 -   Support React18.
 -   Professional user interface.

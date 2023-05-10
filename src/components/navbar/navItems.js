@@ -227,15 +227,11 @@ const NAV_LINKS_CONFIG = [
 				href: '/pages/settings',
 			},
 			{
-				title: 'Notifications WIP',
-				href: '/pages/login',
+				title: 'Notifications',
+				href: '/pages/notifications',
 			},
 			{
 				title: 'Profile WIP',
-				href: '/pages/login',
-			},
-			{
-				title: 'Pricing WIP',
 				href: '/pages/login',
 			},
 			{
@@ -262,6 +258,25 @@ const NAV_LINKS_CONFIG = [
 					{
 						title: '505 Forbidden',
 						href: '/pages/error/505',
+					},
+				],
+			},
+			{
+				id: uuid(),
+				title: 'Pricing Pages',
+				type: 'group',
+				children: [
+					{
+						title: 'Pricing 1',
+						href: '/pages/pricing/pricing1',
+					},
+					{
+						title: 'Pricing 2',
+						href: '/pages/pricing/pricing2',
+					},
+					{
+						title: 'Pricing3',
+						href: '/pages/pricing/pricing3',
 					},
 				],
 			},
