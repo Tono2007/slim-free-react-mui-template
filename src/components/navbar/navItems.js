@@ -223,8 +223,8 @@ const NAV_LINKS_CONFIG = [
 				href: '/pages/wip',
 			},
 			{
-				title: 'Edit Profile WIP',
-				href: '/pages/login',
+				title: 'Account Settings',
+				href: '/pages/settings',
 			},
 			{
 				title: 'Notifications WIP',
@@ -232,6 +232,10 @@ const NAV_LINKS_CONFIG = [
 			},
 			{
 				title: 'Profile WIP',
+				href: '/pages/login',
+			},
+			{
+				title: 'Pricing WIP',
 				href: '/pages/login',
 			},
 			{

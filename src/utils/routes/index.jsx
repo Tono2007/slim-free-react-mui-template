@@ -19,17 +19,18 @@ const LoadersComponentPage = withLazyLoadably(lazy(() => import('@/pages/compone
 const TablesComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/tables')));
 const ModalComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/modal')));
 const SnackbarComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/snackbar')));
-const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
-const Page403 = withLazyLoadably(lazy(() => import('@/pages/errorPages/403')));
-const Page500 = withLazyLoadably(lazy(() => import('@/pages/errorPages/500')));
-const Page503 = withLazyLoadably(lazy(() => import('@/pages/errorPages/503')));
-const Page505 = withLazyLoadably(lazy(() => import('@/pages/errorPages/505')));
 const LoginPage = withLazyLoadably(lazy(() => import('@/pages/loginPages/login')));
 const LoginSimplePage = withLazyLoadably(lazy(() => import('@/pages/loginPages/loginSimple')));
 const LoginSplitPage = withLazyLoadably(lazy(() => import('@/pages/loginPages/loginSplit')));
 const SignupSplitPage = withLazyLoadably(lazy(() => import('@/pages/signupPages/signupSplit')));
 const SignupSimplePage = withLazyLoadably(lazy(() => import('@/pages/signupPages/signupSimple')));
 const SignupPage = withLazyLoadably(lazy(() => import('@/pages/signupPages/signup')));
+const Page403 = withLazyLoadably(lazy(() => import('@/pages/errorPages/403')));
+const Page500 = withLazyLoadably(lazy(() => import('@/pages/errorPages/500')));
+const Page503 = withLazyLoadably(lazy(() => import('@/pages/errorPages/503')));
+const Page505 = withLazyLoadably(lazy(() => import('@/pages/errorPages/505')));
+const EditProfilePage = withLazyLoadably(lazy(() => import('@/pages/editProfile')));
+const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
 const SamplePage = withLazyLoadably(lazy(() => import('@/pages/sample')));
 const ThemeTypographyPage = withLazyLoadably(lazy(() => import('@/pages/themePages/themeTypography')));
 const ThemeColorsPage = withLazyLoadably(lazy(() => import('@/pages/themePages/themeColors')));
@@ -77,6 +78,7 @@ function Router() {
 						</Route>
 
 						<Route path="pages/">
+							<Route path="settings" element={<EditProfilePage />} />
 							<Route path="error/">
 								<Route path="404" element={<Page404 />} />
 								<Route path="403" element={<Page403 />} />

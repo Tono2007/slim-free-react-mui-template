@@ -11,7 +11,7 @@ import SearchBar from './searchBar';
 
 function MainHeader() {
 	return (
-		<Box bgcolor="background.paper" component="header" py={1.5}>
+		<Box bgcolor="background.paper" component="header" py={1.5} zIndex={1}>
 			<Stack
 				component={Container}
 				maxWidth="lg"

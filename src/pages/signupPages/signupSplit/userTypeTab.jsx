@@ -81,7 +81,6 @@ function UserTypeCard({ text, Icon, type, userTypeSelected, setUserTypeSelected 
 			alignItems="center"
 			spacing={2}
 			width="100%"
-			border={0}
 			py={1}
 			px={{
 				xs: 1,

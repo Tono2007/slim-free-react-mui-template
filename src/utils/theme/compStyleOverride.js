@@ -69,7 +69,7 @@ export default {
 			},
 			{
 				props: {
-					hover: true,
+					hover: 'light',
 				},
 				style: {
 					'&:hover': {
@@ -77,9 +77,19 @@ export default {
 					},
 				},
 			},
+			{
+				props: {
+					hover: 'color',
+				},
+				style: {
+					'&:hover': {
+						boxShadow: `0px 10px 20px -15px ${palette.primary.main}`,
+					},
+				},
+			},
 		],
 		defaultProps: {
-			hover: true,
+			hover: 'light',
 			elevation: 26,
 			type: 'card',
 			variant: 'outlinedElevation',

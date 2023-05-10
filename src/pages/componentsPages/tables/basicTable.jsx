@@ -147,7 +147,7 @@ function TableResults() {
 						))}
 					</TableBody>
 				</Table>
-			</TableContainer>{' '}
+			</TableContainer>
 		</Card>
 	);
 }

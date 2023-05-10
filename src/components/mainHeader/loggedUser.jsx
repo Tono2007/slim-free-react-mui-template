@@ -186,11 +186,11 @@ function UserMenu({ handleClose }) {
 				Profile
 			</MenuItem>
 
-			<MenuItem onClick={handleClose} to="/" component={RouterLink}>
+			<MenuItem onClick={handleClose} to="/pages/settings" component={RouterLink}>
 				<ListItemIcon>
 					<SettingsOutlinedIcon fontSize="small" />
 				</ListItemIcon>
-				Settings
+				Account Settings
 			</MenuItem>
 			<MenuItem onClick={handleClose} to="/" component={RouterLink}>
 				<ListItemIcon>
