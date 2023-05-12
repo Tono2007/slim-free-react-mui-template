@@ -60,6 +60,7 @@ git clone https://github.com/Tono2007/slim-free-react-mui-template.git
 -   Code Splitting
 -   Aliases
 -   Light/Dark theme support
+-   Eslint - airbnb style guide
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=Javascript&logoColor=%23F7DF1E)
 ![React](https://img.shields.io/badge/React-149eca?style=for-the-badge&logo=react&logoColor=fff)

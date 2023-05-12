@@ -59,7 +59,7 @@ function SampleTabsPage() {
 					<Typography color="text.tertiary">Sample Tab Page</Typography>
 				</Breadcrumbs>
 			</PageHeader>
-			<Grid container rowSpacing={2} columnSpacing={4}>
+			<Grid container spacing={4}>
 				<Grid item xs={12} sm={4} md={3}>
 					<Card
 						sx={{

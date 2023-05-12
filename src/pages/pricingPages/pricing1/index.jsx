@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-// MUI Stuff
+import { useState } from 'react';
+
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -9,174 +8,224 @@ import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
-import LinearProgress from '@mui/material/LinearProgress';
-import List from '@mui/material/List';
+import Container from '@mui/material/Container';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
+import Chip from '@mui/material/Chip';
 import Alert from '@mui/material/Alert';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
+import Switch from '@mui/material/Switch';
+import Slider from '@mui/material/Slider';
 
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+import CheckIcon from '@mui/icons-material/Check';
 
-// Icons
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SmartphoneIcon from '@mui/icons-material/Smartphone';
-import DevicesIcon from '@mui/icons-material/Devices';
-import SchoolIcon from '@mui/icons-material/School';
-import AccountTreeIcon from '@mui/icons-material/AccountTree';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import PeopleIcon from '@mui/icons-material/People';
-import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
-import BusinessIcon from '@mui/icons-material/Business';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import LocationCityIcon from '@mui/icons-material/LocationCity';
-import NewspaperIcon from '@mui/icons-material/Newspaper';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import StarIcon from '@mui/icons-material/Star';
-import StarsIcon from '@mui/icons-material/Stars';
+import PageHeader from '@/components/pageHeader';
+import CardHeader from '@/components/cardHeader';
 
-import avatar from '@/assets/images/avatars/avatar_13.jpg';
+const plans = [
+	{
+		name: 'Started',
+		cost: '$29',
+		benefits: [
+			'10,000 visitors',
+			'Create unlimited widgets',
+			'All widget Types',
+			'3rd Party Integrations',
+			'Advanced Targeting',
+			'Widget A/B Testing',
+		],
+	},
+	{
+		name: 'Pro',
+		cost: '$46',
+		benefits: [
+			'10,000 visitors',
+			'All in Started',
+			'Website Personalization',
+			'A/B Testing and Experimentation',
+			'Manage Multiples Websites',
+			'Priority Support',
+		],
+	},
+	{
+		name: 'Enterprise',
+		cost: '$122',
+		benefits: [
+			'10,000 visitors',
+			'All in Started and Pro',
+			'Custom contract',
+			'Crearbit and Albacross',
+			'Custom Integrations',
+			'Dedicated Manager',
+		],
+	},
+];
 
-const features = {
-	free: [
-		'Acceso a Estadisticas',
-		'Acceso a contenidos gratuitos',
-		'Acceso a tu Perfil',
-		'Acceso a foros publicos',
-		'Creación de comentarios y publicaciones en foros',
-	],
-	basic: [
-		'Acceso a Estadisticas',
-		'Acceso a contenidos exclusivos',
-		'Acceso a tu Perfil',
-		'Consulta de usuarios del ecosistema',
-		'Chat entre participantes',
-		'Acceso y creación de foros',
-		'Creación de comentarios y publicaciones en foros',
-	],
-	pro: [
-		'Acceso a Estadisticas',
-		'Acceso con expertos',
-		'Acceso a contenidos gratuitos',
-		'Acceso a tu Perfil',
-		'Acceso a foros publicos',
-		'Creación de comentarios y publicaciones en foros',
-	],
-};
-function Pricing1() {
+function Pricing1Page() {
+	const [period, setPeriod] = useState(false);
 	return (
 		<>
-			<Card>
-				<Stack direction="row" spacing={2} alignItems="center" flexWrap="wrap">
-					<Avatar sx={{ width: 45, height: 45 }} alt="Remy Sharp" src={avatar} />
-					<Typography variant="h5" flexGrow={1}>
-						Elizabeth Lumaad Olsen
+			<PageHeader title="Pricing Page">
+				<Breadcrumbs
+					aria-label="breadcrumb"
+					sx={{
+						textTransform: 'uppercase',
+					}}
+				>
+					<Link underline="hover" href="#!">
+						Pages
+					</Link>
+					<Typography color="text.tertiary">Pricing</Typography>
+				</Breadcrumbs>
+			</PageHeader>
+			<Container maxWidth="md">
+				<Stack spacing={3} alignItems="center">
+					<Typography variant="h2" fontSize={30} fontWeight="medium">
+						Choose your plan
 					</Typography>
-					<Typography variant="subtitle2">
-						Tipo Usuario: &nbsp;
-						<Typography variant="caption" color="textPrimary" fontWeight="bold">
-							Invitado
+					<Typography variant="body2" color="text.tertiary">
+						14 days unlimited free trial. No contract or credit card required.
+					</Typography>
+					<Stack direction="row" spacing={2} alignItems="center" flexWrap="wrap">
+						<Typography variant="subtitle1" color={period ? 'textSecondary' : 'textPrimary'}>
+							Monthly
 						</Typography>
-					</Typography>
-					<Typography variant="subtitle2">
-						Tipo Cuenta: &nbsp;
-						<Typography variant="caption" color="textPrimary" fontWeight="bold">
-							Administrador
+						<Switch
+							value={period}
+							onChange={(e) => setPeriod(e.target.checked)}
+							sx={{
+								'& .MuiSwitch-thumb': {
+									backgroundColor: 'primary.main',
+								},
+								'& .MuiSwitch-track': {
+									opacity: 1,
+									backgroundColor: 'primary.light',
+								},
+							}}
+						/>
+						<Typography variant="subtitle1" color={!period ? 'textSecondary' : 'textPrimary'}>
+							Yearly
 						</Typography>
-					</Typography>
+						<Chip label="20% OFF" variant="outlined" color="primary" />
+					</Stack>
+					<Stack width="100%" spacing={1}>
+						<Typography textTransform="uppercase" color="textSecondary">
+							Number of monthly visitors
+						</Typography>
+						<Slider
+							defaultValue={8000}
+							aria-label="Default"
+							valueLabelDisplay="on"
+							step={1000}
+							marks={[{ value: 10000, label: '10k' }]}
+							min={0}
+							max={10000}
+							sx={{
+								'& .MuiSlider-thumb': {
+									height: 25,
+									width: 25,
+									backgroundColor: 'primary.main',
+									border: '7px solid #fff',
+									boxShadow: 2,
+									'&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
+										boxShadow: 4,
+									},
+								},
+							}}
+						/>
+					</Stack>
+					<div style={{ width: '100%' }}>
+						<Grid container spacing={3} pt={4}>
+							{plans.map((plan, i) => (
+								<Grid item xs={12} sm={4} md={4} key={i}>
+									<PlanCard plan={plan} />
+								</Grid>
+							))}
+						</Grid>
+					</div>
 				</Stack>
-			</Card>
-			<Stack
-				my={5}
-				direction={{ xs: 'column', sm: 'row' }}
-				spacing={2}
-				alignItems="center"
-				justifyContent="space-between"
-			>
-				<Typography variant="h4" textAlign="center" fontWeight="300" gutterBottom>
-					Escoje tu Plan
-				</Typography>
-				<Alert severity="info">
-					Tu plan actual es : <strong>Gratuito</strong>
-				</Alert>
-			</Stack>
-
-			<Grid container spacing={5} alignItems="stretch" alignContent="stretch" mb={10}>
-				<Grid item xs={12} sm={6} md={4}>
-					<PriceCard icon={StarBorderIcon} type="Gratuito" price="0.0" isActual features={features.free} />
-				</Grid>
-				<Grid item xs={12} sm={6} md={4}>
-					<PriceCard icon={StarIcon} type="Basico" price="5.99" features={features.basic} />
-				</Grid>
-				<Grid item xs={12} sm={6} md={4}>
-					<PriceCard icon={StarsIcon} type="Pro" price="23.99" features={features.pro} />
-				</Grid>
-			</Grid>
-			<FeaturesTable />
+			</Container>
 		</>
 	);
 }
 
-function PriceCard(props) {
-	const { type, isActual, icon: Icon, price, features, upgradeAccount } = props;
-
+function PlanCard({ plan }) {
+	const { cost, name, benefits } = plan;
 	return (
-		<Stack
-			component={Card}
-			height="100%"
-			p={3}
-			direction="column"
-			spacing={2}
-			sx={{
-				transition: 'all 0.5s',
-				'&:hover': {
-					transform: 'translateY(-10px)',
-				},
-			}}
-		>
-			<Stack direction="row" alignItems="center" justifyContent="space-between">
-				<Avatar
-					sx={{
-						backgroundColor: 'primary.main',
-					}}
-				>
-					<Icon />
-				</Avatar>
+		<Card sx={{ height: '100%', position: 'relative', overflow: 'visible' }} type="none">
+			<Box
+				height={50}
+				width={50}
+				position="absolute"
+				top={-10}
+				right={10}
+				sx={{
+					'&::before': {
+						content: "'Best Value'",
+						position: 'absolute',
+						top: 0,
+						left: 0,
+						fontSize: 8,
+						width: '100%',
+						height: '100%',
+						display: 'grid',
+						placeItems: 'center',
+						textTransform: 'uppercase',
+						textAlign: 'center',
+						color: 'cuaternary.contrastText',
+						fontWeight: 'bold',
+						bgcolor: 'cuaternary.main',
+						letterSpacing: '.1em',
+						clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%)',
+						pb: 1,
+					},
+					'&::after': {
+						content: "''",
+						position: 'absolute',
+						top: 0,
+						left: 0.5,
+						transform: 'translateX(-100%)',
+						clipPath: 'polygon(0 100%, 100% 0, 100% 100%)',
+						width: 10,
+						height: 10,
+						bgcolor: 'cuaternary.dark',
+					},
+				}}
+			/>
+			<Typography
+				variant="h3"
+				bgcolor="primary.main"
+				align="center"
+				fontWeight="light"
+				width="100%"
+				p={2}
+				color="primary.contrastText"
+			>
+				{name}
+			</Typography>
+			<Stack spacing={3} alignItems="center" p={3}>
 				<Typography
-					fontSize="20px"
 					textAlign="center"
-					fontWeight="400"
+					variant="h1"
+					component="h5"
 					borderBottom={2}
 					borderColor="secondary.main"
 				>
-					{type}
+					{cost} <Typography variant="caption">/MO</Typography>
 				</Typography>
-			</Stack>
-
-			<Typography textAlign="center" variant="h1" component="h5">
-				${price} <Typography variant="caption">Pago único</Typography>
-			</Typography>
-			<Divider variant="middle" />
-			<Stack spacing={1.5} py={2} flexGrow={1}>
-				{features.map((feature, index) => (
-					<Feature title={feature} key={index} />
-				))}
-			</Stack>
-			{isActual ? (
-				<Button variant="contained" disabled>
-					Mejorar Cuenta
+				<Divider flexItem>
+					<Chip label="Free 30 days trial" color="primary" variant="outlined" size="small" />
+				</Divider>
+				<Stack spacing={1} height="100%">
+					{benefits.map((benefit, i) => (
+						<Feature title={benefit} key={i} />
+					))}
+				</Stack>
+				<Button variant="contained" disableElevation>
+					GET STARTED
 				</Button>
-			) : (
-				<Button variant="contained" onClick={upgradeAccount}>
-					Mejorar Cuenta
-				</Button>
-			)}
-		</Stack>
+			</Stack>
+		</Card>
 	);
 }
 
@@ -189,7 +238,7 @@ function Feature({ title, addSX, ...props }) {
 			sx={{
 				transition: 'transform .3s',
 				'&:hover': {
-					transform: 'translateX(10px)',
+					transform: 'translateX(5px)',
 					'& .MuiTypography-root': {
 						color: (theme) => theme.palette.secondary.dark,
 					},
@@ -198,7 +247,7 @@ function Feature({ title, addSX, ...props }) {
 			}}
 			{...props}
 		>
-			<CheckCircleOutlineIcon color="success" />
+			<CheckIcon color="success" fontSize="small" />
 			<Typography variant="body1" color="textSecondary">
 				{title}
 			</Typography>
@@ -206,139 +255,4 @@ function Feature({ title, addSX, ...props }) {
 	);
 }
 
-const FEAT_STAT_TYPES = {
-	check: 'type-check',
-	none: 'type-none',
-	text: 'type-text',
-};
-
-const tableFeatures = [
-	{
-		name: 'Basic Features',
-		free: {
-			type: FEAT_STAT_TYPES.check,
-		},
-		basic: {
-			type: FEAT_STAT_TYPES.check,
-		},
-		pro: {
-			type: FEAT_STAT_TYPES.check,
-		},
-	},
-	{
-		name: 'Users',
-		free: {
-			type: FEAT_STAT_TYPES.text,
-			text: '10',
-		},
-		basic: {
-			type: FEAT_STAT_TYPES.text,
-			text: '20',
-		},
-		pro: {
-			type: FEAT_STAT_TYPES.text,
-			text: 'Unlimited',
-		},
-	},
-	{
-		name: 'Individual Data',
-		free: {
-			type: FEAT_STAT_TYPES.text,
-			text: '200GB',
-		},
-		basic: {
-			type: FEAT_STAT_TYPES.text,
-			text: '400GB',
-		},
-		pro: {
-			type: FEAT_STAT_TYPES.text,
-			text: 'Unlimited',
-		},
-	},
-	{
-		name: 'Support',
-		free: {
-			type: FEAT_STAT_TYPES.check,
-		},
-		basic: {
-			type: FEAT_STAT_TYPES.check,
-		},
-		pro: {
-			type: FEAT_STAT_TYPES.check,
-		},
-	},
-	{
-		name: 'Automated Workflows',
-		free: {
-			type: FEAT_STAT_TYPES.none,
-		},
-		basic: {
-			type: FEAT_STAT_TYPES.check,
-		},
-		pro: {
-			type: FEAT_STAT_TYPES.check,
-		},
-	},
-	{
-		name: '200+ Integrations',
-		free: {
-			type: FEAT_STAT_TYPES.none,
-		},
-		basic: {
-			type: FEAT_STAT_TYPES.check,
-		},
-		pro: {
-			type: FEAT_STAT_TYPES.check,
-		},
-	},
-];
-
-function FeaturesTable() {
-	return (
-		<Card type="none">
-			<TableContainer>
-				<Table aria-label="results table">
-					<TableHead
-						sx={{
-							bgcolor: 'primary.main',
-							'& .MuiTableCell-head': {
-								color: 'primary.contrastText',
-							},
-						}}
-					>
-						<TableRow>
-							<TableCell align="left" />
-							<TableCell align="center">Free</TableCell>
-							<TableCell align="center">Basic</TableCell>
-							<TableCell align="center">Pro</TableCell>
-						</TableRow>
-					</TableHead>
-					<TableBody>
-						{tableFeatures.map((feat, i) => (
-							<TableRow hover key={i}>
-								<TableCell align="left">
-									<Typography variant="subtitle1">{feat.name}</Typography>
-								</TableCell>
-								<TableCellType type={feat?.free?.type} text={feat?.free?.text} />
-								<TableCellType type={feat?.basic?.type} text={feat?.basic?.text} />
-								<TableCellType type={feat?.pro?.type} text={feat?.pro?.text} />
-							</TableRow>
-						))}
-					</TableBody>
-				</Table>
-			</TableContainer>
-		</Card>
-	);
-}
-
-function TableCellType({ cellProps, type, text }) {
-	return (
-		<TableCell align="center" {...cellProps}>
-			{type === FEAT_STAT_TYPES.check && <CheckCircleOutlineIcon color="success" />}
-			{type === FEAT_STAT_TYPES.none && '--'}
-			{type === FEAT_STAT_TYPES.text && text}
-		</TableCell>
-	);
-}
-
-export default Pricing1;
+export default Pricing1Page;

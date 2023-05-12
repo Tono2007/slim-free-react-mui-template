@@ -274,10 +274,6 @@ const NAV_LINKS_CONFIG = [
 						title: 'Pricing 2',
 						href: '/pages/pricing/pricing2',
 					},
-					{
-						title: 'Pricing3',
-						href: '/pages/pricing/pricing3',
-					},
 				],
 			},
 			{
