@@ -26,7 +26,13 @@ import logo from '@/assets/images/logo/png/Color_logo_nobg.png';
 
 function Footer() {
 	return (
-		<Box bgcolor={(theme) => theme.palette.background.paper} py={3} borderTop={1} borderColor="cuaternary.300">
+		<Box
+			zIndex={1}
+			bgcolor={(theme) => theme.palette.background.paper}
+			py={3}
+			borderTop={1}
+			borderColor="cuaternary.300"
+		>
 			<Container maxWidth="lg" component={Stack} direction="column" spacing={5}>
 				<Grid container spacing={3} alignContent="center" justifyContent="center" alignItems="center">
 					<Grid item xs={12} sm={6} md={4}>

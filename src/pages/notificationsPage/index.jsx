@@ -82,12 +82,10 @@ function Notification({ notification }) {
 		<ButtonBase
 			sx={{
 				py: 1,
-				px: 2,
-				'&:hover': {
-					bgcolor: (theme) => alpha(theme.palette.primary.light, 0.1),
-				},
+				pl: 2,
 				borderLeft: 3,
 				borderLeftColor: notification?.checked ? '#d3d3d3' : 'primary.400',
+				bgcolor: (theme) => (notification?.checked ? 'transparent' : alpha(theme.palette.primary.light, 0.2)),
 			}}
 		>
 			<Stack width="100%" direction="row" spacing={2} alignItems="center" justifyContent="flex-start">

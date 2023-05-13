@@ -113,13 +113,13 @@ export default {
 				'&.Mui-selected': {
 					color: palette.primary.contrastText,
 					backgroundColor: palette.primary[200],
-					'& .MuiListItemIcon-root': {
+					'&>.MuiListItemIcon-root': {
 						color: palette.primary.contrastText,
 					},
 					'&:hover': {
 						backgroundColor: palette.primary[300],
 						color: palette.primary.contrastText,
-						'& .MuiListItemIcon-root': {
+						'&>.MuiListItemIcon-root': {
 							color: palette.primary.contrastText,
 						},
 					},
@@ -127,7 +127,7 @@ export default {
 				'&:hover': {
 					backgroundColor: alpha(palette.primary.light, 0.2),
 					color: palette.primary[400],
-					'& .MuiListItemIcon-root': {
+					'&>.MuiListItemIcon-root': {
 						color: palette.primary.main,
 					},
 				},

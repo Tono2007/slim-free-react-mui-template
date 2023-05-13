@@ -30,6 +30,7 @@ const Page500 = withLazyLoadably(lazy(() => import('@/pages/errorPages/500')));
 const Page503 = withLazyLoadably(lazy(() => import('@/pages/errorPages/503')));
 const Page505 = withLazyLoadably(lazy(() => import('@/pages/errorPages/505')));
 const Pricing1Page = withLazyLoadably(lazy(() => import('@/pages/pricingPages/pricing1')));
+const Pricing2Page = withLazyLoadably(lazy(() => import('@/pages/pricingPages/pricing2')));
 const EditProfilePage = withLazyLoadably(lazy(() => import('@/pages/editProfile')));
 const NotificationsPage = withLazyLoadably(lazy(() => import('@/pages/notificationsPage')));
 const WIPPage = withLazyLoadably(lazy(() => import('@/pages/wip')));
@@ -84,6 +85,7 @@ function Router() {
 							<Route path="notifications" element={<NotificationsPage />} />
 							<Route path="pricing/">
 								<Route path="pricing1" element={<Pricing1Page />} />
+								<Route path="pricing2" element={<Pricing2Page />} />
 							</Route>
 							<Route path="error/">
 								<Route path="404" element={<Page404 />} />
