@@ -14,18 +14,18 @@ import Collapse from '@mui/material/Collapse';
 // Icons
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import navItems from '../navItems';
-
 import { NavItem, NavItemButton, NavLink } from './navItem';
 import NavMenu from './navMenu';
 
-function NavLinks() {
+function NavLinks({ navItems }) {
 	const navMenuItems = navItems.map((item) => {
-		const { title, type, Icon, id, menuMinWidth, children, href } = item;
+		const { title, type, Icon, id, menuMinWidth, menuChildren, href } = item;
 
 		switch (type) {
 			case 'group':
-				return <NavMenu key={id} minWidth={menuMinWidth} menuChildren={children} Icon={Icon} title={title} />;
+				return (
+					<NavMenu key={id} minWidth={menuMinWidth} menuChildren={menuChildren} Icon={Icon} title={title} />
+				);
 			case 'item':
 				return <NavLink key={id} href={href} Icon={Icon} title={title} />;
 			default:

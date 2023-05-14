@@ -19,6 +19,7 @@ const LoadersComponentPage = withLazyLoadably(lazy(() => import('@/pages/compone
 const TablesComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/tables')));
 const ModalComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/modal')));
 const SnackbarComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/snackbar')));
+const NavigationComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/navigation')));
 const LoginPage = withLazyLoadably(lazy(() => import('@/pages/loginPages/login')));
 const LoginSimplePage = withLazyLoadably(lazy(() => import('@/pages/loginPages/loginSimple')));
 const LoginSplitPage = withLazyLoadably(lazy(() => import('@/pages/loginPages/loginSplit')));
@@ -72,6 +73,7 @@ function Router() {
 							<Route path="tables" element={<TablesComponentPage />} />
 							<Route path="modal" element={<ModalComponentPage />} />
 							<Route path="snackbar" element={<SnackbarComponentPage />} />
+							<Route path="navigation" element={<NavigationComponentPage />} />
 						</Route>
 
 						<Route path="theme/">

@@ -1,6 +1,5 @@
 import { v4 as uuid } from 'uuid';
 // Icons
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 import InventoryOutlinedIcon from '@mui/icons-material/InventoryOutlined';
@@ -8,6 +7,7 @@ import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
+import WebOutlinedIcon from '@mui/icons-material/WebOutlined';
 
 /**
  * @example
@@ -16,7 +16,7 @@ import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
  *	type: "group" | "item",
  *	title: string,
  *	Icon: NodeElement
- *	children?: {title: string, href: string}[]
+ *	menuChildren?: {title: string, href: string}[]
  *  menuMinWidth?: number
  * }
  */
@@ -27,7 +27,7 @@ const NAV_LINKS_CONFIG = [
 		type: 'group',
 		title: 'Dashboard',
 		Icon: BarChartOutlinedIcon,
-		children: [
+		menuChildren: [
 			{
 				title: 'Dashboard01',
 				href: '/dashboards/dashboard1',
@@ -55,7 +55,7 @@ const NAV_LINKS_CONFIG = [
 		type: 'group',
 		title: 'Components',
 		Icon: GridViewOutlinedIcon,
-		children: [
+		menuChildren: [
 			{
 				title: 'Forms',
 				href: '/components/forms',
@@ -81,49 +81,42 @@ const NAV_LINKS_CONFIG = [
 				href: '/components/new',
 			},
 			{
-				title: 'Navigation WIP',
+				title: 'Navigation',
 				// navbar
-				href: '/components/new',
+				href: '/components/navigation',
 			},
 			{
-				title: 'UI Elements WIP',
+				title: 'UI Elements',
 				type: 'group',
-				children: [
+				menuChildren: [
 					{
 						title: 'Card',
-						href: '/theme/components/paper',
+						href: '/components/card',
 					},
 					{
 						title: 'CardHeader',
-						href: '/theme/components/paper',
+						href: '/components/cardHeader',
 					},
 					{
 						title: 'PageHeader',
-						href: '/theme/components/paper',
+						href: '/components/pageHeader',
 					},
-					{
-						title: 'Menu',
-						href: '/theme/components/paper',
-					},
-					{
+					/* {
 						title: 'Paper',
 						href: '/components/ui/paper',
-					},
+					}, 
 					{
 						title: 'Buttons',
-						href: '/components/ui/buttons',
+						href: '/components/buttons',
 					},
-					{
-						title: 'Inputs',
-						href: '/components/ui/inputs',
-					},
+					*/
 				],
 			},
 
 			{
 				title: 'Level 0',
 				type: 'group',
-				children: [
+				menuChildren: [
 					{
 						title: 'Level 1a',
 						href: '/1a',
@@ -131,7 +124,7 @@ const NAV_LINKS_CONFIG = [
 					{
 						title: 'Level 1b',
 						type: 'group',
-						children: [
+						menuChildren: [
 							{
 								title: 'Level 2a',
 								href: '/2a',
@@ -143,7 +136,7 @@ const NAV_LINKS_CONFIG = [
 							{
 								title: 'Level 2c',
 								type: 'group',
-								children: [
+								menuChildren: [
 									{
 										title: 'Level 3a',
 										href: '/3a',
@@ -151,7 +144,7 @@ const NAV_LINKS_CONFIG = [
 									{
 										title: 'Level 3b',
 										type: 'group',
-										children: [
+										menuChildren: [
 											{
 												title: 'Level 4a',
 												href: '/3b',
@@ -179,12 +172,12 @@ const NAV_LINKS_CONFIG = [
 		type: 'group',
 		title: 'Pages',
 		Icon: AutoStoriesOutlinedIcon,
-		children: [
+		menuChildren: [
 			{
 				id: uuid(),
 				title: 'Sign in',
 				type: 'group',
-				children: [
+				menuChildren: [
 					{
 						title: 'Sign in',
 						href: '/pages/login',
@@ -203,7 +196,7 @@ const NAV_LINKS_CONFIG = [
 				id: uuid(),
 				title: 'Sign up',
 				type: 'group',
-				children: [
+				menuChildren: [
 					{
 						title: 'Sign up',
 						href: '/pages/signup',
@@ -238,7 +231,7 @@ const NAV_LINKS_CONFIG = [
 				id: uuid(),
 				title: 'Error Pages',
 				type: 'group',
-				children: [
+				menuChildren: [
 					{
 						title: '403 Unauthorized',
 						href: '/pages/error/403',
@@ -265,7 +258,7 @@ const NAV_LINKS_CONFIG = [
 				id: uuid(),
 				title: 'Pricing Pages',
 				type: 'group',
-				children: [
+				menuChildren: [
 					{
 						title: 'Pricing 1',
 						href: '/pages/pricing/pricing1',
@@ -280,7 +273,7 @@ const NAV_LINKS_CONFIG = [
 				id: uuid(),
 				title: 'Landing Pages WIP',
 				type: 'group',
-				children: [
+				menuChildren: [
 					{
 						title: 'Landing01',
 						href: '/pages/landing/landing1',
@@ -306,7 +299,7 @@ const NAV_LINKS_CONFIG = [
 		type: 'group',
 		title: 'Theme',
 		Icon: PaletteOutlinedIcon,
-		children: [
+		menuChildren: [
 			{
 				title: 'Paleta de Colores',
 				href: '/theme/colors',
@@ -337,7 +330,7 @@ const NAV_LINKS_CONFIG = [
 		type: 'group',
 		title: 'Apps',
 		Icon: InventoryOutlinedIcon,
-		children: [
+		menuChildren: [
 			{
 				title: 'Ecommerce WIP',
 				href: '/profile WIP',
@@ -359,10 +352,16 @@ const NAV_LINKS_CONFIG = [
 	{
 		id: uuid(),
 		type: 'item',
-		// 	title: 'Components',
 		title: 'Sample Tab',
-		Icon: WidgetsOutlinedIcon,
+		Icon: WebOutlinedIcon,
 		href: '/samplePage',
+	},
+	{
+		id: uuid(),
+		type: 'item',
+		title: 'Widgets',
+		Icon: WidgetsOutlinedIcon,
+		href: '/widgets',
 	},
 	{
 		id: uuid(),

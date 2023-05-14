@@ -8,6 +8,8 @@ import Fab from '@mui/material/Fab';
 // Icons
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
+import navItems from './navItems';
+
 // Components
 import Footer from '@/components/footer';
 import MainHeader from '@/components/mainHeader';
@@ -57,7 +59,7 @@ function Header() {
 	return (
 		<>
 			<MainHeader />
-			<Navbar />
+			<Navbar navItems={navItems} />
 		</>
 	);
 }

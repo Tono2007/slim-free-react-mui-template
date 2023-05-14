@@ -23,10 +23,18 @@ import { NavItem, NavItemButton } from './navItem';
 
 const MENUITEM_FONTSIZE = 14;
 
+const deepMatch = ({ items, match }) =>
+	items.some((el) => {
+		if (el?.type === 'group') {
+			return deepMatch({ items: el?.menuChildren, match });
+		}
+		return match.includes(el?.href);
+	});
 function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 	const location = useLocation();
 	const [anchorEl, setAnchorEl] = useState(null);
-	const match = menuChildren.some((el) => location.pathname.includes(el.href));
+	const pathnamee = location.pathname + location.hash;
+	const match = deepMatch({ items: menuChildren, match: pathnamee });
 
 	const handlePopoverClose = () => {
 		setAnchorEl(null);
@@ -75,13 +83,20 @@ function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 								}}
 							>
 								{menuChildren.map((item, i) => {
-									const { href = '', title, type = 'item', children } = item;
+									const { href = '', title, type = 'item', menuChildren, Icon } = item;
 									const match = useMatch({
 										path: href,
 									});
 									switch (type) {
 										case 'group':
-											return <NavCollapse key={i} title={title} menuChildren={children} />;
+											return (
+												<NavCollapse
+													key={i}
+													title={title}
+													menuChildren={menuChildren}
+													Icon={Icon}
+												/>
+											);
 										case 'item':
 											return (
 												<MenuItem
@@ -93,6 +108,11 @@ function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 													}}
 													selected={Boolean(match)}
 												>
+													{Icon && (
+														<ListItemIcon>
+															<Icon />
+														</ListItemIcon>
+													)}
 													{title}
 												</MenuItem>
 											);
@@ -113,9 +133,9 @@ function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 	);
 }
 
-function NavCollapse({ title, menuChildren, level = 1 }) {
+function NavCollapse({ title, menuChildren, Icon, level = 1 }) {
 	const { pathname } = useLocation();
-	const match = menuChildren.some((el) => pathname.includes(el.href));
+	const match = menuChildren.some((el) => pathname.includes(el?.href));
 	const [anchorEl, setAnchorEl] = useState(null);
 
 	const handlePopoverClose = () => {
@@ -137,6 +157,11 @@ function NavCollapse({ title, menuChildren, level = 1 }) {
 			onMouseEnter={handlePopoverOpen}
 			onMouseLeave={handlePopoverClose}
 		>
+			{Icon && (
+				<ListItemIcon>
+					<Icon />
+				</ListItemIcon>
+			)}
 			<ListItemText
 				primary={
 					<Typography variant="inherit" align="left">
@@ -162,7 +187,7 @@ function NavCollapse({ title, menuChildren, level = 1 }) {
 						<Paper>
 							<MenuList>
 								{menuChildren.map((item, i) => {
-									const { href = '', title, type = 'item', children } = item;
+									const { href = '', title, type = 'item', menuChildren, Icon } = item;
 									const match = useMatch({
 										path: href,
 									});
@@ -172,8 +197,9 @@ function NavCollapse({ title, menuChildren, level = 1 }) {
 												<NavCollapse
 													key={i}
 													title={title}
-													menuChildren={children}
+													menuChildren={menuChildren}
 													level={level + 1}
+													Icon={Icon}
 												/>
 											);
 										case 'item':
@@ -187,6 +213,11 @@ function NavCollapse({ title, menuChildren, level = 1 }) {
 														fontSize: 'inherit',
 													}}
 												>
+													{Icon && (
+														<ListItemIcon>
+															<Icon />
+														</ListItemIcon>
+													)}
 													{item.title}
 												</MenuItem>
 											);

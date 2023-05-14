@@ -6,12 +6,12 @@ import Container from '@mui/material/Container';
 // Icons
 import NavLinks from './navLinks';
 
-function Navbar() {
+function Navbar({ navItems, position = 'sticky' }) {
 	return (
-		<AppBar position="sticky" color="transparent" elevation={26}>
+		<AppBar position={position} elevation={26}>
 			<Box bgcolor="background.paper" py={2} border={1} borderColor="border">
 				<Container maxWidth="lg">
-					<NavLinks />
+					<NavLinks navItems={navItems} />
 				</Container>
 			</Box>
 		</AppBar>

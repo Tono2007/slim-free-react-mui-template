@@ -29,12 +29,14 @@ export function NavItem({ Icon, title, showExpand = false, selected = false }) {
 			spacing={0.5}
 			title={title}
 		>
-			<Icon
-				sx={{
-					fontSize: 18,
-					color: (theme) => (selected ? theme.palette.primary.contrastText : theme.palette.primary[300]),
-				}}
-			/>
+			{Icon && (
+				<Icon
+					sx={{
+						fontSize: 18,
+						color: (theme) => (selected ? theme.palette.primary.contrastText : theme.palette.primary[300]),
+					}}
+				/>
+			)}
 			<Typography
 				pt={0.2}
 				display={{

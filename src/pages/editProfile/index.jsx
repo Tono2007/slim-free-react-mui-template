@@ -18,6 +18,7 @@ import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
 
 import PageHeader from '@/components/pageHeader';
 
@@ -44,7 +45,7 @@ const menuOptions = [
 	{
 		id: uuid(),
 		name: 'billing',
-		Icon: AccountBoxOutlinedIcon,
+		Icon: CreditCardIcon,
 		text: 'Billing',
 		renderSection: <Billing />,
 	},

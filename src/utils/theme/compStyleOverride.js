@@ -90,7 +90,6 @@ export default {
 		],
 		defaultProps: {
 			hover: 'light',
-			elevation: 26,
 			type: 'card',
 			variant: 'outlinedElevation',
 		},

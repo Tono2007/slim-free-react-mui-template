@@ -22,9 +22,11 @@ It can be used for most type of dashboard and app templates like analytics, admi
 
 <div align="center">
 <img src="src/assets/images/logo/png/Color_logotext_nobg.png"  height="50px"/>  
-</div>
 
 ⭐ ⭐ ⭐ Do not forget to star (Top right of this page) it if you like the theme ⭐ ⭐ ⭐
+</div>
+
+
 
 -   Support React18.
 -   Professional user interface.
@@ -95,12 +97,12 @@ We use different colors
 │   ├── assets
 │   │   ├── images
 │   │   ├── css            -> Template css files
-│   │       ├── style.css  -> Application main css file
+│   │   │   ├── style.css  -> Application main css file
 │   ├── components
 │   │   │── layouts
-│   │       ├── LandingLayout  -> Layout for landing components & routers
-│   │       ├── MainLayout     -> Layout for main components & routers
-│   │       ├── MinimalLayout  -> Layout for mimimal components & routers
+│   │   │   ├── LandingLayout  -> Layout for landing components & routers
+│   │   │   ├── MainLayout     -> Layout for main components & routers
+│   │   │   ├── MinimalLayout  -> Layout for mimimal components & routers
 │   │   ├── loader
 │   │   ├── modal
 │   │── pages              -> View files for all pages
