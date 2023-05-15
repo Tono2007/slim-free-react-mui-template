@@ -35,7 +35,16 @@ import notifications from '@/_mocks/notifications';
 function NotificationsPage() {
 	return (
 		<>
-			<Box position="fixed" left={0} right={0} top={0} bgcolor="primary.main" width="100%" height="40vh" />
+			<Box
+				position="fixed"
+				left={0}
+				right={0}
+				top={0}
+				bgcolor="primary.main"
+				width="100%"
+				height="40vh"
+				zIndex={-1}
+			/>
 			<Container sx={{ my: '10vh' }} maxWidth="sm">
 				<NotificationsList />
 			</Container>

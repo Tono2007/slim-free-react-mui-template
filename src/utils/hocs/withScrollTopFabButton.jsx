@@ -8,7 +8,7 @@ import Fade from '@mui/material/Fade';
 function withScrollTopFabButton(Component) {
 	const trigger = useScrollTrigger({
 		disableHysteresis: true,
-		threshold: 1200,
+		threshold: 1100,
 	});
 
 	const handleClick = () => {
