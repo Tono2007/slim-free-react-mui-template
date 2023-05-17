@@ -6,6 +6,8 @@
 <a href="https://github.com/Tono2007/slim-free-react-mui-template/graphs/contributors">
   <img alt="React contributors" src="https://img.shields.io/github/contributors/Tono2007/slim-free-react-mui-template">
 </a>
+<a href="https://github.com/Tono2007/slim-free-react-mui-template/releases"><img src="https://img.shields.io/github/release/Tono2007/slim-free-react-mui-template"></a>
+<a href="https://github.com/Tono2007/slim-free-react-mui-template/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
 
 ![CI/CD](https://github.com/Tono2007/slim-free-react-mui-template/workflows/pipeline/badge.svg)
 

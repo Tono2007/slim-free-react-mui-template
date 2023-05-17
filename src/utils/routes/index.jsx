@@ -19,6 +19,7 @@ const LoadersComponentPage = withLazyLoadably(lazy(() => import('@/pages/compone
 const TablesComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/tables')));
 const ModalComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/modal')));
 const SnackbarComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/snackbar')));
+const CarouselComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/carousel')));
 const NavigationComponentPage = withLazyLoadably(lazy(() => import('@/pages/componentsPages/navigation')));
 const CardComponentPage = withLazyLoadably(lazy(() => import('@/pages/uiComponentsPages/card')));
 const CardHeaderComponentPage = withLazyLoadably(lazy(() => import('@/pages/uiComponentsPages/cardHeader')));
@@ -76,6 +77,7 @@ function Router() {
 							<Route path="tables" element={<TablesComponentPage />} />
 							<Route path="modal" element={<ModalComponentPage />} />
 							<Route path="snackbar" element={<SnackbarComponentPage />} />
+							<Route path="carousel" element={<CarouselComponentPage />} />
 							<Route path="navigation" element={<NavigationComponentPage />} />
 							<Route path="card" element={<CardComponentPage />} />
 							<Route path="cardHeader" element={<CardHeaderComponentPage />} />

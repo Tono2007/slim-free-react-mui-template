@@ -228,4 +228,11 @@ export default {
 			},
 		},
 	},
+	MuiMobileStepper: {
+		styleOverrides: {
+			root: {
+				background: palette.background.paper,
+			},
+		},
+	},
 };

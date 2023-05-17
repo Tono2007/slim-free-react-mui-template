@@ -77,8 +77,8 @@ const NAV_LINKS_CONFIG = [
 				href: '/components/snackbar',
 			},
 			{
-				title: 'Carousel WIP',
-				href: '/components/new',
+				title: 'Carousel',
+				href: '/components/carousel',
 			},
 			{
 				title: 'Navigation',
