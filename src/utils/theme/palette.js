@@ -1,4 +1,4 @@
-export default {
+const defaultPalette = {
 	// https://www.tailwindshades.com/
 	primary: {
 		light: '#96C0F3',
@@ -77,8 +77,12 @@ export default {
 		800: '#4A1010',
 		contrastText: '#fff',
 	},
-	border: '#DEE2E6',
+};
 
+const lightPalette = {
+	...defaultPalette,
+	mode: 'light',
+	border: '#DEE2E6',
 	text: {
 		// #121926  #212121
 		primary: '#343A40',
@@ -87,10 +91,35 @@ export default {
 		hint: '#EEF2F6',
 	},
 	background: {
-		// #fafafa
+		// #fafafa || #E3E7EB
 		paper: '#fff',
 		default: '#F0F2F7',
-		dark: '#E3E7EB',
-		// #212529
 	},
 };
+
+const darkPalette = {
+	...defaultPalette,
+	mode: 'dark',
+	border: '#fff2',
+	text: {
+		primary: '#F3F6F9',
+		secondary: '#B2BAC2',
+		tertiary: '#bdbdbd',
+		hint: '#fff2',
+	},
+	background: {
+		/* paper: '#212529',
+		default: '#282D31',
+		dark: '#1A1D21', */
+		paper: '#001E3C',
+		default: '#0A1929',
+	},
+};
+
+const getPalette = (mode) => {
+	if (mode === 'light') return lightPalette;
+	if (mode === 'dark') return darkPalette;
+	return lightPalette;
+};
+
+export default getPalette;

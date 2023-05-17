@@ -11,20 +11,17 @@ import { Provider as SnackbarProvider } from '@/components/snackbar';
 import { ThemeProvider as MuiThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import theme from '@/utils/theme';
+import MUITheme from '@/utils/theme';
 import Router from '@/utils/routes';
 
 function App() {
 	return (
 		<ReduxProvider>
-			<StyledEngineProvider injectFirst>
-				<MuiThemeProvider theme={theme}>
-					<CssBaseline />
-					<SnackbarProvider>
-						<Router />
-					</SnackbarProvider>
-				</MuiThemeProvider>
-			</StyledEngineProvider>
+			<MUITheme>
+				<SnackbarProvider>
+					<Router />
+				</SnackbarProvider>
+			</MUITheme>
 		</ReduxProvider>
 	);
 }

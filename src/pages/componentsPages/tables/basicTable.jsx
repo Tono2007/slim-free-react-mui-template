@@ -389,7 +389,15 @@ function ColoredTables() {
 						}}
 					>
 						{employeesData.slice(0, 4).map((row) => (
-							<TableRow hover key={row.id}>
+							<TableRow
+								hover
+								key={row.id}
+								sx={{
+									'& td': {
+										color: 'secondary.contrastText',
+									},
+								}}
+							>
 								<TableCell>{row.id}</TableCell>
 								<TableCell align="left">{row.name}</TableCell>
 								<TableCell align="left">{row.position}</TableCell>

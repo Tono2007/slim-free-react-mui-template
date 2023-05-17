@@ -58,7 +58,15 @@ function LoginSimple() {
 						OR SIGN IN WITH
 					</Typography>
 
-					<Stack direction="row" spacing={3}>
+					<Stack
+						direction="row"
+						spacing={3}
+						sx={{
+							'& button': {
+								color: '#fff',
+							},
+						}}
+					>
 						<Avatar component={ButtonBase} sx={{ bgcolor: '#4267B2' }} variant="rounded">
 							<FacebookIcon />
 						</Avatar>

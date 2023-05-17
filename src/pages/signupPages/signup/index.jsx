@@ -56,82 +56,52 @@ function SignupPage() {
 				<LoginForm />
 				<Divider sx={{ color: 'text.secondary' }}>or signup using</Divider>
 				<Stack spacing={1}>
-					<Button
-						disableElevation
-						fullWidth
-						size="small"
-						variant="outlined"
-						sx={{
-							color: 'grey.700',
-							backgroundColor: (theme) => theme.palette.grey[50],
-							borderColor: (theme) => theme.palette.grey[300],
-						}}
-						to="/home"
-						component={RouterLink}
-					>
-						<Box
-							sx={{
-								mr: {
-									xs: 1,
-									sm: 2,
-								},
-							}}
-							width={16}
-							height={16}
-							component="img"
-							src={Google}
-							alt="google"
-						/>
-						Sign Up Using Google
-					</Button>
-					<Button
-						disableElevation
-						fullWidth
-						size="small"
-						variant="outlined"
-						sx={{
-							color: 'grey.700',
-							backgroundColor: (theme) => theme.palette.grey[50],
-							borderColor: (theme) => theme.palette.grey[300],
-						}}
-						to="/home"
-						component={RouterLink}
-					>
-						<FacebookIcon
-							sx={{
-								color: '#4267B2',
-								mr: {
-									xs: 1,
-									sm: 2,
-								},
-							}}
-						/>
-						Sign Up Using Facebook
-					</Button>
-					<Button
-						disableElevation
-						fullWidth
-						size="small"
-						variant="outlined"
-						sx={{
-							color: 'grey.700',
-							backgroundColor: (theme) => theme.palette.grey[50],
-							borderColor: (theme) => theme.palette.grey[300],
-						}}
-						to="/home"
-						component={RouterLink}
-					>
-						<TwitterIcon
-							sx={{
-								color: '#1DA1F2',
-								mr: {
-									xs: 1,
-									sm: 2,
-								},
-							}}
-						/>
-						Sign Up Using Twitter
-					</Button>
+					<SocialButton
+						icon={
+							<Box
+								sx={{
+									mr: {
+										xs: 1,
+										sm: 2,
+									},
+								}}
+								width={16}
+								height={16}
+								component="img"
+								src={Google}
+								alt="google"
+							/>
+						}
+						title="Sign Up Using Google"
+					/>
+					<SocialButton
+						icon={
+							<FacebookIcon
+								sx={{
+									color: '#4267B2',
+									mr: {
+										xs: 1,
+										sm: 2,
+									},
+								}}
+							/>
+						}
+						title="Sign Up Using Facebook"
+					/>
+					<SocialButton
+						icon={
+							<TwitterIcon
+								sx={{
+									color: '#1DA1F2',
+									mr: {
+										xs: 1,
+										sm: 2,
+									},
+								}}
+							/>
+						}
+						title="Sign Up Using Twitter"
+					/>
 				</Stack>
 				<Typography>
 					Already have an account?{' '}
@@ -141,6 +111,28 @@ function SignupPage() {
 				</Typography>
 			</Stack>
 		</Card>
+	);
+}
+
+function SocialButton({ title, icon }) {
+	return (
+		<Button
+			disableElevation
+			fullWidth
+			size="small"
+			variant="outlined"
+			sx={{
+				color: (theme) => (theme.palette.mode === 'dark' ? 'text.primary' : 'grey.700'),
+				backgroundColor: (theme) =>
+					theme.palette.mode === 'dark' ? 'background.default' : theme.palette.grey[50],
+				borderColor: 'border',
+			}}
+			to="/home"
+			component={RouterLink}
+		>
+			{icon}
+			{title}
+		</Button>
 	);
 }
 

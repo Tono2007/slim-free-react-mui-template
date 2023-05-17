@@ -195,13 +195,7 @@ function HelperPopover() {
 				onMouseEnter={handlePopoverOpen}
 				onMouseLeave={handlePopoverClose}
 			>
-				<QuestionMarkIcon
-					color="background.paper"
-					fontSize="small"
-					sx={{
-						fontSize: 15,
-					}}
-				/>
+				<QuestionMarkIcon fontSize="small" sx={{ fontSize: 15, color: 'primary.contrastText' }} />
 			</Avatar>
 
 			<Popover

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTheme } from '@mui/material/styles';
 
 import Chart from 'react-apexcharts';
 import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
@@ -84,92 +85,101 @@ function TabButton({ children, tabKey, changeTab, activeView }) {
 	);
 }
 
-const customerGraphConfig = {
-	options: {
-		colors: getDefaultChartsColors(3),
-		chart: {
-			toolbar: {
-				show: false,
+function getCustomerGraphConfig(config) {
+	return {
+		options: {
+			colors: getDefaultChartsColors(3),
+			chart: {
+				...(config?.mode === 'dark' && { foreColor: '#fff' }),
+				toolbar: {
+					show: false,
+				},
+				zoom: {
+					enabled: false,
+				},
+				parentHeightOffset: 0,
 			},
-			zoom: {
+			...(config?.mode === 'dark' && {
+				tooltip: {
+					theme: 'dark',
+				},
+			}),
+			dataLabels: {
 				enabled: false,
 			},
-			parentHeightOffset: 0,
-		},
-		dataLabels: {
-			enabled: false,
-		},
 
-		grid: {
-			row: {
-				colors: ['#f3f3f3', 'transparent'],
-				opacity: 0.5,
+			grid: {
+				row: {
+					colors: [config?.mode === 'dark' ? '#0008' : '#0001', 'transparent'],
+					opacity: 0.5,
+				},
+				xaxis: {
+					lines: {
+						show: true,
+					},
+				},
+				yaxis: {
+					lines: {
+						show: true,
+					},
+				},
+			},
+			legend: {
+				show: true,
+				position: 'bottom',
+				floating: true,
+				offsetY: 20,
 			},
 			xaxis: {
-				lines: {
-					show: true,
-				},
-			},
-			yaxis: {
-				lines: {
-					show: true,
-				},
-			},
-		},
-		legend: {
-			show: true,
-			position: 'bottom',
-			floating: true,
-			offsetY: 20,
-		},
-		xaxis: {
-			categories: [1, 2, 3, 4, 5, 6, 7, 8],
-			labels: {
-				formatter(val) {
-					return `${val}°`;
+				categories: [1, 2, 3, 4, 5, 6, 7, 8],
+				labels: {
+					formatter(val) {
+						return `${val}°`;
+					},
 				},
 			},
 		},
-	},
-	series: {
-		day: [
-			{
-				name: 'Incomes',
-				data: [2.0, 3.0, 6.0, 5.0, 7.0, 8.0, 10.0],
-			},
-			{
-				name: 'Expenses',
-				data: [1.0, 2.0, 5.0, 3.0, 5.0, 6.0, 9.0],
-			},
-		],
-		week: [
-			{
-				name: 'Incomes',
-				data: [5.0, 4.0, 9.0, 6.0, 8.0, 11.0, 7.0],
-			},
-			{
-				name: 'Expenses',
-				data: [4.0, 3.0, 7.0, 4.0, 6.0, 9.0, 7.0],
-			},
-		],
-		month: [
-			{
-				name: 'Incomes',
-				data: [5.0, 6.0, 3.0, 5.0, 6.0, 11.0, 4.0, 6.7],
-			},
-			{
-				name: 'Expenses',
-				data: [4.0, 5.0, 2.0, 4.0, 5.0, 7.0, 3.0, 2.3],
-			},
-		],
-	},
-};
+		series: {
+			day: [
+				{
+					name: 'Incomes',
+					data: [2.0, 3.0, 6.0, 5.0, 7.0, 8.0, 10.0],
+				},
+				{
+					name: 'Expenses',
+					data: [1.0, 2.0, 5.0, 3.0, 5.0, 6.0, 9.0],
+				},
+			],
+			week: [
+				{
+					name: 'Incomes',
+					data: [5.0, 4.0, 9.0, 6.0, 8.0, 11.0, 7.0],
+				},
+				{
+					name: 'Expenses',
+					data: [4.0, 3.0, 7.0, 4.0, 6.0, 9.0, 7.0],
+				},
+			],
+			month: [
+				{
+					name: 'Incomes',
+					data: [5.0, 6.0, 3.0, 5.0, 6.0, 11.0, 4.0, 6.7],
+				},
+				{
+					name: 'Expenses',
+					data: [4.0, 5.0, 2.0, 4.0, 5.0, 7.0, 3.0, 2.3],
+				},
+			],
+		},
+	};
+}
 function CustomersChart({ activeView }) {
+	const theme = useTheme();
 	return (
 		<Box
 			component={Chart}
-			options={customerGraphConfig.options}
-			series={customerGraphConfig.series?.[activeView]}
+			options={getCustomerGraphConfig({ mode: theme.palette.mode })?.options}
+			series={getCustomerGraphConfig()?.series?.[activeView]}
 			type="bar"
 			width="100%"
 			ml={-1}

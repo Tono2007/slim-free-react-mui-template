@@ -51,6 +51,8 @@ function Modal(props) {
 			PaperProps={{
 				variant: 'elevation',
 				sx: {
+					backgroundImage: 'none',
+					// bgcolor: theme.palette.mode === 'dark' ? '#000' : 'background.paper',
 					width: '100%',
 				},
 			}}

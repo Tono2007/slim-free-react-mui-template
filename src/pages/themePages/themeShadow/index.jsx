@@ -62,7 +62,7 @@ function ColorBox({ shadow }) {
 				display: 'flex',
 				justifyContent: 'center',
 				alignItems: 'center',
-				bgcolor: '#fafafa',
+				bgcolor: (theme) => (theme.palette.mode === 'dark' ? 'background.paper' : '#fafafa'),
 				py: 7,
 				color: 'grey.800',
 			}}

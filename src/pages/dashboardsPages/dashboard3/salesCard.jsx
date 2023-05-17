@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTheme } from '@mui/material/styles';
 
 import Chart from 'react-apexcharts';
 import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
@@ -92,10 +93,11 @@ const sharedGraphConfig = {
 	},
 };
 
-const incomesGraphConfig = {
+const getIncomesGraphConfig = (config) => ({
 	options: {
 		colors: getDefaultChartsColors(2),
 		chart: {
+			...(config?.mode === 'dark' && { foreColor: '#fff' }),
 			id: 'incomes',
 			group: 'sales',
 			toolbar: {
@@ -106,6 +108,11 @@ const incomesGraphConfig = {
 			},
 			parentHeightOffset: 0,
 		},
+		...(config?.mode === 'dark' && {
+			tooltip: {
+				theme: 'dark',
+			},
+		}),
 		...sharedGraphConfig,
 	},
 
@@ -129,15 +136,22 @@ const incomesGraphConfig = {
 			},
 		],
 	},
-};
-const expensesGraphConfig = {
+});
+
+const getExpensesGraphConfig = (config) => ({
 	options: {
 		colors: getDefaultChartsColors(3),
 		fill: {
 			opacity: 0.6,
 			type: 'solid',
 		},
+		...(config?.mode === 'dark' && {
+			tooltip: {
+				theme: 'dark',
+			},
+		}),
 		chart: {
+			...(config?.mode === 'dark' && { foreColor: '#fff' }),
 			id: 'expenses',
 			group: 'sales',
 			toolbar: {
@@ -170,35 +184,14 @@ const expensesGraphConfig = {
 			},
 		],
 	},
-};
-
-const xaxisCategories = {
-	day: {
-		type: 'category',
-		categories: [
-			1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
-			30, 31, 32,
-		],
-	},
-	week: {
-		type: 'category',
-		categories: [1, 2, 3, 4, 5, 6, 7],
-	},
-	month: {
-		type: 'category',
-		categories: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-	},
-};
-
+});
 function IncomesChart({ activeView }) {
+	const theme = useTheme();
 	return (
 		<Box
 			component={Chart}
-			options={{
-				...incomesGraphConfig.options,
-				// xaxis: xaxisCategories[activeView],
-			}}
-			series={incomesGraphConfig.series?.[activeView]}
+			options={getIncomesGraphConfig({ mode: theme.palette.mode })?.options}
+			series={getIncomesGraphConfig()?.series?.[activeView]}
 			type="area"
 			width="100%"
 		/>
@@ -206,14 +199,12 @@ function IncomesChart({ activeView }) {
 }
 
 function ExpensesChart({ activeView }) {
+	const theme = useTheme();
 	return (
 		<Box
 			component={Chart}
-			options={{
-				...expensesGraphConfig.options,
-				// xaxis: xaxisCategories[activeView],
-			}}
-			series={expensesGraphConfig.series?.[activeView]}
+			options={getExpensesGraphConfig({ mode: theme.palette.mode })?.options}
+			series={getExpensesGraphConfig()?.series?.[activeView]}
 			type="area"
 			width="100%"
 		/>

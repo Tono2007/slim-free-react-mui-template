@@ -60,7 +60,7 @@ function BitcoinCard(props) {
 			<Stack height="100%" direction="column" spacing={3} justifyContent="center" alignItems="center">
 				<img src={img} alt="bitcoin 1" width="40%" />
 				<Typography variant="h3">{title}</Typography>
-				<Typography variant="body2" color="text.secondary">
+				<Typography variant="body2" color="textSecondary">
 					{content}
 				</Typography>
 				<Button variant="contained" fullWidth disableElevation>
