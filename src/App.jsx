@@ -8,17 +8,16 @@ import ReduxProvider from '@/redux/store';
 
 import { Provider as SnackbarProvider } from '@/components/snackbar';
 
-import { ThemeProvider as MuiThemeProvider, StyledEngineProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-
 import MUITheme from '@/utils/theme';
 import Router from '@/utils/routes';
+import CustomizationLayout from '@/components/layouts/customization';
 
 function App() {
 	return (
 		<ReduxProvider>
 			<MUITheme>
 				<SnackbarProvider>
+					<CustomizationLayout />
 					<Router />
 				</SnackbarProvider>
 			</MUITheme>

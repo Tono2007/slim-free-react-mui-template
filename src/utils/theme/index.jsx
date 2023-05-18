@@ -6,7 +6,10 @@ import themePalette from './palette';
 import themeTypography from './typography';
 import componentStyleOverrides from './compStyleOverride';
 
-const getTheme = (mode) => {
+const getTheme = () => {
+	// make a default theme or change localStorage to your prefered state manager redux/context/zustand...
+	const mode = 'light';
+
 	const themeOptions = {
 		palette: themePalette(mode),
 		typography: themeTypography(mode),
@@ -35,10 +38,9 @@ const getTheme = (mode) => {
 };
 
 function MUITheme({ children }) {
-	const mode = 'dark';
 	return (
 		<StyledEngineProvider injectFirst>
-			<MuiThemeProvider theme={getTheme(mode)}>
+			<MuiThemeProvider theme={getTheme()}>
 				<CssBaseline />
 				{children}
 			</MuiThemeProvider>
