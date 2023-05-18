@@ -1,7 +1,7 @@
 import { TransitionGroup, Transition as ReactTransition } from 'react-transition-group';
 import { getFastExitTransitionStyles } from '@helpers/getTransitionStyles';
 
-const TIMEOUT = 500;
+const TIMEOUT = 1000;
 const transitionStyles = getFastExitTransitionStyles(TIMEOUT);
 
 function WidthPageTransition({ children, location }) {

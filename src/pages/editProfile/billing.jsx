@@ -127,7 +127,7 @@ function UserPlanCard({ cost, Icon, type, using, userTypeSelected, setUserTypeSe
 				transition: '0.1s all',
 				border: 2,
 				borderColor: userTypeSelected ? 'primary.300' : 'text.hint',
-				borderRadius: 5,
+				borderRadius: '10px',
 				'&:hover': {
 					boxShadow: '0px 10px 30px -15px #0003',
 				},
@@ -204,7 +204,7 @@ function PaymentSection() {
 						<PlanStat key={i} title={title} subtitle={subtitle} btnText={btnText} color={color} />
 					))}
 				</Stack>
-				<Box border={1} borderColor="border" p={2} borderRadius={5}>
+				<Box border={1} borderColor="border" p={2} borderRadius="10px">
 					<CardHeader size="small" title="Payment Methods" sx={{ mb: 1 }}>
 						<Button variant="contained">Add New Method</Button>
 					</CardHeader>
@@ -215,7 +215,7 @@ function PaymentSection() {
 						))}
 					</Stack>
 				</Box>
-				<Box border={1} borderColor="border" p={2} borderRadius={5}>
+				<Box border={1} borderColor="border" p={2} borderRadius="10px">
 					<CardHeader size="small" title="Billing History" sx={{ mb: 1 }} />
 					<TableContainer>
 						<Table aria-label="results table">
@@ -263,7 +263,7 @@ function PlanStat({ title, subtitle, btnText, color }) {
 			borderLeft={10}
 			borderColor={`${color}.main`}
 			p={2}
-			borderRadius={5}
+			borderRadius="10px"
 			spacing={0.5}
 		>
 			<Typography variant="body2">{title}</Typography>

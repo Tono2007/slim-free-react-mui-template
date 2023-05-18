@@ -1,5 +1,4 @@
 const defaultPalette = {
-	// https://www.tailwindshades.com/
 	primary: {
 		light: '#96C0F3',
 		100: '#84B5F1',
@@ -115,6 +114,10 @@ const darkPalette = {
 		default: '#0A1929',
 	},
 };
+
+// https://www.tailwindshades.com/
+// this template needs four color shades
+// for now manual color change for scroll bar  src/assets/css/styles.css
 
 const getPalette = (mode) => {
 	if (mode === 'light') return lightPalette;

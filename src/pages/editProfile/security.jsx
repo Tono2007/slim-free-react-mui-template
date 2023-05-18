@@ -94,6 +94,7 @@ function MultifactorSection() {
 					<Stack
 						spacing={1}
 						border={1}
+						borderRadius={1}
 						borderColor="text.hint"
 						p={2}
 						sx={{
@@ -127,6 +128,7 @@ function MultifactorSection() {
 					<Stack
 						spacing={1}
 						border={1}
+						borderRadius={1}
 						borderColor="text.hint"
 						p={2}
 						height="100%"

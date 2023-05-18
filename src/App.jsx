@@ -3,8 +3,12 @@ import '@fontsource/rubik/300.css';
 import '@fontsource/rubik/400.css';
 import '@fontsource/rubik/500.css';
 import '@fontsource/rubik/700.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
-import ReduxProvider from '@/redux/store';
+import StoreProvider from '@/store';
 
 import { Provider as SnackbarProvider } from '@/components/snackbar';
 
@@ -14,14 +18,14 @@ import CustomizationLayout from '@/components/layouts/customization';
 
 function App() {
 	return (
-		<ReduxProvider>
+		<StoreProvider>
 			<MUITheme>
 				<SnackbarProvider>
 					<CustomizationLayout />
 					<Router />
 				</SnackbarProvider>
 			</MUITheme>
-		</ReduxProvider>
+		</StoreProvider>
 	);
 }
 

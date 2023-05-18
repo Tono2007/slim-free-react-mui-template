@@ -6,17 +6,21 @@ import themePalette from './palette';
 import themeTypography from './typography';
 import componentStyleOverrides from './compStyleOverride';
 
+import { selectThemeConfig } from '@/store/theme/selectors';
+import { useSelector } from '@/store';
+
 const getTheme = () => {
-	// make a default theme or change localStorage to your prefered state manager redux/context/zustand...
-	const mode = 'light';
+	const { mode, borderRadius } = useSelector(selectThemeConfig);
+
+	// make a default theme or change theme by your prefered state manager redux/context/zustand...
 
 	const themeOptions = {
 		palette: themePalette(mode),
-		typography: themeTypography(mode),
+		typography: themeTypography(),
 		components: componentStyleOverrides(mode),
 		spacing: 8,
 		shape: {
-			borderRadius: 2,
+			borderRadius,
 		},
 		breakpoints: {
 			values: {
