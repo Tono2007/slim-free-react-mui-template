@@ -1,7 +1,12 @@
 # slim-mui-template &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) ![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)
 
-<a href="https://github.com/Tono2007/slim-free-react-mui-template?style=social/issues">
-  <img alt="React open issues" src="https://img.shields.io/github/stars/Tono2007/slim-free-react-mui-template?style=social">
+<a href="https://github.com/Tono2007/slim-free-react-mui-template/stargazers">
+  <img alt="Stars" src="https://img.shields.io/github/stars/Tono2007/slim-free-react-mui-template?style=social">
+<a href="https://github.com/Tono2007/slim-free-react-mui-template/forks">
+  <img alt="Forks" src="https://img.shields.io/github/forks/Tono2007/slim-free-react-mui-template?style=social">
+</a>
+<a href="https://github.com/Tono2007/slim-free-react-mui-template/releases">
+  <img alt="Version" src="https://img.shields.io/github/package-json/v/Tono2007/slim-free-react-mui-template?filename=complete%2Fpackage.json">
 </a>
 <a href="https://github.com/Tono2007/slim-free-react-mui-template/graphs/contributors">
   <img alt="React contributors" src="https://img.shields.io/github/contributors/Tono2007/slim-free-react-mui-template">
@@ -65,26 +70,44 @@ git clone https://github.com/Tono2007/slim-free-react-mui-template.git
 -   Aliases
 -   Light/Dark theme support
 -   Eslint - airbnb style guide
+-   ApexCharts
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=Javascript&logoColor=%23F7DF1E)
 ![React](https://img.shields.io/badge/React-149eca?style=for-the-badge&logo=react&logoColor=fff)
 ![Prettier](https://img.shields.io/badge/Prettier-crimson?style=for-the-badge&logo=Prettier&logoColor=fff)
 ![ESLint](https://img.shields.io/badge/ESLint-000?style=for-the-badge&logo=ESLint&logoColor=fff)
+![MUI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 
 ## Issues
 
-### Routing
+## Routing
 
 To report a bug, please submit an [issue](https://github.com/Tono2007/slim-free-react-mui-template/issues) on Github. We will respond as soon as possible to resolve the issue.
 
-### Color Presets
+## Roadmap
+### Priorities
+- More components!
+- More Pages
+- Better customization
+- Better documentation
+- Performance
+- Bundle size
+---
+## In future
+- User issues & support
+- Typescript version
+- Next/CRA/Remix versions
+- Accessibility.
+
+
+## Color Presets
 
 We use different colors
 
 | ![#f03c15](https://placehold.it/40/1560BD/1560BD?text=.) | ![#f03c15](https://placehold.it/40/FEC604/FEC604?text=.) | ![#f03c15](https://placehold.it/40/E219D7/E219D7?text=.) | ![#f03c15](https://placehold.it/40/17A3F1/17A3F1?text=.) | ![#f03c15](https://placehold.it/40/F0F2F7/F0F2F7?text=.) |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 
-### Changelog
+## Changelog
 
 <!-- https://ascii-tree-generator.com/ -->
 
