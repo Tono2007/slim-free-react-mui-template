@@ -55,9 +55,10 @@ function LoginPage() {
 					size="small"
 					variant="outlined"
 					sx={{
-						color: 'grey.700',
-						backgroundColor: (theme) => theme.palette.grey[50],
-						borderColor: (theme) => theme.palette.grey[300],
+						color: (theme) => (theme.palette.mode === 'dark' ? 'text.primary' : 'grey.700'),
+						backgroundColor: (theme) =>
+							theme.palette.mode === 'dark' ? 'background.default' : theme.palette.grey[50],
+						borderColor: 'border',
 					}}
 					to="/home"
 					component={RouterLink}

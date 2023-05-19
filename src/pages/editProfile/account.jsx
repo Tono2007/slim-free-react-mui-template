@@ -171,7 +171,16 @@ function AdvancedSettingsSection() {
 }
 function DeleteAccountSection() {
 	return (
-		<Stack sx={{ border: 2, borderColor: 'red', borderStyle: 'dotted', bgcolor: 'background.paper', p: 3 }}>
+		<Stack
+			sx={{
+				borderRadius: 1,
+				border: 2,
+				borderColor: 'red',
+				borderStyle: 'dotted',
+				bgcolor: 'background.paper',
+				p: 3,
+			}}
+		>
 			<CardHeader title="Delete Account" />
 			<Typography mb={2}>
 				To desactivate your account, first delete its resources. If you are the only owner of any teams, either

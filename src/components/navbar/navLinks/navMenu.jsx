@@ -80,6 +80,9 @@ function NavMenu({ minWidth = '100%', menuChildren = [], Icon, title }) {
 							<MenuList
 								sx={{
 									px: 1,
+									'& .MuiMenuItem-root': {
+										borderRadius: 2,
+									},
 								}}
 							>
 								{menuChildren.map((item, i) => {
@@ -185,7 +188,11 @@ function NavCollapse({ title, menuChildren, Icon, level = 1 }) {
 				{({ TransitionProps }) => (
 					<Fade {...TransitionProps} timeout={350}>
 						<Paper>
-							<MenuList>
+							<MenuList
+								sx={{
+									px: 1,
+								}}
+							>
 								{menuChildren.map((item, i) => {
 									const { href = '', title, type = 'item', menuChildren, Icon } = item;
 									const match = useMatch({

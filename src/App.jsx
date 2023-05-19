@@ -3,29 +3,29 @@ import '@fontsource/rubik/300.css';
 import '@fontsource/rubik/400.css';
 import '@fontsource/rubik/500.css';
 import '@fontsource/rubik/700.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
-import ReduxProvider from '@/redux/store';
+import StoreProvider from '@/store';
 
 import { Provider as SnackbarProvider } from '@/components/snackbar';
 
-import { ThemeProvider as MuiThemeProvider, StyledEngineProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-
-import theme from '@/utils/theme';
+import MUITheme from '@/utils/theme';
 import Router from '@/utils/routes';
+import CustomizationLayout from '@/components/layouts/customization';
 
 function App() {
 	return (
-		<ReduxProvider>
-			<StyledEngineProvider injectFirst>
-				<MuiThemeProvider theme={theme}>
-					<CssBaseline />
-					<SnackbarProvider>
-						<Router />
-					</SnackbarProvider>
-				</MuiThemeProvider>
-			</StyledEngineProvider>
-		</ReduxProvider>
+		<StoreProvider>
+			<MUITheme>
+				<SnackbarProvider>
+					<CustomizationLayout />
+					<Router />
+				</SnackbarProvider>
+			</MUITheme>
+		</StoreProvider>
 	);
 }
 

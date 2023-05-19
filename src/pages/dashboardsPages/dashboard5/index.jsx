@@ -83,7 +83,7 @@ function Header() {
 
 function TabsNav() {
 	const [value, setValue] = useState(0);
-	const [slot, setSlot] = useState('week');
+	const [slot, setSlot] = useState('Today');
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);

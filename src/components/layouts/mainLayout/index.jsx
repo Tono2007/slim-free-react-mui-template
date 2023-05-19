@@ -1,6 +1,9 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import withScrollTopFabButton from '@hocs/withScrollTopFabButton';
 import WidthPageTransition from '@hocs/widthPageTransition';
+
+import { useSelector } from '@/store';
+import { selectThemeConfig } from '@/store/theme/selectors';
 // MUI
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -31,6 +34,8 @@ function FabButton() {
 }
 function MainLayout({ container = 'lg', pb = true }) {
 	const location = useLocation();
+	const { pageTransitions } = useSelector(selectThemeConfig);
+
 	return (
 		<Box display="flex" minHeight="100vh" flexDirection="column">
 			<Header />
@@ -44,10 +49,13 @@ function MainLayout({ container = 'lg', pb = true }) {
 					}),
 				}}
 			>
-				{/* <WidthPageTransition location={location.key}>
+				{pageTransitions ? (
+					<WidthPageTransition location={location.key}>
+						<Outlet />
+					</WidthPageTransition>
+				) : (
 					<Outlet />
-				</WidthPageTransition> */}
-				<Outlet />
+				)}
 			</Container>
 			{withScrollTopFabButton(FabButton)}
 			<Footer />
@@ -56,10 +64,12 @@ function MainLayout({ container = 'lg', pb = true }) {
 }
 
 function Header() {
+	const { stickyHeader } = useSelector(selectThemeConfig);
+
 	return (
 		<>
 			<MainHeader />
-			<Navbar navItems={navItems} />
+			<Navbar navItems={navItems} position={stickyHeader ? 'sticky' : 'static'} />
 		</>
 	);
 }

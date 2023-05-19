@@ -1,3 +1,5 @@
+import { useTheme } from '@mui/material/styles';
+
 import Chart from 'react-apexcharts';
 import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
 
@@ -38,10 +40,11 @@ function HoursSection() {
 	);
 }
 
-const hoursGraphConfig = {
+const getHoursGraphConfig = (config) => ({
 	options: {
 		colors: getDefaultChartsColors(5),
 		chart: {
+			...(config?.mode === 'dark' && { foreColor: '#fff' }),
 			toolbar: {
 				show: true,
 			},
@@ -49,6 +52,11 @@ const hoursGraphConfig = {
 				enabled: true,
 			},
 		},
+		...(config?.mode === 'dark' && {
+			tooltip: {
+				theme: 'dark',
+			},
+		}),
 		grid: {
 			xaxis: {
 				lines: {
@@ -77,9 +85,18 @@ const hoursGraphConfig = {
 			data: [12, 39, 20, 10, 25, 18, 12, 39, 20, 10, 25, 18],
 		},
 	],
-};
+});
 function HoursGraph() {
-	return <Chart options={hoursGraphConfig.options} series={hoursGraphConfig.series} type="bar" width="100%" />;
+	const theme = useTheme();
+
+	return (
+		<Chart
+			options={getHoursGraphConfig({ mode: theme.palette.mode })?.options}
+			series={getHoursGraphConfig()?.series}
+			type="bar"
+			width="100%"
+		/>
+	);
 }
 
 export default HoursSection;

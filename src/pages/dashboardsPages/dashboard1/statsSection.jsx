@@ -45,6 +45,8 @@ function StatsSection() {
 		<Grid
 			container
 			sx={{
+				borderRadius: 1,
+				overflow: 'hidden',
 				bgcolor: 'background.paper',
 				boxShadow: 26,
 				'--Grid-borderWidth': '1px',

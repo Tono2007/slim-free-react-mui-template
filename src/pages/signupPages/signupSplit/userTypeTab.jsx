@@ -97,16 +97,18 @@ function UserTypeCard({ text, Icon, type, userTypeSelected, setUserTypeSelected 
 				borderRadius: '5px',
 				boxShadow: '0px 10px 30px -5px #0002',
 				'&:hover': {
-					boxShadow: '0px 10px 30px -5px #0003',
+					boxShadow: (theme) =>
+						theme.palette.mode === 'dark' ? '0px 0px 0px 3px #fff3' : '0px 10px 30px -5px #0003',
 				},
 			}}
 		>
 			<Icon
-				{...(userTypeSelected !== type && {
-					color: 'action',
-				})}
 				fontSize="medium"
 				sx={{
+					color: (theme) => {
+						const selectedColor = theme.palette.mode === 'dark' ? 'primary.main' : 'black';
+						return userTypeSelected === type ? selectedColor : 'text.primary';
+					},
 					display: {
 						xs: 'none',
 						sm: 'block',

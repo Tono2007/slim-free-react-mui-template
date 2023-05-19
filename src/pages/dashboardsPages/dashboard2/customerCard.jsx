@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTheme } from '@mui/material/styles';
 
 import Chart from 'react-apexcharts';
 import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
@@ -11,6 +12,7 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
 import CardHeader from '@/components/cardHeader';
+import { ThirteenMpTwoTone } from '@mui/icons-material';
 
 function CustomersOverviewCard() {
 	const [viewBy, setViewBy] = useState('day');
@@ -49,94 +51,105 @@ function TabButton({ children, tabKey, changeTab, activeView }) {
 	);
 }
 
-const customerGraphConfig = {
-	options: {
-		colors: getDefaultChartsColors(1),
-		fill: {
-			opacity: 0.6,
-			type: 'solid',
-		},
-		chart: {
-			toolbar: {
-				show: false,
+function getCustomerGraphConfig(config) {
+	return {
+		options: {
+			colors: getDefaultChartsColors(config?.mode === 'dark' ? 3 : 1),
+			fill: {
+				opacity: 0.6,
+				type: 'solid',
 			},
-			zoom: {
+			...(config?.mode === 'dark' && {
+				tooltip: {
+					theme: 'dark',
+				},
+			}),
+
+			chart: {
+				...(config?.mode === 'dark' && { foreColor: '#fff' }),
+				toolbar: {
+					show: false,
+				},
+				zoom: {
+					enabled: false,
+				},
+				parentHeightOffset: 0,
+			},
+			stroke: {
+				width: 0,
+				curve: 'straight',
+			},
+			dataLabels: {
 				enabled: false,
 			},
-			parentHeightOffset: 0,
-		},
-		stroke: {
-			width: 0,
-			curve: 'straight',
-		},
-		dataLabels: {
-			enabled: false,
-		},
-		yaxis: {
-			seriesName: 'customers cuantity',
-			min: 0,
-			max: 15.0,
-			tickAmount: 7,
-			decimalsInFloat: 1,
-		},
-		grid: {
-			xaxis: {
-				lines: {
-					show: true,
-				},
-			},
 			yaxis: {
-				lines: {
-					show: true,
+				seriesName: 'customers cuantity',
+				min: 0,
+				max: 15.0,
+				tickAmount: 7,
+				decimalsInFloat: 1,
+			},
+			grid: {
+				xaxis: {
+					lines: {
+						show: true,
+					},
+				},
+				yaxis: {
+					lines: {
+						show: true,
+					},
 				},
 			},
+			legend: {
+				show: true,
+				position: 'bottom',
+				floating: true,
+				offsetY: 20,
+			},
 		},
-		legend: {
-			show: true,
-			position: 'bottom',
-			floating: true,
-			offsetY: 20,
+		series: {
+			day: [
+				{
+					name: 'New Customer',
+					data: [2.0, 3.0, 6.0, 5.0, 7.0, 8.0, 10.0],
+				},
+				{
+					name: 'Returning Customer',
+					data: [1.0, 2.0, 5.0, 3.0, 5.0, 6.0, 9.0],
+				},
+			],
+			week: [
+				{
+					name: 'New Customer',
+					data: [5.0, 4.0, 9.0, 6.0, 8.0, 11.0, 7.0],
+				},
+				{
+					name: 'Returning Customer',
+					data: [4.0, 3.0, 7.0, 4.0, 6.0, 9.0, 7.0],
+				},
+			],
+			month: [
+				{
+					name: 'New Customer',
+					data: [5.0, 6.0, 3.0, 5.0, 6.0, 11.0, 4.0],
+				},
+				{
+					name: 'Returning Customer',
+					data: [4.0, 5.0, 2.0, 4.0, 5.0, 7.0, 3.0],
+				},
+			],
 		},
-	},
-	series: {
-		day: [
-			{
-				name: 'New Customer',
-				data: [2.0, 3.0, 6.0, 5.0, 7.0, 8.0, 10.0],
-			},
-			{
-				name: 'Returning Customer',
-				data: [1.0, 2.0, 5.0, 3.0, 5.0, 6.0, 9.0],
-			},
-		],
-		week: [
-			{
-				name: 'New Customer',
-				data: [5.0, 4.0, 9.0, 6.0, 8.0, 11.0, 7.0],
-			},
-			{
-				name: 'Returning Customer',
-				data: [4.0, 3.0, 7.0, 4.0, 6.0, 9.0, 7.0],
-			},
-		],
-		month: [
-			{
-				name: 'New Customer',
-				data: [5.0, 6.0, 3.0, 5.0, 6.0, 11.0, 4.0],
-			},
-			{
-				name: 'Returning Customer',
-				data: [4.0, 5.0, 2.0, 4.0, 5.0, 7.0, 3.0],
-			},
-		],
-	},
-};
+	};
+}
+
 function CustomersChart({ activeView }) {
+	const theme = useTheme();
 	return (
 		<Box
 			component={Chart}
-			options={customerGraphConfig.options}
-			series={customerGraphConfig.series?.[activeView]}
+			options={getCustomerGraphConfig({ mode: theme.palette.mode })?.options}
+			series={getCustomerGraphConfig()?.series?.[activeView]}
 			type="area"
 			width="100%"
 			ml={-1}

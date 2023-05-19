@@ -244,7 +244,7 @@ function InputGroupsSection() {
 							px={1}
 							display="grid"
 							bgcolor="background.default"
-							borderColor="#d3d3d3"
+							borderColor="border"
 							sx={{ placeItems: 'center' }}
 						>
 							.00
@@ -271,7 +271,7 @@ function InputGroupsSection() {
 							px={1}
 							display="grid"
 							bgcolor="background.default"
-							borderColor="#d3d3d3"
+							borderColor="border"
 							sx={{ placeItems: 'center' }}
 						>
 							.00
@@ -305,7 +305,7 @@ function InputGroupsSection() {
 							px={1}
 							display="grid"
 							bgcolor="background.default"
-							borderColor="#d3d3d3"
+							borderColor="border"
 							sx={{ placeItems: 'center' }}
 						>
 							@x.com
@@ -406,7 +406,7 @@ function HelperPopover({ children }) {
 				onMouseEnter={handlePopoverOpen}
 				onMouseLeave={handlePopoverClose}
 			>
-				<QuestionMarkIcon color="background.paper" fontSize="small" sx={{ fontSize: 15 }} />
+				<QuestionMarkIcon fontSize="small" sx={{ fontSize: 15, color: 'primary.contrastText' }} />
 			</Avatar>
 
 			<Popover

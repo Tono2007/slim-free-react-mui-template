@@ -1,21 +1,26 @@
-import palette from './palette';
+import getPalette from './palette';
 import typography from './typography';
 import { alpha } from '@mui/material/styles';
 
-export default {
+const getComponentStyleOverride = (mode) => ({
 	MuiButton: {
 		styleOverrides: {
 			root: {
 				'&.MuiButton-containedPrimary:not(:disabled)': {
-					backgroundColor: palette.primary[400],
+					backgroundColor: getPalette(mode)?.primary[400],
 					'&:hover': {
-						backgroundColor: palette.primary.main,
+						backgroundColor: getPalette(mode)?.primary.main,
 					},
 				},
 			},
 		},
 	},
 	MuiPaper: {
+		styleOverrides: {
+			elevation: {
+				backgroundImage: 'none',
+			},
+		},
 		defaultProps: {
 			elevation: 26,
 			variant: 'outlinedElevation',
@@ -27,7 +32,7 @@ export default {
 				},
 				style: ({ ownerState, theme }) => ({
 					boxShadow: theme.shadows[ownerState.elevation],
-					border: `1px solid ${palette.border}`,
+					border: `1px solid ${getPalette(mode)?.border}`,
 				}),
 			},
 		],
@@ -83,7 +88,7 @@ export default {
 				},
 				style: {
 					'&:hover': {
-						boxShadow: `0px 10px 20px -15px ${palette.primary.main}`,
+						boxShadow: `0px 10px 20px -15px ${getPalette(mode)?.primary.main}`,
 					},
 				},
 			},
@@ -98,37 +103,38 @@ export default {
 		defaultProps: {
 			elevation: 26,
 		},
-		styleOverrides: {
-			paper: {
-				border: `1px solid ${palette.border}`,
-			},
-		},
 	},
 	MuiMenuItem: {
 		styleOverrides: {
 			root: {
-				color: palette.text.secondary,
-				borderRadius: 2,
+				color: getPalette(mode)?.text.secondary,
+				borderRadius: '3px',
 				'&.Mui-selected': {
-					color: palette.primary.contrastText,
-					backgroundColor: palette.primary[200],
+					color: getPalette(mode)?.primary.contrastText,
+					backgroundColor: getPalette(mode)?.primary[mode === 'light' ? 300 : 400],
 					'&>.MuiListItemIcon-root': {
-						color: palette.primary.contrastText,
+						color: getPalette(mode)?.primary.contrastText,
 					},
 					'&:hover': {
-						backgroundColor: palette.primary[300],
-						color: palette.primary.contrastText,
+						backgroundColor: getPalette(mode)?.primary[mode === 'light' ? 400 : 300],
+						color: getPalette(mode)?.primary.contrastText,
 						'&>.MuiListItemIcon-root': {
-							color: palette.primary.contrastText,
+							color: getPalette(mode)?.primary.contrastText,
 						},
 					},
 				},
 				'&:hover': {
-					backgroundColor: alpha(palette.primary.light, 0.2),
-					color: palette.primary[400],
-					'&>.MuiListItemIcon-root': {
-						color: palette.primary.main,
-					},
+					backgroundColor: alpha(getPalette(mode)?.primary.light, 0.2),
+
+					...(mode === 'light' && {
+						color: getPalette(mode)?.primary[400],
+						'&>.MuiListItemIcon-root': {
+							color: getPalette(mode)?.primary.main,
+						},
+					}),
+					...(mode === 'dark' && {
+						color: getPalette(mode)?.primary.contrastText,
+					}),
 				},
 			},
 		},
@@ -137,29 +143,37 @@ export default {
 	MuiOutlinedInput: {
 		styleOverrides: {
 			root: ({ ownerState }) => ({
-				'&:hover': {
-					backgroundColor: '#eee8',
-				},
+				...(mode === 'light' && {
+					'&:hover': {
+						backgroundColor: '#eee8',
+					},
+				}),
+				...(mode === 'dark' && {
+					'&:hover': {
+						backgroundColor: '#eee1',
+					},
+				}),
+
 				/* ...(ownerState.color === 'primary' && {
 					'&.MuiOutlinedInput-notchedOutline': {
-						borderColor: palette.secondary.light,
+						borderColor: getPalette(mode)?.secondary.light,
 					},
 					'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-						borderColor: palette.primary[400],
+						borderColor: getPalette(mode)?.primary[400],
 					},
 					'&:hover&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-						borderColor: palette.primary[400],
+						borderColor: getPalette(mode)?.primary[400],
 					},
 					'&:hover .MuiOutlinedInput-notchedOutline': {
-						borderColor: palette.primary[400],
+						borderColor: getPalette(mode)?.primary[400],
 					},
 				}), */
 
 				'&:not(.Mui-error).Mui-focused .MuiOutlinedInput-notchedOutline': {
-					borderColor: palette?.[ownerState?.color]?.[400] || '#000',
+					borderColor: getPalette(mode)?.[ownerState?.color]?.[400] || '#000',
 				},
 				'&:not(.Mui-error):hover .MuiOutlinedInput-notchedOutline': {
-					borderColor: palette?.[ownerState?.color]?.[400] || '#000',
+					borderColor: getPalette(mode)?.[ownerState?.color]?.[400] || '#000',
 				},
 			}),
 		},
@@ -176,12 +190,12 @@ export default {
 	MuiTableHead: {
 		styleOverrides: {
 			root: {
-				backgroundColor: palette.background.default,
+				backgroundColor: getPalette(mode)?.background.default,
 				'& .MuiTableCell-head': {
 					...typography?.h5,
 					textTransform: 'uppercase',
-					borderTop: `1px solid ${palette.border}`,
-					borderBottom: `1px solid ${palette.border}`,
+					borderTop: `1px solid ${getPalette(mode)?.border}`,
+					borderBottom: `1px solid ${getPalette(mode)?.border}`,
 				},
 			},
 		},
@@ -190,7 +204,7 @@ export default {
 		styleOverrides: {
 			root: {
 				'&.MuiTableRow-hover:hover': {
-					backgroundColor: alpha(palette.background.default, 0.4),
+					backgroundColor: alpha(getPalette(mode)?.background.default, 0.4),
 				},
 			},
 		},
@@ -207,7 +221,7 @@ export default {
 	MuiLink: {
 		styleOverrides: {
 			root: {
-				color: palette.primary[300],
+				color: getPalette(mode)?.primary[300],
 			},
 		},
 	},
@@ -215,7 +229,7 @@ export default {
 	MuiAlert: {
 		styleOverrides: {
 			outlined: {
-				backgroundColor: palette.background.paper,
+				backgroundColor: getPalette(mode)?.background.paper,
 			},
 			filled: {
 				border: 0,
@@ -224,15 +238,17 @@ export default {
 				border: 0,
 			},
 			filledSuccess: {
-				color: palette.success.contrastText,
+				color: getPalette(mode)?.success.contrastText,
 			},
 		},
 	},
 	MuiMobileStepper: {
 		styleOverrides: {
 			root: {
-				background: palette.background.paper,
+				background: getPalette(mode)?.background.paper,
 			},
 		},
 	},
-};
+});
+
+export default getComponentStyleOverride;

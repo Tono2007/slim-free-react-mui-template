@@ -398,10 +398,6 @@ const BACKGROUND_COLOR_PALETTE = [
 		dark: true,
 	},
 	{
-		bgcolor: 'background.dark',
-		dark: true,
-	},
-	{
 		bgcolor: 'background.paper',
 		dark: true,
 	},

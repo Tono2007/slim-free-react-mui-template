@@ -84,6 +84,8 @@ function ReportSection() {
 				container
 				columns={13}
 				sx={{
+					borderRadius: 1,
+					overflow: 'hidden',
 					bgcolor: 'background.paper',
 					boxShadow: 26,
 					'--Grid-borderWidth': '1px',

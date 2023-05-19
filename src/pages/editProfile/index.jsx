@@ -97,7 +97,13 @@ function EditProfile() {
 					>
 						<Typography variant="subtitle1">Elizabeth Lumaad Olsen</Typography>
 						<Divider sx={{ borderColor: 'primary.light', my: 1 }} />
-						<MenuList>
+						<MenuList
+							sx={{
+								'& .MuiMenuItem-root': {
+									borderRadius: 2,
+								},
+							}}
+						>
 							{menuOptions.map(({ id, name, Icon, text }) => (
 								<MenuListItem
 									key={id}

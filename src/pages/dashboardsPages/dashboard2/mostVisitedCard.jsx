@@ -1,3 +1,5 @@
+import { useTheme } from '@mui/material/styles';
+
 import Chart from 'react-apexcharts';
 import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
 
@@ -8,10 +10,11 @@ import Box from '@mui/material/Box';
 
 import CardHeader from '@/components/cardHeader';
 
-const impressionsGraphConfig = {
+const getCustomerGraphConfig = (config) => ({
 	options: {
 		colors: getDefaultChartsColors(4),
 		chart: {
+			...(config?.mode === 'dark' && { foreColor: '#fff' }),
 			toolbar: {
 				show: false,
 			},
@@ -30,6 +33,7 @@ const impressionsGraphConfig = {
 			},
 			fontFamily: 'inherit',
 			fontSize: 13,
+
 			floating: true,
 			offsetY: 90,
 			markers: {
@@ -65,15 +69,18 @@ const impressionsGraphConfig = {
 		},
 	},
 	series: [9212, 8768, 8355],
-};
+});
 function MostVisitedCard() {
+	const theme = useTheme();
+
 	return (
 		<Card>
 			<CardHeader title="Most Visited" size="small" />
 			<Box
+				color="text.primary"
 				component={Chart}
-				options={impressionsGraphConfig.options}
-				series={impressionsGraphConfig.series}
+				options={getCustomerGraphConfig({ mode: theme.palette.mode })?.options}
+				series={getCustomerGraphConfig()?.series}
 				type="donut"
 				width="100%"
 				height="100%"
