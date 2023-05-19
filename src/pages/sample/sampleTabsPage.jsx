@@ -68,7 +68,13 @@ function SampleTabsPage() {
 						}}
 						component="aside"
 					>
-						<MenuList>
+						<MenuList
+							sx={{
+								'& .MuiMenuItem-root': {
+									borderRadius: 2,
+								},
+							}}
+						>
 							{menuOptions.map(({ id, Icon, text }) => (
 								<MenuListItem
 									key={id}

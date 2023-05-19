@@ -108,15 +108,15 @@ const getComponentStyleOverride = (mode) => ({
 		styleOverrides: {
 			root: {
 				color: getPalette(mode)?.text.secondary,
-				borderRadius: 2,
+				borderRadius: '3px',
 				'&.Mui-selected': {
 					color: getPalette(mode)?.primary.contrastText,
-					backgroundColor: getPalette(mode)?.primary[200],
+					backgroundColor: getPalette(mode)?.primary[mode === 'light' ? 300 : 400],
 					'&>.MuiListItemIcon-root': {
 						color: getPalette(mode)?.primary.contrastText,
 					},
 					'&:hover': {
-						backgroundColor: getPalette(mode)?.primary[300],
+						backgroundColor: getPalette(mode)?.primary[mode === 'light' ? 400 : 300],
 						color: getPalette(mode)?.primary.contrastText,
 						'&>.MuiListItemIcon-root': {
 							color: getPalette(mode)?.primary.contrastText,

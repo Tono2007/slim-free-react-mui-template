@@ -11,12 +11,22 @@ const initialState = {
 	},
 };
 
+const THEME_CONFIG_KEY = 'SLIM_MUI_THEME_DATA';
+
+const getInitialState = () => {
+	const localStorageData = localStorage.getItem(THEME_CONFIG_KEY);
+	if (localStorageData) {
+		return { themeConfig: JSON.parse(localStorageData) };
+	}
+	return initialState;
+};
+
 const useSlice = createSlice({
 	name: 'themeSlice',
-	initialState,
+	initialState: getInitialState(),
 	reducers: {
 		setDefaultConfig: (state) => {
-			state.themeConfig = initialState;
+			state.themeConfig = initialState.themeConfig;
 		},
 		setConfig: (state, action) => {
 			state.themeConfig = action.payload;

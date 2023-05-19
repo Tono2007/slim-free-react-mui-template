@@ -132,6 +132,9 @@ function UserMenu({ handleClose }) {
 		<MenuList
 			sx={{
 				p: 1,
+				'& .MuiMenuItem-root': {
+					borderRadius: 2,
+				},
 			}}
 		>
 			<Stack px={3}>
