@@ -10,6 +10,7 @@ import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDiss
 function Page500() {
 	return (
 		<Stack
+			px={5}
 			direction="column"
 			spacing={2}
 			justifyContent="center"

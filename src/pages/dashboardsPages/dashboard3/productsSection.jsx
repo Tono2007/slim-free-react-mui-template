@@ -153,7 +153,7 @@ function ProductsTable() {
 				<TableHead>
 					<TableRow>
 						<TableCell>Item</TableCell>
-						<TableCell align="left" padding="none">
+						<TableCell align="left" padding="none" sx={{ minWidth: 140 }}>
 							Item Details
 						</TableCell>
 						<TableCell align="right">Sold</TableCell>

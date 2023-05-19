@@ -68,10 +68,10 @@ function BasicFormSection({ variant }) {
 				subtitle="A basic form control with disabled and readonly mode."
 			/>
 			<Grid container rowSpacing={2} columnSpacing={4}>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4}>
 					<TextField label="Input box" variant={variant} fullWidth />
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4}>
 					<TextField
 						InputProps={{
 							readOnly: true,
@@ -82,13 +82,13 @@ function BasicFormSection({ variant }) {
 						fullWidth
 					/>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4}>
 					<TextField disabled label="Input box (disabled)" variant={variant} fullWidth />
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4}>
 					<TextField multiline minRows={4} label="Textarea" variant={variant} fullWidth />
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4}>
 					<TextField
 						InputProps={{
 							readOnly: true,
@@ -101,7 +101,7 @@ function BasicFormSection({ variant }) {
 						fullWidth
 					/>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4}>
 					<TextField disabled multiline minRows={4} label="Textarea (disabled)" variant={variant} fullWidth />
 				</Grid>
 			</Grid>
@@ -116,7 +116,7 @@ function InputGroupsSection() {
 				subtitle="Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs."
 			/>
 			<Grid container rowSpacing={2} columnSpacing={4}>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<TextField
 						label="Usuario"
 						variant="outlined"
@@ -130,7 +130,7 @@ function InputGroupsSection() {
 						}}
 					/>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<TextField
 						label="Usuario"
 						variant="filled"
@@ -144,7 +144,7 @@ function InputGroupsSection() {
 						}}
 					/>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<TextField
 						label="Usuario"
 						variant="standard"
@@ -158,7 +158,7 @@ function InputGroupsSection() {
 						}}
 					/>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<TextField
 						InputProps={{
 							startAdornment: (
@@ -172,7 +172,7 @@ function InputGroupsSection() {
 						fullWidth
 					/>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<TextField
 						color="primary"
 						InputProps={{
@@ -194,7 +194,7 @@ function InputGroupsSection() {
 						fullWidth
 					/>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<TextField
 						label="Costo"
 						variant="outlined"
@@ -209,7 +209,7 @@ function InputGroupsSection() {
 						}}
 					/>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<TextField
 						variant="outlined"
 						fullWidth
@@ -224,7 +224,7 @@ function InputGroupsSection() {
 						}}
 					/>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<Stack direction="row">
 						<Box
 							border={1}
@@ -251,7 +251,7 @@ function InputGroupsSection() {
 						</Box>
 					</Stack>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<Stack direction="row">
 						<Box
 							border={1}
@@ -278,7 +278,7 @@ function InputGroupsSection() {
 						</Box>
 					</Stack>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<Stack direction="row">
 						<Box
 							border={1}
@@ -294,7 +294,7 @@ function InputGroupsSection() {
 						<TextField placeholder="Nombre de Usuario" variant="outlined" fullWidth />
 					</Stack>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={4} md={4}>
 					<Stack direction="row">
 						<TextField placeholder="Email" variant="outlined" fullWidth />
 						<Typography
@@ -321,7 +321,7 @@ function HelperInputSection() {
 		<Card type="section">
 			<CardHeader title="Helpers Input" subtitle="Cuadro de ayuda popover" />
 			<Grid container rowSpacing={2} columnSpacing={4}>
-				<Grid item xs={6} sm={4} md={4} sx={{ position: 'relative' }}>
+				<Grid item xs={12} sm={6} md={4} sx={{ position: 'relative' }}>
 					<TextField label="Outlined popover" fullWidth />
 					<HelperPopover>
 						<Stack spacing={1} borderTop={3} borderColor="info.main" p={2}>
@@ -338,7 +338,7 @@ function HelperInputSection() {
 						</Stack>
 					</HelperPopover>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4} sx={{ position: 'relative' }}>
+				<Grid item xs={12} sm={6} md={4} sx={{ position: 'relative' }}>
 					<TextField label="Filled popover" variant="filled" fullWidth />
 					<HelperPopover>
 						<Stack spacing={1} borderTop={3} borderColor="success.main" p={2}>
@@ -355,7 +355,7 @@ function HelperInputSection() {
 						</Stack>
 					</HelperPopover>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4} sx={{ position: 'relative' }}>
+				<Grid item xs={12} sm={6} md={4} sx={{ position: 'relative' }}>
 					<TextField label="Standard popover" variant="standard" fullWidth />
 					<HelperPopover>
 						<Stack spacing={1} p={2}>
@@ -372,7 +372,7 @@ function HelperInputSection() {
 						</Stack>
 					</HelperPopover>
 				</Grid>
-				<Grid item xs={6} sm={4} md={4} sx={{ position: 'relative' }}>
+				<Grid item xs={12} sm={6} md={4} sx={{ position: 'relative' }}>
 					<TextField label="MUI Helper text" variant="outlined" helperText="helper Text" fullWidth />
 				</Grid>
 			</Grid>
@@ -437,13 +437,13 @@ function BasicInputColorSection() {
 		<Card type="section">
 			<CardHeader title="Color Inputs" />
 			<Grid container rowSpacing={2} columnSpacing={4}>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={6} md={4}>
 					<TextField label="Outlined secondary" color="secondary" fullWidth />
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={6} md={4}>
 					<TextField label="Filled success" variant="filled" color="success" fullWidth />
 				</Grid>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={6} md={4}>
 					<TextField label="Standard tertiary" variant="standard" color="tertiary" fullWidth />
 				</Grid>
 			</Grid>
@@ -466,7 +466,7 @@ function InputMaskSection() {
 				subtitle="Input masks allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates,phones, etc)."
 			/>
 			<Grid container rowSpacing={2} columnSpacing={4}>
-				<Grid item xs={6} sm={4} md={4}>
+				<Grid item xs={12} sm={6} md={4}>
 					<MaskedInput
 						mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
 						placeholderChar="_"
@@ -600,7 +600,7 @@ function FormValidatorSection() {
 			<Card type="section">
 				<CardHeader title="Valid state Input- React Hook Form" />
 				<Grid container spacing={3}>
-					<Grid item xs={6} sm={4} md={4}>
+					<Grid item xs={12} sm={6} md={4}>
 						<Typography variant="subtitle2">FormInput - Controller</Typography>
 						<Divider sx={{ my: 2, borderColor: 'primary.main' }} />
 						<form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
@@ -639,7 +639,7 @@ function FormValidatorSection() {
 							</Button>
 						</form>
 					</Grid>
-					<Grid item xs={6} sm={4} md={4}>
+					<Grid item xs={12} sm={6} md={4}>
 						<form autoComplete="off" onSubmit={handleSubmit2(onSubmit)}>
 							<Typography variant="subtitle2">! Register </Typography>
 							<Divider sx={{ my: 2, borderColor: 'primary.main' }} />
@@ -673,7 +673,7 @@ function FormValidatorSection() {
 						</form>
 					</Grid>
 
-					<Grid item xs={6} sm={4} md={4}>
+					<Grid item xs={12} sm={6} md={4}>
 						<form autoComplete="off" onSubmit={handleSubmit3(onSubmit)}>
 							<Typography variant="subtitle2">FormInput - Custom</Typography>
 							<Divider sx={{ my: 2, borderColor: 'primary.main' }} />

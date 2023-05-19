@@ -91,7 +91,7 @@ function ChangePlanSection() {
 	return (
 		<Card type="section">
 			<CardHeader title="Change Plan" subtitle="You can upgrade and downgrade whenever you want" />
-			<Stack spacing={3} direction="row">
+			<Stack spacing={3} direction={{ xs: 'column', md: 'row' }}>
 				{plansData.map(({ type, cost, Icon, using }) => (
 					<UserPlanCard
 						key={type}
@@ -199,7 +199,7 @@ function PaymentSection() {
 		<Card type="section">
 			<CardHeader title="Stats" />
 			<Stack spacing={6} direction="column">
-				<Stack spacing={3} direction="row" width="100%">
+				<Stack spacing={3} direction={{ xs: 'column', md: 'row' }} width="100%">
 					{planStats.map(({ title, subtitle, btnText, color }, i) => (
 						<PlanStat key={i} title={title} subtitle={subtitle} btnText={btnText} color={color} />
 					))}

@@ -10,6 +10,7 @@ import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDiss
 function PageNotFound() {
 	return (
 		<Stack
+			px={5}
 			direction="column"
 			spacing={2}
 			justifyContent="center"

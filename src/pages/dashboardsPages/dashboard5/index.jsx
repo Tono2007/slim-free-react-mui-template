@@ -53,6 +53,7 @@ function Header() {
 			})}`}
 		>
 			<Stack
+				pt={{ xs: 5, sm: 0 }}
 				divider={<Divider orientation="vertical" flexItem />}
 				direction="row"
 				alignItems="center"
@@ -95,7 +96,14 @@ function TabsNav() {
 				borderColor: 'divider',
 			}}
 		>
-			<Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+			<Tabs
+				value={value}
+				onChange={handleChange}
+				variant="scrollable"
+				aria-label="grap type"
+				scrollButtons="auto"
+				allowScrollButtonsMobile
+			>
 				<Tab label="Overview" />
 				<Tab label="Employee" />
 				<Tab label="Products" />

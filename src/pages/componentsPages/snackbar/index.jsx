@@ -293,7 +293,7 @@ function MuiSnackbarSection() {
 			<Typography variant="h5" mt={5}>
 				Variants with Action:
 			</Typography>
-			<Stack direction="row" spacing={3}>
+			<Stack direction="row" spacing={3} flexWrap="wrap">
 				<Button
 					variant="contained"
 					color="success"

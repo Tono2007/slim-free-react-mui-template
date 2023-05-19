@@ -82,7 +82,7 @@ function ReportSection() {
 			<Header />
 			<Grid
 				container
-				columns={13}
+				columns={{ xs: 12, md: 13 }}
 				sx={{
 					borderRadius: 1,
 					overflow: 'hidden',
