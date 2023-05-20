@@ -27,7 +27,7 @@ jobs:
 
     - name: Install dependencies
       run:  |
-            ls
+            cd complete-template
             npm run installD 
 
     - name: 🔨 Build Project
@@ -52,7 +52,9 @@ jobs:
 
 
     - name: Install dependencies
-      run: npm run installD 
+      run:  |
+            cd complete-template
+            npm run installD 
 
     - name: Install Prettier
       run: npm i prettier
@@ -79,7 +81,9 @@ jobs:
 
 
     - name: Install dependencies
-      run: npm run installD 
+      run:  |
+            cd clean-template
+            npm run installD 
 
     - name: 🔨 Build Project
       run: npm run build
@@ -103,7 +107,9 @@ jobs:
 
 
     - name: Install dependencies
-      run: npm run installD 
+      run:  |
+            cd clean-template
+            npm run installD 
 
     - name: Install Prettier
       run: npm i prettier
