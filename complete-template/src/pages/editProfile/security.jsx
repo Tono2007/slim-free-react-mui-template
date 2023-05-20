@@ -238,7 +238,7 @@ function SessionsSection() {
 			</Stack>
 			<CardHeader size="small" title="Active Sessions" sx={{ mt: 6 }} />
 			<Stack spacing={1}>
-				{devices.map(({ TypeIcon, device, ubication, active, last }, i) => (
+				{devices.map(({ TypeIcon, device, ubication }, i) => (
 					<Stack key={i} direction="row" alignItems="center" spacing={1}>
 						<TypeIcon color="success" />
 						<Typography variant="body1" flexGrow={1}>

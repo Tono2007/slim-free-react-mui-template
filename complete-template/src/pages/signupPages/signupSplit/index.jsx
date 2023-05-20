@@ -155,12 +155,9 @@ function Signup() {
 }
 
 function SignupContainer() {
-	const { activeStep, setActiveStep } = useSignupData();
+	const { activeStep } = useSignupData();
 	const steps = ['Usuario', 'Perfil', 'Cuenta'];
 
-	const changeActiveStep = (step) => {
-		setActiveStep(step);
-	};
 	return (
 		<Stack
 			width="100%"
@@ -178,7 +175,7 @@ function SignupContainer() {
 			overflow="auto"
 		>
 			<Stepper activeStep={activeStep}>
-				{steps.map((label, index) => {
+				{steps.map((label) => {
 					const stepProps = {};
 					const labelProps = {};
 					return (

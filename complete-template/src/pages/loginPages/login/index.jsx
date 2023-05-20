@@ -119,10 +119,6 @@ function LoginPage() {
 function LoginForm() {
 	const navigate = useNavigate();
 	const [isLoading, setIsLoading] = useState(false);
-	const [error, setError] = useState({
-		error: false,
-		message: '',
-	});
 	const [showPassword, setShowPassword] = useState(false);
 
 	const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -141,7 +137,6 @@ function LoginForm() {
 			<TextField
 				size="small"
 				color="primary"
-				error={error.error}
 				autoFocus
 				name="nickname"
 				label="Usuario"
@@ -159,13 +154,11 @@ function LoginForm() {
 			<TextField
 				size="small"
 				color="primary"
-				error={error.error}
 				name="password"
 				type={showPassword ? 'text' : 'password'}
 				margin="normal"
 				label="Contraseña"
 				variant="outlined"
-				helperText={error.message}
 				InputProps={{
 					startAdornment: (
 						<InputAdornment position="start">

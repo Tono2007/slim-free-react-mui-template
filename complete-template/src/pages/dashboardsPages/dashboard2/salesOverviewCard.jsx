@@ -14,9 +14,9 @@ import CardHeader from '@/components/cardHeader';
 function SalesOverviewCard() {
 	const [viewBy, setViewBy] = useState('month');
 
-	const changeTab = (tabKey) => {
+	/* const changeTab = (tabKey) => {
 		setViewBy(tabKey);
-	};
+	}; */
 	return (
 		<Card>
 			<CardHeader title="Sales Overview" size="small">
@@ -68,7 +68,7 @@ function SalesOverviewCard() {
 		</Card>
 	);
 }
-function TabButton({ children, tabKey, changeTab, activeView }) {
+/* function TabButton({ children, tabKey, changeTab, activeView }) {
 	return (
 		<Button
 			onClick={() => changeTab(tabKey)}
@@ -81,7 +81,7 @@ function TabButton({ children, tabKey, changeTab, activeView }) {
 			{children}
 		</Button>
 	);
-}
+} */
 
 function getCustomerGraphConfig(config) {
 	return {
