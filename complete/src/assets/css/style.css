@@ -1,0 +1,55 @@
+@media screen and (min-width: 400px) {
+	/* Tamaño del scroll */
+	::-webkit-scrollbar {
+		width: 14px;
+		height: 14px;
+		/* border-left: 1px solid #2121213e; */
+	}
+
+	/* Estilos barra (thumb) de scroll */
+	::-webkit-scrollbar-thumb {
+		background-color: rgb(123, 123, 131);
+		border-radius: 8px;
+		border: 2.5px solid rgba(0, 0, 0, 0);
+		background-clip: padding-box;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #1973e2;
+	}
+
+	/* Estilos track de scroll */
+	::-webkit-scrollbar-track {
+		background-color: #eee;
+		/* 	background-color: rgb(129, 130, 134); */
+		border-left: 1px solid #2121213e;
+	}
+
+	::-webkit-scrollbar-button:single-button:vertical {
+		background-color: rgba(27, 30, 50, 0.15);
+		display: block;
+		border-style: solid;
+		height: 13px;
+		max-width: 16px;
+	}
+
+	/* Up */
+	::-webkit-scrollbar-button:single-button:vertical:decrement {
+		border-width: 0 8px 8px 8px;
+		border-color: transparent transparent #555555 transparent;
+	}
+
+	::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+		border-color: transparent transparent #1973e2 transparent;
+	}
+
+	/* Down */
+	::-webkit-scrollbar-button:single-button:vertical:increment {
+		border-width: 8px 8px 0 8px;
+		border-color: #555555 transparent transparent transparent;
+	}
+
+	::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+		border-color: #1973e2 transparent transparent transparent;
+	}
+}
