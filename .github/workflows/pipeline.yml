@@ -21,8 +21,9 @@ jobs:
     - name: Use Node.js 18
       uses: actions/setup-node@v3
       with:
-          cache: 'npm'
           node-version: '18'   
+          cache: 'npm'
+          cache-dependency-path: 'complete-template/package-lock.json'
 
     - name: Install dependencies
       run:  npm run installD 
@@ -43,8 +44,10 @@ jobs:
     - name: Use Node.js 18
       uses: actions/setup-node@v3
       with:
-          cache: 'npm'
           node-version: '18' 
+          cache: 'npm'
+          cache-dependency-path: 'complete-template/package-lock.json'
+
 
     - name: Install dependencies
       run: npm run installD 
@@ -68,8 +71,10 @@ jobs:
     - name: Use Node.js 18
       uses: actions/setup-node@v3
       with:
-          cache: 'npm'
           node-version: '18'   
+          cache: 'npm'
+          cache-dependency-path: 'clean-template/package-lock.json'
+
 
     - name: Install dependencies
       run: npm run installD 
@@ -90,8 +95,10 @@ jobs:
     - name: Use Node.js 18
       uses: actions/setup-node@v3
       with:
-          cache: 'npm'
           node-version: '18' 
+          cache: 'npm'
+          cache-dependency-path: 'clean-template/package-lock.json'
+
 
     - name: Install dependencies
       run: npm run installD 
