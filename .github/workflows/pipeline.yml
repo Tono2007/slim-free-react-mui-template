@@ -28,10 +28,14 @@ jobs:
     - name: Install dependencies
       run:  |
             cd complete-template
+            ls
             npm run installD 
 
     - name: 🔨 Build Project
-      run: npm run build
+      run:  |
+            cd complete-template
+            ls
+            npm run build
 
   complete-template-lint:
     runs-on: ubuntu-20.04
@@ -54,13 +58,20 @@ jobs:
     - name: Install dependencies
       run:  |
             cd complete-template
+            ls
             npm run installD 
 
     - name: Install Prettier
-      run: npm i prettier
+      run:  |
+            cd complete-template
+            ls
+            npm i prettier
 
     - name: Lint
-      run: npm run lint    
+      run:  |
+            cd complete-template
+            ls
+            npm run lint    
 
   clean-template-build:
     runs-on: ubuntu-20.04
@@ -86,7 +97,10 @@ jobs:
             npm run installD 
 
     - name: 🔨 Build Project
-      run: npm run build
+      run:  |
+            cd clean-template
+            ls
+            npm run build
 
   clean-template-lint:
     runs-on: ubuntu-20.04
@@ -109,13 +123,20 @@ jobs:
     - name: Install dependencies
       run:  |
             cd clean-template
+            ls
             npm run installD 
 
     - name: Install Prettier
-      run: npm i prettier
+      run:  |
+            cd clean-template
+            ls
+            npm i prettier
 
     - name: Lint
-      run: npm run lint    
+      run:  |
+            cd clean-template
+            ls
+            npm run lint    
       
       
       
