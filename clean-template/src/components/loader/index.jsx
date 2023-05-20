@@ -7,8 +7,6 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import LinearProgress from '@mui/material/LinearProgress';
 
-import logo from '@/assets/images/logo/png/Color_logotext_nobg.png';
-
 export function LogoLoader({ addSx, ...rest }) {
 	return (
 		<Card
@@ -29,7 +27,6 @@ export function LogoLoader({ addSx, ...rest }) {
 			<Stack direction="column" spacing={1}>
 				<Box
 					component="img"
-					src={logo}
 					alt="Slim Logo"
 					width={{
 						xs: '30vw',
@@ -546,4 +543,4 @@ export function Loader9({ size = 50, color = 'primary', addSx }) {
 	);
 }
 
-export default LogoLoader;
+export default Loader9;

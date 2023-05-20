@@ -27,7 +27,6 @@ import DraftsOutlinedIcon from '@mui/icons-material/DraftsOutlined';
 import TaskOutlinedIcon from '@mui/icons-material/TaskOutlined';
 import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 // assets
-import avatar2 from '@/assets/images/avatars/avatar_13.jpg';
 
 // Components
 import NotificationsButton from './notificationButton';
@@ -94,7 +93,6 @@ function LoggedUser() {
 					<Stack width="100%" direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
 						<Avatar
 							alt="User Img"
-							src={avatar2}
 							sx={{
 								width: 35,
 								height: 35,
