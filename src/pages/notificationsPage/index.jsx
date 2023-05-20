@@ -1,31 +1,18 @@
 import { alpha } from '@mui/material/styles';
-import calcHeaderHeight from '@helpers/layoutHeight';
 
 import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import ButtonBase from '@mui/material/ButtonBase';
 import Box from '@mui/material/Box';
-import Switch from '@mui/material/Switch';
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
 import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 
 // Icons
-import CloseIcon from '@mui/icons-material/Close';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 import CardHeader from '@/components/cardHeader';

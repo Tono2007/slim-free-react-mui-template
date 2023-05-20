@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSignupData } from './signupContext';
-import { useNavigate, Link as RouterLink } from 'react-router-dom';
 
 // Icons
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -29,11 +28,6 @@ import SignupButtonsContainer from './signupButtonsContainer';
 
 // api
 
-const usersConfig = {
-	company: 'Organización',
-	startup: 'Startup',
-	investmen: 'Fondo de Inversión',
-};
 const hearAboutUs = ['Github', 'Facebook', 'LinkedIn', 'Web', 'Otro'];
 const SexList = ['Masculino', 'Femenino'];
 

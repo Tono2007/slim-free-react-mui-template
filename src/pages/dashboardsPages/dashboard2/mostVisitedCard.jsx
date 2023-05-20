@@ -3,9 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import Chart from 'react-apexcharts';
 import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
 
-import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
 import CardHeader from '@/components/cardHeader';

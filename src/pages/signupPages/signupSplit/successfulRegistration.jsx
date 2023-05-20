@@ -1,14 +1,12 @@
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // MUI Stuff
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
 // Icons
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 // Api
 // Contexts
 import { useSignupData } from './signupContext';

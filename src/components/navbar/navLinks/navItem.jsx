@@ -1,16 +1,9 @@
-import { useState } from 'react';
-import { Link as RouterLink, useMatch, useLocation } from 'react-router-dom';
+import { Link as RouterLink, useMatch } from 'react-router-dom';
 import { alpha } from '@mui/material/styles';
-// MUI Stuff
+// MUI
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import ButtonBase from '@mui/material/ButtonBase';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import MenuList from '@mui/material/MenuList';
-import Collapse from '@mui/material/Collapse';
-
 // Icons
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 

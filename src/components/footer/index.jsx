@@ -1,5 +1,5 @@
 import constants from '@/utils/constants';
-// MUI Stuff
+// MUI
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -21,7 +21,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-// Components
+// assets
 import logo from '@/assets/images/logo/png/Color_logo_nobg.png';
 
 function Footer() {

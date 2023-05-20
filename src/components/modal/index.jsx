@@ -6,12 +6,10 @@ import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
-import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
-
 // Icons
 import CloseIcon from '@mui/icons-material/Close';
-// Components
+// assets
 import logo from '@/assets/images/logo/png/Color_logotext2_nobg.png';
 import logoWhite from '@/assets/images/logo/png/White_logotext_nobg.png';
 

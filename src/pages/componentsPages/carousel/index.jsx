@@ -13,7 +13,6 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 
 import PageHeader from '@/components/pageHeader';
-import CardHeader from '@/components/cardHeader';
 import Slider from '@/components/slider';
 
 import { data1 } from './data';

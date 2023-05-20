@@ -1,9 +1,7 @@
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
 import InputAdornment from '@mui/material/InputAdornment';
-import InputBase from '@mui/material/InputBase';
 import TextField from '@mui/material/TextField';
-
 // Icons
 import SearchIcon from '@mui/icons-material/Search';
 

@@ -1,17 +1,10 @@
 import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import Switch from '@mui/material/Switch';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import IconButton from '@mui/material/IconButton';
@@ -23,9 +16,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
-import EditIcon from '@mui/icons-material/Edit';
-import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import EastIcon from '@mui/icons-material/East';
 import CloseIcon from '@mui/icons-material/Close';
 import DesktopWindowsTwoToneIcon from '@mui/icons-material/DesktopWindowsTwoTone';
@@ -33,8 +23,6 @@ import TabletAndroidTwoToneIcon from '@mui/icons-material/TabletAndroidTwoTone';
 import PhoneAndroidTwoToneIcon from '@mui/icons-material/PhoneAndroidTwoTone';
 
 import CardHeader from '@/components/cardHeader';
-
-import avatar from '@/assets/images/avatars/avatar_13.jpg';
 
 function Security() {
 	return (

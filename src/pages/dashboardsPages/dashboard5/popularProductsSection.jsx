@@ -1,26 +1,12 @@
-import Chart from 'react-apexcharts';
-import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
-
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import Grid from '@mui/material/Grid';
-import LinearProgress from '@mui/material/LinearProgress';
-import Rating from '@mui/material/Rating';
 import Card from '@mui/material/Card';
 import Link from '@mui/material/Link';
 
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
-import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
-import Inventory2Icon from '@mui/icons-material/Inventory2';
 
 import CardHeader from '@/components/cardHeader';
 

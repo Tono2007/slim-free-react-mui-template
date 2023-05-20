@@ -21,10 +21,10 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 function CustomizationLayout() {
 	const [showDrawer, setshowDrawer] = useState(false);
 
-	const openDrawer = (e) => {
+	const openDrawer = () => {
 		setshowDrawer(true);
 	};
-	const closeDrawer = (e) => {
+	const closeDrawer = () => {
 		setshowDrawer(false);
 	};
 	return (

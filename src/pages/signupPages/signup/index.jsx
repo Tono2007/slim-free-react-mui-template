@@ -3,22 +3,15 @@ import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import { strengthColor, strengthIndicator } from '@/utils/helpers/passwordStrength';
 // MUI
 import Typography from '@mui/material/Typography';
-import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
-import Checkbox from '@mui/material/Checkbox';
 import Card from '@mui/material/Card';
 import Link from '@mui/material/Link';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
-import Chip from '@mui/material/Chip';
 // Icons
-import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LoginIcon from '@mui/icons-material/Login';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';

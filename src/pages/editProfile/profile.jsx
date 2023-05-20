@@ -1,25 +1,13 @@
-import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
-import Switch from '@mui/material/Switch';
 
 import EditIcon from '@mui/icons-material/Edit';
-import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 import CardHeader from '@/components/cardHeader';
-
-import avatar from '@/assets/images/avatars/avatar_13.jpg';
 
 function Profile() {
 	return (

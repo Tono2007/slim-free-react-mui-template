@@ -1,12 +1,5 @@
-import { useState, useEffect, createContext, useContext } from 'react';
+import { createContext, useContext } from 'react';
 
-// MUI
-import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
-import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 
 const SliderContext = createContext({});

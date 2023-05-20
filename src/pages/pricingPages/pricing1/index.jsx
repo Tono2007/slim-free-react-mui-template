@@ -3,15 +3,12 @@ import { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import Container from '@mui/material/Container';
-import ListItem from '@mui/material/ListItem';
 import Chip from '@mui/material/Chip';
-import Alert from '@mui/material/Alert';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import Switch from '@mui/material/Switch';
@@ -20,7 +17,6 @@ import Slider from '@mui/material/Slider';
 import CheckIcon from '@mui/icons-material/Check';
 
 import PageHeader from '@/components/pageHeader';
-import CardHeader from '@/components/cardHeader';
 
 const plans = [
 	{

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { alpha } from '@mui/material/styles';
-
 // MUI
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
@@ -14,7 +13,6 @@ import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import ButtonBase from '@mui/material/ButtonBase';
-
 // Icons
 import CloseIcon from '@mui/icons-material/Close';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -33,7 +31,7 @@ function NotificationsButton() {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
-	const toNotifications = (e) => {
+	const toNotifications = () => {
 		handleClose();
 		navigate('/pages/notifications');
 	};

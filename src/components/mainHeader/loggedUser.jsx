@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { alpha } from '@mui/material/styles';
-// MUI Stuff
+// MUI
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
@@ -14,12 +14,10 @@ import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
-
 // Icons
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import LockPersonOutlinedIcon from '@mui/icons-material/LockPersonOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import PaymentOutlinedIcon from '@mui/icons-material/PaymentOutlined';

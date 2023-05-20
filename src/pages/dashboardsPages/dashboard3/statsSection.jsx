@@ -1,8 +1,5 @@
 import useAutoCounter from '@hooks/useAutoCounter';
 
-import QueryStatsOutlinedIcon from '@mui/icons-material/QueryStatsOutlined';
-import DonutSmallOutlinedIcon from '@mui/icons-material/DonutSmallOutlined';
-import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 import DriveFolderUploadOutlinedIcon from '@mui/icons-material/DriveFolderUploadOutlined';

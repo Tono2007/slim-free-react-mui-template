@@ -3,12 +3,7 @@ import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
 
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import Grid from '@mui/material/Grid';
 import LinearProgress from '@mui/material/LinearProgress';
 import Rating from '@mui/material/Rating';

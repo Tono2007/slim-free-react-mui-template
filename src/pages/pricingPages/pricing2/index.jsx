@@ -1,6 +1,3 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-// MUI Stuff
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -9,10 +6,6 @@ import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
-import Container from '@mui/material/Container';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
 import Alert from '@mui/material/Alert';
 
 import Table from '@mui/material/Table';
@@ -23,19 +16,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
 // Icons
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SmartphoneIcon from '@mui/icons-material/Smartphone';
-import DevicesIcon from '@mui/icons-material/Devices';
-import SchoolIcon from '@mui/icons-material/School';
-import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import PeopleIcon from '@mui/icons-material/People';
-import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
-import BusinessIcon from '@mui/icons-material/Business';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import LocationCityIcon from '@mui/icons-material/LocationCity';
-import NewspaperIcon from '@mui/icons-material/Newspaper';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
 import StarsIcon from '@mui/icons-material/Stars';

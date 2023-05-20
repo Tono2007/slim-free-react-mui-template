@@ -1,16 +1,9 @@
-// MUI
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 
-import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
-
 import PageHeader from '@/components/pageHeader';
-import CardHeader from '@/components/cardHeader';
 
 function PageHeaderComponentPage() {
 	return (

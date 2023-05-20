@@ -6,19 +6,13 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
 import Card from '@mui/material/Card';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import CircularProgress from '@mui/material/CircularProgress';
 
-// import logo from '@/assets/images/logo/png/Color_logo_nobg.png';
 import logo from '@/assets/images/logo/png/White_logo_nobg.png';
-import Google from '@/assets/icons/social-google.svg';
-import Facebook from '@/assets/icons/social-facebook.png';
 import LoginIcon from '@mui/icons-material/Login';
 
 function LoginSplit() {

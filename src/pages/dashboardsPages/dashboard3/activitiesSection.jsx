@@ -1,18 +1,8 @@
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import Avatar from '@mui/material/Avatar';
-
-import AddLocationAltOutlinedIcon from '@mui/icons-material/AddLocationAltOutlined';
-import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
-import PostAddIcon from '@mui/icons-material/PostAdd';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
-import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 
 import CardHeader from '@/components/cardHeader';
 

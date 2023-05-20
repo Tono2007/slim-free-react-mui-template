@@ -4,15 +4,12 @@ import { useTheme } from '@mui/material/styles';
 import Chart from 'react-apexcharts';
 import getDefaultChartsColors from '@helpers/getDefaultChartsColors';
 
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
 import CardHeader from '@/components/cardHeader';
-import { ThirteenMpTwoTone } from '@mui/icons-material';
 
 function CustomersOverviewCard() {
 	const [viewBy, setViewBy] = useState('day');

@@ -1,19 +1,12 @@
 import { useState } from 'react';
 
 import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
-import Switch from '@mui/material/Switch';
 import Chip from '@mui/material/Chip';
 
 import Table from '@mui/material/Table';
@@ -23,9 +16,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
-import EditIcon from '@mui/icons-material/Edit';
-import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
 import StarsIcon from '@mui/icons-material/Stars';

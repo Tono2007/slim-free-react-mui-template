@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import { useState } from 'react';
 import Table from '@mui/material/Table';
 

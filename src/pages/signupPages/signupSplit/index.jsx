@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { UserProvider, useSignupData } from './signupContext';
 import { Link as RouterLink } from 'react-router-dom';
 

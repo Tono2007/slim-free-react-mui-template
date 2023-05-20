@@ -1,15 +1,8 @@
-// MUI
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
-import Card from '@mui/material/Card';
-
-import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 
 import PageHeader from '@/components/pageHeader';
-import CardHeader from '@/components/cardHeader';
 import Navbar from '@/components/navbar';
 
 import { navItems1, navItems1b, navItems2, navItems3, navItems4, navItems5, navItems6 } from './navItems';
