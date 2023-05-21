@@ -33,7 +33,7 @@ It can be used for most type of dashboard and app templates like analytics, admi
 ⭐ ⭐ ⭐ Do not forget to star (Top right of this page) it if you like the theme ⭐ ⭐ ⭐
 </div>
 
-![slim-free-react-mui-template netlify app_](https://github.com/Tono2007/slim-free-react-mui-template/assets/35477201/d9248196-3e45-488d-bdce-ca47568fc7fa)
+![slim-free-react-mui-template netlify app_](https://github.com/Tono2007/slim-free-react-mui-template/assets/35477201/89d5c71f-b25d-4627-83d2-580ff845927d)
 
 -   Support React18.
 -   Professional user interface.
