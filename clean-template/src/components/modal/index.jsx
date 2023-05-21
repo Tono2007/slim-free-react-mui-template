@@ -10,8 +10,6 @@ import Divider from '@mui/material/Divider';
 // Icons
 import CloseIcon from '@mui/icons-material/Close';
 // assets
-import logo from '@/assets/images/logo/png/Color_logotext2_nobg.png';
-import logoWhite from '@/assets/images/logo/png/White_logotext_nobg.png';
 
 /**
  * @typedef {'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'fullScreen'} MAX_WIDTH_KEYS
@@ -70,7 +68,8 @@ function UnderlineBox({ title, fnCloseModal }) {
 		<Box top={0} zIndex={9999} position="sticky">
 			<Stack direction="row" alignItems="center" height={50} bgcolor="background.paper" px={1}>
 				<Box width="33%" height="80%">
-					<Box component="img" height="100%" py={1} ml={1} src={logo} alt="logo" />
+					Logo
+					{/* <Box component="img" height="100%" py={1} ml={1} src={logo} alt="logo" /> */}
 				</Box>
 				<Box width="34%">
 					<ModalText text={title} />
@@ -89,7 +88,8 @@ function ContainedBox({ title, fnCloseModal }) {
 		<Box top="0" position="sticky" zIndex={9999}>
 			<Stack direction="row" alignItems="center" height={50} bgcolor="primary.main">
 				<Box width="33%" height="100%">
-					<Box component="img" height="100%" py={1} ml={1} src={logoWhite} alt="logo" />
+					Logo
+					{/* <Box component="img" height="100%" py={1} ml={1} src={logoWhite} alt="logo" /> */}
 				</Box>
 				<Box width="34%">
 					<ModalText text={title} color="primary.contrastText" />

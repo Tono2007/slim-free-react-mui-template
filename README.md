@@ -17,23 +17,23 @@
 ![CI/CD](https://github.com/Tono2007/slim-free-react-mui-template/workflows/pipeline/badge.svg)
 
 <div align="center">
-<img src="src/assets/images/logo/png/Color_logo_nobg.png" />  
+<img src="complete-template//src/assets/images/logo/png/Color_logo_nobg.png" />  
 </div>
 <h3 align="justify">Modern and clean mui Template
 
-Slim - a free and open source React dashboard template made using the Material UI React component library with aim of flexibility and better customizability.
+Slim - a free and open source React dashboard template made using Material UI React component library with aim of flexibility and better customizability.
 
-Modern & Clean Responsive MUI Material-ui Admin Dashboard Template. Using flat and minimal design. It is fully responsive.
+Modern & Clean Responsive MUI Material-ui Admin Dashboard Template. It is fully responsive.
 
 It can be used for most type of dashboard and app templates like analytics, admin or messenger app for your desktop or mobile applications. Amazing flexibility and reusability. **85+** Demo pages </h3>
 
 <div align="center">
-<img src="src/assets/images/logo/png/Color_logotext_nobg.png"  height="50px"/>  
+<img src="complete-template/src/assets/images/logo/png/Color_logotext_nobg.png"  height="50px"/>  
 
 ⭐ ⭐ ⭐ Do not forget to star (Top right of this page) it if you like the theme ⭐ ⭐ ⭐
 </div>
 
-
+![slim-free-react-mui-template netlify app_](https://github.com/Tono2007/slim-free-react-mui-template/assets/35477201/d9248196-3e45-488d-bdce-ca47568fc7fa)
 
 -   Support React18.
 -   Professional user interface.
@@ -47,8 +47,10 @@ It can be used for most type of dashboard and app templates like analytics, admi
 
 ## Free SLIM MUI React js version
 
--   [Preview](https://slim-free-react-mui-template.netlify.app/)
--   [Download from Github](https://github.com/Tono2007/slim-free-react-mui-template)
+-   [Complete Version Preview](https://slim-free-react-mui-template.netlify.app/)
+-   [Clean Version Preview](https://slim-free-react-mui-clean-template.netlify.app/)
+Version with only components, styles, theme and sample page
+-   [Download from Github](https://github.com/Tono2007/slim-free-react-mui-template/releases)
 
 ## Getting Started
 
@@ -79,8 +81,6 @@ git clone https://github.com/Tono2007/slim-free-react-mui-template.git
 ![MUI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 
 ## Issues
-
-## Routing
 
 To report a bug, please submit an [issue](https://github.com/Tono2007/slim-free-react-mui-template/issues) on Github. We will respond as soon as possible to resolve the issue.
 
