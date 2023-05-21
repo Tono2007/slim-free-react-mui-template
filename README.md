@@ -6,7 +6,7 @@
   <img alt="Forks" src="https://img.shields.io/github/forks/Tono2007/slim-free-react-mui-template?style=social">
 </a>
 <a href="https://github.com/Tono2007/slim-free-react-mui-template/releases">
-  <img alt="Version" src="https://img.shields.io/github/package-json/v/Tono2007/slim-free-react-mui-template?filename=complete%2Fpackage.json">
+  <img alt="Version" src="https://img.shields.io/github/package-json/v/Tono2007/slim-free-react-mui-template?filename=complete-template%2Fpackage.json">
 </a>
 <a href="https://github.com/Tono2007/slim-free-react-mui-template/graphs/contributors">
   <img alt="React contributors" src="https://img.shields.io/github/contributors/Tono2007/slim-free-react-mui-template">
@@ -14,7 +14,7 @@
 <a href="https://github.com/Tono2007/slim-free-react-mui-template/releases"><img src="https://img.shields.io/github/release/Tono2007/slim-free-react-mui-template"></a>
 <a href="https://github.com/Tono2007/slim-free-react-mui-template/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
 
-![CI/CD](https://github.com/Tono2007/slim-free-react-mui-template/workflows/pipeline/badge.svg)
+![CI/CD](https://github.com/Tono2007/slim-free-react-mui-template/actions/workflows/pipeline.yml/badge.svg)
 
 <div align="center">
 <img src="complete-template//src/assets/images/logo/png/Color_logo_nobg.png" />  
