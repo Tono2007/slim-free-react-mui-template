@@ -2,7 +2,7 @@
 	"homepage": ".",
 	"name": "slim-mui-template",
 	"private": false,
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
